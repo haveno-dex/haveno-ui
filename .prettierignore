@@ -1,0 +1,7 @@
+node_modules
+*.lock
+buildResources
+packages/main/dist
+packages/preload/dist
+packages/rendered/dist
+dist/

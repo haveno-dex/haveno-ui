@@ -1,0 +1,75 @@
+name: Tests
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/**"
+      - "tests/**"
+      - "package-lock.json"
+      - ".github/workflows/tests.yml"
+  pull_request:
+    paths:
+      - "packages/**"
+      - "tests/**"
+      - "package-lock.json"
+      - ".github/workflows/tests.yml"
+
+defaults:
+  run:
+    shell: "bash"
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn test:main
+
+  preload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn test:preload
+
+  renderer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn test:renderer
+
+  e2e:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+      - run: npx playwright install --with-deps chromium
+      - run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- yarn test:e2e
+        if: matrix.os == 'ubuntu-latest'
+      - run: yarn test:e2e
+        if: matrix.os != 'ubuntu-latest'
