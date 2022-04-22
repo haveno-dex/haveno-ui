@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "sourceMap": false,
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "strict": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "vite-plugin-svgr/client"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@services/*": ["./src/services/*"],
+      "@types/*": ["./src/types/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "../../types/**/*.d.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts"]
+}
