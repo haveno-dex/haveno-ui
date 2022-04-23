@@ -2,7 +2,7 @@ name: Linters
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - "**.js"
       - "**.ts"

@@ -6,7 +6,7 @@
     ":disableDependencyDashboard"
   ],
   "labels": ["dependencies"],
-  "baseBranches": ["main"],
+  "baseBranches": ["master"],
   "bumpVersion": "patch",
   "patch": {
     "automerge": true
