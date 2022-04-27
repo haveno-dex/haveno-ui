@@ -25,5 +25,5 @@ export const SupportedLocales = {
 
 export const LangPack = {
   [SupportedLocales.EN]: en,
-  [SupportedLocales.EN]: es,
+  [SupportedLocales.ES]: es,
 };
