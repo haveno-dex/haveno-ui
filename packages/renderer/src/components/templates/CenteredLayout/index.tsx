@@ -14,24 +14,22 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Routes, Route } from "react-router-dom";
-import { Home, Welcome } from "@pages/Onboarding";
-import { Wallet } from "@pages/Wallet";
+import type { FC } from "react";
+import { Container, Stack } from "@mantine/core";
+import { HeaderWithLogo } from "@atoms/Header";
 
-export const ROUTES = {
-  Home: "/",
-  Welcome: "/onboarding/welcome",
-  RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
-};
-
-export function AppRoutes() {
-  return (
-    <Routes>
-      <Route path={ROUTES.Home} element={<Home />} />
-      <Route path={ROUTES.Welcome} element={<Welcome />} />
-      <Route path={ROUTES.Wallet} element={<Wallet />} />
-    </Routes>
-  );
+interface CenteredLayoutProps {
+  showHeader?: boolean;
 }
+
+export const CenteredLayout: FC<CenteredLayoutProps> = (props) => {
+  const { children, showHeader = false } = props;
+  return (
+    <Stack sx={{ width: "100%" }}>
+      {showHeader && <HeaderWithLogo />}
+      <Container p="sm" sx={{ display: "flex", flex: 1 }}>
+        {children}
+      </Container>
+    </Stack>
+  );
+};

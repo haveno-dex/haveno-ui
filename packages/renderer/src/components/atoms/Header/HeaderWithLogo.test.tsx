@@ -14,24 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Routes, Route } from "react-router-dom";
-import { Home, Welcome } from "@pages/Onboarding";
-import { Wallet } from "@pages/Wallet";
+import { describe, expect, it } from "vitest";
+import { render } from "@testing-library/react";
+import { AppProviders } from "@atoms/AppProviders";
+import { HeaderWithLogo } from ".";
 
-export const ROUTES = {
-  Home: "/",
-  Welcome: "/onboarding/welcome",
-  RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
-};
-
-export function AppRoutes() {
-  return (
-    <Routes>
-      <Route path={ROUTES.Home} element={<Home />} />
-      <Route path={ROUTES.Welcome} element={<Welcome />} />
-      <Route path={ROUTES.Wallet} element={<Wallet />} />
-    </Routes>
-  );
-}
+describe("atoms::HeaderWithLogo", () => {
+  it("renders without exploding", () => {
+    const { asFragment } = render(
+      <AppProviders>
+        <HeaderWithLogo />
+      </AppProviders>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+});

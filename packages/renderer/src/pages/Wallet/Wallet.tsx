@@ -14,24 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Routes, Route } from "react-router-dom";
-import { Home, Welcome } from "@pages/Onboarding";
-import { Wallet } from "@pages/Wallet";
+import { NavbarLayout } from "@templates/NavbarLayout";
 
-export const ROUTES = {
-  Home: "/",
-  Welcome: "/onboarding/welcome",
-  RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
-};
-
-export function AppRoutes() {
-  return (
-    <Routes>
-      <Route path={ROUTES.Home} element={<Home />} />
-      <Route path={ROUTES.Welcome} element={<Welcome />} />
-      <Route path={ROUTES.Wallet} element={<Wallet />} />
-    </Routes>
-  );
+export function Wallet() {
+  return <NavbarLayout></NavbarLayout>;
 }

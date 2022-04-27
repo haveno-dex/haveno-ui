@@ -14,24 +14,21 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Routes, Route } from "react-router-dom";
-import { Home, Welcome } from "@pages/Onboarding";
-import { Wallet } from "@pages/Wallet";
+import InterFont from "@assets/fonts/Inter-Variable.ttf";
 
-export const ROUTES = {
-  Home: "/",
-  Welcome: "/onboarding/welcome",
-  RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
+export const globalStyles = {
+  "@font-face": {
+    fontFamily: "Inter",
+    src: `url('${InterFont}')`,
+    fontWeight: "100 800",
+    fontStyle: "normal italic",
+  },
+  body: {
+    margin: 0,
+    padding: 0,
+  },
+  "#app": {
+    display: "flex",
+    minHeight: "100vh",
+  },
 };
-
-export function AppRoutes() {
-  return (
-    <Routes>
-      <Route path={ROUTES.Home} element={<Home />} />
-      <Route path={ROUTES.Welcome} element={<Welcome />} />
-      <Route path={ROUTES.Wallet} element={<Wallet />} />
-    </Routes>
-  );
-}

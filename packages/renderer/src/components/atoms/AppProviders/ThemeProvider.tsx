@@ -14,24 +14,15 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Routes, Route } from "react-router-dom";
-import { Home, Welcome } from "@pages/Onboarding";
-import { Wallet } from "@pages/Wallet";
+import type { FC } from "react";
+import { MantineProvider, Global } from "@mantine/core";
+import { themeOverride, globalStyles } from "@src/theme";
 
-export const ROUTES = {
-  Home: "/",
-  Welcome: "/onboarding/welcome",
-  RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
-};
-
-export function AppRoutes() {
+export const ThemeProvider: FC = ({ children }) => {
   return (
-    <Routes>
-      <Route path={ROUTES.Home} element={<Home />} />
-      <Route path={ROUTES.Welcome} element={<Welcome />} />
-      <Route path={ROUTES.Wallet} element={<Wallet />} />
-    </Routes>
+    <MantineProvider theme={themeOverride}>
+      <Global styles={globalStyles} />
+      {children}
+    </MantineProvider>
   );
-}
+};

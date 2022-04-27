@@ -14,24 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Routes, Route } from "react-router-dom";
-import { Home, Welcome } from "@pages/Onboarding";
-import { Wallet } from "@pages/Wallet";
+import type { FC } from "react";
+import { RecoilRoot } from "recoil";
+import { QueryClientProvider } from "./QueryClientProvider";
+import { IntlProvider } from "./IntlProvider";
+import { ThemeProvider } from "./ThemeProvider";
 
-export const ROUTES = {
-  Home: "/",
-  Welcome: "/onboarding/welcome",
-  RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
-};
-
-export function AppRoutes() {
-  return (
-    <Routes>
-      <Route path={ROUTES.Home} element={<Home />} />
-      <Route path={ROUTES.Welcome} element={<Welcome />} />
-      <Route path={ROUTES.Wallet} element={<Wallet />} />
-    </Routes>
-  );
-}
+export const AppProviders: FC = ({ children }) => (
+  <RecoilRoot>
+    <IntlProvider>
+      <QueryClientProvider>
+        <ThemeProvider>{children}</ThemeProvider>
+      </QueryClientProvider>
+    </IntlProvider>
+  </RecoilRoot>
+);

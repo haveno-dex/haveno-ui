@@ -14,19 +14,25 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Link } from "react-router-dom";
-import { ROUTES } from "@src/Routes";
-import { FormattedMessage } from "react-intl";
-import { LangKeys } from "@constants/lang/LangKeys";
+import { Stack } from "@mantine/core";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Button } from ".";
 
-export function Home() {
+export default {
+  title: "atoms/Buttons",
+  component: Button,
+} as ComponentMeta<typeof Button>;
+
+const Template: ComponentStory<typeof Button> = () => {
   return (
-    <div>
-      <h1>Home</h1>
-      <h2>
-        <FormattedMessage id={LangKeys.AppTitle} defaultMessage="welcome" />
-      </h2>
-      <Link to={ROUTES.Page2}>Page 2</Link>
-    </div>
+    <Stack>
+      <Button flavor="primary">Primary</Button>
+      <Button flavor="neutral">Neutral</Button>
+      <Button flavor="success">Success</Button>
+      <Button flavor="danger">Error</Button>
+    </Stack>
   );
-}
+};
+
+export const Default = Template.bind({});
+Default.args = {};

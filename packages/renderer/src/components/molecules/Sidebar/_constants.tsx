@@ -14,24 +14,33 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Routes, Route } from "react-router-dom";
-import { Home, Welcome } from "@pages/Onboarding";
-import { Wallet } from "@pages/Wallet";
+import { ReactComponent as MarketsIcon } from "@assets/markets.svg";
+import { ReactComponent as OffersIcon } from "@assets/offers.svg";
+import { ReactComponent as TradesIcon } from "@assets/trades.svg";
+import { ReactComponent as NotificationsIcon } from "@assets/notifications.svg";
+import { ReactComponent as AccountIcon } from "@assets/account.svg";
 
-export const ROUTES = {
-  Home: "/",
-  Welcome: "/onboarding/welcome",
-  RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
-};
+export const WIDTH = 210;
 
-export function AppRoutes() {
-  return (
-    <Routes>
-      <Route path={ROUTES.Home} element={<Home />} />
-      <Route path={ROUTES.Welcome} element={<Welcome />} />
-      <Route path={ROUTES.Wallet} element={<Wallet />} />
-    </Routes>
-  );
-}
+export const NAV_LINKS = [
+  {
+    icon: <MarketsIcon />,
+    label: "Markets",
+  },
+  {
+    icon: <OffersIcon />,
+    label: "My Offers",
+  },
+  {
+    icon: <TradesIcon />,
+    label: "My Trades",
+  },
+  {
+    icon: <NotificationsIcon />,
+    label: "Notifications",
+  },
+  {
+    icon: <AccountIcon />,
+    label: "Account",
+  },
+];

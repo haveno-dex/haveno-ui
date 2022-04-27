@@ -33,6 +33,7 @@ const config = {
   root: PACKAGE_ROOT,
   resolve: {
     alias: {
+      "@assets/": join(PACKAGE_ROOT, "assets") + "/",
       "@atoms/": join(PACKAGE_ROOT, "src", "components", "atoms") + "/",
       "@constants/": join(PACKAGE_ROOT, "src", "constants") + "/",
       "@molecules/": join(PACKAGE_ROOT, "src", "components", "molecules") + "/",

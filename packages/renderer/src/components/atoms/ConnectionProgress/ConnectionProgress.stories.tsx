@@ -14,16 +14,21 @@
 //  limitations under the License.
 // =============================================================================
 
+import { Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Header } from "../Header";
+import { ConnectionProgress } from ".";
 
 export default {
-  title: "atoms/Header",
-  component: Header,
-} as ComponentMeta<typeof Header>;
+  title: "atoms/ConnectionProgress",
+  component: ConnectionProgress,
+} as ComponentMeta<typeof ConnectionProgress>;
 
-const Template: ComponentStory<typeof Header> = () => {
-  return <Header />;
+const Template: ComponentStory<typeof ConnectionProgress> = () => {
+  return (
+    <Stack>
+      <ConnectionProgress />
+    </Stack>
+  );
 };
 
 export const Default = Template.bind({});

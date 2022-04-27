@@ -14,14 +14,22 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Box } from "@mantine/core";
-import { FormattedMessage } from "react-intl";
-import { LangKeys } from "@constants/lang/LangKeys";
+import { Stack } from "@mantine/core";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { WalletBalance } from ".";
 
-export function Header() {
+export default {
+  title: "molecules/WalletBalance",
+  component: WalletBalance,
+} as ComponentMeta<typeof WalletBalance>;
+
+const Template: ComponentStory<typeof WalletBalance> = () => {
   return (
-    <Box component="header">
-      <FormattedMessage id={LangKeys.AppTitle} defaultMessage="Header" />
-    </Box>
+    <Stack>
+      <WalletBalance />
+    </Stack>
   );
-}
+};
+
+export const Default = Template.bind({});
+Default.args = {};

@@ -17,12 +17,8 @@
 import type { FC } from "react";
 import { useEffect, useMemo, useState } from "react";
 import { IntlProvider as ReacIntlProvider } from "react-intl";
-import type { LangKeys } from "@src/constants/lang/LangKeys";
-
-const SupportedLocales = {
-  EN: "en",
-  ES: "es",
-};
+import type { LangKeys } from "@src/constants/lang";
+import { LangPack, SupportedLocales } from "@src/constants/lang";
 
 const DEFAULT_LOCALE = SupportedLocales.EN;
 
@@ -37,12 +33,7 @@ export const IntlProvider: FC = ({ children }) => {
   );
 
   useEffect(() => {
-    console.log(navigator.language);
-    import(/* @vite-ignore */ `../../../constants/lang/${locale}.ts`).then(
-      (val) => {
-        setMessages(val.default);
-      }
-    );
+    setMessages(LangPack[locale] ?? LangPack[DEFAULT_LOCALE]);
   }, [locale]);
 
   return (

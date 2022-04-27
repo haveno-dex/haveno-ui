@@ -15,6 +15,7 @@
 // =============================================================================
 
 const { mergeConfig } = require("vite");
+const svgrPlugin = require("vite-plugin-svgr");
 const viteConfig = require("../packages/renderer/vite.config");
 
 module.exports = {
@@ -35,8 +36,15 @@ module.exports = {
   viteFinal: async (config) => {
     // return the customized config
     return mergeConfig(config, {
-      root: viteConfig.root,
+      root: process.cwd(),
       resolve: viteConfig.resolve,
+      plugins: [
+        svgrPlugin({
+          svgrOptions: {
+            icon: true,
+          },
+        }),
+      ],
     });
   },
 };

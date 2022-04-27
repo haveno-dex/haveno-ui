@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`atoms::HeaderWithLogo > renders without exploding 1`] = `
+<DocumentFragment>
+  <header
+    class="mantine-caub1y"
+  >
+    <img
+      alt="Haveno"
+      height="24"
+      src="/assets/logo.svg"
+    />
+  </header>
+</DocumentFragment>
+`;
