@@ -16,7 +16,6 @@
 
 import { useState } from "react";
 import {
-  Box,
   Collapse,
   createStyles,
   Group,
@@ -31,24 +30,22 @@ export function WalletBalance() {
   const [isOpen, setOpen] = useState(false);
   const { classes } = useStyles({ isOpen });
   return (
-    <Box className={classes.container}>
+    <UnstyledButton
+      className={classes.btnToggle}
+      onClick={() => setOpen(!isOpen)}
+    >
       <Stack>
         <Group spacing="sm">
-          <XMRLogo />
+          <XMRLogo className={classes.xmrLogo} />
           <Text className={classes.heading} weight={700}>
             Available Balance
           </Text>
         </Group>
         <Stack spacing={4}>
-          <UnstyledButton
-            className={classes.btnToggle}
-            onClick={() => setOpen(!isOpen)}
-          >
-            <Group>
-              <Text className={classes.xmr}>10.647382650365</Text>
-              <ArrowDown />
-            </Group>
-          </UnstyledButton>
+          <Group>
+            <Text className={classes.xmr}>10.647382650365</Text>
+            <ArrowDown className={classes.toggleIcon} />
+          </Group>
           <Text className={classes.fiat}>(EUR 2441,02)</Text>
         </Stack>
         <Collapse in={isOpen}>
@@ -68,28 +65,33 @@ export function WalletBalance() {
           </Stack>
         </Collapse>
       </Stack>
-    </Box>
+    </UnstyledButton>
   );
 }
 
 const useStyles = createStyles<string, { isOpen: boolean }>(
   (theme, params) => ({
-    container: {
+    btnToggle: {
       border: `solid 1px ${theme.colors.gray[4]}`,
       borderRadius: theme.radius.md,
       padding: theme.spacing.md,
+
+      "&:hover": {
+        borderColor: theme.colors.gray[5],
+      },
+    },
+    xmrLogo: {
+      width: 20,
+    },
+    toggleIcon: {
+      transform: `rotate(${params.isOpen ? 180 : 0}deg)`,
+      transition: "transform 0.2s",
+      width: 8,
     },
     heading: {
       fontSize: "0.5rem",
       fontWeight: 700,
       textTransform: "uppercase",
-    },
-    btnToggle: {
-      svg: {
-        transform: `rotate(${params.isOpen ? 180 : 0}deg)`,
-        transition: "transform 0.2s",
-        width: 8,
-      },
     },
     xmr: {
       fontSize: "0.75rem",

@@ -22,13 +22,14 @@ type ButtonProps<TComponent> = MButtonProps<TComponent> & {
 };
 
 export function Button<TComponent = "button">(props: ButtonProps<TComponent>) {
-  const { children, flavor = "primary", ...rest } = props;
+  const { children, className, flavor = "primary", ...rest } = props;
   const { classes, cx } = useStyles();
 
   return (
     <MButton
       className={cx(
         classes.common,
+        className,
         { [classes.neutral]: flavor === "neutral" },
         { [classes.success]: flavor === "success" },
         { [classes.danger]: flavor === "danger" }
@@ -43,9 +44,12 @@ export function Button<TComponent = "button">(props: ButtonProps<TComponent>) {
 const useStyles = createStyles((theme) => ({
   common: {
     borderRadius: 10,
+    fontSize: "0.875rem",
     fontWeight: 600,
-    height: 48,
-    padding: "1rem",
+    height: theme.other.buttonHeight,
+    minWidth: "9.75rem",
+    padding: `0 ${theme.spacing.lg}px`,
+    transition: "color 0.2s, background-color 0.2s",
   },
   neutral: {
     backgroundColor: theme.colors.gray[2],
@@ -55,15 +59,15 @@ const useStyles = createStyles((theme) => ({
     },
   },
   success: {
-    backgroundColor: theme.colors.green[7],
+    backgroundColor: theme.colors.green[4],
     "&:hover": {
-      backgroundColor: theme.colors.green[8],
+      backgroundColor: theme.colors.green[5],
     },
   },
   danger: {
-    backgroundColor: theme.colors.red[6],
+    backgroundColor: theme.colors.red[4],
     "&:hover": {
-      backgroundColor: theme.colors.red[7],
+      backgroundColor: theme.colors.red[5],
     },
   },
 }));

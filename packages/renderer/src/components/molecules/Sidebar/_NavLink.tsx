@@ -47,7 +47,7 @@ const useStyles = createStyles<string, { isActive: boolean }>(
   (theme, { isActive }, getRef) => ({
     navLink: {
       display: "block",
-      padding: "1.5rem 2.5rem",
+      padding: `${theme.spacing.lg}px ${theme.spacing.lg}px`,
       transition: "opacity 0.2s",
       width: "100%",
 
@@ -59,7 +59,7 @@ const useStyles = createStyles<string, { isActive: boolean }>(
       svg: isActive
         ? {
             path: {
-              fill: theme.colors.brand[6],
+              fill: theme.colors.blue[6],
             },
           }
         : null,

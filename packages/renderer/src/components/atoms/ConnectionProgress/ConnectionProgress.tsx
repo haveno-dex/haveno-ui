@@ -50,7 +50,7 @@ const useStyles = createStyles((theme) => ({
   },
   bar: {
     animation: `${bounce} 3s ease-in-out infinite`,
-    background: theme.colors.brand[5],
+    background: theme.colors.blue[5],
     borderRadius: 3,
     height: 6,
     position: "absolute",

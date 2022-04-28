@@ -34,7 +34,7 @@ export function Sidebar() {
           </Navbar.Section>
         ))}
         <Navbar.Section>
-          <Box p="lg">
+          <Box mt="lg">
             <WalletBalance />
           </Box>
         </Navbar.Section>
@@ -45,8 +45,8 @@ export function Sidebar() {
 
 const useStyles = createStyles((theme) => ({
   logo: {
-    height: 32,
-    padding: `${theme.spacing.lg} ${theme.spacing.xl}`,
+    height: "2rem",
+    padding: `${theme.spacing.lg}px ${theme.spacing.lg}px`,
   },
   container: {
     width: WIDTH,

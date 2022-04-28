@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - develop
     paths:
       - "**.ts"
       - "**/tsconfig.json"

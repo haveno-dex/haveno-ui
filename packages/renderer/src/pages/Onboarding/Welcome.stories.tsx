@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { AppProviders } from "@atoms/AppProviders";
 import { Welcome } from ".";
 
 export default {
@@ -25,9 +25,9 @@ export default {
 
 const Template: ComponentStory<typeof Welcome> = () => {
   return (
-    <Stack>
+    <AppProviders>
       <Welcome />
-    </Stack>
+    </AppProviders>
   );
 };
 

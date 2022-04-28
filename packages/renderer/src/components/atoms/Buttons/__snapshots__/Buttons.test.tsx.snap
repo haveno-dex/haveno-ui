@@ -3,7 +3,7 @@
 exports[`atoms::Buttons > renders error button 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-Button-filled mantine-Button-root mantine-r1112v"
+    class="mantine-Button-filled mantine-Button-root mantine-xeynuy"
     type="button"
   >
     <div
@@ -22,7 +22,7 @@ exports[`atoms::Buttons > renders error button 1`] = `
 exports[`atoms::Buttons > renders neutral button 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-Button-filled mantine-Button-root mantine-birnp8"
+    class="mantine-Button-filled mantine-Button-root mantine-2tbxau"
     type="button"
   >
     <div
@@ -41,7 +41,7 @@ exports[`atoms::Buttons > renders neutral button 1`] = `
 exports[`atoms::Buttons > renders primary button by default 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-Button-filled mantine-Button-root mantine-idg0bf"
+    class="mantine-Button-filled mantine-Button-root mantine-1slecx4"
     type="button"
   >
     <div
@@ -60,7 +60,7 @@ exports[`atoms::Buttons > renders primary button by default 1`] = `
 exports[`atoms::Buttons > renders success button 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-Button-filled mantine-Button-root mantine-18w1h4r"
+    class="mantine-Button-filled mantine-Button-root mantine-11svsr2"
     type="button"
   >
     <div

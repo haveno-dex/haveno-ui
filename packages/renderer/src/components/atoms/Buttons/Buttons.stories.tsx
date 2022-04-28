@@ -14,7 +14,7 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
+import { Group, Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Button } from ".";
 
@@ -30,6 +30,13 @@ const Template: ComponentStory<typeof Button> = () => {
       <Button flavor="neutral">Neutral</Button>
       <Button flavor="success">Success</Button>
       <Button flavor="danger">Error</Button>
+
+      <Group>
+        <Button flavor="primary">Primary</Button>
+        <Button flavor="neutral">Neutral</Button>
+        <Button flavor="success">Success</Button>
+        <Button flavor="danger">Error</Button>
+      </Group>
     </Stack>
   );
 };

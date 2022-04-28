@@ -15,18 +15,18 @@
 // =============================================================================
 
 import { FormattedMessage } from "react-intl";
-import { Space, Stack, Text } from "@mantine/core";
+import { Box, Space, Stack, Text } from "@mantine/core";
 import { LangKeys } from "@constants/lang/LangKeys";
 import { CenteredLayout } from "@templates/CenteredLayout";
-import Logo from "@assets/logo.svg";
 import { ConnectionProgress } from "@atoms/ConnectionProgress";
+import Logo from "@assets/logo.svg";
 
 export function Home() {
   return (
     <CenteredLayout>
       <Stack align="center" justify="center" sx={{ flex: 1 }}>
         <Stack>
-          <img src={Logo} alt="Haveno" />
+          <Box component="img" src={Logo} alt="Haveno" />
           <Text size="lg">
             <FormattedMessage
               id={LangKeys.AppHeading2}

@@ -12,7 +12,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         class="mantine-khtkeg"
       >
         <svg
-          class="mantine-98j7ht"
+          class="mantine-evhmzv"
           fill="none"
           height="1em"
           viewBox="0 0 23 34"
@@ -33,7 +33,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         class="mantine-khtkeg"
       >
         <button
-          class="mantine-UnstyledButton-root mantine-3p8mxz"
+          class="mantine-UnstyledButton-root mantine-1wgvoyu"
           type="button"
         >
           <div
@@ -53,7 +53,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               />
             </svg>
             <div
-              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-2juzrl"
+              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-1omu9y9"
             >
               Markets
             </div>
@@ -64,7 +64,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         class="mantine-khtkeg"
       >
         <button
-          class="mantine-UnstyledButton-root mantine-3p8mxz"
+          class="mantine-UnstyledButton-root mantine-1wgvoyu"
           type="button"
         >
           <div
@@ -88,7 +88,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               />
             </svg>
             <div
-              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-2juzrl"
+              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-1omu9y9"
             >
               My Offers
             </div>
@@ -99,7 +99,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         class="mantine-khtkeg"
       >
         <button
-          class="mantine-UnstyledButton-root mantine-3p8mxz"
+          class="mantine-UnstyledButton-root mantine-1wgvoyu"
           type="button"
         >
           <div
@@ -127,7 +127,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               />
             </svg>
             <div
-              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-2juzrl"
+              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-1omu9y9"
             >
               My Trades
             </div>
@@ -138,7 +138,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         class="mantine-khtkeg"
       >
         <button
-          class="mantine-UnstyledButton-root mantine-3p8mxz"
+          class="mantine-UnstyledButton-root mantine-1wgvoyu"
           type="button"
         >
           <div
@@ -158,7 +158,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               />
             </svg>
             <div
-              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-2juzrl"
+              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-1omu9y9"
             >
               Notifications
             </div>
@@ -169,7 +169,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         class="mantine-khtkeg"
       >
         <button
-          class="mantine-UnstyledButton-root mantine-3p8mxz"
+          class="mantine-UnstyledButton-root mantine-1wgvoyu"
           type="button"
         >
           <div
@@ -188,7 +188,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               />
             </svg>
             <div
-              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-2juzrl"
+              class="mantine-Text-root mantine-Group-child __mantine-ref-text mantine-1omu9y9"
             >
               Account
             </div>
@@ -199,10 +199,11 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         class="mantine-khtkeg"
       >
         <div
-          class="mantine-a3o11y"
+          class="mantine-b98ato"
         >
-          <div
-            class="mantine-11cjvdx"
+          <button
+            class="mantine-UnstyledButton-root mantine-1v0qbt7"
+            type="button"
           >
             <div
               class="mantine-Stack-root mantine-lfk3cq"
@@ -211,7 +212,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                 class="mantine-Group-root mantine-1lumg83"
               >
                 <svg
-                  class="mantine-gnzaph mantine-Group-child"
+                  class="mantine-Group-child mantine-oilh7i"
                   fill="none"
                   height="1em"
                   viewBox="0 0 20 20"
@@ -243,7 +244,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                   </defs>
                 </svg>
                 <div
-                  class="mantine-Text-root mantine-Group-child mantine-1ohno7u"
+                  class="mantine-Text-root mantine-Group-child mantine-15e7vnj"
                 >
                   Available Balance
                 </div>
@@ -251,37 +252,32 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               <div
                 class="mantine-Stack-root mantine-1kb6t4k"
               >
-                <button
-                  class="mantine-UnstyledButton-root mantine-1o6jmux"
-                  type="button"
+                <div
+                  class="mantine-Group-root mantine-6y1794"
                 >
                   <div
-                    class="mantine-Group-root mantine-6y1794"
+                    class="mantine-Text-root mantine-Group-child mantine-3vx9ct"
                   >
-                    <div
-                      class="mantine-Text-root mantine-Group-child mantine-14ayao3"
-                    >
-                      10.647382650365
-                    </div>
-                    <svg
-                      class="mantine-gnzaph mantine-Group-child"
-                      fill="none"
-                      height="1em"
-                      viewBox="0 0 7 4"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        clip-rule="evenodd"
-                        d="M2.91916 3.69319C3.23963 4.04927 3.76166 4.04657 4.07971 3.69319L6.82329 0.644746C7.14377 0.288661 7.01636 0 6.53811 0H0.460749C-0.0172283 0 -0.14248 0.291357 0.17557 0.644746L2.91916 3.69319Z"
-                        fill="#111111"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
+                    10.647382650365
                   </div>
-                </button>
+                  <svg
+                    class="mantine-Group-child mantine-qg5oag"
+                    fill="none"
+                    height="1em"
+                    viewBox="0 0 7 4"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M2.91916 3.69319C3.23963 4.04927 3.76166 4.04657 4.07971 3.69319L6.82329 0.644746C7.14377 0.288661 7.01636 0 6.53811 0H0.460749C-0.0172283 0 -0.14248 0.291357 0.17557 0.644746L2.91916 3.69319Z"
+                      fill="#111111"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </div>
                 <div
-                  class="mantine-Text-root mantine-zvjvuq"
+                  class="mantine-Text-root mantine-14xctlx"
                 >
                   (EUR 2441,02)
                 </div>
@@ -301,12 +297,12 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                       class="mantine-Stack-root mantine-1kb6t4k"
                     >
                       <div
-                        class="mantine-Text-root mantine-ywyx71"
+                        class="mantine-Text-root mantine-xtp7ze"
                       >
                         Total
                       </div>
                       <div
-                        class="mantine-Text-root mantine-1lh77dt"
+                        class="mantine-Text-root mantine-pxv98s"
                       >
                         14.048212174412
                       </div>
@@ -315,12 +311,12 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                       class="mantine-Stack-root mantine-1kb6t4k"
                     >
                       <div
-                        class="mantine-Text-root mantine-ywyx71"
+                        class="mantine-Text-root mantine-xtp7ze"
                       >
                         Reserved
                       </div>
                       <div
-                        class="mantine-Text-root mantine-1lh77dt"
+                        class="mantine-Text-root mantine-pxv98s"
                       >
                         2.874598526325
                       </div>
@@ -329,12 +325,12 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                       class="mantine-Stack-root mantine-1kb6t4k"
                     >
                       <div
-                        class="mantine-Text-root mantine-ywyx71"
+                        class="mantine-Text-root mantine-xtp7ze"
                       >
                         Locked
                       </div>
                       <div
-                        class="mantine-Text-root mantine-1lh77dt"
+                        class="mantine-Text-root mantine-pxv98s"
                       >
                         0.854975624859
                       </div>
@@ -343,7 +339,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                 </div>
               </div>
             </div>
-          </div>
+          </button>
         </div>
       </div>
     </nav>
