@@ -14,11 +14,11 @@
 //  limitations under the License.
 // =============================================================================
 
-import { FormattedMessage } from "react-intl";
-import { Box, Space, Stack, Text } from "@mantine/core";
+import { Box, Space, Stack } from "@mantine/core";
 import { LangKeys } from "@constants/lang/LangKeys";
 import { CenteredLayout } from "@templates/CenteredLayout";
 import { ConnectionProgress } from "@atoms/ConnectionProgress";
+import { Heading } from "@atoms/Typography";
 import Logo from "@assets/logo.svg";
 
 export function Home() {
@@ -27,12 +27,13 @@ export function Home() {
       <Stack align="center" justify="center" sx={{ flex: 1 }}>
         <Stack>
           <Box component="img" src={Logo} alt="Haveno" />
-          <Text size="lg">
-            <FormattedMessage
-              id={LangKeys.AppHeading2}
-              defaultMessage="Monero based decentralized exchange"
-            />
-          </Text>
+          <Heading
+            order={2}
+            stringId={LangKeys.AppHeading2}
+            sx={{ fontWeight: 500 }}
+          >
+            Monero based decentralized exchange
+          </Heading>
         </Stack>
         <Space h="lg" />
         <ConnectionProgress />

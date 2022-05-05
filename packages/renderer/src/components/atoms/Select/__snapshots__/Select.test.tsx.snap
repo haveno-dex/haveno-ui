@@ -1,0 +1,65 @@
+// Vitest Snapshot v1
+
+exports[`atoms::Select > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Select-root mantine-18udhi"
+  >
+    <label
+      class="mantine-Select-label mantine-7802ha"
+      for="select"
+      id="select-label"
+    >
+      Select your favorite framework
+    </label>
+    <div
+      aria-controls="select"
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-owns="select-items"
+      role="combobox"
+      tabindex="-1"
+    >
+      <input
+        defaultvalue=""
+        type="hidden"
+      />
+      <div
+        class="mantine-Select-wrapper mantine-12sbrde"
+      >
+        <input
+          aria-autocomplete="list"
+          aria-invalid="false"
+          autocomplete="nope"
+          class="mantine-Select-defaultVariant mantine-Select-input mantine-93d3e4"
+          data-mantine-stop-propagation="false"
+          defaultvalue=""
+          id="select"
+          placeholder="Pick one"
+          readonly=""
+          type="text"
+        />
+        <div
+          class="mantine-Select-rightSection mantine-14dm59e"
+        >
+          <svg
+            class="mantine-18du5gu"
+            fill="none"
+            height="1em"
+            viewBox="0 0 7 4"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M2.91916 3.69319C3.23963 4.04927 3.76166 4.04657 4.07971 3.69319L6.82329 0.644746C7.14377 0.288661 7.01636 0 6.53811 0H0.460749C-0.0172283 0 -0.14248 0.291357 0.17557 0.644746L2.91916 3.69319Z"
+              fill="#111111"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

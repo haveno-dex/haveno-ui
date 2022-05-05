@@ -15,29 +15,30 @@
 // =============================================================================
 
 import type { FC } from "react";
-import { Box, createStyles, Group } from "@mantine/core";
-import { Sidebar } from "@organisms/Sidebar";
+import { ReactComponent as BtcLogo } from "@assets/btc.svg";
+import { ReactComponent as EthLogo } from "@assets/eth.svg";
+import { ReactComponent as EurLogo } from "@assets/eur.svg";
+import type { SupportedCurrencies } from "./_types";
 
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
-  const { classes } = useStyles();
-  return (
-    <Group className={classes.container} spacing={0}>
-      <Sidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
-  );
+export const WIDTH = "17rem";
+export const HEIGHT = "7.25rem";
+
+interface CurrencyDetails {
+  Logo: FC<any>; // eslint-disable-line @typescript-eslint/no-explicit-any
+  name: string;
+}
+
+export const CurrencyLogos: Record<SupportedCurrencies, CurrencyDetails> = {
+  BTC: {
+    Logo: BtcLogo,
+    name: "Bitcoin",
+  },
+  ETH: {
+    Logo: EthLogo,
+    name: "Ethereum",
+  },
+  EUR: {
+    Logo: EurLogo,
+    name: "Euro",
+  },
 };
-
-const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
-  },
-  contentArea: {
-    background: theme.colors.gray[0],
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
-  },
-}));

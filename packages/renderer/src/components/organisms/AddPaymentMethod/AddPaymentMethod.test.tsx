@@ -14,30 +14,13 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
-import { Box, createStyles, Group } from "@mantine/core";
-import { Sidebar } from "@organisms/Sidebar";
+import { describe, expect, it } from "vitest";
+import { render } from "@testing-library/react";
+import { AddPaymentMethod } from ".";
 
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
-  const { classes } = useStyles();
-  return (
-    <Group className={classes.container} spacing={0}>
-      <Sidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
-  );
-};
-
-const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
-  },
-  contentArea: {
-    background: theme.colors.gray[0],
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
-  },
-}));
+describe("organisms::AddPaymentMethod", () => {
+  it("renders without exploding", () => {
+    const { asFragment } = render(<AddPaymentMethod />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+});

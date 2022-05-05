@@ -14,20 +14,17 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Box, createStyles, keyframes, Stack, Text } from "@mantine/core";
-import { FormattedMessage } from "react-intl";
+import { Box, createStyles, keyframes, Stack } from "@mantine/core";
 import { LangKeys } from "@constants/lang/LangKeys";
+import { BodyText } from "@atoms/Typography";
 
 export function ConnectionProgress() {
   const { classes } = useStyles();
   return (
     <Stack align="center" justify="center">
-      <Text size="sm">
-        <FormattedMessage
-          id={LangKeys.ConnectingToNetwork}
-          defaultMessage="Connecting to Monero Network"
-        />
-      </Text>
+      <BodyText size="lg" stringId={LangKeys.ConnectingToNetwork}>
+        Connecting to Monero Network
+      </BodyText>
       <Box className={classes.container}>
         <Box className={classes.bar} />
       </Box>

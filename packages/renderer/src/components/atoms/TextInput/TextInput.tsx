@@ -14,30 +14,29 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
-import { Box, createStyles, Group } from "@mantine/core";
-import { Sidebar } from "@organisms/Sidebar";
+import type { TextInputProps as MTextInputProps } from "@mantine/core";
+import { createStyles, TextInput as MTextInput } from "@mantine/core";
 
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
+interface TextInputProps extends MTextInputProps {
+  id: string;
+}
+
+export function TextInput(props: TextInputProps) {
+  const { id, ...rest } = props;
   const { classes } = useStyles();
-  return (
-    <Group className={classes.container} spacing={0}>
-      <Sidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
-  );
-};
+  return <MTextInput classNames={classes} id={id} {...rest} />;
+}
 
 const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
+  label: {
+    fontSize: "0.875rem",
+    fontWeight: 600,
+    marginBottom: theme.spacing.sm,
   },
-  contentArea: {
-    background: theme.colors.gray[0],
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
+  input: {
+    fontSize: "0.875rem",
+    fontWeight: 700,
+    height: "3rem",
+    padding: "1rem",
   },
 }));

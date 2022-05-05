@@ -1,0 +1,199 @@
+// Vitest Snapshot v1
+
+exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Stack-root mantine-1kgx180"
+  >
+    <form>
+      <div
+        class="mantine-Stack-root mantine-1i7neaa"
+      >
+        <div
+          class="mantine-Select-root mantine-18udhi"
+        >
+          <label
+            class="mantine-Select-label mantine-7802ha"
+            for="currency"
+            id="currency-label"
+          >
+            Select the currency for your new payment account
+          </label>
+          <div
+            aria-controls="currency"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-owns="currency-items"
+            role="combobox"
+            tabindex="-1"
+          >
+            <input
+              defaultvalue=""
+              type="hidden"
+            />
+            <div
+              class="mantine-Select-wrapper mantine-12sbrde"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-invalid="false"
+                autocomplete="nope"
+                class="mantine-Select-defaultVariant mantine-Select-input mantine-93d3e4"
+                data-mantine-stop-propagation="false"
+                defaultvalue=""
+                id="currency"
+                placeholder="Pick one"
+                readonly=""
+                type="text"
+              />
+              <div
+                class="mantine-Select-rightSection mantine-14dm59e"
+              >
+                <svg
+                  class="mantine-18du5gu"
+                  fill="none"
+                  height="1em"
+                  viewBox="0 0 7 4"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M2.91916 3.69319C3.23963 4.04927 3.76166 4.04657 4.07971 3.69319L6.82329 0.644746C7.14377 0.288661 7.01636 0 6.53811 0H0.460749C-0.0172283 0 -0.14248 0.291357 0.17557 0.644746L2.91916 3.69319Z"
+                    fill="#111111"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="mantine-1avyp1d"
+          style="box-sizing: border-box; display: none; height: 0px; overflow: hidden;"
+        >
+          <div
+            style="opacity: 0; transition: opacity 200ms ease;"
+          >
+            <div
+              class="mantine-Select-root mantine-18udhi"
+            >
+              <label
+                class="mantine-Select-label mantine-7802ha"
+                for="paymentMethod"
+                id="paymentMethod-label"
+              >
+                Select your preferred payment method
+              </label>
+              <div
+                aria-controls="paymentMethod"
+                aria-expanded="false"
+                aria-haspopup="listbox"
+                aria-owns="paymentMethod-items"
+                role="combobox"
+                tabindex="-1"
+              >
+                <input
+                  defaultvalue=""
+                  type="hidden"
+                />
+                <div
+                  class="mantine-Select-wrapper mantine-12sbrde"
+                >
+                  <input
+                    aria-autocomplete="list"
+                    aria-invalid="false"
+                    autocomplete="nope"
+                    class="mantine-Select-defaultVariant mantine-Select-input mantine-16ko5f2"
+                    data-mantine-stop-propagation="false"
+                    defaultvalue=""
+                    id="paymentMethod"
+                    placeholder="Pick one"
+                    type="text"
+                  />
+                  <div
+                    class="mantine-Select-rightSection mantine-14dm59e"
+                  >
+                    <svg
+                      class="mantine-18du5gu"
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 7 4"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M2.91916 3.69319C3.23963 4.04927 3.76166 4.04657 4.07971 3.69319L6.82329 0.644746C7.14377 0.288661 7.01636 0 6.53811 0H0.460749C-0.0172283 0 -0.14248 0.291357 0.17557 0.644746L2.91916 3.69319Z"
+                        fill="#111111"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="mantine-1avyp1d"
+          style="box-sizing: border-box; display: none; height: 0px; overflow: hidden;"
+        >
+          <div
+            style="opacity: 0; transition: opacity 200ms ease;"
+          >
+            <div
+              class="mantine-TextInput-root mantine-18udhi"
+            >
+              <label
+                class="mantine-TextInput-label mantine-7802ha"
+                for="accountNumber"
+                id="accountNumber-label"
+              >
+                Account Number
+              </label>
+              <div
+                class="mantine-TextInput-wrapper mantine-12sbrde"
+              >
+                <input
+                  aria-invalid="false"
+                  class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+                  defaultvalue=""
+                  id="accountNumber"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mantine-Group-root mantine-mk7hdv"
+        >
+          <button
+            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1i7r9hr"
+            type="submit"
+          >
+            <div
+              class="mantine-3xbgk5 mantine-Button-inner"
+            >
+              <span
+                class="mantine-qo1k2 mantine-Button-label"
+              >
+                Save
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </form>
+    <div
+      class="mantine-1eabysl"
+    />
+    <div
+      class="mantine-Stack-root mantine-lfk3cq"
+    />
+  </div>
+</DocumentFragment>
+`;

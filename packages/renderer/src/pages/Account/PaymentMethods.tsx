@@ -14,30 +14,19 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
-import { Box, createStyles, Group } from "@mantine/core";
-import { Sidebar } from "@organisms/Sidebar";
+import { useNavigate } from "react-router-dom";
+import { PaymentMethodList } from "@organisms/PaymentMethodList";
+import { NavbarLayout } from "@templates/NavbarLayout";
+import { ROUTES } from "@src/Routes";
 
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
-  const { classes } = useStyles();
+export function PaymentMethods() {
+  const navigate = useNavigate();
+
   return (
-    <Group className={classes.container} spacing={0}>
-      <Sidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
+    <NavbarLayout>
+      <PaymentMethodList
+        onAdd={() => navigate(ROUTES.AccountAddPaymentMethod)}
+      />
+    </NavbarLayout>
   );
-};
-
-const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
-  },
-  contentArea: {
-    background: theme.colors.gray[0],
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
-  },
-}));
+}

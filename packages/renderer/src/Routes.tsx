@@ -17,6 +17,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Home, Welcome } from "@pages/Onboarding";
 import { Wallet } from "@pages/Wallet";
+import { PaymentMethods, AddPaymentMethod } from "@pages/Account";
 
 export const ROUTES = {
   Home: "/",
@@ -24,6 +25,8 @@ export const ROUTES = {
   RestoreBackup: "/onboarding/restore-backup",
   SetupAccount: "/onboarding/setup",
   Wallet: "/wallet",
+  AccountPaymentMethods: "/account/payment-methods",
+  AccountAddPaymentMethod: "/account/payment-methods/add",
 };
 
 export function AppRoutes() {
@@ -32,6 +35,11 @@ export function AppRoutes() {
       <Route path={ROUTES.Home} element={<Home />} />
       <Route path={ROUTES.Welcome} element={<Welcome />} />
       <Route path={ROUTES.Wallet} element={<Wallet />} />
+      <Route path={ROUTES.AccountPaymentMethods} element={<PaymentMethods />} />
+      <Route
+        path={ROUTES.AccountAddPaymentMethod}
+        element={<AddPaymentMethod />}
+      />
     </Routes>
   );
 }

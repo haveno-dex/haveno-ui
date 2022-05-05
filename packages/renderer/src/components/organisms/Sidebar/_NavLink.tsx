@@ -34,7 +34,6 @@ export function NavLink({ icon, isActive = false, label }: NavLinkProps) {
           color="gray"
           size="xs"
           transform="uppercase"
-          weight={700}
         >
           {label}
         </Text>
@@ -81,7 +80,8 @@ const useStyles = createStyles<string, { isActive: boolean }>(
         theme.colorScheme === "dark"
           ? theme.colors.dark[6]
           : theme.colors.dark[8],
-
+      fontSize: "0.6875rem",
+      fontWeight: 700,
       transition: "opacity 0.2s",
     },
   })

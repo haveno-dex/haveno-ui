@@ -14,30 +14,42 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
-import { Box, createStyles, Group } from "@mantine/core";
-import { Sidebar } from "@organisms/Sidebar";
+import { createStyles, UnstyledButton } from "@mantine/core";
+import { ReactComponent as AddIcon } from "@assets/circle-plus.svg";
+import { HEIGHT, WIDTH } from "./_constants";
 
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
+interface AddCardProps {
+  onClick: () => void;
+}
+
+export function AddPaymentMethodButton({ onClick }: AddCardProps) {
   const { classes } = useStyles();
+
   return (
-    <Group className={classes.container} spacing={0}>
-      <Sidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
+    <UnstyledButton className={classes.card} onClick={onClick}>
+      <AddIcon />
+    </UnstyledButton>
   );
-};
+}
 
 const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
-  },
-  contentArea: {
-    background: theme.colors.gray[0],
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
+  card: {
+    background: theme.colors.gray[2],
+    borderRadius: "0.625rem",
+    display: "grid",
+    height: HEIGHT,
+    opacity: 0.75,
+    placeContent: "center",
+    transition: "opacity 0.2s",
+    width: WIDTH,
+
+    "&:hover": {
+      opacity: 1,
+    },
+
+    "& svg": {
+      height: "1.75rem",
+      width: "1.75rem",
+    },
   },
 }));

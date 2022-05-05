@@ -14,30 +14,24 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
-import { Box, createStyles, Group } from "@mantine/core";
-import { Sidebar } from "@organisms/Sidebar";
+import { Stack } from "@mantine/core";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { BodyText } from ".";
 
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
-  const { classes } = useStyles();
+export default {
+  title: "atoms/Typography/ BodyText",
+  component: BodyText,
+} as ComponentMeta<typeof BodyText>;
+
+const Template: ComponentStory<typeof BodyText> = (args) => {
   return (
-    <Group className={classes.container} spacing={0}>
-      <Sidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
+    <Stack>
+      <BodyText {...args}>Body Text</BodyText>
+    </Stack>
   );
 };
 
-const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
-  },
-  contentArea: {
-    background: theme.colors.gray[0],
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
-  },
-}));
+export const Default = Template.bind({});
+Default.args = {
+  heavy: false,
+};

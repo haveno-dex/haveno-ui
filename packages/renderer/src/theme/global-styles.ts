@@ -14,14 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
+import type { CSSObject } from "@mantine/core";
 import InterFont from "@assets/fonts/Inter-Variable.ttf";
 
-export const globalStyles = {
+export const globalStyles: CSSObject = {
   "@font-face": {
     fontFamily: "Inter",
     src: `url('${InterFont}')`,
     fontWeight: "100 800",
     fontStyle: "normal italic",
+  },
+  "*, *::before, *::after": {
+    boxSizing: "border-box",
   },
   body: {
     margin: 0,

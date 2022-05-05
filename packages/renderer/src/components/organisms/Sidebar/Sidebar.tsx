@@ -24,7 +24,7 @@ export function Sidebar() {
   const { classes } = useStyles();
   return (
     <Stack className={classes.container}>
-      <Navbar height="100%" p={0} width={{ base: WIDTH }}>
+      <Navbar height="100%" p={0} pl="sm" width={{ base: WIDTH }}>
         <Navbar.Section>
           <Box component={Logo} className={classes.logo} />
         </Navbar.Section>

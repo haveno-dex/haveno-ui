@@ -1,0 +1,28 @@
+// Vitest Snapshot v1
+
+exports[`atoms::TextInput > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-TextInput-root mantine-18udhi"
+  >
+    <label
+      class="mantine-TextInput-label mantine-7802ha"
+      for="textfield"
+      id="textfield-label"
+    >
+      Email
+    </label>
+    <div
+      class="mantine-TextInput-wrapper mantine-12sbrde"
+    >
+      <input
+        aria-invalid="false"
+        class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+        id="textfield"
+        placeholder="johndoe@gmail.com"
+        type="email"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

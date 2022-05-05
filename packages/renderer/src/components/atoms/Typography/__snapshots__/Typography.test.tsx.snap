@@ -1,0 +1,71 @@
+// Vitest Snapshot v1
+
+exports[`atoms::Typography > ::BodyText > renders heavy variant exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Text-root mantine-119fjqf"
+  >
+    body text
+  </div>
+</DocumentFragment>
+`;
+
+exports[`atoms::Typography > ::BodyText > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Text-root mantine-1q69ff6"
+  >
+    body text
+  </div>
+</DocumentFragment>
+`;
+
+exports[`atoms::Typography > ::Heading > renders h1 1`] = `
+<DocumentFragment>
+  <h1
+    class="mantine-Title-root mantine-xz2ygd"
+  >
+    heading text
+  </h1>
+</DocumentFragment>
+`;
+
+exports[`atoms::Typography > ::Heading > renders h1 by default 1`] = `
+<DocumentFragment>
+  <h1
+    class="mantine-Title-root mantine-xz2ygd"
+  >
+    heading text
+  </h1>
+</DocumentFragment>
+`;
+
+exports[`atoms::Typography > ::Heading > renders h2 1`] = `
+<DocumentFragment>
+  <h2
+    class="mantine-Title-root mantine-1dbhwd4"
+  >
+    heading text
+  </h2>
+</DocumentFragment>
+`;
+
+exports[`atoms::Typography > ::InfoText > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Text-root mantine-5q0bln"
+  >
+    Info text
+  </div>
+</DocumentFragment>
+`;
+
+exports[`atoms::Typography > ::LabelText > renders without exploding 1`] = `
+<DocumentFragment>
+  <label
+    class="mantine-Text-root mantine-12ze1td"
+  >
+    Label text
+  </label>
+</DocumentFragment>
+`;

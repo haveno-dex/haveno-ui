@@ -14,11 +14,11 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack, Space, Text, Title, Container, Group } from "@mantine/core";
-import { FormattedMessage } from "react-intl";
+import { Stack, Space, Container, Group } from "@mantine/core";
 import { LangKeys } from "@constants/lang/LangKeys";
-import { CenteredLayout } from "@src/components/templates/CenteredLayout";
+import { CenteredLayout } from "@templates/CenteredLayout";
 import { Button } from "@atoms/Buttons";
+import { BodyText, Heading } from "@atoms/Typography";
 import { CONTENT_MAX_WIDTH } from "./_constants";
 
 export function Welcome() {
@@ -27,17 +27,15 @@ export function Welcome() {
       <Stack align="center" justify="center" sx={{ flex: 1 }}>
         <Stack>
           <Container size={CONTENT_MAX_WIDTH}>
-            <Title order={1}>
-              <FormattedMessage
-                id={LangKeys.WelcomeToHaveno}
-                defaultMessage="Welcome to Haveno. The world’s first Monero based decentralised exchange."
-              />
-            </Title>
+            <Heading order={1} stringId={LangKeys.WelcomeToHaveno}>
+              Welcome to Haveno. The world&apos;s first Monero based
+              decentralised exchange.
+            </Heading>
           </Container>
           <Container size={CONTENT_MAX_WIDTH}>
-            <Text size="md">
-              Before you can use Haveno, we’re going to set up your account.{" "}
-            </Text>
+            <BodyText size="lg">
+              Before you can use Haveno, we&apos;re going to set up your account
+            </BodyText>
           </Container>
         </Stack>
         <Space h="lg" />
