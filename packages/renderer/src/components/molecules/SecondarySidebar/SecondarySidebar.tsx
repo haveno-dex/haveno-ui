@@ -14,7 +14,7 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack, Navbar } from "@mantine/core";
+import { Stack, Navbar, createStyles } from "@mantine/core";
 
 interface SecondarySidebarProps {
   children: Array<JSX.Element>;
@@ -26,9 +26,18 @@ interface SecondarySidebarProps {
  * @returns {JSX.Element}
  */
 export function SecondarySidebar({ children }: SecondarySidebarProps) {
+  const { classes } = useStyles();
+
   return (
     <Stack>
-      <Navbar>{children}</Navbar>
+      <Navbar className={classes.navbar}>{children}</Navbar>
     </Stack>
   );
 }
+
+const useStyles = createStyles<string>(() => ({
+  navbar: {
+    background: "transparent",
+    border: 0,
+  },
+}));

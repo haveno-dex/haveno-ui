@@ -14,16 +14,21 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum LangKeys {
-  AppTitle = "app.title",
-  AppHeading2 = "app.heading2",
-  Header = "app.header",
-  ConnectingToNetwork = "app.connectingToNetwork",
-  WelcomeToHaveno = "app.welcomeToHaveno",
-  AccountTitle = "account.title",
-  AccountSidebarPaymentAccounts = "account.sidebar.paymentAccounts",
-  AccountSidebarSecurity = "account.sidebar.security",
-  AccountSidebarWallet = "account.sidebar.wallet",
-  AccountSidebarBackup = "account.sidebar.backup",
-  AccountSidebarNodeSettings = "account.sidebar.nodeSettings",
-}
+import { describe, expect, it } from "vitest";
+import { render } from "@testing-library/react";
+import { Routes, Route } from "react-router-dom";
+import { AppProviders } from "@atoms/AppProviders";
+import { AccountSidebar } from "./AccountSidebar";
+
+describe("molecules::AccountSidebar", () => {
+  it("renders without exploding", () => {
+    const { asFragment } = render(
+      <AppProviders>
+        <Routes>
+          <Route path={"/"} element={<AccountSidebar />} />
+        </Routes>
+      </AppProviders>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+});

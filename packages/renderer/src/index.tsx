@@ -16,17 +16,14 @@
 
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-import { HashRouter } from "react-router-dom";
 import { AppRoutes } from "./Routes";
 import { AppProviders } from "@atoms/AppProviders";
 
 ReactDOM.render(
-  <HashRouter>
-    <StrictMode>
-      <AppProviders>
-        <AppRoutes />
-      </AppProviders>
-    </StrictMode>
-  </HashRouter>,
+  <StrictMode>
+    <AppProviders>
+      <AppRoutes />
+    </AppProviders>
+  </StrictMode>,
   document.getElementById("app")
 );

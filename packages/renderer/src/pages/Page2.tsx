@@ -17,7 +17,7 @@
 import type { FormEvent } from "react";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ROUTES } from "@src/Routes";
+import { ROUTES } from "@constants/routes";
 
 export function Page2() {
   const txtUserRef = useRef<HTMLInputElement>(null);

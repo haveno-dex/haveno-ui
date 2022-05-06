@@ -14,16 +14,27 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum LangKeys {
-  AppTitle = "app.title",
-  AppHeading2 = "app.heading2",
-  Header = "app.header",
-  ConnectingToNetwork = "app.connectingToNetwork",
-  WelcomeToHaveno = "app.welcomeToHaveno",
-  AccountTitle = "account.title",
-  AccountSidebarPaymentAccounts = "account.sidebar.paymentAccounts",
-  AccountSidebarSecurity = "account.sidebar.security",
-  AccountSidebarWallet = "account.sidebar.wallet",
-  AccountSidebarBackup = "account.sidebar.backup",
-  AccountSidebarNodeSettings = "account.sidebar.nodeSettings",
+import { useNavigate } from "react-router-dom";
+import { SecondarySidebarItem } from "@molecules/SecondarySidebar";
+import { useNavLinkActive } from "@src/hooks/useNavLinkActive";
+
+interface AccountSidebarItemProps {
+  label: string;
+  route: string;
+}
+
+export function AccountSidebarItem({ label, route }: AccountSidebarItemProps) {
+  const isActive = useNavLinkActive({ to: route });
+  const navigate = useNavigate();
+
+  return (
+    <SecondarySidebarItem
+      key={label}
+      label={label}
+      isActive={isActive}
+      onClick={() => {
+        return navigate(route);
+      }}
+    />
+  );
 }

@@ -14,19 +14,45 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useNavigate } from "react-router-dom";
-import { PaymentMethodList } from "@organisms/PaymentMethodList";
+import { Group, createStyles, Box } from "@mantine/core";
 import { NavbarLayout } from "@templates/NavbarLayout";
-import { ROUTES } from "@constants/routes";
+import { AccountSidebar } from "@molecules/AccountSidebar";
 
-export function PaymentMethods() {
-  const navigate = useNavigate();
+interface AccountContentProps {
+  children: JSX.Element | JSX.Element[];
+}
+
+function AccountContent({ children }: AccountContentProps) {
+  const { classes } = useStyles();
 
   return (
+    <Group className={classes.container} spacing={0}>
+      <AccountSidebar />
+      <Box className={classes.contentArea}>{children}</Box>
+    </Group>
+  );
+}
+
+interface AccountLayoutProps {
+  children: JSX.Element | JSX.Element[];
+}
+
+export function AccountLayout({ children }: AccountLayoutProps) {
+  return (
     <NavbarLayout>
-      <PaymentMethodList
-        onAdd={() => navigate(ROUTES.AccountAddPaymentMethod)}
-      />
+      <AccountContent>{children}</AccountContent>
     </NavbarLayout>
   );
 }
+
+const useStyles = createStyles((theme) => ({
+  container: {
+    flex: 1,
+    alignItems: "stretch",
+  },
+  contentArea: {
+    display: "flex",
+    flex: 1,
+    padding: theme.spacing.sm,
+  },
+}));

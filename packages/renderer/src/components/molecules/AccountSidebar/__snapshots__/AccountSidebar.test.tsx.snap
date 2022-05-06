@@ -1,0 +1,93 @@
+// Vitest Snapshot v1
+
+exports[`molecules::AccountSidebar > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-37r7j5"
+  >
+    <h3
+      class="mantine-Title-root mantine-19bfor4"
+    >
+      Account
+    </h3>
+    <div
+      class="mantine-Stack-root mantine-lfk3cq"
+    >
+      <nav
+        class="mantine-Navbar-root mantine-vf15cs"
+      >
+        <button
+          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          type="button"
+        >
+          <div
+            class="mantine-Group-root mantine-2jlg77"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+            >
+              Payment Accounts
+            </div>
+          </div>
+        </button>
+        <button
+          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          type="button"
+        >
+          <div
+            class="mantine-Group-root mantine-2jlg77"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+            >
+              Node Settings
+            </div>
+          </div>
+        </button>
+        <button
+          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          type="button"
+        >
+          <div
+            class="mantine-Group-root mantine-2jlg77"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+            >
+              Security
+            </div>
+          </div>
+        </button>
+        <button
+          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          type="button"
+        >
+          <div
+            class="mantine-Group-root mantine-2jlg77"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+            >
+              Wallet
+            </div>
+          </div>
+        </button>
+        <button
+          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          type="button"
+        >
+          <div
+            class="mantine-Group-root mantine-2jlg77"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+            >
+              Backup
+            </div>
+          </div>
+        </button>
+      </nav>
+    </div>
+  </div>
+</DocumentFragment>
+`;

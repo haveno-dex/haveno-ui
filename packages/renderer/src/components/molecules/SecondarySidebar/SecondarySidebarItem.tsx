@@ -19,6 +19,7 @@ import { UnstyledButton, Group, Text, createStyles } from "@mantine/core";
 interface SecondarySidebarItemProps {
   isActive?: boolean;
   label: string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 /**
@@ -29,10 +30,12 @@ interface SecondarySidebarItemProps {
 export function SecondarySidebarItem({
   isActive = false,
   label,
+  onClick,
 }: SecondarySidebarItemProps) {
   const { classes } = useStyles({ isActive });
+
   return (
-    <UnstyledButton className={classes.button}>
+    <UnstyledButton className={classes.button} onClick={onClick}>
       <Group className={classes.group}>
         <Text className={classes.text}>{label}</Text>
       </Group>
@@ -56,19 +59,19 @@ const useStyles = createStyles<string, { isActive: boolean }>(
     },
     text: {
       textTransform: "uppercase",
-      fontSize: theme.fontSizes.xs,
+      fontSize: theme.fontSizes.sm,
       fontWeight: 700,
-      paddingLeft: isActive ? 20 : "0",
+      paddingLeft: isActive ? 20 : 0,
 
       "&:before": {
         content: '""',
         display: "inline-block",
-        width: isActive ? "12px" : "0",
+        width: isActive ? 12 : 0,
         height: 3,
         backgroundColor: theme.colors.blue[6],
         position: "absolute",
         top: "50%",
-        marginTop: "-1.5px",
+        marginTop: -1.5,
         left: 0,
         borderRadius: 3,
       },

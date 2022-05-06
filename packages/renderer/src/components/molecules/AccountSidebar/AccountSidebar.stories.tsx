@@ -14,16 +14,17 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum LangKeys {
-  AppTitle = "app.title",
-  AppHeading2 = "app.heading2",
-  Header = "app.header",
-  ConnectingToNetwork = "app.connectingToNetwork",
-  WelcomeToHaveno = "app.welcomeToHaveno",
-  AccountTitle = "account.title",
-  AccountSidebarPaymentAccounts = "account.sidebar.paymentAccounts",
-  AccountSidebarSecurity = "account.sidebar.security",
-  AccountSidebarWallet = "account.sidebar.wallet",
-  AccountSidebarBackup = "account.sidebar.backup",
-  AccountSidebarNodeSettings = "account.sidebar.nodeSettings",
-}
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { AccountSidebar } from "./AccountSidebar";
+
+export default {
+  title: "molecules/AccountSidebar",
+  component: AccountSidebar,
+} as ComponentMeta<typeof AccountSidebar>;
+
+const Template: ComponentStory<typeof AccountSidebar> = () => {
+  return <AccountSidebar />;
+};
+
+export const Default = Template.bind({});
+Default.args = {};

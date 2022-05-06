@@ -23,6 +23,12 @@ const LangPackES: { [key in LangKeys]: string } = {
   [LangKeys.Header]: "Haveno",
   [LangKeys.WelcomeToHaveno]:
     "Bienvenido a Haveno. El primer intercambio descentralizado basado en Monero del mundo.",
+  [LangKeys.AccountTitle]: "Cuenta",
+  [LangKeys.AccountSidebarPaymentAccounts]: "Cuentas de pago",
+  [LangKeys.AccountSidebarSecurity]: "Seguridad",
+  [LangKeys.AccountSidebarWallet]: "Cartera",
+  [LangKeys.AccountSidebarBackup]: "Respaldo",
+  [LangKeys.AccountSidebarNodeSettings]: "Ajustes",
 };
 
 export default LangPackES;

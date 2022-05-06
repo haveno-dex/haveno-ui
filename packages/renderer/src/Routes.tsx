@@ -17,17 +17,14 @@
 import { Routes, Route } from "react-router-dom";
 import { Home, Welcome } from "@pages/Onboarding";
 import { Wallet } from "@pages/Wallet";
-import { PaymentMethods, AddPaymentMethod } from "@pages/Account";
-
-export const ROUTES = {
-  Home: "/",
-  Welcome: "/onboarding/welcome",
-  RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
-  AccountPaymentMethods: "/account/payment-methods",
-  AccountAddPaymentMethod: "/account/payment-methods/add",
-};
+import { AccountPaymentAccounts } from "@pages/Account/AccountPaymentAccounts";
+import { AccountNodeSettings } from "@pages/Account/AccountNodeSettings";
+import { AccountBackup } from "@pages/Account/AccountBackup";
+import { AccountWallet } from "@pages/Account/AccountWallet";
+import { AccountSecurity } from "@pages/Account/AccountSecurity";
+import { ROUTES } from "@constants/routes";
+import { PaymentMethods } from "@pages/Account";
+import { AddPaymentMethod } from "@organisms/AddPaymentMethod";
 
 export function AppRoutes() {
   return (
@@ -35,11 +32,27 @@ export function AppRoutes() {
       <Route path={ROUTES.Home} element={<Home />} />
       <Route path={ROUTES.Welcome} element={<Welcome />} />
       <Route path={ROUTES.Wallet} element={<Wallet />} />
-      <Route path={ROUTES.AccountPaymentMethods} element={<PaymentMethods />} />
-      <Route
-        path={ROUTES.AccountAddPaymentMethod}
-        element={<AddPaymentMethod />}
-      />
+      <Route path={ROUTES.Account}>
+        <Route
+          path={ROUTES.AccountPaymentAccounts}
+          element={<AccountPaymentAccounts />}
+        />
+        <Route
+          path={ROUTES.AccountNodeSettings}
+          element={<AccountNodeSettings />}
+        />
+        <Route path={ROUTES.AccountBackup} element={<AccountBackup />} />
+        <Route path={ROUTES.AccountWallet} element={<AccountWallet />} />
+        <Route path={ROUTES.AccountSecurity} element={<AccountSecurity />} />
+        <Route
+          path={ROUTES.AccountPaymentMethods}
+          element={<PaymentMethods />}
+        />
+        <Route
+          path={ROUTES.AccountAddPaymentMethod}
+          element={<AddPaymentMethod />}
+        />
+      </Route>
     </Routes>
   );
 }
