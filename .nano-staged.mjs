@@ -17,8 +17,8 @@
 import { resolve, sep } from "path";
 
 export default {
-  // eslint
-  "*.{js,ts,tsx}": "eslint --cache --fix",
+  // format
+  "*.{js,ts,tsx}": ["yarn format", "yarn license", "eslint --cache --fix"],
 
   /**
    * Run typechecking if any type-sensitive files was staged
@@ -30,7 +30,7 @@ export default {
     return Array.from(
       filenames.reduce((set, filename) => {
         const pack = filename.replace(pathToPackages, "").split(sep)[0];
-        set.add(`npm run typecheck:${pack} --if-present`);
+        set.add(`yarn typecheck:${pack} --if-present`);
         return set;
       }, new Set())
     );
