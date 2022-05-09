@@ -45,13 +45,14 @@ const LangPackEN: { [key in LangKeys]: string } = {
   [LangKeys.AccountNodeStopDeamon]: "Stop deamon",
   [LangKeys.AccountSettingsAddNode]: "Add a new node",
   [LangKeys.AccountSettingsCurrent]: "Current",
-  [LangKeys.AccountSecurityFieldPassword]: "Password",
+  [LangKeys.AccountSecurityFieldPassword]: "Update account password",
   [LangKeys.AccountSecurityFieldRepeatPassword]: "Repeat new password",
   [LangKeys.AccountSecurityFieldCurrentPassword]: "Current password",
   [LangKeys.AccountSecurityFieldPasswordFormatMsg]:
-    "contain atleast {minChars} characters, one uppercase, one lowercase and one number.",
+    "Password must contain atleast {minChars} characters, one uppercase, one lowercase and one number.",
   [LangKeys.AccountSecurityFieldRepeatPasswordMatchMsg]:
-    "Password confirmation doesn't match Password.",
+    "Passwords don't match",
+  [LangKeys.CreatePassword]: "Create password",
 };
 
 export default LangPackEN;

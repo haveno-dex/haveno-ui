@@ -16,12 +16,41 @@
 
 import { ipcRenderer } from "electron";
 import { exposeInMainWorld } from "./exposeInMainWorld";
-import type { UserInfoInputType } from "./types";
+import type {
+  AccountInfoDto,
+  ChangePasswordInput,
+  IPreferences,
+  SetPasswordInput,
+} from "./types";
+import { IpcChannels } from "./types";
 
 // Export for types in contracts.d.ts
 export const store = {
-  storeUserinfo: async (data?: UserInfoInputType) =>
-    ipcRenderer.invoke("store:userinfo", data),
+  setPassword: async (data: SetPasswordInput): Promise<void> =>
+    ipcRenderer.invoke(IpcChannels.SetPassword, data),
+
+  // returns jwt on success
+  changePassword: async (data: ChangePasswordInput): Promise<string> =>
+    ipcRenderer.invoke(IpcChannels.ChangePassword, data),
+
+  // returns jwt on success; null on failure
+  verifyPassword: async (plainText: string): Promise<string | null> =>
+    ipcRenderer.invoke(IpcChannels.VerifyPassword, plainText),
+
+  verifyAuthToken: async (token: string): Promise<boolean> =>
+    ipcRenderer.invoke(IpcChannels.VerifyAuthToken, token),
+
+  setPrimaryFiat: async (value: string): Promise<void> =>
+    ipcRenderer.invoke(IpcChannels.SetPrimaryFiat, value),
+
+  getAccountInfo: async (): Promise<AccountInfoDto> =>
+    ipcRenderer.invoke(IpcChannels.GetAccountInfo),
+
+  setMoneroNode: async (value: string): Promise<void> =>
+    ipcRenderer.invoke(IpcChannels.SetMoneroNode, value),
+
+  getPreferences: async (): Promise<IPreferences> =>
+    ipcRenderer.invoke(IpcChannels.GetPreferences),
 };
 
 exposeInMainWorld("electronStore", store);

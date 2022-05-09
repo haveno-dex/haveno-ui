@@ -28,17 +28,17 @@ export function NodeSettingsSwitch() {
 
   return (
     <NodeConnectSwitch
-      initialTab={"local-node"}
+      initialTab="local-node"
       className={classes.connectSwitch}
     >
       <NodeConnectSwitch.Method
         active={true}
         current={true}
-        tabKey={"local-node"}
+        tabKey="local-node"
         label={
           <FormattedMessage
             id={LangKeys.AccountNodeSettingsLocal}
-            defaultMessage={"Local Node"}
+            defaultMessage="Local Node"
           />
         }
         icon={<ServerIcon width={32} height={62} />}
@@ -47,11 +47,11 @@ export function NodeSettingsSwitch() {
       </NodeConnectSwitch.Method>
 
       <NodeConnectSwitch.Method
-        tabKey={"remote-node"}
+        tabKey="remote-node"
         label={
           <FormattedMessage
             id={LangKeys.AccountNodeSettingsRemote}
-            defaultMessage={"Remote Node"}
+            defaultMessage="Remote Node"
           />
         }
         icon={<CloudIcon width={58} height={54} />}

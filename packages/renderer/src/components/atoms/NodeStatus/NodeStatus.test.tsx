@@ -24,11 +24,11 @@ describe("atoms::NodeStatus", () => {
     const { asFragment } = render(
       <AppProviders>
         <NodeStatus
-          title={"node.moneroworldcom:18089:active"}
+          title="node.moneroworldcom:18089:active"
           status={NodeStatusType.Active}
         />
         <NodeStatus
-          title={"node.moneroworldcom:18089:inactive"}
+          title="node.moneroworldcom:18089:inactive"
           status={NodeStatusType.Inactive}
         />
       </AppProviders>

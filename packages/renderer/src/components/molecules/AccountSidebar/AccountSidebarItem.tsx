@@ -16,7 +16,7 @@
 
 import { useNavigate } from "react-router-dom";
 import { SecondarySidebarItem } from "@molecules/SecondarySidebar";
-import { useNavLinkActive } from "@src/hooks/useNavLinkActive";
+import { useNavLinkActive } from "@src/hooks/misc/useNavLinkActive";
 
 interface AccountSidebarItemProps {
   label: string;

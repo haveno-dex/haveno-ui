@@ -30,7 +30,7 @@ const Template: ComponentStory<typeof NodeConnectSwitch> = () => {
       <NodeConnectSwitch.Method
         active={true}
         current={true}
-        tabKey={"local-node"}
+        tabKey="local-node"
         label="Local Node"
         icon={<ServerIcon width="32px" height="62px" />}
       >
@@ -38,7 +38,7 @@ const Template: ComponentStory<typeof NodeConnectSwitch> = () => {
       </NodeConnectSwitch.Method>
 
       <NodeConnectSwitch.Method
-        tabKey={"remote-node"}
+        tabKey="remote-node"
         label="Remote Node"
         icon={<CloudIcon width="58px" height="54px" />}
       >

@@ -24,9 +24,9 @@ describe("molecules::SecondarySidebar", () => {
     const { asFragment } = render(
       <ThemeProvider>
         <SecondarySidebar>
-          <SecondarySidebarItem label={"Active item"} isActive={true} />
-          <SecondarySidebarItem label={"Inactive item"} isActive={false} />
-          <SecondarySidebarItem label={"Active item"} isActive={true} />
+          <SecondarySidebarItem label="Active item" isActive={true} />
+          <SecondarySidebarItem label="Inactive item" isActive={false} />
+          <SecondarySidebarItem label="Active item" isActive={true} />
         </SecondarySidebar>
       </ThemeProvider>
     );

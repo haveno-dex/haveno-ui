@@ -62,7 +62,7 @@ export function NodeConnectSwitchMethod({
           <Box className={cx(classes.tabCurrent)}>
             <FormattedMessage
               id={LangKeys.AccountSettingsCurrent}
-              defaultMessage={"Current"}
+              defaultMessage="Current"
             />
           </Box>
         )}

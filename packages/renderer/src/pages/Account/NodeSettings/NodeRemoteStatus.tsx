@@ -24,22 +24,19 @@ export function NodeRemoteStatus() {
   return (
     <Stack>
       <NodeStatus
-        title={"node.moneroworldcom:18089"}
+        title="node.moneroworldcom:18089"
         status={NodeStatusType.Active}
       />
+      <NodeStatus title="node.xmr.pt:18081" status={NodeStatusType.Inactive} />
       <NodeStatus
-        title={"node.xmr.pt:18081"}
-        status={NodeStatusType.Inactive}
-      />
-      <NodeStatus
-        title={"node.monero.net:18081"}
+        title="node.monero.net:18081"
         status={NodeStatusType.Active}
       />
       <AddNewNodeButton />
 
-      <Group position={"right"} mt={"sm"}>
-        <Button size={"md"}>
-          <FormattedMessage id={LangKeys.Save} defaultMessage={"Save"} />
+      <Group position="right" mt="sm">
+        <Button size="md">
+          <FormattedMessage id={LangKeys.Save} defaultMessage="Save" />
         </Button>
       </Group>
     </Stack>
@@ -51,8 +48,8 @@ function AddNewNodeButton({ ...rest }) {
 
   return (
     <Button
-      variant={"subtle"}
-      color={"dark"}
+      variant="subtle"
+      color="dark"
       classNames={{
         root: classes.root,
         inner: classes.inner,
@@ -62,7 +59,7 @@ function AddNewNodeButton({ ...rest }) {
       +{" "}
       <FormattedMessage
         id={LangKeys.AccountSettingsAddNode}
-        defaultMessage={"Add a new node"}
+        defaultMessage="Add a new node"
       />
     </Button>
   );

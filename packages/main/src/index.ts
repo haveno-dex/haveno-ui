@@ -17,7 +17,7 @@
 import { app } from "electron";
 import "./security-restrictions";
 import { restoreOrCreateWindow } from "@src/mainWindow";
-import { registerStoreHandlers } from "./services/store";
+import { registerStoreHandlers } from "@src/services/store";
 
 /**
  * Prevent multiple instances

@@ -21,6 +21,7 @@ export enum LangKeys {
   ConnectingToNetwork = "app.connectingToNetwork",
   WelcomeToHaveno = "app.welcomeToHaveno",
   Save = "app.save",
+  CreatePassword = "onboarding.createPassword",
   AccountTitle = "account.title",
   AccountSidebarPaymentAccounts = "account.sidebar.paymentAccounts",
   AccountSidebarSecurity = "account.sidebar.security",

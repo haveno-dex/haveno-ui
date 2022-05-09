@@ -14,5 +14,5 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./Home";
 export * from "./Welcome";
+export * from "./CreateAccount";

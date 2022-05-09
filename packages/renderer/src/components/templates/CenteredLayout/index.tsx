@@ -20,14 +20,15 @@ import { HeaderWithLogo } from "@atoms/Header";
 
 interface CenteredLayoutProps {
   showHeader?: boolean;
+  size?: number;
 }
 
 export const CenteredLayout: FC<CenteredLayoutProps> = (props) => {
-  const { children, showHeader = false } = props;
+  const { children, showHeader = false, size } = props;
   return (
     <Stack sx={{ width: "100%" }}>
       {showHeader && <HeaderWithLogo />}
-      <Container p="sm" sx={{ display: "flex", flex: 1 }}>
+      <Container p="sm" size={size} sx={{ display: "flex", flex: 1 }}>
         {children}
       </Container>
     </Stack>

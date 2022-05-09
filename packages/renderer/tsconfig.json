@@ -16,6 +16,7 @@
       "@assets/*": ["../assets/*"],
       "@atoms/*": ["components/atoms/*"],
       "@constants/*": ["constants/*"],
+      "@hooks/*": ["hooks/*"],
       "@molecules/*": ["components/molecules/*"],
       "@organisms/*": ["components/organisms/*"],
       "@pages/*": ["pages/*"],

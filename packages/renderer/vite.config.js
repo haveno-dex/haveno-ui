@@ -36,6 +36,7 @@ const config = {
       "@assets/": join(PACKAGE_ROOT, "assets") + "/",
       "@atoms/": join(PACKAGE_ROOT, "src", "components", "atoms") + "/",
       "@constants/": join(PACKAGE_ROOT, "src", "constants") + "/",
+      "@hooks/": join(PACKAGE_ROOT, "src", "hooks") + "/",
       "@molecules/": join(PACKAGE_ROOT, "src", "components", "molecules") + "/",
       "@organisms/": join(PACKAGE_ROOT, "src", "components", "organisms") + "/",
       "@pages/": join(PACKAGE_ROOT, "src", "pages") + "/",

@@ -18,7 +18,6 @@ import { Stack, Box, createStyles } from "@mantine/core";
 import { AccountLayout } from "@templates/AccountLayout";
 import { LangKeys } from "@constants/lang";
 import { NodeSettingsSwitch } from "./NodeSettingsSwitch";
-import { WIDTH } from "./_constants";
 import { BodyText, Heading } from "@atoms/Typography";
 
 export function AccountNodeSettings() {
@@ -27,13 +26,13 @@ export function AccountNodeSettings() {
   return (
     <AccountLayout>
       <Box className={classes.content}>
-        <Stack spacing={"sm"}>
+        <Stack spacing="sm">
           <Heading stringId={LangKeys.AccountNodeSettingsTitle} order={3}>
             Your node settings
           </Heading>
           <BodyText
             stringId={LangKeys.AccountNodeSettingsDesc}
-            size={"md"}
+            size="md"
             className={classes.paragraph}
           >
             Using a local node is recommended, but does require loading the
@@ -49,7 +48,7 @@ export function AccountNodeSettings() {
 
 const useStyles = createStyles((theme) => ({
   content: {
-    maxWidth: WIDTH,
+    maxWidth: theme.other.contentWidthMd,
   },
   paragraph: {
     marginBottom: theme.spacing.xl,

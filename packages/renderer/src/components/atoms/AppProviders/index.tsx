@@ -17,6 +17,7 @@
 import type { FC } from "react";
 import { RecoilRoot } from "recoil";
 import { HashRouter } from "react-router-dom";
+import { NotificationsProvider } from "@mantine/notifications";
 import { QueryClientProvider } from "./QueryClientProvider";
 import { IntlProvider } from "./IntlProvider";
 import { ThemeProvider } from "./ThemeProvider";
@@ -26,7 +27,9 @@ export const AppProviders: FC = ({ children }) => (
     <RecoilRoot>
       <IntlProvider>
         <QueryClientProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <NotificationsProvider>{children}</NotificationsProvider>
+          </ThemeProvider>
         </QueryClientProvider>
       </IntlProvider>
     </RecoilRoot>

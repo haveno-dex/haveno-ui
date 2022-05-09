@@ -172,7 +172,7 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
           class="mantine-Group-root mantine-mk7hdv"
         >
           <button
-            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1i7r9hr"
+            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1bqp2m7"
             type="submit"
           >
             <div

@@ -36,23 +36,23 @@ export function NodeLocalForm() {
       <NodeLocalStopDeamon />
 
       <form onSubmit={form.onSubmit((values) => console.log(values))}>
-        <Stack spacing={"lg"}>
+        <Stack spacing="lg">
           <TextInput
-            id={"blockchainLocation"}
+            id="blockchainLocation"
             label={
               <FormattedMessage
                 id={LangKeys.AccountNodeFieldBlockchainLocation}
-                defaultMessage={"Blockchain location"}
+                defaultMessage="Blockchain location"
               />
             }
             {...form.getInputProps("blockchainLocation")}
           />
           <TextInput
-            id={"deamonFlags"}
+            id="deamonFlags"
             label={
               <FormattedMessage
                 id={LangKeys.AccountNodeFieldDeamonFlags}
-                defaultMessage={"Deamon startup flags"}
+                defaultMessage="Deamon startup flags"
               />
             }
             {...form.getInputProps("startupFlags")}
@@ -60,11 +60,11 @@ export function NodeLocalForm() {
           <Grid>
             <Grid.Col span={9}>
               <TextInput
-                id={"deamonAddress"}
+                id="deamonAddress"
                 label={
                   <FormattedMessage
                     id={LangKeys.AccountNodeFieldDeamonAddress}
-                    defaultMessage={"Deamon Address"}
+                    defaultMessage="Deamon Address"
                   />
                 }
                 {...form.getInputProps("deamonAddress")}
@@ -72,11 +72,11 @@ export function NodeLocalForm() {
             </Grid.Col>
             <Grid.Col span={3}>
               <TextInput
-                id={"port"}
+                id="port"
                 label={
                   <FormattedMessage
                     id={LangKeys.AccountNodeFieldPort}
-                    defaultMessage={"Port"}
+                    defaultMessage="Port"
                   />
                 }
                 {...form.getInputProps("port")}
@@ -94,10 +94,10 @@ function NodeLocalStopDeamon() {
 
   return (
     <div className={classes.actions}>
-      <Button flavor={"neutral"}>
+      <Button flavor="neutral">
         <FormattedMessage
           id={LangKeys.AccountNodeStopDeamon}
-          defaultMessage={"Stop deamon"}
+          defaultMessage="Stop deamon"
         />
       </Button>
     </div>

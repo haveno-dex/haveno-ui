@@ -27,15 +27,12 @@ const Template: ComponentStory<typeof NodeStatus> = () => {
   return (
     <Stack>
       <NodeStatus
-        title={"node.moneroworldcom:18089"}
+        title="node.moneroworldcom:18089"
         status={NodeStatusType.Active}
       />
+      <NodeStatus title="node.xmr.pt:18081" status={NodeStatusType.Inactive} />
       <NodeStatus
-        title={"node.xmr.pt:18081"}
-        status={NodeStatusType.Inactive}
-      />
-      <NodeStatus
-        title={"node.monero.net:18081"}
+        title="node.monero.net:18081"
         status={NodeStatusType.Active}
       />
     </Stack>

@@ -15,19 +15,18 @@
 // =============================================================================
 
 export const ROUTES = {
-  Home: "/",
+  Home: "",
+  HomeAlias: "/",
+  Login: "/login",
   Welcome: "/onboarding/welcome",
+  CreateAccount: "/onboarding/create-account",
   RestoreBackup: "/onboarding/restore-backup",
-  SetupAccount: "/onboarding/setup",
-  Wallet: "/wallet",
 
-  // Account routes.
-  Account: "/account",
+  // Account routes
   AccountPaymentAccounts: "/account/payment-accounts",
+  AccountAddPaymentAccount: "/account/payment-accounts/add",
   AccountNodeSettings: "/account/node-settings",
   AccountBackup: "/account/backup",
   AccountWallet: "/account/wallet",
   AccountSecurity: "/account/security",
-  AccountPaymentMethods: "/account/payment-methods",
-  AccountAddPaymentMethod: "/account/payment-methods/add",
 };

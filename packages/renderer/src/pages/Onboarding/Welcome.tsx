@@ -20,6 +20,8 @@ import { CenteredLayout } from "@templates/CenteredLayout";
 import { Button } from "@atoms/Buttons";
 import { BodyText, Heading } from "@atoms/Typography";
 import { CONTENT_MAX_WIDTH } from "./_constants";
+import { Link } from "react-router-dom";
+import { ROUTES } from "@constants/routes";
 
 export function Welcome() {
   return (
@@ -40,8 +42,12 @@ export function Welcome() {
         </Stack>
         <Space h="lg" />
         <Group position="left" sx={{ width: CONTENT_MAX_WIDTH }}>
-          <Button>Setup Account</Button>
-          <Button flavor="neutral">Upload Backup</Button>
+          <Button component={Link} to={ROUTES.CreateAccount}>
+            Setup Account
+          </Button>
+          <Button flavor="neutral" component={Link} to={ROUTES.RestoreBackup}>
+            Upload Backup
+          </Button>
         </Group>
       </Stack>
     </CenteredLayout>

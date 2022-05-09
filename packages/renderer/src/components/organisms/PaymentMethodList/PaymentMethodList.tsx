@@ -20,12 +20,15 @@ import {
   AddPaymentMethodButton,
   PaymentMethodCard,
 } from "@molecules/PaymentMethodCard";
+import { usePaymentAccounts } from "@hooks/haveno/usePaymentAccounts";
 
 interface PaymentMethodsProps {
   onAdd: () => void;
 }
 
 export function PaymentMethodList({ onAdd }: PaymentMethodsProps) {
+  const { data: paymentAccounts, isLoading } = usePaymentAccounts();
+
   return (
     <Stack spacing="lg">
       <Stack sx={{ maxWidth: "32rem" }}>
@@ -37,15 +40,15 @@ export function PaymentMethodList({ onAdd }: PaymentMethodsProps) {
         </BodyText>
       </Stack>
       <Space h="xl" />
-      <Group spacing="xl">
-        <PaymentMethodCard
-          accountId="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2"
-          currency="BTC"
-        />
-        <PaymentMethodCard accountId="tqTFn5Au4m4GFg7x" currency="ETH" />
-        <PaymentMethodCard accountId="112233" currency="EUR" />
-        <AddPaymentMethodButton onClick={onAdd} />
-      </Group>
+      {isLoading && <BodyText>Loading accounts ...</BodyText>}
+      {!isLoading && paymentAccounts?.length && (
+        <Group spacing="xl">
+          {paymentAccounts.map((account) => (
+            <PaymentMethodCard key={account.getId()} data={account} />
+          ))}
+          <AddPaymentMethodButton onClick={onAdd} />
+        </Group>
+      )}
     </Stack>
   );
 }

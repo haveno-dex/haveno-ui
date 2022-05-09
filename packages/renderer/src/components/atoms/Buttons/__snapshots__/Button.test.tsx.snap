@@ -1,0 +1,77 @@
+// Vitest Snapshot v1
+
+exports[`atoms::Buttons > renders error button 1`] = `
+<DocumentFragment>
+  <button
+    class="mantine-Button-filled mantine-Button-root mantine-17e9v6f"
+    type="button"
+  >
+    <div
+      class="mantine-3xbgk5 mantine-Button-inner"
+    >
+      <span
+        class="mantine-qo1k2 mantine-Button-label"
+      >
+        Error
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`atoms::Buttons > renders neutral button 1`] = `
+<DocumentFragment>
+  <button
+    class="mantine-Button-filled mantine-Button-root mantine-13v2nwn"
+    type="button"
+  >
+    <div
+      class="mantine-3xbgk5 mantine-Button-inner"
+    >
+      <span
+        class="mantine-qo1k2 mantine-Button-label"
+      >
+        Neutral
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`atoms::Buttons > renders primary button by default 1`] = `
+<DocumentFragment>
+  <button
+    class="mantine-Button-filled mantine-Button-root mantine-pfssi"
+    type="button"
+  >
+    <div
+      class="mantine-3xbgk5 mantine-Button-inner"
+    >
+      <span
+        class="mantine-qo1k2 mantine-Button-label"
+      >
+        Primary
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`atoms::Buttons > renders success button 1`] = `
+<DocumentFragment>
+  <button
+    class="mantine-Button-filled mantine-Button-root mantine-1phtj0c"
+    type="button"
+  >
+    <div
+      class="mantine-3xbgk5 mantine-Button-inner"
+    >
+      <span
+        class="mantine-qo1k2 mantine-Button-label"
+      >
+        Success
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;

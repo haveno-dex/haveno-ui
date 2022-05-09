@@ -16,49 +16,51 @@
 
 import type { Schema } from "electron-store";
 
-export enum StoreKeys {
-  UserInfo = "UserInfo",
-  Permissions = "Permissions",
+export enum StorageKeys {
+  AccountInfo_Password = "accounInfo.password",
+  AccountInfo_PrimaryFiat = "accounInfo.primaryFiat",
+  Preferences_MoneroNode = "preferences.moneroNode",
 }
 
 // TS types for StoreSchema
 export interface IStoreSchema {
-  [StoreKeys.UserInfo]: IUserInfo;
-  [StoreKeys.Permissions]: Array<IUserPermission>;
+  [StorageKeys.AccountInfo_Password]: IAccountInfo["password"];
+  [StorageKeys.AccountInfo_PrimaryFiat]: IAccountInfo["primaryFiat"];
+  [StorageKeys.Preferences_MoneroNode]: IPreferences["moneroNode"]; // TODO: change to object {url, password}
 }
 
-export interface IUserInfo {
-  username: string;
+export interface IAccountInfo {
   password: Buffer;
+  primaryFiat: string;
 }
 
-export type UserInfoInputType = Omit<IUserInfo, "password"> & {
-  password: string;
-};
+export interface AccountInfoDto extends Omit<IAccountInfo, "password"> {
+  passwordHash: string;
+}
 
-export interface IUserPermission {
-  name: string;
+export interface IPreferences {
+  moneroNode: string;
 }
 
 // this schema is used by electron-store
 // must mirror IStoreSchema
 export const StoreSchema: Schema<IStoreSchema> = {
-  [StoreKeys.UserInfo]: {
-    type: "object",
-    required: [],
-    properties: {
-      username: { type: "string" },
-    },
+  [StorageKeys.AccountInfo_Password]: {
+    type: "string",
   },
-  [StoreKeys.Permissions]: {
-    type: "array",
-    default: [],
-    items: {
-      type: "object",
-      required: [],
-      properties: {
-        name: { type: "string" },
-      },
-    },
+  [StorageKeys.AccountInfo_PrimaryFiat]: {
+    type: "string",
+  },
+  [StorageKeys.Preferences_MoneroNode]: {
+    type: "string",
   },
 };
+
+export interface SetPasswordInput {
+  newPassword: string;
+}
+
+export interface ChangePasswordInput {
+  currentPassword: string;
+  newPassword: string;
+}

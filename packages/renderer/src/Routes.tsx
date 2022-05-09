@@ -15,44 +15,84 @@
 // =============================================================================
 
 import { Routes, Route } from "react-router-dom";
-import { Home, Welcome } from "@pages/Onboarding";
-import { Wallet } from "@pages/Wallet";
-import { AccountPaymentAccounts } from "@pages/Account/AccountPaymentAccounts";
-import { AccountNodeSettings } from "@pages/Account/NodeSettings";
-import { AccountBackup } from "@pages/Account/AccountBackup";
-import { AccountWallet } from "@pages/Account/AccountWallet";
-import { AccountSecurity } from "@pages/Account/Security";
 import { ROUTES } from "@constants/routes";
-import { PaymentMethods } from "@pages/Account";
-import { AddPaymentMethod } from "@organisms/AddPaymentMethod";
+import { ProtectedRoute } from "@atoms/ProtectedRoute";
+import { Home } from "@pages/Home";
+import { Login } from "@pages/Login";
+import { CreateAccount, Welcome } from "@pages/Onboarding";
+import {
+  AccountBackup,
+  AccountNodeSettings,
+  AccountPaymentAccounts,
+  AccountSecurity,
+  AccountWallet,
+  AddPaymentAccount,
+  PaymentMethods,
+} from "@pages/Account";
 
 export function AppRoutes() {
   return (
     <Routes>
       <Route path={ROUTES.Home} element={<Home />} />
+      <Route path={ROUTES.Login} element={<Login />} />
       <Route path={ROUTES.Welcome} element={<Welcome />} />
-      <Route path={ROUTES.Wallet} element={<Wallet />} />
-      <Route path={ROUTES.Account}>
-        <Route
-          path={ROUTES.AccountPaymentAccounts}
-          element={<AccountPaymentAccounts />}
-        />
-        <Route
-          path={ROUTES.AccountNodeSettings}
-          element={<AccountNodeSettings />}
-        />
-        <Route path={ROUTES.AccountBackup} element={<AccountBackup />} />
-        <Route path={ROUTES.AccountWallet} element={<AccountWallet />} />
-        <Route path={ROUTES.AccountSecurity} element={<AccountSecurity />} />
-        <Route
-          path={ROUTES.AccountPaymentMethods}
-          element={<PaymentMethods />}
-        />
-        <Route
-          path={ROUTES.AccountAddPaymentMethod}
-          element={<AddPaymentMethod />}
-        />
-      </Route>
+      <Route path={ROUTES.CreateAccount} element={<CreateAccount />} />
+      <Route
+        path={ROUTES.AccountPaymentAccounts}
+        element={
+          <ProtectedRoute>
+            <AccountPaymentAccounts />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path={ROUTES.AccountNodeSettings}
+        element={
+          <ProtectedRoute>
+            <AccountNodeSettings />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path={ROUTES.AccountBackup}
+        element={
+          <ProtectedRoute>
+            <AccountBackup />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path={ROUTES.AccountWallet}
+        element={
+          <ProtectedRoute>
+            <AccountWallet />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path={ROUTES.AccountSecurity}
+        element={
+          <ProtectedRoute>
+            <AccountSecurity />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path={ROUTES.AccountPaymentAccounts}
+        element={
+          <ProtectedRoute>
+            <PaymentMethods />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path={ROUTES.AccountAddPaymentAccount}
+        element={
+          <ProtectedRoute>
+            <AddPaymentAccount />
+          </ProtectedRoute>
+        }
+      />
     </Routes>
   );
 }

@@ -30,6 +30,8 @@ interface ImportMetaEnv {
    * The value of the variable is set in scripts/watch.js and depend on packages/main/vite.config.js
    */
   readonly VITE_DEV_SERVER_URL: undefined | string;
+  readonly VITE_HAVENO_URL: undefined | string;
+  readonly VITE_HAVENO_PASSWORD: undefined | string;
 }
 
 interface ImportMeta {

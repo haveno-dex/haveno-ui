@@ -25,7 +25,7 @@ describe("molecules::AccountSidebar", () => {
     const { asFragment } = render(
       <AppProviders>
         <Routes>
-          <Route path={"/"} element={<AccountSidebar />} />
+          <Route path="/" element={<AccountSidebar />} />
         </Routes>
       </AppProviders>
     );

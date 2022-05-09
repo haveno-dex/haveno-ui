@@ -53,6 +53,7 @@ const LangPackES: { [key in LangKeys]: string } = {
     "contener al menos {minChars} caracteres, una mayúscula, una minúscula y un número.",
   [LangKeys.AccountSecurityFieldRepeatPasswordMatchMsg]:
     "La confirmación de la contraseña no coincide con la contraseña.",
+  [LangKeys.CreatePassword]: "Crear contraseña",
 };
 
 export default LangPackES;

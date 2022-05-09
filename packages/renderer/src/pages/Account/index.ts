@@ -14,5 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./AddPaymentMethod";
+export * from "./AddPaymentAccount";
 export * from "./PaymentMethods";
+export * from "./AccountBackup";
+export * from "./NodeSettings";
+export * from "./AccountPaymentAccounts";
+export * from "./AccountSecurity";
+export * from "./AccountWallet";

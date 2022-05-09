@@ -17,44 +17,116 @@
 import { ipcMain, safeStorage } from "electron";
 import Store from "electron-store";
 import type {
+  AccountInfoDto,
+  ChangePasswordInput,
+  IPreferences,
   IStoreSchema,
-  IUserInfo,
-  UserInfoInputType,
-  IUserPermission,
+  SetPasswordInput,
 } from "@src/types";
-import { StoreKeys, StoreSchema } from "@src/types";
+import { StorageKeys } from "@src/types";
+import { IpcChannels, StoreSchema } from "@src/types";
+import {
+  createAuthToken,
+  hashPassword,
+  verifyAuthAuthToken,
+  verifyPassword,
+} from "@src/utils/password";
 
 const store = new Store<IStoreSchema>({ schema: StoreSchema });
 
 export function registerStoreHandlers() {
-  ipcMain.handle("store:userinfo", async (_, payload?: UserInfoInputType) => {
-    const prevData = store.get(StoreKeys.UserInfo);
-    // retrieve encrypted data like so:
-    // safeStorage.decryptString(Buffer.from(prevData.password));
-    if (!payload) {
-      return prevData;
+  ipcMain.handle(IpcChannels.SetPassword, async (_, data: SetPasswordInput) => {
+    const encryptedPassword = store.get(StorageKeys.AccountInfo_Password);
+    if (encryptedPassword) {
+      throw new Error("[[Can't set password]]");
     }
-    const userInfo: IUserInfo = {
-      ...payload,
-      // encrypt sensitive data before storage
-      password: safeStorage.encryptString(payload.password),
-    };
-    store.set(StoreKeys.UserInfo, {
-      ...(prevData ?? {}),
-      ...userInfo,
-    });
-    return store.get(StoreKeys.UserInfo);
+    const hash = await hashPassword(data.newPassword);
+    store.set(
+      StorageKeys.AccountInfo_Password,
+      safeStorage.encryptString(hash)
+    );
   });
 
   ipcMain.handle(
-    "store:permissions",
-    async (_, permissions?: Array<IUserPermission>) => {
-      const prevData = store.get(StoreKeys.Permissions);
-      if (!permissions) {
-        return prevData;
+    IpcChannels.ChangePassword,
+    async (_, data: ChangePasswordInput): Promise<string> => {
+      const encryptedPassword = store.get(StorageKeys.AccountInfo_Password);
+      if (!encryptedPassword) {
+        throw new Error("[[No password currently set]]");
       }
-      store.set(StoreKeys.Permissions, [...(prevData || []), ...permissions]);
-      return store.get(StoreKeys.Permissions);
+      // verify old password
+      const oldPassHash = safeStorage.decryptString(
+        Buffer.from(encryptedPassword)
+      );
+      if (!("currentPassword" in data)) {
+        throw new Error("[[Current password required]]");
+      }
+      if (!(await verifyPassword(data.currentPassword, oldPassHash))) {
+        throw new Error("[[Current password doesn't match]]");
+      }
+      const hash = await hashPassword(data.newPassword);
+      store.set(
+        StorageKeys.AccountInfo_Password,
+        safeStorage.encryptString(hash)
+      );
+      // generate and return a new authToken
+      return createAuthToken(hash);
+    }
+  );
+
+  ipcMain.handle(IpcChannels.SetPrimaryFiat, (_, value: string) => {
+    store.set(StorageKeys.AccountInfo_PrimaryFiat, value);
+  });
+
+  ipcMain.handle(IpcChannels.GetAccountInfo, (): AccountInfoDto | null => {
+    const encryptedPassword = store.get(StorageKeys.AccountInfo_Password);
+    if (!encryptedPassword) {
+      return null;
+    }
+    return {
+      passwordHash: safeStorage.decryptString(Buffer.from(encryptedPassword)),
+      primaryFiat: store.get(StorageKeys.AccountInfo_PrimaryFiat),
+    };
+  });
+
+  // returns null if password is incorrect. returns jwt if password is correct
+  ipcMain.handle(
+    IpcChannels.VerifyPassword,
+    async (_, plainText: string): Promise<string | null> => {
+      const encryptedPassword = store.get(StorageKeys.AccountInfo_Password);
+      if (!encryptedPassword) {
+        return null;
+      }
+      const hash = safeStorage.decryptString(Buffer.from(encryptedPassword));
+      if (!(await verifyPassword(plainText, hash))) {
+        return null;
+      }
+      return createAuthToken(hash);
+    }
+  );
+
+  ipcMain.handle(
+    IpcChannels.VerifyAuthToken,
+    async (_, token: string): Promise<boolean> => {
+      const encryptedPassword = store.get(StorageKeys.AccountInfo_Password);
+      if (!encryptedPassword) {
+        return false;
+      }
+      const hash = safeStorage.decryptString(Buffer.from(encryptedPassword));
+      return verifyAuthAuthToken(token, hash);
+    }
+  );
+
+  ipcMain.handle(IpcChannels.SetMoneroNode, async (_, value: string) => {
+    store.set(StorageKeys.Preferences_MoneroNode, value);
+  });
+
+  ipcMain.handle(
+    IpcChannels.GetPreferences,
+    async (): Promise<IPreferences> => {
+      return {
+        moneroNode: store.get(StorageKeys.Preferences_MoneroNode),
+      };
     }
   );
 }

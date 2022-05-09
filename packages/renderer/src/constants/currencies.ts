@@ -23,18 +23,21 @@ export const SupportedCurrencies = [
   {
     id: "BTC",
     name: "Bitcoin",
+    fiat: false,
     logo: BtcLogo,
     paymentMethods: [PaymentMethodIds.BLOCK_CHAINS_ID],
   },
   {
     id: "ETH",
     name: "Ethereum",
+    fiat: false,
     logo: EthLogo,
     paymentMethods: [PaymentMethodIds.BLOCK_CHAINS_ID],
   },
   {
     id: "EUR",
     name: "Euro",
+    fiat: true,
     logo: EurLogo,
     paymentMethods: [
       // EUR
@@ -84,6 +87,7 @@ export const SupportedCurrencies = [
   {
     id: "USD",
     name: "US Dollar",
+    fiat: true,
     logo: EurLogo,
     paymentMethods: [
       // US
