@@ -21,7 +21,7 @@ import { AccountPaymentAccounts } from "@pages/Account/AccountPaymentAccounts";
 import { AccountNodeSettings } from "@pages/Account/AccountNodeSettings";
 import { AccountBackup } from "@pages/Account/AccountBackup";
 import { AccountWallet } from "@pages/Account/AccountWallet";
-import { AccountSecurity } from "@pages/Account/AccountSecurity";
+import { AccountSecurity } from "@pages/Account/Security";
 import { ROUTES } from "@constants/routes";
 import { PaymentMethods } from "@pages/Account";
 import { AddPaymentMethod } from "@organisms/AddPaymentMethod";

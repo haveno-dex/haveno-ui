@@ -23,12 +23,23 @@ const LangPackEN: { [key in LangKeys]: string } = {
   [LangKeys.Header]: "Haveno",
   [LangKeys.WelcomeToHaveno]:
     "Welcome to Haveno. The world’s first Monero based decentralised exchange.",
+  [LangKeys.Save]: "Save",
   [LangKeys.AccountTitle]: "Account",
   [LangKeys.AccountSidebarPaymentAccounts]: "Payment Accounts",
   [LangKeys.AccountSidebarSecurity]: "Security",
   [LangKeys.AccountSidebarWallet]: "Wallet",
   [LangKeys.AccountSidebarBackup]: "Backup",
   [LangKeys.AccountSidebarNodeSettings]: "Settings",
+  [LangKeys.AccountSecurityTitle]: "Account Security",
+  [LangKeys.AccountSecurityDesc]:
+    "Haveno does not store any of your data, this happens solely locally on your device. It’s not possible to restore your password when lost. Please make sure you store a copy of it on a safe place.",
+  [LangKeys.AccountSecurityFieldPassword]: "Password",
+  [LangKeys.AccountSecurityFieldRepeatPassword]: "Repeat new password",
+  [LangKeys.AccountSecurityFieldCurrentPassword]: "Current password",
+  [LangKeys.AccountSecurityFieldPasswordFormatMsg]:
+    "contain atleast {minChars} characters, one uppercase, one lowercase and one number.",
+  [LangKeys.AccountSecurityFieldRepeatPasswordMatchMsg]:
+    "Password confirmation doesn't match Password.",
 };
 
 export default LangPackEN;

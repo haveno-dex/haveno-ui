@@ -14,12 +14,7 @@
 //  limitations under the License.
 // =============================================================================
 
-import { AccountLayout } from "@templates/AccountLayout";
+export const WIDTH = 475;
 
-export function AccountSecurity() {
-  return (
-    <AccountLayout>
-      <h1>Account Security</h1>
-    </AccountLayout>
-  );
-}
+// The minimum characters that should password field contain.
+export const MIN_PASSWORD_CHARS = 8;
