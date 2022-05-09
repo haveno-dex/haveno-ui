@@ -33,6 +33,19 @@ const LangPackES: { [key in LangKeys]: string } = {
   [LangKeys.AccountSecurityTitle]: "Seguridad de la cuenta",
   [LangKeys.AccountSecurityDesc]:
     "Haveno no almacena ninguno de sus datos, esto ocurre únicamente localmente en su dispositivo. No es posible restaurar su contraseña cuando se pierde. Asegúrese de guardar una copia en un lugar seguro.",
+  [LangKeys.AccountNodeSettingsDesc]:
+    "Se recomienda usar un nodo local, pero requiere cargar toda la cadena de bloques. Elija 'nodo remoto' si prefiere una experiencia más rápida pero menos segura.",
+  [LangKeys.AccountNodeSettingsTitle]: "La configuración de tu nodo",
+  [LangKeys.AccountNodeSettingsLocal]: "Nodo Local",
+  [LangKeys.AccountNodeSettingsRemote]: "Nodo Remoto",
+  [LangKeys.AccountNodeFieldBlockchainLocation]:
+    "Ubicación de cadena de bloques",
+  [LangKeys.AccountNodeFieldDeamonAddress]: "Dirección del demonio",
+  [LangKeys.AccountNodeFieldPort]: "Puerto",
+  [LangKeys.AccountNodeFieldDeamonFlags]: "Indicadores de inicio de daemon",
+  [LangKeys.AccountNodeStopDeamon]: "Detener demonio",
+  [LangKeys.AccountSettingsAddNode]: "Agregar un nuevo nodo",
+  [LangKeys.AccountSettingsCurrent]: "Actual",
   [LangKeys.AccountSecurityFieldPassword]: "Clave",
   [LangKeys.AccountSecurityFieldRepeatPassword]: "Repita la nueva contraseña",
   [LangKeys.AccountSecurityFieldCurrentPassword]: "Contraseña actual",

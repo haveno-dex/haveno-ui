@@ -33,6 +33,18 @@ const LangPackEN: { [key in LangKeys]: string } = {
   [LangKeys.AccountSecurityTitle]: "Account Security",
   [LangKeys.AccountSecurityDesc]:
     "Haveno does not store any of your data, this happens solely locally on your device. It’s not possible to restore your password when lost. Please make sure you store a copy of it on a safe place.",
+  [LangKeys.AccountNodeSettingsDesc]:
+    "Using a local node is  recommended, but does require loading the entire blockchain. Choose ‘remote node’ if you prefer a faster but less secure experience.",
+  [LangKeys.AccountNodeSettingsTitle]: "Your node settings",
+  [LangKeys.AccountNodeSettingsLocal]: "Local Node",
+  [LangKeys.AccountNodeSettingsRemote]: "Remote Node",
+  [LangKeys.AccountNodeFieldBlockchainLocation]: "Blockchain location",
+  [LangKeys.AccountNodeFieldDeamonAddress]: "Deamon Address",
+  [LangKeys.AccountNodeFieldPort]: "Port",
+  [LangKeys.AccountNodeFieldDeamonFlags]: "Deamon startup flags",
+  [LangKeys.AccountNodeStopDeamon]: "Stop deamon",
+  [LangKeys.AccountSettingsAddNode]: "Add a new node",
+  [LangKeys.AccountSettingsCurrent]: "Current",
   [LangKeys.AccountSecurityFieldPassword]: "Password",
   [LangKeys.AccountSecurityFieldRepeatPassword]: "Repeat new password",
   [LangKeys.AccountSecurityFieldCurrentPassword]: "Current password",

@@ -14,16 +14,4 @@
 //  limitations under the License.
 // =============================================================================
 
-import { AppProviders } from "@atoms/AppProviders";
-
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-};
-
-export const decorators = [(Story) => <AppProviders>{Story()}</AppProviders>];
+export * from "./NodeConnectSwitch";

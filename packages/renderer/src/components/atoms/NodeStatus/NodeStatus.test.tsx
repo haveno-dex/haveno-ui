@@ -14,16 +14,25 @@
 //  limitations under the License.
 // =============================================================================
 
+import { describe, expect, it } from "vitest";
+import { render } from "@testing-library/react";
 import { AppProviders } from "@atoms/AppProviders";
+import { NodeStatus, NodeStatusType } from "./NodeStatus";
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-};
-
-export const decorators = [(Story) => <AppProviders>{Story()}</AppProviders>];
+describe("atoms::NodeStatus", () => {
+  it("renders without exploding", () => {
+    const { asFragment } = render(
+      <AppProviders>
+        <NodeStatus
+          title={"node.moneroworldcom:18089:active"}
+          status={NodeStatusType.Active}
+        />
+        <NodeStatus
+          title={"node.moneroworldcom:18089:inactive"}
+          status={NodeStatusType.Inactive}
+        />
+      </AppProviders>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+});

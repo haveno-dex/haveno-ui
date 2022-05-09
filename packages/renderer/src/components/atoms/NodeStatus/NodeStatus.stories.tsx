@@ -14,16 +14,33 @@
 //  limitations under the License.
 // =============================================================================
 
-import { AppProviders } from "@atoms/AppProviders";
+import { Stack } from "@mantine/core";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { NodeStatus, NodeStatusType } from ".";
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
+export default {
+  title: "atoms/NodeStatus",
+  component: NodeStatus,
+} as ComponentMeta<typeof NodeStatus>;
+
+const Template: ComponentStory<typeof NodeStatus> = () => {
+  return (
+    <Stack>
+      <NodeStatus
+        title={"node.moneroworldcom:18089"}
+        status={NodeStatusType.Active}
+      />
+      <NodeStatus
+        title={"node.xmr.pt:18081"}
+        status={NodeStatusType.Inactive}
+      />
+      <NodeStatus
+        title={"node.monero.net:18081"}
+        status={NodeStatusType.Active}
+      />
+    </Stack>
+  );
 };
 
-export const decorators = [(Story) => <AppProviders>{Story()}</AppProviders>];
+export const Default = Template.bind({});
+Default.args = {};

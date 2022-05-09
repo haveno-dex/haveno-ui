@@ -18,7 +18,7 @@ import { Routes, Route } from "react-router-dom";
 import { Home, Welcome } from "@pages/Onboarding";
 import { Wallet } from "@pages/Wallet";
 import { AccountPaymentAccounts } from "@pages/Account/AccountPaymentAccounts";
-import { AccountNodeSettings } from "@pages/Account/AccountNodeSettings";
+import { AccountNodeSettings } from "@pages/Account/NodeSettings";
 import { AccountBackup } from "@pages/Account/AccountBackup";
 import { AccountWallet } from "@pages/Account/AccountWallet";
 import { AccountSecurity } from "@pages/Account/Security";

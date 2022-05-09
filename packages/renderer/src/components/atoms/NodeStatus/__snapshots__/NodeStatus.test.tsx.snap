@@ -1,0 +1,38 @@
+// Vitest Snapshot v1
+
+exports[`atoms::NodeStatus > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-18xx7au"
+  >
+    <div
+      class="mantine-Text-root mantine-14byb36"
+    >
+      node.moneroworldcom:18089:active
+    </div>
+    <div
+      class="mantine-17do188"
+    >
+      <div
+        class="mantine-167633s"
+      />
+    </div>
+  </div>
+  <div
+    class="mantine-18xx7au"
+  >
+    <div
+      class="mantine-Text-root mantine-14byb36"
+    >
+      node.moneroworldcom:18089:inactive
+    </div>
+    <div
+      class="mantine-17do188"
+    >
+      <div
+        class="mantine-1cipvbv"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
