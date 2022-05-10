@@ -14,30 +14,22 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
-import { Box, createStyles, Group } from "@mantine/core";
-import { Sidebar } from "@organisms/Sidebar";
-import { Synce } from "@molecules/Synce";
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
-  const { classes } = useStyles();
+import { Stack } from "@mantine/core";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Synce } from ".";
+
+export default {
+  title: "molecules/Synce",
+  component: Synce,
+} as ComponentMeta<typeof Synce>;
+
+const Template: ComponentStory<typeof Synce> = () => {
   return (
-    <Group className={classes.container} spacing={0}>
-      <Sidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
+    <Stack>
+      <Synce />
+    </Stack>
   );
 };
 
-const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
-  },
-  contentArea: {
-    background: theme.colors.gray[0],
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
-  },
-}));
+export const Default = Template.bind({});
+Default.args = {};

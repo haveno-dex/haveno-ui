@@ -19,7 +19,7 @@ import { WalletBalance } from "@molecules/WalletBalance";
 import { ReactComponent as Logo } from "@assets/logo-icon.svg";
 import { NavLink } from "./_NavLink";
 import { NAV_LINKS, WIDTH } from "./_constants";
-
+import { Synce } from "@molecules/Synce";
 export function Sidebar() {
   const { classes } = useStyles();
   return (
@@ -38,6 +38,11 @@ export function Sidebar() {
             <WalletBalance />
           </Box>
         </Navbar.Section>
+        <Navbar.Section>
+          <Box>
+            <Synce/>
+          </Box>
+        </Navbar.Section>
       </Navbar>
     </Stack>
   );
@@ -50,5 +55,6 @@ const useStyles = createStyles((theme) => ({
   },
   container: {
     width: WIDTH,
+    position: "relative",
   },
 }));

@@ -14,30 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
-import { Box, createStyles, Group } from "@mantine/core";
-import { Sidebar } from "@organisms/Sidebar";
-import { Synce } from "@molecules/Synce";
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
-  const { classes } = useStyles();
-  return (
-    <Group className={classes.container} spacing={0}>
-      <Sidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
-  );
-};
+import { describe, expect, it } from "vitest";
+import { render } from "@testing-library/react";
+import { AppProviders } from "@atoms/AppProviders";
+import { Synce } from ".";
 
-const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
-  },
-  contentArea: {
-    background: theme.colors.gray[0],
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
-  },
-}));
+describe("molecules::Synce", () => {
+  it("renders without exploding", () => {
+    const { asFragment } = render(
+      <AppProviders>
+        <Synce />
+      </AppProviders>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
