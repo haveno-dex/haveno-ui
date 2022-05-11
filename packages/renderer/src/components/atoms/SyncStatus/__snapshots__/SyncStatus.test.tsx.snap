@@ -1,0 +1,52 @@
+// Vitest Snapshot v1
+
+exports[`atoms::Sync Status > renders the fully synced status 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Group-root mantine-33bl97"
+  >
+    <span
+      class="mantine-Group-child mantine-16wvh2m"
+    />
+    <div
+      class="mantine-Text-root mantine-Group-child mantine-1mga3um"
+    >
+      Fully Synced
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`atoms::Sync Status > renders the not synced status by default 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Group-root mantine-33bl97"
+  >
+    <span
+      class="mantine-Group-child mantine-1mmj0t1"
+    />
+    <div
+      class="mantine-Text-root mantine-Group-child mantine-1mga3um"
+    >
+      Not Synced
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`atoms::Sync Status > renders the sync in progress status 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Group-root mantine-33bl97"
+  >
+    <span
+      class="mantine-Group-child mantine-6c6x3l"
+    />
+    <div
+      class="mantine-Text-root mantine-Group-child mantine-1mga3um"
+    >
+      Syncing
+    </div>
+  </div>
+</DocumentFragment>
+`;

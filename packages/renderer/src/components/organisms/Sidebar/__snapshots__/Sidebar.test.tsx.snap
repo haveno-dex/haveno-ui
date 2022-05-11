@@ -3,10 +3,10 @@
 exports[`molecules::Sidebar > renders without exploding 1`] = `
 <DocumentFragment>
   <div
-    class="mantine-Stack-root mantine-dczm8e"
+    class="mantine-Stack-root mantine-zbavia"
   >
     <nav
-      class="mantine-Navbar-root mantine-pjloqa"
+      class="mantine-Navbar-root mantine-1kodx9a"
     >
       <div
         class="mantine-khtkeg"
@@ -199,10 +199,10 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         class="mantine-khtkeg"
       >
         <div
-          class="mantine-b98ato"
+          class="mantine-865t33"
         >
           <button
-            class="mantine-UnstyledButton-root mantine-3om9so"
+            class="mantine-UnstyledButton-root mantine-qmn0rn"
             type="button"
           >
             <div
@@ -343,6 +343,22 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
         </div>
       </div>
     </nav>
+    <div
+      class="mantine-1o6xp10"
+    >
+      <div
+        class="mantine-Group-root mantine-33bl97"
+      >
+        <span
+          class="mantine-Group-child mantine-1mmj0t1"
+        />
+        <div
+          class="mantine-Text-root mantine-Group-child mantine-1mga3um"
+        >
+          Not Synced
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;

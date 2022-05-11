@@ -84,7 +84,7 @@
     "dayjs": "^1.11.0",
     "electron-store": "^8.0.1",
     "electron-updater": "4.6.5",
-    "haveno-ts": "0.0.2",
+    "haveno-ts": "0.0.3",
     "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",

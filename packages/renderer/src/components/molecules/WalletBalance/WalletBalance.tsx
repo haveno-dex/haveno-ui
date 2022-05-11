@@ -75,6 +75,7 @@ const useStyles = createStyles<string, { isOpen: boolean }>(
       border: `solid 1px ${theme.colors.gray[4]}`,
       borderRadius: theme.radius.md,
       padding: theme.spacing.md,
+      width: "100%",
 
       "&:hover": {
         borderColor: theme.colors.gray[5],

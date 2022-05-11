@@ -20,16 +20,6 @@ exports[`atoms::Typography > ::BodyText > renders without exploding 1`] = `
 </DocumentFragment>
 `;
 
-exports[`atoms::Typography > ::Heading > renders h1 1`] = `
-<DocumentFragment>
-  <h1
-    class="mantine-Title-root mantine-xz2ygd"
-  >
-    heading text
-  </h1>
-</DocumentFragment>
-`;
-
 exports[`atoms::Typography > ::Heading > renders h1 by default 1`] = `
 <DocumentFragment>
   <h1

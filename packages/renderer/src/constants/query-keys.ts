@@ -18,6 +18,7 @@ export enum QueryKeys {
   HavenoVersion = "Haveno.Version",
   Balances = "Haveno.Balances",
   PaymentAccounts = "Haveno.PaymentAccounts",
+  SyncStatus = "Haveno.SyncStatus",
 
   StorageAccountInfo = "Storage.AccountInfo",
   StoragePreferences = "Storage.Preferences",

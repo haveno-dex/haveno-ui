@@ -14,27 +14,21 @@
 //  limitations under the License.
 // =============================================================================
 
-/**
- * Config for global end-to-end tests
- * placed in project root tests folder
- * @type {import('vite').UserConfig}
- * @see https://vitest.dev/config/
- */
-const config = {
-  test: {
-    /**
-     * By default, vitest search test files in all packages.
-     * For e2e tests have sense search only is project root tests folder
-     */
-    include: ["./tests/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+import { useQuery } from "react-query";
+import { QueryKeys } from "@constants/query-keys";
+// import { useHavenoClient } from "./useHavenoClient";
+import { SyncStatus } from "@constants/sync-status";
 
-    /**
-     * A default timeout of 5000ms is sometimes not enough for playwright.
-     */
-    testTimeout: 30_000,
-    hookTimeout: 30_000,
-    deps: { inline: ["haveno-ts"] },
-  },
-};
-
-export default config;
+export function useSyncStatus() {
+  // const client = useHavenoClient();
+  return useQuery(
+    QueryKeys.SyncStatus,
+    async () => {
+      // TODO: this is a stub
+      return SyncStatus.NotSynced;
+    },
+    {
+      staleTime: 10000,
+    }
+  );
+}

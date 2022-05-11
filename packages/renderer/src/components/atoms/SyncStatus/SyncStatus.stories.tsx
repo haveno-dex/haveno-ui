@@ -14,27 +14,33 @@
 //  limitations under the License.
 // =============================================================================
 
-/**
- * Config for global end-to-end tests
- * placed in project root tests folder
- * @type {import('vite').UserConfig}
- * @see https://vitest.dev/config/
- */
-const config = {
-  test: {
-    /**
-     * By default, vitest search test files in all packages.
-     * For e2e tests have sense search only is project root tests folder
-     */
-    include: ["./tests/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
+import { Stack } from "@mantine/core";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { SyncStatus as SyncStatusOptions } from "@constants/sync-status";
+import { SyncStatus } from ".";
 
-    /**
-     * A default timeout of 5000ms is sometimes not enough for playwright.
-     */
-    testTimeout: 30_000,
-    hookTimeout: 30_000,
-    deps: { inline: ["haveno-ts"] },
+export default {
+  title: "molecules/Sync Status",
+  component: SyncStatus,
+  argTypes: {
+    status: {
+      options: SyncStatusOptions,
+      control: {
+        type: "radio",
+      },
+    },
   },
+} as ComponentMeta<typeof SyncStatus>;
+
+const Template: ComponentStory<typeof SyncStatus> = (args) => {
+  return (
+    <Stack>
+      <SyncStatus {...args} />
+    </Stack>
+  );
 };
 
-export default config;
+export const Default = Template.bind({});
+Default.args = {
+  status: SyncStatusOptions.Full,
+};

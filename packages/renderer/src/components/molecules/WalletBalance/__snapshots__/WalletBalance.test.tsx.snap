@@ -3,7 +3,7 @@
 exports[`molecules::WalletBalance > renders without exploding 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-UnstyledButton-root mantine-3om9so"
+    class="mantine-UnstyledButton-root mantine-qmn0rn"
     type="button"
   >
     <div
