@@ -14,12 +14,20 @@
 //  limitations under the License.
 // =============================================================================
 
+import { Box, Stack } from "@mantine/core";
 import { AccountLayout } from "@templates/AccountLayout";
+import { AccountBackupDownload } from "./AccountBackupDownload";
+import { AccountRestoreDownload } from "./AccountBackupRestore";
 
 export function AccountBackup() {
   return (
     <AccountLayout>
-      <h1>Account Backup</h1>
+      <Box>
+        <Stack spacing={40}>
+          <AccountBackupDownload />
+          <AccountRestoreDownload />
+        </Stack>
+      </Box>
     </AccountLayout>
   );
 }

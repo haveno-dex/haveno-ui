@@ -46,4 +46,10 @@ export enum LangKeys {
   AccountSecurityFieldCurrentPassword = "account.security.field.currentPassword",
   AccountSecurityFieldPasswordFormatMsg = "account.security.field.password.format.message",
   AccountSecurityFieldRepeatPasswordMatchMsg = "account.security.field.repeatPassword.match.message",
+  AccountBackupDownloadTitle = "account.backup.download.title",
+  AccountBackupDownloadDesc = "account.backup.download.desc",
+  AccountBackupDownloadBtn = "account.backup.download.btn",
+  AccountBackupRestoreTitle = "account.backup.restore.title",
+  AccountBackupRestoreDesc = "account.backup.restore.desc",
+  AccountBackupRestoreBtn = "account.backup.restore.btn",
 }

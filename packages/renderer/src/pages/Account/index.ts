@@ -16,7 +16,7 @@
 
 export * from "./AddPaymentAccount";
 export * from "./PaymentMethods";
-export * from "./AccountBackup";
+export * from "./Backup";
 export * from "./NodeSettings";
 export * from "./AccountPaymentAccounts";
 export * from "./AccountSecurity";
