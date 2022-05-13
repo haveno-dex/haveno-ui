@@ -202,7 +202,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
           class="mantine-865t33"
         >
           <button
-            class="mantine-UnstyledButton-root mantine-qmn0rn"
+            class="mantine-UnstyledButton-root mantine-3om9so"
             type="button"
           >
             <div
@@ -258,7 +258,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                   <div
                     class="mantine-Text-root mantine-Group-child mantine-q5labh"
                   >
-                    10.647382650365
+                    0
                   </div>
                   <svg
                     class="mantine-Group-child mantine-qg5oag"
@@ -304,7 +304,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                       <div
                         class="mantine-Text-root mantine-14d5cdm"
                       >
-                        14.048212174412
+                        0
                       </div>
                     </div>
                     <div
@@ -318,7 +318,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                       <div
                         class="mantine-Text-root mantine-14d5cdm"
                       >
-                        2.874598526325
+                        0
                       </div>
                     </div>
                     <div
@@ -332,7 +332,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
                       <div
                         class="mantine-Text-root mantine-14d5cdm"
                       >
-                        0.854975624859
+                        0
                       </div>
                     </div>
                   </div>

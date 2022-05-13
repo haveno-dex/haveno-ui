@@ -14,7 +14,7 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import {
   Collapse,
   createStyles,
@@ -25,10 +25,18 @@ import {
 } from "@mantine/core";
 import { ReactComponent as XMRLogo } from "@assets/xmr-logo-1.svg";
 import { ReactComponent as ArrowDown } from "@assets/arrow-down.svg";
+import { useBalances } from "@hooks/haveno/useBalances";
 
 export function WalletBalance() {
   const [isOpen, setOpen] = useState(false);
   const { classes } = useStyles({ isOpen });
+  const { data: availableBalances } = useBalances();
+  const Total = useMemo(() => {
+    return (
+      Number(availableBalances?.getLockedBalance() || 0) +
+      Number(availableBalances?.getReservedTradeBalance() || 0)
+    ).toString();
+  }, [availableBalances]);
   return (
     <UnstyledButton
       className={classes.btnToggle}
@@ -43,7 +51,9 @@ export function WalletBalance() {
         </Group>
         <Stack spacing={4}>
           <Group>
-            <Text className={classes.xmr}>10.647382650365</Text>
+            <Text className={classes.xmr}>
+              {availableBalances?.getBalance() ?? 0}
+            </Text>
             <ArrowDown className={classes.toggleIcon} />
           </Group>
           <Text className={classes.fiat}>(EUR 2441,02)</Text>
@@ -52,15 +62,19 @@ export function WalletBalance() {
           <Stack>
             <Stack spacing={4}>
               <Text className={classes.balanceLabel}>Total</Text>
-              <Text className={classes.balanceValue}>14.048212174412</Text>
+              <Text className={classes.balanceValue}>{Total}</Text>
             </Stack>
             <Stack spacing={4}>
               <Text className={classes.balanceLabel}>Reserved</Text>
-              <Text className={classes.balanceValue}>2.874598526325</Text>
+              <Text className={classes.balanceValue}>
+                {availableBalances?.getReservedTradeBalance() ?? 0}
+              </Text>
             </Stack>
             <Stack spacing={4}>
               <Text className={classes.balanceLabel}>Locked</Text>
-              <Text className={classes.balanceValue}>0.854975624859</Text>
+              <Text className={classes.balanceValue}>
+                {availableBalances?.getLockedBalance() ?? 0}
+              </Text>
             </Stack>
           </Stack>
         </Collapse>
@@ -75,7 +89,6 @@ const useStyles = createStyles<string, { isOpen: boolean }>(
       border: `solid 1px ${theme.colors.gray[4]}`,
       borderRadius: theme.radius.md,
       padding: theme.spacing.md,
-      width: "100%",
 
       "&:hover": {
         borderColor: theme.colors.gray[5],
