@@ -14,18 +14,14 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum QueryKeys {
-  HavenoVersion = "Haveno.Version",
-  Balances = "Haveno.Balances",
-  PaymentAccounts = "Haveno.PaymentAccounts",
-  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
-  MoneroNodeIsRunning = "Haveno.MoneroNodeIsRunning",
-  MoneroRemoteNodes = "Haveno.MoneroRemoteNodes",
+import { useQuery } from "react-query";
+import { QueryKeys } from "@constants/query-keys";
+import { useHavenoClient } from "./useHavenoClient";
 
-  SyncStatus = "Haveno.SyncStatus",
+export function useIsMoneroNodeRunning() {
+  const client = useHavenoClient();
 
-  StorageAccountInfo = "Storage.AccountInfo",
-  StoragePreferences = "Storage.Preferences",
-
-  AuthSession = "AuthSession",
+  return useQuery<boolean, Error>(QueryKeys.MoneroNodeIsRunning, () =>
+    client.isMoneroNodeRunning()
+  );
 }

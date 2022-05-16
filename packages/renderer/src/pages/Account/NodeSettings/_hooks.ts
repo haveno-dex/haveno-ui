@@ -14,18 +14,20 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum QueryKeys {
-  HavenoVersion = "Haveno.Version",
-  Balances = "Haveno.Balances",
-  PaymentAccounts = "Haveno.PaymentAccounts",
-  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
-  MoneroNodeIsRunning = "Haveno.MoneroNodeIsRunning",
-  MoneroRemoteNodes = "Haveno.MoneroRemoteNodes",
+import * as Joi from "joi";
 
-  SyncStatus = "Haveno.SyncStatus",
+export interface NodeLocalFormValues {
+  blockchainLocation: string;
+  startupFlags: string;
+  deamonAddress: string;
+  port: string;
+}
 
-  StorageAccountInfo = "Storage.AccountInfo",
-  StoragePreferences = "Storage.Preferences",
-
-  AuthSession = "AuthSession",
+export function useNodeLocalFormValidation() {
+  return Joi.object<NodeLocalFormValues>({
+    blockchainLocation: Joi.string().empty("").uri({ relativeOnly: true }),
+    startupFlags: Joi.string().empty(""),
+    deamonAddress: Joi.string().uri({ allowRelative: false }),
+    port: Joi.number().port(),
+  });
 }

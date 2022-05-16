@@ -14,18 +14,26 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum QueryKeys {
-  HavenoVersion = "Haveno.Version",
-  Balances = "Haveno.Balances",
-  PaymentAccounts = "Haveno.PaymentAccounts",
-  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
-  MoneroNodeIsRunning = "Haveno.MoneroNodeIsRunning",
-  MoneroRemoteNodes = "Haveno.MoneroRemoteNodes",
+import { useQuery } from "react-query";
+import { QueryKeys } from "@constants/query-keys";
+// import { useHavenoClient } from "./useHavenoClient";
 
-  SyncStatus = "Haveno.SyncStatus",
+interface MoneroRemoteNodes {
+  title: string;
+  isActive: boolean;
+}
 
-  StorageAccountInfo = "Storage.AccountInfo",
-  StoragePreferences = "Storage.Preferences",
+export function useMoneroRemoteNodes() {
+  // const client = useHavenoClient();
 
-  AuthSession = "AuthSession",
+  return useQuery<MoneroRemoteNodes[], Error>(
+    QueryKeys.MoneroRemoteNodes,
+    async () => {
+      return Promise.resolve([
+        { title: "node.moneroworldcom:18089", isActive: true },
+        { title: "node.xmr.pt:18081", isActive: true },
+        { title: "node.monero.net:18081", isActive: true },
+      ]);
+    }
+  );
 }

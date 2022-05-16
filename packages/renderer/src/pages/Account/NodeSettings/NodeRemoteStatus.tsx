@@ -15,23 +15,26 @@
 // =============================================================================
 
 import { Stack, createStyles, Group } from "@mantine/core";
+import { FormattedMessage } from "react-intl";
 import { Button } from "@atoms/Buttons";
 import { NodeStatus, NodeStatusType } from "@atoms/NodeStatus";
-import { FormattedMessage } from "react-intl";
 import { LangKeys } from "@constants/lang";
+import { useMoneroRemoteNodes } from "@hooks/haveno/useMoneroRemoteNodes";
 
 export function NodeRemoteStatus() {
+  const { data: remoteNodes } = useMoneroRemoteNodes();
+
   return (
     <Stack>
-      <NodeStatus
-        title="node.moneroworldcom:18089"
-        status={NodeStatusType.Active}
-      />
-      <NodeStatus title="node.xmr.pt:18081" status={NodeStatusType.Inactive} />
-      <NodeStatus
-        title="node.monero.net:18081"
-        status={NodeStatusType.Active}
-      />
+      {remoteNodes?.map((node) => (
+        <NodeStatus
+          key={node.title}
+          title={node.title}
+          status={
+            node.isActive ? NodeStatusType.Active : NodeStatusType.Inactive
+          }
+        />
+      ))}
       <AddNewNodeButton />
 
       <Group position="right" mt="sm">

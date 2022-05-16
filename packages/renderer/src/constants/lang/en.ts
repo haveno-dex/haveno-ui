@@ -43,6 +43,11 @@ const LangPackEN: { [key in LangKeys]: string } = {
   [LangKeys.AccountNodeFieldPort]: "Port",
   [LangKeys.AccountNodeFieldDeamonFlags]: "Deamon startup flags",
   [LangKeys.AccountNodeStopDeamon]: "Stop deamon",
+  [LangKeys.AccountNodeStartDeamon]: "Start deamon",
+  [LangKeys.AccountNodeLocalSaveNotification]:
+    "Local node settings updated successfully",
+  [LangKeys.AccountNodeDeamonStoppedNotif]: "Deamon stopped successfully",
+  [LangKeys.AccountNodeDeamonStartedNotif]: "Deamon started successfully",
   [LangKeys.AccountSettingsAddNode]: "Add a new node",
   [LangKeys.AccountSettingsCurrent]: "Current",
   [LangKeys.AccountSecurityFieldPassword]: "Update account password",
