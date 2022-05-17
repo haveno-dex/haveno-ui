@@ -21,7 +21,6 @@ import { AccountLayout } from "@templates/AccountLayout";
 
 export function AccountPaymentAccounts() {
   const navigate = useNavigate();
-
   return (
     <AccountLayout>
       <PaymentMethodList

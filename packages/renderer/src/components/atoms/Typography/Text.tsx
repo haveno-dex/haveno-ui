@@ -14,14 +14,14 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ReactText } from "react";
+import type { ReactNode, ReactText } from "react";
 import { FormattedMessage } from "react-intl";
 import type { TextProps as MTextProps } from "@mantine/core";
 import { Text as MText, createStyles } from "@mantine/core";
 import type { LangKeys } from "@constants/lang";
 
 type TextProps<TComponent> = MTextProps<TComponent> & {
-  children: ReactText;
+  children: ReactText | ReactNode;
   stringId?: LangKeys;
 };
 
@@ -44,7 +44,10 @@ export function BodyText<TComponent = "p">(props: BodyTextProps<TComponent>) {
       size={size}
     >
       {stringId ? (
-        <FormattedMessage id={stringId} defaultMessage={children.toString()} />
+        <FormattedMessage
+          id={stringId}
+          defaultMessage={children ? children.toString() : ""}
+        />
       ) : (
         children
       )}
@@ -59,7 +62,10 @@ export function InfoText<TComponent = "p">(props: TextProps<TComponent>) {
   return (
     <MText {...rest} className={cx(className, classes.info)}>
       {stringId ? (
-        <FormattedMessage id={stringId} defaultMessage={children.toString()} />
+        <FormattedMessage
+          id={stringId}
+          defaultMessage={children ? children.toString() : ""}
+        />
       ) : (
         children
       )}
@@ -74,7 +80,10 @@ export function LabelText(props: TextProps<"label">) {
   return (
     <MText component="label" {...rest} className={cx(className, classes.label)}>
       {stringId ? (
-        <FormattedMessage id={stringId} defaultMessage={children.toString()} />
+        <FormattedMessage
+          id={stringId}
+          defaultMessage={children ? children.toString() : ""}
+        />
       ) : (
         children
       )}

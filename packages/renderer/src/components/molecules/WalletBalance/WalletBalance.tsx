@@ -26,19 +26,37 @@ import {
 import { ReactComponent as XMRLogo } from "@assets/xmr-logo-1.svg";
 import { ReactComponent as ArrowDown } from "@assets/arrow-down.svg";
 import { useBalances } from "@hooks/haveno/useBalances";
+import { useAccountInfo } from "@hooks/storage/useAccountInfo";
+import { usePrice } from "@hooks/haveno/usePrice";
+import { Currency } from "@atoms/Currency";
+import { BodyText } from "@atoms/Typography";
 
 export function WalletBalance() {
   const [isOpen, setOpen] = useState(false);
   const { classes } = useStyles({ isOpen });
-  const { data: availableBalances } = useBalances();
-  const Total = useMemo(() => {
+  const { data: availableBalances, isLoading: isLoadingBalance } =
+    useBalances();
+  const { data: accountInfo, isLoading: isLoadingAccountInfo } =
+    useAccountInfo();
+  const { data: price } = usePrice(accountInfo?.primaryFiat);
+
+  const totalBalance = useMemo(() => {
     return (
       Number(availableBalances?.getLockedBalance() || 0) +
       Number(availableBalances?.getReservedTradeBalance() || 0)
-    ).toString();
+    );
   }, [availableBalances]);
+
+  const fiatBalance = useMemo(() => {
+    if (!totalBalance || !price || !accountInfo?.primaryFiat) {
+      return 0;
+    }
+    return totalBalance * price;
+  }, [totalBalance, price, accountInfo]);
+
   return (
     <UnstyledButton
+      aria-label="Show Balance"
       className={classes.btnToggle}
       onClick={() => setOpen(!isOpen)}
     >
@@ -49,35 +67,60 @@ export function WalletBalance() {
             Available Balance
           </Text>
         </Group>
-        <Stack spacing={4}>
-          <Group>
-            <Text className={classes.xmr}>
-              {availableBalances?.getBalance() ?? 0}
-            </Text>
-            <ArrowDown className={classes.toggleIcon} />
-          </Group>
-          <Text className={classes.fiat}>(EUR 2441,02)</Text>
-        </Stack>
-        <Collapse in={isOpen}>
+        {isLoadingAccountInfo || isLoadingBalance ? (
           <Stack>
-            <Stack spacing={4}>
-              <Text className={classes.balanceLabel}>Total</Text>
-              <Text className={classes.balanceValue}>{Total}</Text>
-            </Stack>
-            <Stack spacing={4}>
-              <Text className={classes.balanceLabel}>Reserved</Text>
-              <Text className={classes.balanceValue}>
-                {availableBalances?.getReservedTradeBalance() ?? 0}
-              </Text>
-            </Stack>
-            <Stack spacing={4}>
-              <Text className={classes.balanceLabel}>Locked</Text>
-              <Text className={classes.balanceValue}>
-                {availableBalances?.getLockedBalance() ?? 0}
-              </Text>
-            </Stack>
+            <BodyText size="xs">Loading...</BodyText>
           </Stack>
-        </Collapse>
+        ) : (
+          <>
+            <Stack spacing={4}>
+              <Group>
+                <Text className={classes.xmr}>
+                  <Currency
+                    value={Number(availableBalances?.getBalance() ?? 0)}
+                  />
+                </Text>
+                <ArrowDown className={classes.toggleIcon} />
+              </Group>
+              <Text className={classes.fiat}>
+                (
+                <Currency
+                  currencyCode={accountInfo?.primaryFiat}
+                  value={fiatBalance}
+                />
+                )
+              </Text>
+            </Stack>
+            <Collapse in={isOpen}>
+              <Stack>
+                <Stack spacing={4}>
+                  <Text className={classes.balanceLabel}>Total</Text>
+                  <Text className={classes.balanceValue}>
+                    <Currency value={totalBalance} />
+                  </Text>
+                </Stack>
+                <Stack spacing={4}>
+                  <Text className={classes.balanceLabel}>Reserved</Text>
+                  <Text className={classes.balanceValue}>
+                    <Currency
+                      value={Number(
+                        availableBalances?.getReservedTradeBalance() ?? 0
+                      )}
+                    />
+                  </Text>
+                </Stack>
+                <Stack spacing={4}>
+                  <Text className={classes.balanceLabel}>Locked</Text>
+                  <Text className={classes.balanceValue}>
+                    <Currency
+                      value={Number(availableBalances?.getLockedBalance() ?? 0)}
+                    />
+                  </Text>
+                </Stack>
+              </Stack>
+            </Collapse>
+          </>
+        )}
       </Stack>
     </UnstyledButton>
   );

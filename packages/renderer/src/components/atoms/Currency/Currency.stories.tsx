@@ -14,14 +14,28 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useQuery } from "react-query";
-import type { XmrBalanceInfo } from "haveno-ts";
-import { QueryKeys } from "@constants/query-keys";
-import { useHavenoClient } from "./useHavenoClient";
+import { BodyText } from "@atoms/Typography";
+import { Stack } from "@mantine/core";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { Currency } from ".";
 
-export function useBalances() {
-  const client = useHavenoClient();
-  return useQuery<XmrBalanceInfo, Error>(QueryKeys.Balances, async () =>
-    client.getBalances()
+export default {
+  title: "atoms/Currency",
+  component: Currency,
+} as ComponentMeta<typeof Currency>;
+
+const Template: ComponentStory<typeof Currency> = (args) => {
+  return (
+    <Stack>
+      <BodyText heavy>
+        <Currency {...args} />
+      </BodyText>
+    </Stack>
   );
-}
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  currencyCode: "EUR",
+  value: 400000.12,
+};

@@ -1,8 +1,9 @@
 // Vitest Snapshot v1
 
-exports[`molecules::WalletBalance > renders without exploding 1`] = `
+exports[`molecules::WalletBalance > renders after loading data 1`] = `
 <DocumentFragment>
   <button
+    aria-label="Show Balance"
     class="mantine-UnstyledButton-root mantine-3om9so"
     type="button"
   >
@@ -59,7 +60,7 @@ exports[`molecules::WalletBalance > renders without exploding 1`] = `
           <div
             class="mantine-Text-root mantine-Group-child mantine-q5labh"
           >
-            0
+            15.00
           </div>
           <svg
             class="mantine-Group-child mantine-qg5oag"
@@ -80,7 +81,7 @@ exports[`molecules::WalletBalance > renders without exploding 1`] = `
         <div
           class="mantine-Text-root mantine-1pfxwhx"
         >
-          (EUR 2441,02)
+          (USD 7,800.00)
         </div>
       </div>
       <div
@@ -105,7 +106,7 @@ exports[`molecules::WalletBalance > renders without exploding 1`] = `
               <div
                 class="mantine-Text-root mantine-14d5cdm"
               >
-                0
+                26.00
               </div>
             </div>
             <div
@@ -119,7 +120,7 @@ exports[`molecules::WalletBalance > renders without exploding 1`] = `
               <div
                 class="mantine-Text-root mantine-14d5cdm"
               >
-                0
+                14.00
               </div>
             </div>
             <div
@@ -133,10 +134,75 @@ exports[`molecules::WalletBalance > renders without exploding 1`] = `
               <div
                 class="mantine-Text-root mantine-14d5cdm"
               >
-                0
+                12.00
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`molecules::WalletBalance > renders loading state 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Show Balance"
+    class="mantine-UnstyledButton-root mantine-3om9so"
+    type="button"
+  >
+    <div
+      class="mantine-Stack-root mantine-lfk3cq"
+    >
+      <div
+        class="mantine-Group-root mantine-1lumg83"
+      >
+        <svg
+          class="mantine-Group-child mantine-oilh7i"
+          fill="none"
+          height="1em"
+          viewBox="0 0 20 20"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            clip-path="url(#clip0_3508_17165)"
+          >
+            <path
+              d="M10.0026 0C4.4815 0 -0.00311409 4.48323 0.0039145 9.9987C0.00529892 11.1022 0.18128 12.1636 0.51157 13.1565H3.5034V4.74512L10.0026 11.2436L16.5015 4.74512V13.1567H19.494C19.8247 12.1639 19.9998 11.1024 20.0018 9.99885C20.0112 4.47764 15.5243 0.00133103 10.0026 0.00133103V0Z"
+              fill="#111111"
+            />
+            <path
+              d="M8.50535 12.7375L5.66905 9.90137V15.1943H3.50057L1.45435 15.1946C3.20952 18.0739 6.38154 20 9.99999 20C13.6184 20 16.7906 18.0735 18.5461 15.1942H14.3303V9.90137L11.4938 12.7375L9.99967 14.2315L8.50545 12.7375H8.50535Z"
+              fill="#111111"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_3508_17165"
+            >
+              <rect
+                fill="white"
+                height="20"
+                width="20"
+              />
+            </clippath>
+          </defs>
+        </svg>
+        <div
+          class="mantine-Text-root mantine-Group-child mantine-1iw7oli"
+        >
+          Available Balance
+        </div>
+      </div>
+      <div
+        class="mantine-Stack-root mantine-lfk3cq"
+      >
+        <div
+          class="mantine-Text-root mantine-1152338"
+        >
+          Loading...
         </div>
       </div>
     </div>

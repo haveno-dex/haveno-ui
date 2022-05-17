@@ -19,6 +19,8 @@ import { ReactComponent as EthLogo } from "@assets/eth.svg";
 import { ReactComponent as EurLogo } from "@assets/eur.svg";
 import { PaymentMethodIds } from "./payment-methods";
 
+export type SupportedFiat = "USD" | "ETH" | "GBP";
+
 export const SupportedCurrencies = [
   {
     id: "BTC",

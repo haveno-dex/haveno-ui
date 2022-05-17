@@ -20,7 +20,5 @@ import { useHavenoClient } from "./useHavenoClient";
 
 export function useHavenoVersion() {
   const client = useHavenoClient();
-  return useQuery(QueryKeys.HavenoVersion, async () => {
-    return client.getVersion();
-  });
+  return useQuery(QueryKeys.HavenoVersion, async () => client.getVersion());
 }

@@ -21,7 +21,7 @@ import { LangKeys } from "@constants/lang/LangKeys";
 import { CenteredLayout } from "@templates/CenteredLayout";
 import { Heading } from "@atoms/Typography";
 import Logo from "@assets/logo.svg";
-import { useAccountInfo } from "@src/hooks/storage/useGetAccountInfo";
+import { useAccountInfo } from "@hooks/storage/useAccountInfo";
 import { ROUTES } from "@constants/routes";
 import { showNotification } from "@mantine/notifications";
 

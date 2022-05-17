@@ -15,17 +15,21 @@
 // =============================================================================
 
 export enum QueryKeys {
-  HavenoVersion = "Haveno.Version",
+  // Haveno
   Balances = "Haveno.Balances",
-  PaymentAccounts = "Haveno.PaymentAccounts",
-  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
+  HavenoVersion = "Haveno.Version",
   MoneroNodeIsRunning = "Haveno.MoneroNodeIsRunning",
+  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
   MoneroRemoteNodes = "Haveno.MoneroRemoteNodes",
-
+  PaymentAccounts = "Haveno.PaymentAccounts",
+  Prices = "Haveno.Prices",
+  PrimaryAddress = "Haveno.PrimaryAddress",
   SyncStatus = "Haveno.SyncStatus",
 
+  // Storage
   StorageAccountInfo = "Storage.AccountInfo",
   StoragePreferences = "Storage.Preferences",
 
+  // Others
   AuthSession = "AuthSession",
 }

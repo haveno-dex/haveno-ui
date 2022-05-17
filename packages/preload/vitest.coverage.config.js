@@ -14,14 +14,19 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useQuery } from "react-query";
-import type { XmrBalanceInfo } from "haveno-ts";
-import { QueryKeys } from "@constants/query-keys";
-import { useHavenoClient } from "./useHavenoClient";
+/**
+ * Config for global end-to-end tests
+ * placed in project root tests folder
+ * @type {import('vite').UserConfig}
+ * @see https://vitest.dev/config/
+ */
+const config = {
+  test: {
+    include: ["./src/**/*.{test,spec}.{ts,tsx}"],
+    coverage: {
+      reporter: ["html"],
+    },
+  },
+};
 
-export function useBalances() {
-  const client = useHavenoClient();
-  return useQuery<XmrBalanceInfo, Error>(QueryKeys.Balances, async () =>
-    client.getBalances()
-  );
-}
+export default config;

@@ -14,14 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useQuery } from "react-query";
-import type { XmrBalanceInfo } from "haveno-ts";
+import type { MarketPriceInfo } from "haveno-ts";
 import { QueryKeys } from "@constants/query-keys";
+import { useQuery } from "react-query";
 import { useHavenoClient } from "./useHavenoClient";
 
-export function useBalances() {
+export function usePrices() {
   const client = useHavenoClient();
-  return useQuery<XmrBalanceInfo, Error>(QueryKeys.Balances, async () =>
-    client.getBalances()
+  return useQuery<Array<MarketPriceInfo.AsObject>, Error>(
+    QueryKeys.Prices,
+    async () => {
+      const prices = await client.getPrices();
+      return prices.map((price) => price.toObject());
+    }
   );
 }

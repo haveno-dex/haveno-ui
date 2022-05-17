@@ -14,14 +14,4 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useQuery } from "react-query";
-import type { XmrBalanceInfo } from "haveno-ts";
-import { QueryKeys } from "@constants/query-keys";
-import { useHavenoClient } from "./useHavenoClient";
-
-export function useBalances() {
-  const client = useHavenoClient();
-  return useQuery<XmrBalanceInfo, Error>(QueryKeys.Balances, async () =>
-    client.getBalances()
-  );
-}
+export * from "./Currency";

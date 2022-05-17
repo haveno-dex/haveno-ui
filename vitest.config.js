@@ -33,7 +33,6 @@ const config = {
      */
     testTimeout: 30_000,
     hookTimeout: 30_000,
-    deps: { inline: ["haveno-ts"] },
   },
 };
 

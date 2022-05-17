@@ -14,14 +14,24 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useQuery } from "react-query";
-import type { XmrBalanceInfo } from "haveno-ts";
 import { QueryKeys } from "@constants/query-keys";
+import { useQuery } from "react-query";
 import { useHavenoClient } from "./useHavenoClient";
 
-export function useBalances() {
+export function usePaymentMethods() {
   const client = useHavenoClient();
-  return useQuery<XmrBalanceInfo, Error>(QueryKeys.Balances, async () =>
-    client.getBalances()
-  );
+  return useQuery(QueryKeys.PaymentMethods, async () => {
+    // TODO: replace with getSupportedAssets(): TradeCurrency[]
+    // const mns = await client.getMoneroNodeSettings();
+    const mns = await client._moneroNodeClient.getMoneroNodeSettings({}, {});
+    console.log("monero node settings: ", mns?.toObject());
+    if (mns) {
+      const mns2 = mns.setStartupFlagsList(["foo1"]);
+      mns;
+    }
+    const assetCodes = await client.getSupportedAssetCodes();
+    return await Promise.all(
+      assetCodes.map((assetCode) => client.getPaymentMethods(assetCode))
+    );
+  });
 }

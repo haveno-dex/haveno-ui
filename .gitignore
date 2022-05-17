@@ -55,4 +55,10 @@ thumbs.db
 .idea/httpRequests
 /.idea/csv-plugin.xml
 
+# Dev environment variables
 .env
+
+# Coverage reports
+packages/main/coverage/
+packages/preload/coverage/
+packages/renderer/coverage/

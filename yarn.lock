@@ -7973,10 +7973,10 @@ hastscript@^6.0.0:
     property-information "^5.0.0"
     space-separated-tokens "^1.0.0"
 
-haveno-ts@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/haveno-ts/-/haveno-ts-0.0.4.tgz#4d9fac6601887f384e5b380471988ee3e8b17783"
-  integrity sha512-8Yf1kyeuBCbfOr7T0uy87XcnNk8pfwS6uN4iuXgkAKLySByGl8Mxay7C0Fq1qPExz4hPJsJ8ql2qbaU1HJkbkg==
+haveno-ts@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/haveno-ts/-/haveno-ts-0.0.5.tgz#996e290b4dd1659e58f86aff4e0cc0d3c7516ad3"
+  integrity sha512-HzBuvMmsQLUybk99NqOe50lAcYmnwv2uv0/5IMAIuUpqFmJq2xvPW6vvZASXkRBVYPdRYjLLnUV5ygy8Rq7Yog==
   dependencies:
     "@types/node" "^17.0.30"
     console "^0.7.2"

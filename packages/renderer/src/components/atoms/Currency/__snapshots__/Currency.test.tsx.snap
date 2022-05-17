@@ -1,0 +1,19 @@
+// Vitest Snapshot v1
+
+exports[`atoms::Currency > renders currency value 1`] = `
+<DocumentFragment>
+  USD 10.00
+</DocumentFragment>
+`;
+
+exports[`atoms::Currency > renders decimal value 1`] = `
+<DocumentFragment>
+  10.12345678
+</DocumentFragment>
+`;
+
+exports[`atoms::Currency > renders without exploding 1`] = `
+<DocumentFragment>
+  10.00
+</DocumentFragment>
+`;
