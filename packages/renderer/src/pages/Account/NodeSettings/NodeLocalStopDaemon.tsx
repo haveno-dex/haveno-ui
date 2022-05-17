@@ -24,7 +24,7 @@ import { useStopMoneroNode } from "@hooks/haveno/useStopMoneroNode";
 import { useIsMoneroNodeRunning } from "@hooks/haveno/useIsMoneroNodeRunning";
 import { useStartMoneroNode } from "@hooks/haveno/useStartMoneroNode";
 
-export function NodeLocalStopDeamon() {
+export function NodeLocalStopDaemon() {
   const { classes } = useStyles();
   const intl = useIntl();
 
@@ -41,8 +41,8 @@ export function NodeLocalStopDeamon() {
         showNotification({
           color: "green",
           message: intl.formatMessage({
-            id: LangKeys.AccountNodeDeamonStoppedNotif,
-            defaultMessage: "Deamon stopped successfully",
+            id: LangKeys.AccountNodeDaemonStoppedNotif,
+            defaultMessage: "Daemon stopped successfully",
           }),
         });
       })
@@ -65,8 +65,8 @@ export function NodeLocalStopDeamon() {
         showNotification({
           color: "green",
           message: intl.formatMessage({
-            id: LangKeys.AccountNodeDeamonStartedNotif,
-            defaultMessage: "Deamon started successfully",
+            id: LangKeys.AccountNodeDaemonStartedNotif,
+            defaultMessage: "Daemon started successfully",
           }),
         });
       })
@@ -85,8 +85,8 @@ export function NodeLocalStopDeamon() {
       {isMoneroNodeRunning ? (
         <Button flavor="neutral" onClick={handleStopBtnClick}>
           <FormattedMessage
-            id={LangKeys.AccountNodeStopDeamon}
-            defaultMessage="Stop deamon"
+            id={LangKeys.AccountNodeStopDaemon}
+            defaultMessage="Stop daemon"
           />
         </Button>
       ) : (
@@ -96,8 +96,8 @@ export function NodeLocalStopDeamon() {
           disabled={Boolean(isNodeSettingsLoading || !nodeSettings)}
         >
           <FormattedMessage
-            id={LangKeys.AccountNodeStopDeamon}
-            defaultMessage="Start deamon"
+            id={LangKeys.AccountNodeStopDaemon}
+            defaultMessage="Start daemon"
           />
         </Button>
       )}

@@ -28,7 +28,7 @@ export function transformSettingsRequestToForm(
   return {
     blockchainLocation: nodeSettings?.blockchainPath || "",
     startupFlags: nodeSettings?.startupFlagsList.join(", ") || "",
-    deamonAddress: transfromBootstrapUrl(nodeSettings?.bootstrapUrl || ""),
+    daemonAddress: transfromBootstrapUrl(nodeSettings?.bootstrapUrl || ""),
     port: transformPort(nodeSettings?.bootstrapUrl || ""),
   };
 }

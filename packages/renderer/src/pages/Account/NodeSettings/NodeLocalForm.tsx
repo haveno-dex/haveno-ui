@@ -23,7 +23,7 @@ import { LangKeys } from "@constants/lang";
 import { TextInput } from "@atoms/TextInput";
 import { useMoneroNodeSettings } from "@hooks/haveno/useMoneroNodeSettings";
 import { useSetMoneroNodeSettings } from "@hooks/haveno/useSetMoneroNodeSettings";
-import { NodeLocalStopDeamon } from "./NodeLocalStopDeamon";
+import { NodeLocalStopDaemon } from "./NodeLocalStopDaemon";
 import type { NodeLocalFormValues } from "./_hooks";
 import { useNodeLocalFormValidation } from "./_hooks";
 import { transformSettingsRequestToForm } from "./_utils";
@@ -39,7 +39,7 @@ export function NodeLocalForm() {
     initialValues: {
       blockchainLocation: "",
       startupFlags: "",
-      deamonAddress: "",
+      daemonAddress: "",
       port: "",
       ...(nodeSettings
         ? transformSettingsRequestToForm(nodeSettings.toObject())
@@ -52,7 +52,7 @@ export function NodeLocalForm() {
     updateNodeSettings({
       blockchainPath: values.blockchainLocation,
       startupFlags: values.startupFlags.split(", "),
-      bootstrapUrl: `${values.deamonAddress}:${values.port}`,
+      bootstrapUrl: `${values.daemonAddress}:${values.port}`,
     })
       .then(() => {
         showNotification({
@@ -75,7 +75,7 @@ export function NodeLocalForm() {
 
   return (
     <Box>
-      <NodeLocalStopDeamon />
+      <NodeLocalStopDaemon />
 
       <form onSubmit={form.onSubmit(handleFormSubmit)}>
         <Stack spacing="lg">
@@ -93,8 +93,8 @@ export function NodeLocalForm() {
             id="startupFlags"
             label={
               <FormattedMessage
-                id={LangKeys.AccountNodeFieldDeamonFlags}
-                defaultMessage="Deamon startup flags"
+                id={LangKeys.AccountNodeFieldDaemonFlags}
+                defaultMessage="Daemon startup flags"
               />
             }
             {...form.getInputProps("startupFlags")}
@@ -102,15 +102,15 @@ export function NodeLocalForm() {
           <Grid>
             <Grid.Col span={9}>
               <TextInput
-                id="deamonAddress"
+                id="daemonAddress"
                 label={
                   <FormattedMessage
-                    id={LangKeys.AccountNodeFieldDeamonAddress}
-                    defaultMessage="Deamon Address"
+                    id={LangKeys.AccountNodeFieldDaemonAddress}
+                    defaultMessage="Daemon Address"
                   />
                 }
                 required
-                {...form.getInputProps("deamonAddress")}
+                {...form.getInputProps("daemonAddress")}
               />
             </Grid.Col>
             <Grid.Col span={3}>
