@@ -14,12 +14,13 @@
 //  limitations under the License.
 // =============================================================================
 
+import { useMemo } from "react";
 import { useResolvedPath, useLocation } from "react-router-dom";
 
 interface LinkItemActiveProps {
-  to: string;
   caseSensitive?: boolean;
   end?: boolean;
+  to?: string;
 }
 
 /**
@@ -31,22 +32,29 @@ export const useNavLinkActive = ({
   caseSensitive = false,
   end = false,
   to,
-}: LinkItemActiveProps) => {
+}: LinkItemActiveProps): boolean => {
   const location = useLocation();
-  const path = useResolvedPath(to);
+  const path = useResolvedPath(to ?? "");
 
-  let locationPathname = location.pathname;
-  let toPathname = path.pathname;
+  const isActive = useMemo(() => {
+    if (!to) {
+      return false;
+    }
+    let locationPathName = location.pathname;
+    let toPathName = path.pathname;
 
-  if (!caseSensitive) {
-    locationPathname = locationPathname.toLowerCase();
-    toPathname = toPathname.toLowerCase();
-  }
+    if (!caseSensitive) {
+      locationPathName = locationPathName.toLowerCase();
+      toPathName = toPathName.toLowerCase();
+    }
 
-  return (
-    locationPathname === toPathname ||
-    (!end &&
-      locationPathname.startsWith(toPathname) &&
-      locationPathname.charAt(toPathname.length) === "/")
-  );
+    return (
+      locationPathName === toPathName ||
+      (!end &&
+        locationPathName.startsWith(toPathName) &&
+        locationPathName.charAt(toPathName.length) === "/")
+    );
+  }, [location, path, caseSensitive, end, to]);
+
+  return isActive;
 };

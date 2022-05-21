@@ -1,0 +1,94 @@
+// Vitest Snapshot v1
+
+exports[`pages::Login > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Stack-root mantine-14yk9bp"
+  >
+    <header
+      class="mantine-caub1y"
+    >
+      <img
+        alt="Haveno"
+        height="24"
+        src="/assets/logo.svg"
+      />
+    </header>
+    <div
+      class="mantine-Container-root mantine-1hpmr7z"
+    >
+      <div
+        class="mantine-Stack-root mantine-12lpdrc"
+      >
+        <form>
+          <div
+            class="mantine-Stack-root mantine-lfk3cq"
+          >
+            <div
+              class="mantine-Container-root mantine-me1cdz"
+            >
+              <h1
+                class="mantine-Title-root mantine-1rawl7h"
+              >
+                Login to Haveno
+              </h1>
+            </div>
+            <div
+              class="mantine-Text-root mantine-1ourfup"
+            >
+              All your data is stored locally on your machine. Haveno uses solely a password.
+            </div>
+            <div
+              class="mantine-63n06h"
+            />
+            <div
+              class="mantine-TextInput-root mantine-14qek68"
+            >
+              <label
+                class="mantine-TextInput-label mantine-1bjo575"
+                for="password"
+                id="password-label"
+              >
+                Password
+              </label>
+              <div
+                class="mantine-TextInput-wrapper mantine-12sbrde"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Password"
+                  class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-nk8491"
+                  id="password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="mantine-63n06h"
+            />
+            <div
+              class="mantine-Group-root mantine-19jxmdp"
+            >
+              <button
+                class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-s2bdxi"
+                type="submit"
+              >
+                <div
+                  class="mantine-3xbgk5 mantine-Button-inner"
+                >
+                  <span
+                    class="mantine-qo1k2 mantine-Button-label"
+                  >
+                    Login
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

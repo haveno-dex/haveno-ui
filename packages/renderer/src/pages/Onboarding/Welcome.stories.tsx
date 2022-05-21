@@ -15,7 +15,6 @@
 // =============================================================================
 
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AppProviders } from "@atoms/AppProviders";
 import { Welcome } from ".";
 
 export default {
@@ -24,11 +23,7 @@ export default {
 } as ComponentMeta<typeof Welcome>;
 
 const Template: ComponentStory<typeof Welcome> = () => {
-  return (
-    <AppProviders>
-      <Welcome />
-    </AppProviders>
-  );
+  return <Welcome />;
 };
 
 export const Default = Template.bind({});

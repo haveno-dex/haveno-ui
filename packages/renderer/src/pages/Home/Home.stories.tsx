@@ -15,20 +15,15 @@
 // =============================================================================
 
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AppProviders } from "@atoms/AppProviders";
 import { Home } from ".";
 
 export default {
-  title: "pages/Onboarding/Home",
+  title: "pages/Home",
   component: Home,
 } as ComponentMeta<typeof Home>;
 
 const Template: ComponentStory<typeof Home> = () => {
-  return (
-    <AppProviders>
-      <Home />
-    </AppProviders>
-  );
+  return <Home />;
 };
 
 export const Default = Template.bind({});

@@ -14,21 +14,26 @@
 //  limitations under the License.
 // =============================================================================
 
-import { describe, expect, it } from "vitest";
-import { render } from "@testing-library/react";
-import { Routes, Route } from "react-router-dom";
-import { AppProviders } from "@atoms/AppProviders";
-import { AccountSidebar } from "./AccountSidebar";
+import { describe, expect, it, vi } from "vitest";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { AddPaymentMethodButton } from ".";
 
-describe("molecules::AccountSidebar", () => {
+describe("molecules::AddPaymentMethodButton", () => {
   it("renders without exploding", () => {
-    const { asFragment } = render(
-      <AppProviders>
-        <Routes>
-          <Route path="/" element={<AccountSidebar />} />
-        </Routes>
-      </AppProviders>
+    const spy = vi.fn();
+    const { asFragment, unmount } = render(
+      <AddPaymentMethodButton onClick={spy} />
     );
     expect(asFragment()).toMatchSnapshot();
+    unmount();
+  });
+
+  it("calls onClick", () => {
+    const spy = vi.fn();
+    const { unmount } = render(<AddPaymentMethodButton onClick={spy} />);
+    expect(spy).to.not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole("button"));
+    expect(spy).to.toHaveBeenCalledTimes(1);
+    unmount();
   });
 });

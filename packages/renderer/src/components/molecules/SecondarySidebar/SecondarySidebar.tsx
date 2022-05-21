@@ -25,7 +25,9 @@ interface SecondarySidebarProps {
  * @param   {SecondarySidebarProps}
  * @returns {JSX.Element}
  */
-export function SecondarySidebar({ children }: SecondarySidebarProps) {
+export function SecondarySidebar({
+  children,
+}: SecondarySidebarProps): JSX.Element {
   const { classes } = useStyles();
 
   return (

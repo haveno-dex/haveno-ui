@@ -16,19 +16,19 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
+import { AppProviders } from "@atoms/AppProviders";
 import { SecondarySidebar, SecondarySidebarItem } from "./";
-import { ThemeProvider } from "@atoms/AppProviders/ThemeProvider";
 
 describe("molecules::SecondarySidebar", () => {
   it("renders without exploding", () => {
     const { asFragment } = render(
-      <ThemeProvider>
+      <AppProviders>
         <SecondarySidebar>
           <SecondarySidebarItem label="Active item" isActive={true} />
           <SecondarySidebarItem label="Inactive item" isActive={false} />
           <SecondarySidebarItem label="Active item" isActive={true} />
         </SecondarySidebar>
-      </ThemeProvider>
+      </AppProviders>
     );
     expect(asFragment()).toMatchSnapshot();
   });

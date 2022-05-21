@@ -19,12 +19,12 @@ import { joiResolver, useForm } from "@mantine/form";
 import { useNavigate } from "react-router-dom";
 import { Container, Group, Space, Stack } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
+import { useLogin } from "@hooks/session/useLogin";
 import { CenteredLayout } from "@templates/CenteredLayout";
 import { BodyText, Heading } from "@atoms/Typography";
-import { ROUTES } from "@constants/routes";
-import { useLogin } from "@hooks/session/useLogin";
 import { Button } from "@atoms/Buttons";
 import { TextInput } from "@atoms/TextInput";
+import { ROUTES } from "@constants/routes";
 import { CONTENT_MAX_WIDTH } from "./_constants";
 
 export function Login() {
@@ -67,6 +67,7 @@ export function Login() {
             </BodyText>
             <Space h="lg" />
             <TextInput
+              aria-label="Password"
               id="password"
               label="Password"
               type="password"

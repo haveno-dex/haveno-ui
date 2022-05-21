@@ -19,7 +19,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { BodyText } from "@atoms/Typography";
 import type { ReactText } from "react";
 
-interface LinkProps extends RouterLinkProps {
+export interface LinkProps extends RouterLinkProps {
   children: ReactText;
 }
 

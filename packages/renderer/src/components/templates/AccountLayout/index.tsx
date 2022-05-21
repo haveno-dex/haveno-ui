@@ -16,7 +16,7 @@
 
 import { Group, createStyles, Box } from "@mantine/core";
 import { NavbarLayout } from "@templates/NavbarLayout";
-import { AccountSidebar } from "@molecules/AccountSidebar";
+import { AccountSidebar } from "@organisms/AccountSidebar";
 
 interface AccountContentProps {
   children: JSX.Element | JSX.Element[];

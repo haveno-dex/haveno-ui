@@ -28,21 +28,19 @@ export function Currency(props: CurrencyProps) {
 
   const formattedNumber = useMemo(
     () =>
-      intl
-        .formatNumber(value, {
-          ...(currencyCode
-            ? {
-                currency: currencyCode,
-                currencyDisplay: "code",
-                style: "currency",
-              }
-            : {
-                style: "decimal",
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 12,
-              }),
-        })
-        .replace(/XXX\s/, ""),
+      intl.formatNumber(value, {
+        ...(currencyCode
+          ? {
+              currency: currencyCode,
+              currencyDisplay: "code",
+              style: "currency",
+            }
+          : {
+              style: "decimal",
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 12,
+            }),
+      }),
     [currencyCode, value]
   );
 

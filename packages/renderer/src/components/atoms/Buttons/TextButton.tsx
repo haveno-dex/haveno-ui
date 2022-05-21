@@ -26,7 +26,7 @@ interface TextButtonProps extends UnstyledButtonProps<"button"> {
 export function TextButton(props: TextButtonProps) {
   const { children, ...rest } = props;
   return (
-    <UnstyledButton {...rest}>
+    <UnstyledButton {...rest} sx={{ textAlign: "center" }}>
       <BodyText component="span" heavy sx={{ textDecoration: "underline" }}>
         {children}
       </BodyText>

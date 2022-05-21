@@ -73,12 +73,12 @@ export function NodeConnectSwitch({
 
   return (
     <Box className={cx(classes.root, className)}>
-      <div className={cx(classes.tabsListWrapper)}>{panes} </div>
+      <Box className={cx(classes.tabsListWrapper)}>{panes}</Box>
 
       {content && (
-        <div role="tabpanel" className={classes.body} key={_activeTab}>
+        <Box role="tabpanel" className={classes.body} key={_activeTab}>
           {content.props.children}
-        </div>
+        </Box>
       )}
     </Box>
   );

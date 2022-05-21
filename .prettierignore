@@ -3,5 +3,8 @@ node_modules
 buildResources
 packages/main/dist
 packages/preload/dist
-packages/rendered/dist
+packages/renderer/dist
+packages/main/coverage
+packages/preload/coverage
+packages/renderer/coverage
 dist/

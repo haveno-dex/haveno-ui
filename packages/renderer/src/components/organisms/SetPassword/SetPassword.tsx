@@ -23,9 +23,9 @@ import { Button, TextButton } from "@atoms/Buttons";
 import { LangKeys } from "@constants/lang";
 
 interface SetPasswordProps {
-  value: string;
   onGoBack: () => void;
   onNext: (password: string) => void;
+  value?: string;
 }
 
 export function SetPassword(props: SetPasswordProps) {
@@ -43,7 +43,7 @@ export function SetPassword(props: SetPasswordProps) {
   };
 
   return (
-    <form onSubmit={onSubmit(handleSubmit)}>
+    <form data-testid="change-password-form" onSubmit={onSubmit(handleSubmit)}>
       <Stack>
         <Container>
           <Heading order={1} stringId={LangKeys.CreatePassword}>
@@ -55,21 +55,31 @@ export function SetPassword(props: SetPasswordProps) {
           password.
         </BodyText>
         <TextInput
+          aria-label="Enter password"
+          autoFocus={false}
           id="password"
           label="Password"
+          tabIndex={1}
           type="password"
           {...getInputProps("password")}
         />
         <TextInput
+          aria-label="Repeat password"
+          autoFocus={false}
           id="repeatPassword"
           label="Repeat password"
+          tabIndex={2}
           type="password"
           {...getInputProps("repeatPassword")}
         />
         <Space h="lg" />
         <Group position="apart">
-          <TextButton onClick={onGoBack}>Go Back</TextButton>
-          <Button type="submit">Next</Button>
+          <TextButton aria-label="Click to go back" onClick={onGoBack}>
+            Go Back
+          </TextButton>
+          <Button aria-label="Click to submit" type="submit">
+            Next
+          </Button>
         </Group>
       </Stack>
     </form>

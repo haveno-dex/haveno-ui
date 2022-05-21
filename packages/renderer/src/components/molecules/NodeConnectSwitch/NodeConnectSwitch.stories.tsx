@@ -15,12 +15,13 @@
 // =============================================================================
 
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { NodeConnectSwitch } from ".";
+import { Text } from "@mantine/core";
 import { ReactComponent as CloudIcon } from "@assets/setting-cloud.svg";
 import { ReactComponent as ServerIcon } from "@assets/setting-server.svg";
+import { NodeConnectSwitch } from ".";
 
 export default {
-  title: "atoms/NodeConnectSwitch",
+  title: "molecules/NodeConnectSwitch",
   component: NodeConnectSwitch,
 } as ComponentMeta<typeof NodeConnectSwitch>;
 
@@ -28,13 +29,11 @@ const Template: ComponentStory<typeof NodeConnectSwitch> = () => {
   return (
     <NodeConnectSwitch>
       <NodeConnectSwitch.Method
-        active={true}
-        current={true}
         tabKey="local-node"
         label="Local Node"
         icon={<ServerIcon width="32px" height="62px" />}
       >
-        Local Node
+        <Text>Local Node</Text>
       </NodeConnectSwitch.Method>
 
       <NodeConnectSwitch.Method
@@ -42,7 +41,7 @@ const Template: ComponentStory<typeof NodeConnectSwitch> = () => {
         label="Remote Node"
         icon={<CloudIcon width="58px" height="54px" />}
       >
-        Remote Node
+        <Text>Remote Node</Text>
       </NodeConnectSwitch.Method>
     </NodeConnectSwitch>
   );

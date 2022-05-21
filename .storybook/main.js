@@ -19,10 +19,7 @@ const svgrPlugin = require("vite-plugin-svgr");
 const viteConfig = require("../packages/renderer/vite.config");
 
 module.exports = {
-  stories: [
-    "../packages/renderer/**/*.stories.mdx",
-    "../packages/renderer/**/*.stories.@(js|jsx|ts|tsx)",
-  ],
+  stories: ["../packages/renderer/src/**/*.stories.tsx"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",

@@ -75,3 +75,18 @@ exports[`atoms::Buttons > renders success button 1`] = `
   </button>
 </DocumentFragment>
 `;
+
+exports[`atoms::Buttons > renders text button 1`] = `
+<DocumentFragment>
+  <button
+    class="mantine-UnstyledButton-root mantine-13uxwbm"
+    type="button"
+  >
+    <span
+      class="mantine-Text-root mantine-10a0kig"
+    >
+      This is a Text Button
+    </span>
+  </button>
+</DocumentFragment>
+`;

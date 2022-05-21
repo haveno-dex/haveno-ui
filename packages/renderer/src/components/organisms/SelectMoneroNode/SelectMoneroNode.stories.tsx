@@ -14,4 +14,20 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./Wallet";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { SelectMoneroNode } from ".";
+
+export default {
+  title: "organisms/Select Monero Node",
+  component: SelectMoneroNode,
+} as ComponentMeta<typeof SelectMoneroNode>;
+
+const Template: ComponentStory<typeof SelectMoneroNode> = (args) => {
+  return <SelectMoneroNode {...args} />;
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  onGoBack: () => console.log("go back"),
+  onNext: () => console.log("next"),
+};

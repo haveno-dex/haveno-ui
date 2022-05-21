@@ -16,6 +16,7 @@
 
 import { Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ReactComponent as BtcIcon } from "@assets/btc.svg";
 import { TextInput } from ".";
 
 export default {
@@ -23,17 +24,13 @@ export default {
   component: TextInput,
 } as ComponentMeta<typeof TextInput>;
 
-const Template: ComponentStory<typeof TextInput> = (args) => {
+const Template: ComponentStory<typeof TextInput> = () => {
   return (
     <Stack>
-      <TextInput {...args} />
+      <TextInput id="name" placeholder="Your name" label="Full name" required />
+      <TextInput id="btc" label="Bitcoin" icon={<BtcIcon />} />
     </Stack>
   );
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  id: "email",
-  label: "Your email",
-  placeholder: "johndoe@gmail.com",
-};

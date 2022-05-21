@@ -14,10 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-import { QueryKeys } from "@constants/query-keys";
-import { getIpcError } from "@src/utils/get-ipc-error";
-import { createSession } from "@src/utils/session";
 import { useMutation, useQueryClient } from "react-query";
+import { QueryKeys } from "@constants/query-keys";
+import { getIpcError } from "@utils/get-ipc-error";
+import { createSession } from "@utils/session";
 
 interface Variables {
   currentPassword: string;

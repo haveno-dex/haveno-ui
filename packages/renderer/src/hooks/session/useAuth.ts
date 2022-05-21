@@ -15,11 +15,11 @@
 // =============================================================================
 
 import { QueryKeys } from "@constants/query-keys";
-import { validateSession } from "@src/utils/session";
+import { validateSession } from "@utils/session";
 import { useQuery } from "react-query";
 
 export function useAuth() {
-  return useQuery(
+  return useQuery<boolean, Error>(
     QueryKeys.AuthSession,
     async () => {
       if (await validateSession()) {

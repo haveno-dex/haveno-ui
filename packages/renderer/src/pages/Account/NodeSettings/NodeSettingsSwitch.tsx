@@ -17,7 +17,7 @@
 import { createStyles } from "@mantine/core";
 import { FormattedMessage } from "react-intl";
 import { LangKeys } from "@constants/lang";
-import { NodeConnectSwitch } from "@atoms/NodeConnectSwitch";
+import { NodeConnectSwitch } from "@molecules/NodeConnectSwitch";
 import { ReactComponent as CloudIcon } from "@assets/setting-cloud.svg";
 import { ReactComponent as ServerIcon } from "@assets/setting-server.svg";
 import { NodeLocalForm } from "./NodeLocalForm";

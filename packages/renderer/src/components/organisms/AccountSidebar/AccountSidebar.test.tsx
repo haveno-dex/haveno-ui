@@ -14,8 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-import { NavbarLayout } from "@templates/NavbarLayout";
+import { describe, expect, it } from "vitest";
+import { render } from "@testing-library/react";
+import { AppProviders } from "@atoms/AppProviders";
+import { AccountSidebar } from "./AccountSidebar";
 
-export function Wallet() {
-  return <NavbarLayout></NavbarLayout>;
-}
+describe("molecules::AccountSidebar", () => {
+  it("renders without exploding", () => {
+    const { asFragment } = render(
+      <AppProviders>
+        <AccountSidebar />
+      </AppProviders>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+});

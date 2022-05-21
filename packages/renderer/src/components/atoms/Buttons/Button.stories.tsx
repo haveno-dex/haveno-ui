@@ -16,7 +16,7 @@
 
 import { Group, Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Button } from ".";
+import { Button, TextButton } from ".";
 
 export default {
   title: "atoms/Buttons",
@@ -30,12 +30,14 @@ const Template: ComponentStory<typeof Button> = () => {
       <Button flavor="neutral">Neutral</Button>
       <Button flavor="success">Success</Button>
       <Button flavor="danger">Error</Button>
+      <TextButton>Click me</TextButton>
 
       <Group>
         <Button flavor="primary">Primary</Button>
         <Button flavor="neutral">Neutral</Button>
         <Button flavor="success">Success</Button>
         <Button flavor="danger">Error</Button>
+        <TextButton>Click me</TextButton>
       </Group>
     </Stack>
   );

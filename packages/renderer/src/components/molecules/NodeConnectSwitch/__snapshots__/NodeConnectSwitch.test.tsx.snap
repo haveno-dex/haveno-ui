@@ -1,12 +1,12 @@
 // Vitest Snapshot v1
 
-exports[`atoms::NodeConnectSwitch > renders without exploding 1`] = `
+exports[`molecules::NodeConnectSwitch > renders without exploding 1`] = `
 <DocumentFragment>
   <div
     class="mantine-15po0m8"
   >
     <div
-      class="mantine-17do188"
+      class="mantine-1d0mff5"
     >
       <button
         class="mantine-1lhe3fe"
@@ -114,7 +114,6 @@ exports[`atoms::NodeConnectSwitch > renders without exploding 1`] = `
           </div>
         </div>
       </button>
-       
     </div>
   </div>
 </DocumentFragment>

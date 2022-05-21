@@ -14,4 +14,5 @@
 //  limitations under the License.
 // =============================================================================
 
+// TODO @subir: move this to @constants/currencies
 export type SupportedCurrencies = "BTC" | "ETH" | "EUR";

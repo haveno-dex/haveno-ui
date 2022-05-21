@@ -16,37 +16,12 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { AppProviders } from "@atoms/AppProviders";
-import { ReactComponent as CloudIcon } from "@assets/setting-cloud.svg";
-import { ReactComponent as ServerIcon } from "@assets/setting-server.svg";
-import { NodeConnectSwitch } from ".";
+import { PasswordInput } from ".";
 
-describe("atoms::NodeConnectSwitch", () => {
+describe("atoms::PasswordInput", () => {
   it("renders without exploding", () => {
     const { asFragment } = render(
-      <AppProviders>
-        <NodeConnectSwitch>
-          <NodeConnectSwitch.Method
-            active={true}
-            current={true}
-            tabKey={"local-node"}
-            label="Local Node"
-            icon={<ServerIcon width="32px" height="62px" />}
-          >
-            Local Node
-          </NodeConnectSwitch.Method>
-
-          <NodeConnectSwitch.Method
-            tabKey={"remote-node"}
-            label="Remote Node"
-            icon={<CloudIcon width="58px" height="54px" />}
-            active={false}
-            current={false}
-          >
-            Remote Node
-          </NodeConnectSwitch.Method>
-        </NodeConnectSwitch>
-      </AppProviders>
+      <PasswordInput id="pass" label="Enter password" />
     );
     expect(asFragment()).toMatchSnapshot();
   });

@@ -14,21 +14,16 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Wallet } from ".";
+import { CreateAccount } from ".";
 
 export default {
-  title: "pages/Wallet",
-  component: Wallet,
-} as ComponentMeta<typeof Wallet>;
+  title: "pages/Onboarding/Create Account",
+  component: CreateAccount,
+} as ComponentMeta<typeof CreateAccount>;
 
-const Template: ComponentStory<typeof Wallet> = () => {
-  return (
-    <Stack>
-      <Wallet />
-    </Stack>
-  );
+const Template: ComponentStory<typeof CreateAccount> = () => {
+  return <CreateAccount />;
 };
 
 export const Default = Template.bind({});

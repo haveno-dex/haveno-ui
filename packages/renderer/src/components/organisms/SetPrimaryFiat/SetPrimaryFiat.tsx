@@ -25,7 +25,7 @@ import { SupportedCurrencies } from "@constants/currencies";
 interface SetSetPrimaryFiatProps {
   onGoBack: () => void;
   onNext: (fiat: string) => void;
-  value: string;
+  value?: string;
 }
 
 export function SetPrimaryFiat(props: SetSetPrimaryFiatProps) {

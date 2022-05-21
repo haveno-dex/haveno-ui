@@ -21,8 +21,8 @@ exports[`atoms::Select > renders without exploding 1`] = `
       tabindex="-1"
     >
       <input
-        defaultvalue=""
         type="hidden"
+        value=""
       />
       <div
         class="mantine-Select-wrapper mantine-12sbrde"
@@ -33,11 +33,11 @@ exports[`atoms::Select > renders without exploding 1`] = `
           autocomplete="nope"
           class="mantine-Select-defaultVariant mantine-Select-input mantine-93d3e4"
           data-mantine-stop-propagation="false"
-          defaultvalue=""
           id="select"
           placeholder="Pick one"
           readonly=""
           type="text"
+          value=""
         />
         <div
           class="mantine-Select-rightSection mantine-14dm59e"

@@ -1,0 +1,24 @@
+// Vitest Snapshot v1
+
+exports[`molecules::AddPaymentMethodButton > renders without exploding 1`] = `
+<DocumentFragment>
+  <button
+    class="mantine-UnstyledButton-root mantine-17b3lsu"
+    type="button"
+  >
+    <svg
+      fill="none"
+      height="1em"
+      viewBox="0 0 28 28"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 0C6.3 0 0 6.3 0 14C0 21.7 6.3 28 14 28C21.7 28 28 21.7 28 14C28 6.3 21.7 0 14 0ZM21 15H15V21C15 21.55 14.55 22 14 22C13.45 22 13 21.55 13 21V15H7C6.45 15 6 14.55 6 14C6 13.45 6.45 13 7 13C7 13 10.05 13 13 13V7C13 6.45 13.45 6 14 6C14.55 6 15 6.45 15 7V13C17.95 13 21 13 21 13C21.55 13 22 13.45 22 14C22 14.55 21.55 15 21 15Z"
+        fill="#0B65DA"
+        fill-opacity="0.25"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;

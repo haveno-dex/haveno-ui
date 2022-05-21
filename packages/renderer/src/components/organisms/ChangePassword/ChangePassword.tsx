@@ -18,7 +18,7 @@ import { FormattedMessage } from "react-intl";
 import { Stack, Box, Group } from "@mantine/core";
 import { useForm, joiResolver } from "@mantine/form";
 import { showNotification } from "@mantine/notifications";
-import { TextInput } from "@atoms/TextInput";
+import { PasswordInput } from "@atoms/PasswordInput";
 import { LangKeys } from "@constants/lang";
 import { Button } from "@atoms/Buttons";
 import { useChangePassword } from "@hooks/storage/useChangePassword";
@@ -68,9 +68,8 @@ export function ChangePassword() {
     <Box>
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <Stack spacing="lg">
-          <TextInput
+          <PasswordInput
             id="password"
-            type="password"
             required
             label={
               <FormattedMessage
@@ -80,10 +79,9 @@ export function ChangePassword() {
             }
             {...form.getInputProps("newPassword")}
           />
-          <TextInput
+          <PasswordInput
             id="confirmPassword"
             required
-            type="password"
             label={
               <FormattedMessage
                 id={LangKeys.AccountSecurityFieldRepeatPassword}
@@ -92,9 +90,8 @@ export function ChangePassword() {
             }
             {...form.getInputProps("confirmPassword")}
           />
-          <TextInput
+          <PasswordInput
             id="currentPassword"
-            type="password"
             required
             label={
               <FormattedMessage

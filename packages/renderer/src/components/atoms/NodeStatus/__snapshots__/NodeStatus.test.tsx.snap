@@ -3,7 +3,7 @@
 exports[`atoms::NodeStatus > renders without exploding 1`] = `
 <DocumentFragment>
   <div
-    class="mantine-18xx7au"
+    class="mantine-1vax8o0"
   >
     <div
       class="mantine-Text-root mantine-14byb36"
@@ -11,15 +11,15 @@ exports[`atoms::NodeStatus > renders without exploding 1`] = `
       node.moneroworldcom:18089:active
     </div>
     <div
-      class="mantine-17do188"
+      class="mantine-1d0mff5"
     >
       <div
-        class="mantine-167633s"
+        class="mantine-zy87za"
       />
     </div>
   </div>
   <div
-    class="mantine-18xx7au"
+    class="mantine-1vax8o0"
   >
     <div
       class="mantine-Text-root mantine-14byb36"
@@ -27,10 +27,10 @@ exports[`atoms::NodeStatus > renders without exploding 1`] = `
       node.moneroworldcom:18089:inactive
     </div>
     <div
-      class="mantine-17do188"
+      class="mantine-1d0mff5"
     >
       <div
-        class="mantine-1cipvbv"
+        class="mantine-19v6ci5"
       />
     </div>
   </div>

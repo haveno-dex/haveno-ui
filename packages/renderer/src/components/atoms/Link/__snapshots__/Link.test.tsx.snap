@@ -1,0 +1,15 @@
+// Vitest Snapshot v1
+
+exports[`atoms::Link > renders without exploding 1`] = `
+<DocumentFragment>
+  <a
+    href="#/"
+  >
+    <span
+      class="mantine-Text-root mantine-ix3vgq"
+    >
+      Click me
+    </span>
+  </a>
+</DocumentFragment>
+`;

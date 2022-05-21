@@ -14,12 +14,13 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Box, createStyles, Text } from "@mantine/core";
+import { createStyles, Box, Text } from "@mantine/core";
 
 export enum NodeStatusType {
   Active = "active",
   Inactive = "inactive",
 }
+
 export interface NodeStatusProps {
   /** Node title */
   title: string;
@@ -34,9 +35,9 @@ export function NodeStatus({ title, status }: NodeStatusProps) {
   return (
     <Box className={classes.root}>
       <Text className={classes.title}>{title}</Text>
-      <div className={classes.status}>
-        <div className={classes.statusInner} />
-      </div>
+      <Box className={classes.status}>
+        <Box className={classes.statusInner} />
+      </Box>
     </Box>
   );
 }
@@ -49,7 +50,7 @@ export const useStyles = createStyles<string, { status: NodeStatusType }>(
           theme.colorScheme === "dark" ? theme.colors.dark[8] : theme.white,
         border: `1px solid ${theme.colors.gray[2]}`,
         borderRadius: theme.radius.md,
-        padding: "0.91rem",
+        padding: "0.875rem",
         display: "flex",
         transition: "background-color 0.1s ease-in-out",
       },

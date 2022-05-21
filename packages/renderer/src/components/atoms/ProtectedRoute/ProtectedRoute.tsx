@@ -18,7 +18,7 @@ import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@hooks/session/useAuth";
-import { deleteSession } from "@src/utils/session";
+import { deleteSession } from "@utils/session";
 import { ROUTES } from "@constants/routes";
 
 export function ProtectedRoute({ children }: { children: ReactNode }) {
@@ -29,11 +29,11 @@ export function ProtectedRoute({ children }: { children: ReactNode }) {
     if (isLoading) {
       return;
     }
-    if (!isAuthed) {
+    if (!isAuthed || !isSuccess) {
       deleteSession();
       navigate(ROUTES.Login);
     }
-  }, [isLoading, isAuthed]);
+  }, [isLoading, isAuthed, isSuccess]);
 
-  return isSuccess ? <>{children}</> : null;
+  return isSuccess && isAuthed ? <>{children}</> : null;
 }

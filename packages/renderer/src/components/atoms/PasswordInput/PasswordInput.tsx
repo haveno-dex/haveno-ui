@@ -14,19 +14,32 @@
 //  limitations under the License.
 // =============================================================================
 
-/**
- * Config for global end-to-end tests
- * placed in project root tests folder
- * @type {import('vite').UserConfig}
- * @see https://vitest.dev/config/
- */
-const config = {
-  test: {
-    include: ["./src/**/*.{test,spec}.{ts,tsx}"],
-    coverage: {
-      reporter: ["html"],
-    },
-  },
-};
+import type { PasswordInputProps as MPasswordInputProps } from "@mantine/core";
+import { createStyles, PasswordInput as MPasswordInput } from "@mantine/core";
 
-export default config;
+interface PasswordInputProps extends MPasswordInputProps {
+  id: string;
+}
+
+export function PasswordInput(props: PasswordInputProps) {
+  const { id, ...rest } = props;
+  const { classes } = useStyles();
+  return <MPasswordInput classNames={classes} id={id} {...rest} />;
+}
+
+const useStyles = createStyles((theme) => ({
+  label: {
+    fontSize: "0.875rem",
+    fontWeight: 600,
+    marginBottom: theme.spacing.sm,
+  },
+  innerInput: {
+    fontSize: "0.875rem",
+    fontWeight: 700,
+    height: "3rem",
+    padding: "1rem",
+  },
+  input: {
+    height: "3rem",
+  },
+}));

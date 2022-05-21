@@ -28,8 +28,8 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
             tabindex="-1"
           >
             <input
-              defaultvalue=""
               type="hidden"
+              value=""
             />
             <div
               class="mantine-Select-wrapper mantine-12sbrde"
@@ -40,11 +40,11 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
                 autocomplete="nope"
                 class="mantine-Select-defaultVariant mantine-Select-input mantine-93d3e4"
                 data-mantine-stop-propagation="false"
-                defaultvalue=""
                 id="currency"
                 placeholder="Pick one"
                 readonly=""
                 type="text"
+                value=""
               />
               <div
                 class="mantine-Select-rightSection mantine-14dm59e"
@@ -95,8 +95,8 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
                 tabindex="-1"
               >
                 <input
-                  defaultvalue=""
                   type="hidden"
+                  value=""
                 />
                 <div
                   class="mantine-Select-wrapper mantine-12sbrde"
@@ -107,10 +107,10 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
                     autocomplete="nope"
                     class="mantine-Select-defaultVariant mantine-Select-input mantine-16ko5f2"
                     data-mantine-stop-propagation="false"
-                    defaultvalue=""
                     id="paymentMethod"
                     placeholder="Pick one"
                     type="text"
+                    value=""
                   />
                   <div
                     class="mantine-Select-rightSection mantine-14dm59e"
@@ -160,9 +160,9 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
                 <input
                   aria-invalid="false"
                   class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
-                  defaultvalue=""
                   id="accountNumber"
                   type="text"
+                  value=""
                 />
               </div>
             </div>

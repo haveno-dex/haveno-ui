@@ -15,15 +15,15 @@
 // =============================================================================
 
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { AccountSidebar } from "./AccountSidebar";
+import { ConnectingMonero } from ".";
 
 export default {
-  title: "molecules/AccountSidebar",
-  component: AccountSidebar,
-} as ComponentMeta<typeof AccountSidebar>;
+  title: "pages/Onboarding/Connecting Monero",
+  component: ConnectingMonero,
+} as ComponentMeta<typeof ConnectingMonero>;
 
-const Template: ComponentStory<typeof AccountSidebar> = () => {
-  return <AccountSidebar />;
+const Template: ComponentStory<typeof ConnectingMonero> = () => {
+  return <ConnectingMonero />;
 };
 
 export const Default = Template.bind({});

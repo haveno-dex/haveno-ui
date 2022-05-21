@@ -14,12 +14,14 @@
 //  limitations under the License.
 // =============================================================================
 
+import { useNavLinkActive } from "@hooks/misc/useNavLinkActive";
 import { UnstyledButton, Group, Text, createStyles } from "@mantine/core";
 
 interface SecondarySidebarItemProps {
   isActive?: boolean;
   label: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  route?: string;
 }
 
 /**
@@ -31,8 +33,10 @@ export function SecondarySidebarItem({
   isActive = false,
   label,
   onClick,
-}: SecondarySidebarItemProps) {
-  const { classes } = useStyles({ isActive });
+  route,
+}: SecondarySidebarItemProps): JSX.Element {
+  const isRouteActive = useNavLinkActive({ to: route });
+  const { classes } = useStyles({ isActive: isRouteActive || isActive });
 
   return (
     <UnstyledButton className={classes.button} onClick={onClick}>

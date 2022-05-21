@@ -16,15 +16,18 @@
 
 import { createStyles, Box, Title } from "@mantine/core";
 import { FormattedMessage } from "react-intl";
-import { SecondarySidebar } from "@molecules/SecondarySidebar";
+import { useNavigate } from "react-router-dom";
+import {
+  SecondarySidebar,
+  SecondarySidebarItem,
+} from "@molecules/SecondarySidebar";
 import { LangKeys } from "@constants/lang";
 import { WIDTH } from "./_constants";
 import { useGetAccountSidebarMenu } from "./_hooks";
-import { AccountSidebarItem } from "./AccountSidebarItem";
 
 export function AccountSidebar() {
   const { classes } = useStyles();
-
+  const navigate = useNavigate();
   const menu = useGetAccountSidebarMenu();
 
   return (
@@ -35,10 +38,13 @@ export function AccountSidebar() {
 
       <SecondarySidebar>
         {menu.map((item) => (
-          <AccountSidebarItem
+          <SecondarySidebarItem
             key={item.label}
             label={item.label}
             route={item.route}
+            onClick={() => {
+              navigate(item.route);
+            }}
           />
         ))}
       </SecondarySidebar>

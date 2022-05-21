@@ -14,27 +14,24 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useNavigate } from "react-router-dom";
-import { SecondarySidebarItem } from "@molecules/SecondarySidebar";
-import { useNavLinkActive } from "@src/hooks/misc/useNavLinkActive";
+import { mergeConfig } from "vite";
+import viteConfig from "./vite.config";
 
-interface AccountSidebarItemProps {
-  label: string;
-  route: string;
-}
+/**
+ * Config for global end-to-end tests
+ * placed in project root tests folder
+ * @type {import('vite').UserConfig}
+ * @see https://vitest.dev/config/
+ */
+const config = mergeConfig(viteConfig, {
+  test: {
+    setupFiles: ["../../tests/setup-tests.ts"],
+    environment: "jsdom",
+    include: ["./src/**/*.{test,spec}.{ts,tsx}"],
+    coverage: {
+      reporter: ["html"],
+    },
+  },
+});
 
-export function AccountSidebarItem({ label, route }: AccountSidebarItemProps) {
-  const isActive = useNavLinkActive({ to: route });
-  const navigate = useNavigate();
-
-  return (
-    <SecondarySidebarItem
-      key={label}
-      label={label}
-      isActive={isActive}
-      onClick={() => {
-        return navigate(route);
-      }}
-    />
-  );
-}
+export default config;

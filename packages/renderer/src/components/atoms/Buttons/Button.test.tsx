@@ -16,7 +16,7 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { Button } from ".";
+import { Button, TextButton } from ".";
 
 describe("atoms::Buttons", () => {
   it("renders primary button by default", () => {
@@ -36,6 +36,13 @@ describe("atoms::Buttons", () => {
 
   it("renders error button", () => {
     const { asFragment } = render(<Button flavor="danger">Error</Button>);
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("renders text button", () => {
+    const { asFragment } = render(
+      <TextButton>This is a Text Button</TextButton>
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });
