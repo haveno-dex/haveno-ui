@@ -35,7 +35,7 @@ export enum LangKeys {
   AccountNodeSettingsLocal = "account.nodeSecurity.local.title",
   AccountNodeSettingsRemote = "account.nodeSecurity.remote.title",
   AccountNodeFieldBlockchainLocation = "account.nodeSecurity.blockchainLocation",
-  AccountNodeFieldDaemonAddress = "account.nodeSecurity.daemonAddress",
+  AccountNodeFieldBootstrapUrl = "account.nodeSecurity.bootstrapUrl",
   AccountNodeFieldDaemonFlags = "account.nodeSecurity.daemonFlags",
   AccountNodeFieldPort = "account.nodeSecurity.port",
   AccountNodeStopDaemon = "account.nodeSecurity.stopDaemon",

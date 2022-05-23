@@ -39,7 +39,7 @@ const LangPackEN: { [key in LangKeys]: string } = {
   [LangKeys.AccountNodeSettingsLocal]: "Local Node",
   [LangKeys.AccountNodeSettingsRemote]: "Remote Node",
   [LangKeys.AccountNodeFieldBlockchainLocation]: "Blockchain location",
-  [LangKeys.AccountNodeFieldDaemonAddress]: "Daemon Address",
+  [LangKeys.AccountNodeFieldBootstrapUrl]: "Bootstrap URL",
   [LangKeys.AccountNodeFieldPort]: "Port",
   [LangKeys.AccountNodeFieldDaemonFlags]: "Daemon startup flags",
   [LangKeys.AccountNodeStopDaemon]: "Stop daemon",

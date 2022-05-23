@@ -14,18 +14,15 @@
 //  limitations under the License.
 // =============================================================================
 
-import { QueryKeys } from "@constants/query-keys";
-import type { MoneroNodeSettings } from "haveno-ts";
 import { useQuery } from "react-query";
+import type { MoneroNodeSettings } from "haveno-ts";
+import { QueryKeys } from "@constants/query-keys";
 import { useHavenoClient } from "./useHavenoClient";
 
 export function useMoneroNodeSettings() {
   const client = useHavenoClient();
-
   return useQuery<MoneroNodeSettings | undefined, Error>(
     QueryKeys.MoneroNodeSettings,
-    async () => {
-      return client.getMoneroNodeSettings();
-    }
+    async () => client.getMoneroNodeSettings()
   );
 }

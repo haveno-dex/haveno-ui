@@ -14,30 +14,16 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { NodeStatus, NodeStatusType } from ".";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "@constants/routes";
+import { PaymentMethodList } from "@organisms/PaymentMethodList";
+import { AccountLayout } from "@templates/AccountLayout";
 
-export default {
-  title: "atoms/NodeStatus",
-  component: NodeStatus,
-} as ComponentMeta<typeof NodeStatus>;
-
-const Template: ComponentStory<typeof NodeStatus> = () => {
+export function PaymentAccounts() {
+  const navigate = useNavigate();
   return (
-    <Stack>
-      <NodeStatus
-        title="node.moneroworldcom:18089"
-        status={NodeStatusType.Active}
-      />
-      <NodeStatus title="node.xmr.pt:18081" status={NodeStatusType.Inactive} />
-      <NodeStatus
-        title="node.monero.net:18081"
-        status={NodeStatusType.Active}
-      />
-    </Stack>
+    <AccountLayout>
+      <PaymentMethodList onAdd={() => navigate(ROUTES.AddPaymentAccount)} />
+    </AccountLayout>
   );
-};
-
-export const Default = Template.bind({});
-Default.args = {};
+}

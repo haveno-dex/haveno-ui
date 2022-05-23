@@ -31,7 +31,7 @@ import {
   getPaymentAccountLogo,
   getPaymentAccountName,
   getPaymentAccountNumber,
-} from "@utils/payment-account";
+} from "@src/utils/paymentAccount";
 
 interface PaymentMethodCardProps {
   data: PaymentAccount;

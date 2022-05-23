@@ -1,9 +1,10 @@
 // Vitest Snapshot v1
 
-exports[`atoms::NodeStatus > renders without exploding 1`] = `
+exports[`atoms::MoneroNodeListItem > renders without exploding 1`] = `
 <DocumentFragment>
-  <div
-    class="mantine-1vax8o0"
+  <button
+    class="mantine-UnstyledButton-root mantine-pk5m2t"
+    type="button"
   >
     <div
       class="mantine-Text-root mantine-14byb36"
@@ -17,9 +18,10 @@ exports[`atoms::NodeStatus > renders without exploding 1`] = `
         class="mantine-zy87za"
       />
     </div>
-  </div>
-  <div
-    class="mantine-1vax8o0"
+  </button>
+  <button
+    class="mantine-UnstyledButton-root mantine-1v48mh9"
+    type="button"
   >
     <div
       class="mantine-Text-root mantine-14byb36"
@@ -33,6 +35,6 @@ exports[`atoms::NodeStatus > renders without exploding 1`] = `
         class="mantine-19v6ci5"
       />
     </div>
-  </div>
+  </button>
 </DocumentFragment>
 `;

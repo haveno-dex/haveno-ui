@@ -14,4 +14,12 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./NodeStatus";
+import { AccountLayout } from "@templates/AccountLayout";
+
+export function Backup() {
+  return (
+    <AccountLayout>
+      <h1>Account Backup</h1>
+    </AccountLayout>
+  );
+}

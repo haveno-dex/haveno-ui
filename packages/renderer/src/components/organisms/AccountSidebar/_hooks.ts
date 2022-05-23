@@ -34,35 +34,35 @@ export const useGetAccountSidebarMenu = () => {
           id: LangKeys.AccountSidebarPaymentAccounts,
           defaultMessage: "Payment Accounts",
         }),
-        route: ROUTES.AccountPaymentAccounts,
+        route: ROUTES.PaymentAccounts,
       },
       {
         label: intl.formatMessage({
           id: LangKeys.AccountSidebarNodeSettings,
           defaultMessage: "Node Settings",
         }),
-        route: ROUTES.AccountNodeSettings,
+        route: ROUTES.NodeSettings,
       },
       {
         label: intl.formatMessage({
           id: LangKeys.AccountSidebarSecurity,
           defaultMessage: "Security",
         }),
-        route: ROUTES.AccountSecurity,
+        route: ROUTES.Security,
       },
       {
         label: intl.formatMessage({
           id: LangKeys.AccountSidebarWallet,
           defaultMessage: "Wallet",
         }),
-        route: ROUTES.AccountWallet,
+        route: ROUTES.Wallet,
       },
       {
         label: intl.formatMessage({
           id: LangKeys.AccountSidebarBackup,
           defaultMessage: "Backup",
         }),
-        route: ROUTES.AccountBackup,
+        route: ROUTES.Backup,
       },
     ],
     []

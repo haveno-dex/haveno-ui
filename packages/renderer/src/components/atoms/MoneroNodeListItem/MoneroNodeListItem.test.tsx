@@ -17,19 +17,23 @@
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
 import { AppProviders } from "@atoms/AppProviders";
-import { NodeStatus, NodeStatusType } from "./NodeStatus";
+import { MoneroNodeListItem, NodeStatus } from "./MoneroNodeListItem";
 
-describe("atoms::NodeStatus", () => {
+describe("atoms::MoneroNodeListItem", () => {
   it("renders without exploding", () => {
     const { asFragment } = render(
       <AppProviders>
-        <NodeStatus
+        <MoneroNodeListItem
+          isSelected={true}
           title="node.moneroworldcom:18089:active"
-          status={NodeStatusType.Active}
+          status={NodeStatus.Active}
+          onClick={() => console.log("clicked")}
         />
-        <NodeStatus
+        <MoneroNodeListItem
+          isSelected={false}
           title="node.moneroworldcom:18089:inactive"
-          status={NodeStatusType.Inactive}
+          status={NodeStatus.Inactive}
+          onClick={() => console.log("clicked")}
         />
       </AppProviders>
     );

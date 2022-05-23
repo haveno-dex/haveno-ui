@@ -16,7 +16,7 @@
 
 import { useMutation, useQueryClient } from "react-query";
 import { QueryKeys } from "@constants/query-keys";
-import { getIpcError } from "@utils/get-ipc-error";
+import { getIpcError } from "@src/utils/getIpcError";
 import { createSession } from "@utils/session";
 
 interface Variables {

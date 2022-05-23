@@ -14,19 +14,12 @@
 //  limitations under the License.
 // =============================================================================
 
-export const ROUTES = {
-  Home: "",
-  HomeAlias: "/",
-  Login: "/login",
-  Welcome: "/onboarding/welcome",
-  CreateAccount: "/onboarding/create-account",
-  RestoreBackup: "/onboarding/restore-backup",
+import { AccountLayout } from "@templates/AccountLayout";
 
-  // Account routes
-  PaymentAccounts: "/account/payment-accounts",
-  AddPaymentAccount: "/account/payment-accounts/add",
-  NodeSettings: "/account/node-settings",
-  Backup: "/account/backup",
-  Wallet: "/account/wallet",
-  Security: "/account/security",
-};
+export function Wallet() {
+  return (
+    <AccountLayout>
+      <h1>Account Wallet</h1>
+    </AccountLayout>
+  );
+}

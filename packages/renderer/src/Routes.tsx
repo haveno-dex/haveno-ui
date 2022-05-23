@@ -21,11 +21,11 @@ import { Home } from "@pages/Home";
 import { Login } from "@pages/Login";
 import { CreateAccount, Welcome } from "@pages/Onboarding";
 import {
-  AccountBackup,
-  AccountNodeSettings,
-  AccountPaymentAccounts,
-  AccountSecurity,
-  AccountWallet,
+  Backup,
+  Settings,
+  PaymentAccounts,
+  Security,
+  Wallet,
   AddPaymentAccount,
   PaymentMethods,
 } from "@pages/Account";
@@ -38,47 +38,47 @@ export function AppRoutes() {
       <Route path={ROUTES.Welcome} element={<Welcome />} />
       <Route path={ROUTES.CreateAccount} element={<CreateAccount />} />
       <Route
-        path={ROUTES.AccountPaymentAccounts}
+        path={ROUTES.PaymentAccounts}
         element={
           <ProtectedRoute>
-            <AccountPaymentAccounts />
+            <PaymentAccounts />
           </ProtectedRoute>
         }
       />
       <Route
-        path={ROUTES.AccountNodeSettings}
+        path={ROUTES.NodeSettings}
         element={
           <ProtectedRoute>
-            <AccountNodeSettings />
+            <Settings />
           </ProtectedRoute>
         }
       />
       <Route
-        path={ROUTES.AccountBackup}
+        path={ROUTES.Backup}
         element={
           <ProtectedRoute>
-            <AccountBackup />
+            <Backup />
           </ProtectedRoute>
         }
       />
       <Route
-        path={ROUTES.AccountWallet}
+        path={ROUTES.Wallet}
         element={
           <ProtectedRoute>
-            <AccountWallet />
+            <Wallet />
           </ProtectedRoute>
         }
       />
       <Route
-        path={ROUTES.AccountSecurity}
+        path={ROUTES.Security}
         element={
           <ProtectedRoute>
-            <AccountSecurity />
+            <Security />
           </ProtectedRoute>
         }
       />
       <Route
-        path={ROUTES.AccountPaymentAccounts}
+        path={ROUTES.PaymentAccounts}
         element={
           <ProtectedRoute>
             <PaymentMethods />
@@ -86,7 +86,7 @@ export function AppRoutes() {
         }
       />
       <Route
-        path={ROUTES.AccountAddPaymentAccount}
+        path={ROUTES.AddPaymentAccount}
         element={
           <ProtectedRoute>
             <AddPaymentAccount />

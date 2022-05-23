@@ -15,20 +15,20 @@
 // =============================================================================
 
 import type { MoneroNodeSettings } from "haveno-ts";
-import type { NodeLocalFormValues } from "./_hooks";
+import type { LocalSettingsFormValues } from "./_types";
 
 /**
  * Transformes the settings request values to form.
  * @param    {MoneroNodeSettings.AsObject} nodeSettings
- * @returns  {NodeLocalFormValues}
+ * @returns  {LocalSettingsFormValues}
  */
 export function transformSettingsRequestToForm(
   nodeSettings: MoneroNodeSettings.AsObject
-): NodeLocalFormValues {
+): LocalSettingsFormValues {
   return {
     blockchainLocation: nodeSettings?.blockchainPath || "",
-    startupFlags: nodeSettings?.startupFlagsList.join(", ") || "",
-    daemonAddress: transfromBootstrapUrl(nodeSettings?.bootstrapUrl || ""),
+    startupFlags: nodeSettings?.startupFlagsList.join(" ") || "",
+    bootstrapUrl: transfromBootstrapUrl(nodeSettings?.bootstrapUrl || ""),
     port: transformPort(nodeSettings?.bootstrapUrl || ""),
   };
 }

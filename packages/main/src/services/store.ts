@@ -117,15 +117,21 @@ export function registerStoreHandlers() {
     }
   );
 
-  ipcMain.handle(IpcChannels.SetMoneroNode, async (_, value: string) => {
-    store.set(StorageKeys.Preferences_MoneroNode, value);
+  // set or clear remote node url; empty indicates local node
+  ipcMain.handle(IpcChannels.SetMoneroNode, async (_, uri?: string) => {
+    if (!uri) {
+      store.delete(StorageKeys.Preferences_SelectedNode);
+    } else {
+      store.set(StorageKeys.Preferences_SelectedNode, uri);
+    }
   });
 
+  // fetch the complete set of user preferences
   ipcMain.handle(
     IpcChannels.GetPreferences,
     async (): Promise<IPreferences> => {
       return {
-        moneroNode: store.get(StorageKeys.Preferences_MoneroNode),
+        selectedNode: store.get(StorageKeys.Preferences_SelectedNode),
       };
     }
   );

@@ -20,13 +20,18 @@ import { useHavenoClient } from "./useHavenoClient";
 
 export function useIsMoneroNodeRunning() {
   const client = useHavenoClient();
-
-  return useQuery<boolean, Error>(QueryKeys.MoneroNodeIsRunning, async () => {
-    try {
-      const value = await client.isMoneroNodeRunning();
-      return value;
-    } catch {
-      return false;
+  return useQuery<boolean, Error>(
+    QueryKeys.MoneroNodeIsRunning,
+    async () => {
+      try {
+        const value = await client.isMoneroNodeRunning();
+        return value;
+      } catch {
+        return false;
+      }
+    },
+    {
+      staleTime: 10_000, // 10 sec
     }
-  });
+  );
 }

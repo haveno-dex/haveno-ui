@@ -14,19 +14,9 @@
 //  limitations under the License.
 // =============================================================================
 
-export const ROUTES = {
-  Home: "",
-  HomeAlias: "/",
-  Login: "/login",
-  Welcome: "/onboarding/welcome",
-  CreateAccount: "/onboarding/create-account",
-  RestoreBackup: "/onboarding/restore-backup",
-
-  // Account routes
-  PaymentAccounts: "/account/payment-accounts",
-  AddPaymentAccount: "/account/payment-accounts/add",
-  NodeSettings: "/account/node-settings",
-  Backup: "/account/backup",
-  Wallet: "/account/wallet",
-  Security: "/account/security",
-};
+export interface LocalSettingsFormValues {
+  blockchainLocation: string;
+  startupFlags: string;
+  bootstrapUrl: string;
+  port: string;
+}

@@ -23,7 +23,7 @@ import { useLogin } from "@hooks/session/useLogin";
 import { CenteredLayout } from "@templates/CenteredLayout";
 import { BodyText, Heading } from "@atoms/Typography";
 import { Button } from "@atoms/Buttons";
-import { TextInput } from "@atoms/TextInput";
+import { PasswordInput } from "@atoms/PasswordInput";
 import { ROUTES } from "@constants/routes";
 import { CONTENT_MAX_WIDTH } from "./_constants";
 
@@ -41,7 +41,7 @@ export function Login() {
   const handleSubmit = (values: FormValues) => {
     login(values, {
       onSuccess: () => {
-        navigate(ROUTES.AccountPaymentAccounts, { replace: true });
+        navigate(ROUTES.PaymentAccounts, { replace: true });
       },
       onError: (err) => {
         showNotification({
@@ -66,11 +66,10 @@ export function Login() {
               solely a password.
             </BodyText>
             <Space h="lg" />
-            <TextInput
+            <PasswordInput
               aria-label="Password"
               id="password"
               label="Password"
-              type="password"
               {...getInputProps("password")}
             />
             <Space h="lg" />

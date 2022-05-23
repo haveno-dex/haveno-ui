@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { QueryKeys } from "@constants/query-keys";
 import { useQuery } from "react-query";
+import { QueryKeys } from "@constants/query-keys";
 import { useHavenoClient } from "./useHavenoClient";
 
 export function useAddress() {

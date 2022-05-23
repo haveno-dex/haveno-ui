@@ -14,33 +14,13 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useMutation, useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 import { QueryKeys } from "@constants/query-keys";
 import { useHavenoClient } from "./useHavenoClient";
 
-interface SetMeneroNodeSettingsVariables {
-  blockchainPath?: string;
-  bootstrapUrl?: string;
-  startupFlags?: Array<string>;
-}
-
-export function useSetMoneroNodeSettings() {
-  const queryClient = useQueryClient();
+export function useGetMoneroConnection() {
   const client = useHavenoClient();
-
-  return useMutation(
-    async (data: SetMeneroNodeSettingsVariables) => {
-      const nodeSettings = await client.getMoneroNodeSettings();
-
-      data.blockchainPath &&
-        nodeSettings?.setBlockchainPath(data.blockchainPath);
-      data.startupFlags && nodeSettings?.setStartupFlagsList(data.startupFlags);
-      data.bootstrapUrl && nodeSettings?.setBootstrapUrl(data.bootstrapUrl);
-    },
-    {
-      onSuccess: () => {
-        queryClient.invalidateQueries(QueryKeys.MoneroNodeSettings);
-      },
-    }
+  return useQuery(QueryKeys.MoneroConnection, async () =>
+    client.getMoneroConnection()
   );
 }

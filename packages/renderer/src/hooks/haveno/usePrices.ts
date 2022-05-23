@@ -14,9 +14,9 @@
 //  limitations under the License.
 // =============================================================================
 
+import { useQuery } from "react-query";
 import type { MarketPriceInfo } from "haveno-ts";
 import { QueryKeys } from "@constants/query-keys";
-import { useQuery } from "react-query";
 import { useHavenoClient } from "./useHavenoClient";
 
 export function usePrices() {

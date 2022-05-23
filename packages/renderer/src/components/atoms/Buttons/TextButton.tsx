@@ -14,13 +14,13 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ReactText } from "react";
+import type { ReactNode } from "react";
 import type { UnstyledButtonProps } from "@mantine/core";
 import { UnstyledButton } from "@mantine/core";
 import { BodyText } from "@atoms/Typography";
 
 interface TextButtonProps extends UnstyledButtonProps<"button"> {
-  children: ReactText;
+  children: ReactNode;
 }
 
 export function TextButton(props: TextButtonProps) {

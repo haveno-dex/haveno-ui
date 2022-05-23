@@ -14,24 +14,41 @@
 //  limitations under the License.
 // =============================================================================
 
+import { useMutation, useQueryClient } from "react-query";
+import { UrlConnection } from "haveno-ts";
 import { QueryKeys } from "@constants/query-keys";
-import { useQuery } from "react-query";
 import { useHavenoClient } from "./useHavenoClient";
 
-export function usePaymentMethods() {
+interface Variables {
+  address: string;
+  port: string;
+  user?: string;
+  password?: string;
+}
+
+export function useAddMoneroNode() {
+  const queryClient = useQueryClient();
   const client = useHavenoClient();
-  return useQuery(QueryKeys.PaymentMethods, async () => {
-    // TODO: replace with getSupportedAssets(): TradeCurrency[]
-    // const mns = await client.getMoneroNodeSettings();
-    const mns = await client._moneroNodeClient.getMoneroNodeSettings({}, {});
-    console.log("monero node settings: ", mns?.toObject());
-    if (mns) {
-      const mns2 = mns.setStartupFlagsList(["foo1"]);
-      mns;
+
+  return useMutation<void, Error, Variables>(
+    async (data: Variables) => {
+      const url = new URL(data.address);
+      if (data.port) {
+        url.port = data.port + "";
+      }
+      const conn = new UrlConnection().setUrl(url.toString()).setPriority(1);
+      if (data.user) {
+        conn.setUsername(data.user);
+      }
+      if (data.password) {
+        conn.setPassword(data.password);
+      }
+      client.addMoneroConnection(conn);
+    },
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries(QueryKeys.MoneroConnections);
+      },
     }
-    const assetCodes = await client.getSupportedAssetCodes();
-    return await Promise.all(
-      assetCodes.map((assetCode) => client.getPaymentMethods(assetCode))
-    );
-  });
+  );
 }

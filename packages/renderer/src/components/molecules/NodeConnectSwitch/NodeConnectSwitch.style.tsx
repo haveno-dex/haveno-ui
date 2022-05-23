@@ -18,12 +18,12 @@ import { createStyles } from "@mantine/core";
 
 export const useTabsStyles = createStyles<string, void>(() => {
   return {
+    body: {
+      marginTop: "2.5rem",
+    },
     root: {},
     tabsListWrapper: {
       display: "flex",
-    },
-    body: {
-      marginTop: "2.5rem",
     },
   };
 });
@@ -38,19 +38,21 @@ export const useControlStyles = createStyles<
     tabControl: {
       backgroundColor:
         theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.white,
-      color:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[0]
-          : theme.colors.gray[9],
       border: `2px solid ${
         theme.colorScheme === "dark"
           ? theme.colors.dark[6]
           : theme.colors.gray[2]
       }`,
-      fontSize: theme.fontSizes.md,
-      padding: `${theme.spacing.lg}px ${theme.spacing.xl}px`,
       borderRadius: theme.radius.lg,
+      color:
+        theme.colorScheme === "dark"
+          ? theme.colors.dark[0]
+          : theme.colors.gray[9],
+      cursor: "pointer",
+      fontSize: theme.fontSizes.md,
       height: "8.45rem",
+      padding: `${theme.spacing.lg}px ${theme.spacing.xl}px`,
+      position: "relative",
       width: "13.85rem",
 
       "&:not(:first-of-type)": {
@@ -59,13 +61,11 @@ export const useControlStyles = createStyles<
       [`&.${tabActive.ref}`]: {
         color: theme.colorScheme === "dark" ? theme.black : theme.white,
       },
-      cursor: "pointer",
-      position: "relative",
     },
     tabIcon: {
+      display: "flex",
       fill: "currentColor",
       minHeight: "3.8rem",
-      display: "flex",
 
       svg: {
         margin: "auto",
@@ -85,18 +85,18 @@ export const useControlStyles = createStyles<
       color: theme.white,
     },
     tabCurrent: {
-      display: "inline-block",
-      position: "absolute",
-      fontSize: theme.fontSizes.xs,
-      lineHeight: 1,
-      padding: "0.38rem 1.15rem",
-      borderRadius: theme.radius.sm,
-      top: "0.6rem",
-      left: "0.7rem",
       background: active
         ? theme.fn.rgba(theme.white, 0.15)
         : theme.fn.rgba(theme.colors.blue[5], 0.15),
       color: active ? theme.white : theme.black,
+      borderRadius: theme.radius.sm,
+      display: "inline-block",
+      fontSize: theme.fontSizes.xs,
+      left: "0.7rem",
+      lineHeight: 1,
+      padding: "0.38rem 1.15rem",
+      position: "absolute",
+      top: "0.6rem",
     },
   };
 });

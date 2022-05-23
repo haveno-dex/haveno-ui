@@ -14,19 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-export const ROUTES = {
-  Home: "",
-  HomeAlias: "/",
-  Login: "/login",
-  Welcome: "/onboarding/welcome",
-  CreateAccount: "/onboarding/create-account",
-  RestoreBackup: "/onboarding/restore-backup",
+import { useQuery } from "react-query";
+import type { UrlConnection } from "haveno-ts";
+import { QueryKeys } from "@constants/query-keys";
+import { useHavenoClient } from "./useHavenoClient";
 
-  // Account routes
-  PaymentAccounts: "/account/payment-accounts",
-  AddPaymentAccount: "/account/payment-accounts/add",
-  NodeSettings: "/account/node-settings",
-  Backup: "/account/backup",
-  Wallet: "/account/wallet",
-  Security: "/account/security",
-};
+export function useMoneroConnections() {
+  const client = useHavenoClient();
+  return useQuery<Array<UrlConnection.AsObject>, Error>(
+    QueryKeys.MoneroConnections,
+    async () => {
+      const connections = await client.getMoneroConnections();
+      return connections.map((conn) => conn.toObject());
+    }
+  );
+}

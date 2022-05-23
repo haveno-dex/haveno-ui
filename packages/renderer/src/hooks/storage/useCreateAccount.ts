@@ -20,7 +20,6 @@ import { useMutation, useQueryClient } from "react-query";
 interface Variables {
   password: string;
   primaryFiat: string;
-  moneroNode: string;
 }
 
 export function useCreateAccount() {
@@ -31,7 +30,6 @@ export function useCreateAccount() {
       await Promise.all([
         window.electronStore.setPassword({ newPassword: variables.password }),
         window.electronStore.setPrimaryFiat(variables.primaryFiat),
-        window.electronStore.setMoneroNode(variables.moneroNode),
       ]);
     },
     {

@@ -24,9 +24,7 @@ export function PaymentMethods() {
 
   return (
     <NavbarLayout>
-      <PaymentMethodList
-        onAdd={() => navigate(ROUTES.AccountAddPaymentAccount)}
-      />
+      <PaymentMethodList onAdd={() => navigate(ROUTES.AddPaymentAccount)} />
     </NavbarLayout>
   );
 }

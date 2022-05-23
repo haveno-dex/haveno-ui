@@ -46,8 +46,9 @@ export const store = {
   getAccountInfo: async (): Promise<AccountInfoDto> =>
     ipcRenderer.invoke(IpcChannels.GetAccountInfo),
 
-  setMoneroNode: async (value: string): Promise<void> =>
-    ipcRenderer.invoke(IpcChannels.SetMoneroNode, value),
+  // sets the selected monero node url; empty indicates local node
+  setMoneroNode: async (uri?: string): Promise<void> =>
+    ipcRenderer.invoke(IpcChannels.SetMoneroNode, uri),
 
   getPreferences: async (): Promise<IPreferences> =>
     ipcRenderer.invoke(IpcChannels.GetPreferences),

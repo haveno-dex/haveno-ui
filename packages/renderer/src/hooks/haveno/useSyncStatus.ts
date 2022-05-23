@@ -16,8 +16,8 @@
 
 import { useQuery } from "react-query";
 import { QueryKeys } from "@constants/query-keys";
-// import { useHavenoClient } from "./useHavenoClient";
 import { SyncStatus } from "@constants/sync-status";
+// import { useHavenoClient } from "./useHavenoClient";
 
 export function useSyncStatus() {
   // const client = useHavenoClient();
@@ -28,7 +28,7 @@ export function useSyncStatus() {
       return SyncStatus.NotSynced;
     },
     {
-      staleTime: 10000,
+      staleTime: 10_000,
     }
   );
 }

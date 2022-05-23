@@ -14,26 +14,24 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useQuery } from "react-query";
 import { QueryKeys } from "@constants/query-keys";
-// import { useHavenoClient } from "./useHavenoClient";
+import { useMutation, useQueryClient } from "react-query";
 
-interface MoneroRemoteNodes {
-  title: string;
-  isActive: boolean;
+interface Variables {
+  uri?: string;
 }
 
-export function useMoneroRemoteNodes() {
-  // const client = useHavenoClient();
+export function useSaveRemoteNode() {
+  const queryClient = useQueryClient();
 
-  return useQuery<MoneroRemoteNodes[], Error>(
-    QueryKeys.MoneroRemoteNodes,
-    async () => {
-      return Promise.resolve([
-        { title: "node.moneroworldcom:18089", isActive: true },
-        { title: "node.xmr.pt:18081", isActive: true },
-        { title: "node.monero.net:18081", isActive: true },
-      ]);
+  return useMutation<void, Error, Variables>(
+    async (variables: Variables) => {
+      return window.electronStore.setMoneroNode(variables.uri);
+    },
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries(QueryKeys.StoragePreferences);
+      },
     }
   );
 }

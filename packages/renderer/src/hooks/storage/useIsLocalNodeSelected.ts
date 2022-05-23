@@ -14,4 +14,14 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./NodeSettings";
+import { useEffect, useState } from "react";
+import { usePreferences } from "./usePreferences";
+
+export function useIsLocalNodeSelected() {
+  const [data, setData] = useState(false);
+  const { data: preferences, ...rest } = usePreferences();
+  useEffect(() => {
+    setData(!preferences?.selectedNode);
+  }, [preferences]);
+  return { data, ...rest };
+}

@@ -14,17 +14,17 @@
 //  limitations under the License.
 // =============================================================================
 
-import { QueryKeys } from "@constants/query-keys";
-import type { MoneroNodeSettings } from "haveno-ts";
 import { useMutation, useQueryClient } from "react-query";
+import type { MoneroNodeSettings } from "haveno-ts";
+import { QueryKeys } from "@constants/query-keys";
 import { useHavenoClient } from "./useHavenoClient";
 
 export function useStartMoneroNode() {
-  const client = useHavenoClient();
   const queryClient = useQueryClient();
+  const client = useHavenoClient();
 
   return useMutation<void, Error, MoneroNodeSettings>(
-    (data: MoneroNodeSettings) => client.startMoneroNode(data),
+    async (data: MoneroNodeSettings) => client.startMoneroNode(data),
     {
       onSuccess: () => {
         queryClient.invalidateQueries(QueryKeys.MoneroNodeIsRunning);

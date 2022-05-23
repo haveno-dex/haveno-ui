@@ -14,15 +14,15 @@
 //  limitations under the License.
 // =============================================================================
 
-import { QueryKeys } from "@constants/query-keys";
 import { useMutation, useQueryClient } from "react-query";
+import { QueryKeys } from "@constants/query-keys";
 import { useHavenoClient } from "./useHavenoClient";
 
 export function useStopMoneroNode() {
   const queryClient = useQueryClient();
   const client = useHavenoClient();
 
-  return useMutation(() => client.stopMoneroNode(), {
+  return useMutation(async () => client.stopMoneroNode(), {
     onSuccess: () => {
       queryClient.invalidateQueries(QueryKeys.MoneroNodeIsRunning);
     },

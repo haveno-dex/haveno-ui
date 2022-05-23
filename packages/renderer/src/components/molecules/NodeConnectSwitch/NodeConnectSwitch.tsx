@@ -42,11 +42,11 @@ interface NodeConnectSwitchProps {
 }
 
 export function NodeConnectSwitch({
-  className,
-  onTabChange,
   active,
   children,
+  className,
   initialTab,
+  onTabChange,
 }: NodeConnectSwitchProps) {
   const { classes, cx } = useTabsStyles();
 

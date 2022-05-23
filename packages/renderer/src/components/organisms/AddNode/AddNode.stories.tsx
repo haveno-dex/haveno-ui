@@ -14,19 +14,21 @@
 //  limitations under the License.
 // =============================================================================
 
-export const ROUTES = {
-  Home: "",
-  HomeAlias: "/",
-  Login: "/login",
-  Welcome: "/onboarding/welcome",
-  CreateAccount: "/onboarding/create-account",
-  RestoreBackup: "/onboarding/restore-backup",
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { AddNode } from ".";
 
-  // Account routes
-  PaymentAccounts: "/account/payment-accounts",
-  AddPaymentAccount: "/account/payment-accounts/add",
-  NodeSettings: "/account/node-settings",
-  Backup: "/account/backup",
-  Wallet: "/account/wallet",
-  Security: "/account/security",
+export default {
+  title: "organisms/Add Node",
+  component: AddNode,
+} as ComponentMeta<typeof AddNode>;
+
+const Template: ComponentStory<typeof AddNode> = (args) => {
+  return <AddNode {...args} />;
+};
+
+export const Default = Template.bind({});
+Default.args = {
+  isLoading: false,
+  onSubmit: (values) => console.log(values),
+  showTitle: true,
 };

@@ -105,7 +105,7 @@ describe("pages::Login", () => {
     await user.type(screen.getByLabelText("Password"), PASSWORD);
     fireEvent.submit(screen.getByRole("button", { name: "Login" }));
     expect(navSpy).to.toHaveBeenCalledTimes(1);
-    expect(navSpy).toHaveBeenCalledWith(ROUTES.AccountPaymentAccounts, {
+    expect(navSpy).toHaveBeenCalledWith(ROUTES.PaymentAccounts, {
       replace: true,
     });
     unmount();

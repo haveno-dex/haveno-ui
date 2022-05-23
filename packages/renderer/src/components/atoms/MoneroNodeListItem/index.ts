@@ -14,20 +14,4 @@
 //  limitations under the License.
 // =============================================================================
 
-import * as Joi from "joi";
-
-export interface NodeLocalFormValues {
-  blockchainLocation: string;
-  startupFlags: string;
-  daemonAddress: string;
-  port: string;
-}
-
-export function useNodeLocalFormValidation() {
-  return Joi.object<NodeLocalFormValues>({
-    blockchainLocation: Joi.string().empty("").uri({ relativeOnly: true }),
-    startupFlags: Joi.string().empty(""),
-    daemonAddress: Joi.string().uri({ allowRelative: false }),
-    port: Joi.number().port(),
-  });
-}
+export * from "./MoneroNodeListItem";

@@ -9,7 +9,7 @@ exports[`molecules::NodeConnectSwitch > renders without exploding 1`] = `
       class="mantine-1d0mff5"
     >
       <button
-        class="mantine-1lhe3fe"
+        class="mantine-m2616v"
         role="tab"
         tabindex="-1"
         type="button"
@@ -18,12 +18,12 @@ exports[`molecules::NodeConnectSwitch > renders without exploding 1`] = `
           class="mantine-199rwtt"
         >
           <div
-            class="mantine-1jn9p7a"
+            class="mantine-b2d3ff"
           >
             Current
           </div>
           <div
-            class="mantine-9bd5vi"
+            class="mantine-prfd4k"
           >
             <svg
               height="62px"
@@ -57,7 +57,7 @@ exports[`molecules::NodeConnectSwitch > renders without exploding 1`] = `
         </div>
       </button>
       <button
-        class="mantine-1lhe3fe"
+        class="mantine-m2616v"
         role="tab"
         tabindex="-1"
         type="button"
@@ -66,7 +66,7 @@ exports[`molecules::NodeConnectSwitch > renders without exploding 1`] = `
           class="mantine-199rwtt"
         >
           <div
-            class="mantine-9bd5vi"
+            class="mantine-prfd4k"
           >
             <svg
               fill="none"

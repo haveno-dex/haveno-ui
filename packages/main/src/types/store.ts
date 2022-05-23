@@ -19,14 +19,14 @@ import type { Schema } from "electron-store";
 export enum StorageKeys {
   AccountInfo_Password = "accounInfo.password",
   AccountInfo_PrimaryFiat = "accounInfo.primaryFiat",
-  Preferences_MoneroNode = "preferences.moneroNode",
+  Preferences_SelectedNode = "preferences.selectedNode",
 }
 
 // TS types for StoreSchema
 export interface IStoreSchema {
   [StorageKeys.AccountInfo_Password]: IAccountInfo["password"];
   [StorageKeys.AccountInfo_PrimaryFiat]: IAccountInfo["primaryFiat"];
-  [StorageKeys.Preferences_MoneroNode]: IPreferences["moneroNode"]; // TODO: change to object {url, password}
+  [StorageKeys.Preferences_SelectedNode]: IPreferences["selectedNode"];
 }
 
 export interface IAccountInfo {
@@ -39,7 +39,7 @@ export interface AccountInfoDto extends Omit<IAccountInfo, "password"> {
 }
 
 export interface IPreferences {
-  moneroNode: string;
+  selectedNode?: string; // empty for local; id for remote
 }
 
 // this schema is used by electron-store
@@ -51,7 +51,7 @@ export const StoreSchema: Schema<IStoreSchema> = {
   [StorageKeys.AccountInfo_PrimaryFiat]: {
     type: "string",
   },
-  [StorageKeys.Preferences_MoneroNode]: {
+  [StorageKeys.Preferences_SelectedNode]: {
     type: "string",
   },
 };

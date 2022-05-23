@@ -14,11 +14,15 @@
 //  limitations under the License.
 // =============================================================================
 
+import type { FormEvent } from "react";
 import { Stack, Space, Group } from "@mantine/core";
 import { BodyText, Heading } from "@atoms/Typography";
 import { Button, TextButton } from "@atoms/Buttons";
 import { Select } from "@atoms/Select";
-import type { FormEvent } from "react";
+import {
+  HAVENO_DAEMON_PASSWORD,
+  HAVENO_DAEMON_URL,
+} from "@constants/haveno-daemon";
 
 interface SelectMoneroNodeProps {
   onGoBack: () => void;
@@ -32,8 +36,8 @@ export function SelectMoneroNode(props: SelectMoneroNodeProps) {
     ev.preventDefault();
     // TODO: fix
     onNext({
-      url: "http://192.168.29.59:8080",
-      password: "apitest",
+      url: HAVENO_DAEMON_URL,
+      password: HAVENO_DAEMON_PASSWORD,
     });
   };
 

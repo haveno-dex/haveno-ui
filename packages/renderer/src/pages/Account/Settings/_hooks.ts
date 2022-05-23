@@ -14,18 +14,14 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useNavigate } from "react-router-dom";
-import { ROUTES } from "@constants/routes";
-import { PaymentMethodList } from "@organisms/PaymentMethodList";
-import { AccountLayout } from "@templates/AccountLayout";
+import Joi from "joi";
+import type { LocalSettingsFormValues } from "./_types";
 
-export function AccountPaymentAccounts() {
-  const navigate = useNavigate();
-  return (
-    <AccountLayout>
-      <PaymentMethodList
-        onAdd={() => navigate(ROUTES.AccountAddPaymentAccount)}
-      />
-    </AccountLayout>
-  );
+export function useLocalSettingsValidation() {
+  return Joi.object<LocalSettingsFormValues>({
+    blockchainLocation: Joi.string().empty("").uri({ relativeOnly: true }),
+    startupFlags: Joi.string().empty(""),
+    bootstrapUrl: Joi.string().allow("").uri({ allowRelative: false }),
+    port: Joi.number().allow("").port(),
+  });
 }

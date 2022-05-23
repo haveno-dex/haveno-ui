@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { HavenoClient } from "haveno-ts";
 import { useRef } from "react";
+import { HavenoClient } from "haveno-ts";
 import {
   HAVENO_DAEMON_PASSWORD,
   HAVENO_DAEMON_URL,

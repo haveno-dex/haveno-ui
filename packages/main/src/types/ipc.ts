@@ -21,7 +21,7 @@ export enum IpcChannels {
   VerifyPassword = "store:accountinfo.verifyPassword",
   SetPrimaryFiat = "store:accountinfo.primaryFiat",
   GetPreferences = "store:preferences",
-  SetMoneroNode = "store:preferences.moneroNode",
+  SetMoneroNode = "store:preferences.setMoneroNode",
 
   VerifyAuthToken = "verifyAuthToken",
 }

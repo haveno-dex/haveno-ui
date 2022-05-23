@@ -40,7 +40,7 @@ const LangPackES: { [key in LangKeys]: string } = {
   [LangKeys.AccountNodeSettingsRemote]: "Nodo Remoto",
   [LangKeys.AccountNodeFieldBlockchainLocation]:
     "Ubicación de cadena de bloques",
-  [LangKeys.AccountNodeFieldDaemonAddress]: "Dirección del demonio",
+  [LangKeys.AccountNodeFieldBootstrapUrl]: "Dirección URL de arranque",
   [LangKeys.AccountNodeFieldPort]: "Puerto",
   [LangKeys.AccountNodeFieldDaemonFlags]: "Indicadores de inicio de daemon",
   [LangKeys.AccountNodeStopDaemon]: "Detener demonio",

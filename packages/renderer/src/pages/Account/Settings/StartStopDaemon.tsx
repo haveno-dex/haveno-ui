@@ -15,7 +15,7 @@
 // =============================================================================
 
 import { FormattedMessage, useIntl } from "react-intl";
-import { createStyles } from "@mantine/core";
+import { Box, createStyles } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
 import { Button } from "@atoms/Buttons";
 import { LangKeys } from "@constants/lang";
@@ -24,18 +24,19 @@ import { useStopMoneroNode } from "@hooks/haveno/useStopMoneroNode";
 import { useIsMoneroNodeRunning } from "@hooks/haveno/useIsMoneroNodeRunning";
 import { useStartMoneroNode } from "@hooks/haveno/useStartMoneroNode";
 
-export function NodeLocalStopDaemon() {
+export function StartStopDaemon() {
   const { classes } = useStyles();
   const intl = useIntl();
 
-  const { mutateAsync: stopMoneroNode } = useStopMoneroNode();
   const { data: isMoneroNodeRunning } = useIsMoneroNodeRunning();
-  const { mutateAsync: startMoneroNode } = useStartMoneroNode();
+  const { mutateAsync: stopMoneroNode, isLoading: isStopping } =
+    useStopMoneroNode();
+  const { mutateAsync: startMoneroNode, isLoading: isStarting } =
+    useStartMoneroNode();
   const { isLoading: isNodeSettingsLoading, data: nodeSettings } =
     useMoneroNodeSettings();
 
-  // handle the stop button click.
-  const handleStopBtnClick = () => {
+  const handleStop = () => {
     stopMoneroNode()
       .then(() => {
         showNotification({
@@ -55,8 +56,8 @@ export function NodeLocalStopDaemon() {
         });
       });
   };
-  // Handle the start button click.
-  const handleStartBtnClick = () => {
+
+  const handleStart = () => {
     if (!nodeSettings) {
       return;
     }
@@ -81,9 +82,14 @@ export function NodeLocalStopDaemon() {
   };
 
   return (
-    <div className={classes.actions}>
+    <Box className={classes.actions}>
       {isMoneroNodeRunning ? (
-        <Button flavor="neutral" onClick={handleStopBtnClick}>
+        <Button
+          flavor="neutral"
+          loading={isStopping}
+          loaderPosition="right"
+          onClick={handleStop}
+        >
           <FormattedMessage
             id={LangKeys.AccountNodeStopDaemon}
             defaultMessage="Stop daemon"
@@ -91,17 +97,18 @@ export function NodeLocalStopDaemon() {
         </Button>
       ) : (
         <Button
-          flavor="neutral"
-          onClick={handleStartBtnClick}
-          disabled={Boolean(isNodeSettingsLoading || !nodeSettings)}
+          disabled={isNodeSettingsLoading || !nodeSettings || isStarting}
+          loading={isStarting}
+          loaderPosition="right"
+          onClick={handleStart}
         >
           <FormattedMessage
-            id={LangKeys.AccountNodeStopDaemon}
+            id={LangKeys.AccountNodeStartDaemon}
             defaultMessage="Start daemon"
           />
         </Button>
       )}
-    </div>
+    </Box>
   );
 }
 

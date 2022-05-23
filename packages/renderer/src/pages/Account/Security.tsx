@@ -14,32 +14,31 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack, Box, createStyles } from "@mantine/core";
-import { AccountLayout } from "@templates/AccountLayout";
 import { LangKeys } from "@constants/lang";
-import { NodeSettingsSwitch } from "./NodeSettingsSwitch";
-import { BodyText, Heading } from "@atoms/Typography";
+import { Stack, Box, createStyles, Group } from "@mantine/core";
+import { AccountLayout } from "@templates/AccountLayout";
+import { Heading, BodyText } from "@atoms/Typography";
+import { ChangePassword } from "@organisms/ChangePassword";
 
-export function AccountNodeSettings() {
+export function Security() {
   const { classes } = useStyles();
 
   return (
     <AccountLayout>
       <Box className={classes.content}>
-        <Stack spacing="sm">
-          <Heading stringId={LangKeys.AccountNodeSettingsTitle} order={3}>
-            Your node settings
-          </Heading>
-          <BodyText
-            stringId={LangKeys.AccountNodeSettingsDesc}
-            size="md"
-            className={classes.paragraph}
-          >
-            Using a local node is recommended, but does require loading the
-            entire blockchain. Choose ‘remote node’ if you prefer a faster but
-            less secure experience.
-          </BodyText>
-          <NodeSettingsSwitch />
+        <Stack spacing="lg">
+          <Group spacing="sm">
+            <Heading stringId={LangKeys.AccountSecurityTitle} order={3}>
+              Account Security
+            </Heading>
+            <BodyText heavy stringId={LangKeys.AccountSecurityDesc} size="md">
+              Haveno does not store any of your data, this happens solely
+              locally on your device. It’s not possible to restore your password
+              when lost. Please make sure you store a copy of it on a safe
+              place.
+            </BodyText>
+          </Group>
+          <ChangePassword />
         </Stack>
       </Box>
     </AccountLayout>
@@ -49,8 +48,5 @@ export function AccountNodeSettings() {
 const useStyles = createStyles((theme) => ({
   content: {
     maxWidth: theme.other.contentWidthMd,
-  },
-  paragraph: {
-    marginBottom: theme.spacing.xl,
   },
 }));
