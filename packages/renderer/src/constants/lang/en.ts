@@ -58,6 +58,10 @@ const LangPackEN: { [key in LangKeys]: string } = {
   [LangKeys.AccountSecurityFieldRepeatPasswordMatchMsg]:
     "Passwords don't match",
   [LangKeys.CreatePassword]: "Create password",
+  [LangKeys.AccountWalletTitle]: "Your wallet details",
+  [LangKeys.AccountWalletDesc]:
+    "The Haveno wallet is permanently connected to your account. Solely saving your seed phrase is not enough to recover your account, you need to download a backup of your account, which you can download via the backup section.",
+  [LangKeys.AccountWalletPassword]: "Password",
 };
 
 export default LangPackEN;

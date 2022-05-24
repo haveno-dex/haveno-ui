@@ -14,26 +14,17 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum QueryKeys {
-  // Haveno
-  Balances = "Haveno.Balances",
-  HavenoVersion = "Haveno.Version",
-  MoneroConnection = "Haveno.MoneroConnection",
-  MoneroConnections = "Haveno.MoneroConnections",
-  MoneroNodeIsRunning = "Haveno.MoneroNodeIsRunning",
-  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
-  PaymentAccounts = "Haveno.PaymentAccounts",
-  Prices = "Haveno.Prices",
-  PrimaryAddress = "Haveno.PrimaryAddress",
-  SyncStatus = "Haveno.SyncStatus",
-  XmrSeed = "Haveno.XmrSeed",
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { WalletManagement } from ".";
 
-  // Storage
-  StorageAccountInfo = "Storage.AccountInfo",
-  StoragePreferences = "Storage.Preferences",
-  StorageRemoteMoneroNode = "Storage.RemoteMoneroNode",
-  StorageIsPasswordValid = "Storage.IsPasswordValid",
+export default {
+  title: "organisms/Wallet Management",
+  component: WalletManagement,
+} as ComponentMeta<typeof WalletManagement>;
 
-  // Others
-  AuthSession = "AuthSession",
-}
+const Template: ComponentStory<typeof WalletManagement> = () => {
+  return <WalletManagement />;
+};
+
+export const Default = Template.bind({});
+Default.args = {};

@@ -14,26 +14,13 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum QueryKeys {
-  // Haveno
-  Balances = "Haveno.Balances",
-  HavenoVersion = "Haveno.Version",
-  MoneroConnection = "Haveno.MoneroConnection",
-  MoneroConnections = "Haveno.MoneroConnections",
-  MoneroNodeIsRunning = "Haveno.MoneroNodeIsRunning",
-  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
-  PaymentAccounts = "Haveno.PaymentAccounts",
-  Prices = "Haveno.Prices",
-  PrimaryAddress = "Haveno.PrimaryAddress",
-  SyncStatus = "Haveno.SyncStatus",
-  XmrSeed = "Haveno.XmrSeed",
+import { useQuery } from "react-query";
+import { QueryKeys } from "@constants/query-keys";
+import { useHavenoClient } from "./useHavenoClient";
 
-  // Storage
-  StorageAccountInfo = "Storage.AccountInfo",
-  StoragePreferences = "Storage.Preferences",
-  StorageRemoteMoneroNode = "Storage.RemoteMoneroNode",
-  StorageIsPasswordValid = "Storage.IsPasswordValid",
-
-  // Others
-  AuthSession = "AuthSession",
+export function useXmrSeed() {
+  const client = useHavenoClient();
+  return useQuery(QueryKeys.XmrSeed, async () => {
+    return client.getXmrSeed();
+  });
 }

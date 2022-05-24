@@ -1,0 +1,494 @@
+// Vitest Snapshot v1
+
+exports[`molecules::WalletManagement > renders after loading data 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Stack-root mantine-lfk3cq"
+  >
+    <div
+      class="mantine-63n06h"
+    />
+    <div
+      class="mantine-Text-root mantine-1ogvxnc"
+    >
+      Loading Wallet Seeds...
+    </div>
+    <ol
+      class="mantine-List-root mantine-14df5ct"
+    >
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              baptism
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              ounce
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              solved
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              gimmick
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              cafe
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              absorb
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              pouch
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              gesture
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              fawns
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              degrees
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              bikini
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              inline
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              island
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              oncoming
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              menu
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              tissue
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              cajun
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              inwardly
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              chlorine
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              popular
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              sleepless
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              taboo
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              aces
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              arises
+            </span>
+          </div>
+        </li>
+      </div>
+      <div
+        class="mantine-Group-root mantine-1qkd5ve"
+      >
+        <li
+          class="mantine-List-item mantine-Group-child mantine-xm6zd"
+        >
+          <div
+            class="__mantine-ref-itemWrapper mantine-1hf9p21 mantine-List-itemWrapper"
+          >
+            <span>
+              popular
+            </span>
+          </div>
+        </li>
+      </div>
+    </ol>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`molecules::WalletManagement > renders loading state 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Stack-root mantine-lfk3cq"
+  >
+    <form>
+      <div
+        class="mantine-Stack-root mantine-lfk3cq"
+      >
+        <div
+          class="mantine-78ek8g"
+        />
+        <div
+          class="mantine-PasswordInput-root mantine-14qek68"
+        >
+          <label
+            class="mantine-PasswordInput-label mantine-1bjo575"
+            for="password"
+            id="password-label"
+          >
+            Password
+            <span
+              class="mantine-1wc35tu mantine-PasswordInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-PasswordInput-wrapper mantine-12sbrde"
+          >
+            <div
+              aria-invalid="false"
+              class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-nakpsh"
+            >
+              <input
+                class="mantine-PasswordInput-innerInput mantine-17c0t6q"
+                id="password"
+                required=""
+                type="password"
+                value=""
+              />
+            </div>
+            <div
+              class="mantine-o3oqoy mantine-PasswordInput-rightSection"
+            >
+              <button
+                aria-hidden="true"
+                class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-910bvd"
+                tabindex="-1"
+                type="button"
+              >
+                <svg
+                  fill="none"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  width="15"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M7.5 11C4.80285 11 2.52952 9.62184 1.09622 7.50001C2.52952 5.37816 4.80285 4 7.5 4C10.1971 4 12.4705 5.37816 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11ZM7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C1.65639 10.2936 4.30786 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C13.3436 4.70638 10.6921 3 7.5 3ZM7.5 9.5C8.60457 9.5 9.5 8.60457 9.5 7.5C9.5 6.39543 8.60457 5.5 7.5 5.5C6.39543 5.5 5.5 6.39543 5.5 7.5C5.5 8.60457 6.39543 9.5 7.5 9.5Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mantine-63n06h"
+        />
+        <div
+          class="mantine-Group-root mantine-147cgkf"
+        >
+          <button
+            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-s2bdxi"
+            disabled=""
+            type="submit"
+          >
+            <div
+              class="mantine-3xbgk5 mantine-Button-inner"
+            >
+              <span
+                class="mantine-qo1k2 mantine-Button-label"
+              >
+                Reveal Seed Phrase
+              </span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</DocumentFragment>
+`;

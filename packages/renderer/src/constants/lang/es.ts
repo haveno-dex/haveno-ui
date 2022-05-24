@@ -59,6 +59,10 @@ const LangPackES: { [key in LangKeys]: string } = {
   [LangKeys.AccountSecurityFieldRepeatPasswordMatchMsg]:
     "La confirmación de la contraseña no coincide con la contraseña.",
   [LangKeys.CreatePassword]: "Crear contraseña",
+  [LangKeys.AccountWalletTitle]: "Detalles de tu billetera",
+  [LangKeys.AccountWalletDesc]:
+    "La billetera Haveno está permanentemente conectada a su cuenta. Solo guardar su frase inicial no es suficiente para recuperar su cuenta, necesita descargar una copia de seguridad de su cuenta, que puede descargar a través de la sección de copia de seguridad.",
+  [LangKeys.AccountWalletPassword]: "contraseña",
 };
 
 export default LangPackES;

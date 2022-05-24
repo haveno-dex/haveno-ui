@@ -14,26 +14,32 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum QueryKeys {
-  // Haveno
-  Balances = "Haveno.Balances",
-  HavenoVersion = "Haveno.Version",
-  MoneroConnection = "Haveno.MoneroConnection",
-  MoneroConnections = "Haveno.MoneroConnections",
-  MoneroNodeIsRunning = "Haveno.MoneroNodeIsRunning",
-  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
-  PaymentAccounts = "Haveno.PaymentAccounts",
-  Prices = "Haveno.Prices",
-  PrimaryAddress = "Haveno.PrimaryAddress",
-  SyncStatus = "Haveno.SyncStatus",
-  XmrSeed = "Haveno.XmrSeed",
+import { QueryKeys } from "@constants/query-keys";
+import { useQuery } from "react-query";
 
-  // Storage
-  StorageAccountInfo = "Storage.AccountInfo",
-  StoragePreferences = "Storage.Preferences",
-  StorageRemoteMoneroNode = "Storage.RemoteMoneroNode",
-  StorageIsPasswordValid = "Storage.IsPasswordValid",
+interface Variables {
+  password: string;
+}
 
-  // Others
-  AuthSession = "AuthSession",
+interface Options {
+  enabled: boolean;
+}
+
+export function useValidatePassword(variables: Variables, options?: Options) {
+  return useQuery<boolean>(
+    QueryKeys.StorageIsPasswordValid,
+    async () => {
+      try {
+        const authToken = await window.electronStore.verifyPassword(
+          variables.password
+        );
+        return Boolean(authToken);
+      } catch {
+        return false;
+      }
+    },
+    {
+      enabled: options?.enabled ?? true,
+    }
+  );
 }

@@ -14,12 +14,38 @@
 //  limitations under the License.
 // =============================================================================
 
+import { Box, createStyles, Group, Stack } from "@mantine/core";
+import { BodyText, Heading } from "@atoms/Typography";
+import { WalletManagement } from "@organisms/WalletManagement/WalletManagement";
 import { AccountLayout } from "@templates/AccountLayout";
+import { LangKeys } from "@constants/lang";
 
 export function Wallet() {
+  const { classes } = useStyles();
   return (
     <AccountLayout>
-      <h1>Account Wallet</h1>
+      <Box>
+        <Stack spacing="lg" className={classes.content}>
+          <Group spacing="sm">
+            <Heading stringId={LangKeys.AccountWalletTitle} order={3}>
+              Your wallet details
+            </Heading>
+            <BodyText heavy stringId={LangKeys.AccountWalletDesc} size="md">
+              The Haveno wallet is permanently connected to your account. Solely
+              saving your seed phrase is not enough to recover your account, you
+              need to download a backup of your account, which you can download
+              via the backup section.
+            </BodyText>
+          </Group>
+        </Stack>
+        <WalletManagement />
+      </Box>
     </AccountLayout>
   );
 }
+
+const useStyles = createStyles((theme) => ({
+  content: {
+    maxWidth: theme.other.contentWidthMd,
+  },
+}));
