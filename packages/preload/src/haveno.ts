@@ -14,12 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-import { AccountLayout } from "@templates/AccountLayout";
+import { ipcRenderer } from "electron";
+import { exposeInMainWorld } from "./exposeInMainWorld";
+import type { DownloadBackupInput } from "./types";
+import { IpcChannels } from "./types";
 
-export function Backup() {
-  return (
-    <AccountLayout>
-      <h1>Account Backup</h1>
-    </AccountLayout>
-  );
-}
+// Export for types in contracts.d.ts
+export const haveno = {
+  downloadBackup: async (data: DownloadBackupInput): Promise<void> =>
+    ipcRenderer.invoke(IpcChannels.DownloadBackup, data),
+
+  getBackupData: async (): Promise<Uint8Array> =>
+    ipcRenderer.invoke(IpcChannels.RestoreBackup),
+};
+
+exposeInMainWorld("haveno", haveno);

@@ -21,7 +21,7 @@ import { Home } from "@pages/Home";
 import { Login } from "@pages/Login";
 import { CreateAccount, Welcome } from "@pages/Onboarding";
 import {
-  Backup,
+  AccountBackup,
   Settings,
   PaymentAccounts,
   Security,
@@ -57,7 +57,7 @@ export function AppRoutes() {
         path={ROUTES.Backup}
         element={
           <ProtectedRoute>
-            <Backup />
+            <AccountBackup />
           </ProtectedRoute>
         }
       />

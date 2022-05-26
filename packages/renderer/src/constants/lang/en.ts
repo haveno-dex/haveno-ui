@@ -62,6 +62,18 @@ const LangPackEN: { [key in LangKeys]: string } = {
   [LangKeys.AccountWalletDesc]:
     "The Haveno wallet is permanently connected to your account. Solely saving your seed phrase is not enough to recover your account, you need to download a backup of your account, which you can download via the backup section.",
   [LangKeys.AccountWalletPassword]: "Password",
+  [LangKeys.AccountBackupDownloadTitle]: "Download your backup file",
+  [LangKeys.AccountBackupDownloadDesc]:
+    "To be able to restore your Haveno account you need to create a backup file of your account. Keep it somewhere safe.",
+  [LangKeys.AccountBackupDownloadBtn]: "Download backup file",
+  [LangKeys.AccountBackupRestoreTitle]: "Restore an existing backup file",
+  [LangKeys.AccountBackupRestoreDesc]:
+    "When you restore an existing backup file of your Haveno account, you will lose the account you’re using currently. Please use with caution.",
+  [LangKeys.AccountBackupRestoreBtn]: "Restore backup",
+  [LangKeys.AccountBackupDownloadSuccessNotif]:
+    "The backup has been downloaded successfully.",
+  [LangKeys.AccountBackupRestoreSuccessNotif]:
+    "The backup has been restored successfully.",
 };
 
 export default LangPackEN;

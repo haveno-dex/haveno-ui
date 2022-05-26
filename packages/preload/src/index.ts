@@ -21,3 +21,4 @@
 import "./nodeCrypto";
 import "./versions";
 import "./store";
+import "./haveno";

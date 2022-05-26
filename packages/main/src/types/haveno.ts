@@ -14,20 +14,6 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum IpcChannels {
-  // store
-  GetAccountInfo = "store:accountInfo",
-  SetPassword = "store:accountinfo.setPassword",
-  ChangePassword = "store:accountinfo.changePassword",
-  VerifyPassword = "store:accountinfo.verifyPassword",
-  SetPrimaryFiat = "store:accountinfo.primaryFiat",
-  GetPreferences = "store:preferences",
-  SetMoneroNode = "store:preferences.setMoneroNode",
-
-  // haveno
-  DownloadBackup = "haveno:downloadBackup",
-  RestoreBackup = "haveno:restoreBackup",
-
-  // others
-  VerifyAuthToken = "verifyAuthToken",
+export interface DownloadBackupInput {
+  bytes: ArrayBuffer;
 }
