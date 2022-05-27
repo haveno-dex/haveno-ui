@@ -34,18 +34,15 @@ import { BodyText } from "@atoms/Typography";
 export function WalletBalance() {
   const [isOpen, setOpen] = useState(false);
   const { classes } = useStyles({ isOpen });
-  const { data: availableBalances, isLoading: isLoadingBalance } =
-    useBalances();
+
+  const { data: balances, isLoading: isLoadingBalance } = useBalances();
   const { data: accountInfo, isLoading: isLoadingAccountInfo } =
     useAccountInfo();
   const { data: price } = usePrice(accountInfo?.primaryFiat);
 
   const totalBalance = useMemo(() => {
-    return (
-      Number(availableBalances?.getLockedBalance() || 0) +
-      Number(availableBalances?.getReservedTradeBalance() || 0)
-    );
-  }, [availableBalances]);
+    return balances?.balance || 0 + (balances?.reservedTradeBalance || 0);
+  }, [balances]);
 
   const fiatBalance = useMemo(() => {
     if (!totalBalance || !price || !accountInfo?.primaryFiat) {
@@ -76,9 +73,7 @@ export function WalletBalance() {
             <Stack spacing={4}>
               <Group>
                 <Text className={classes.xmr}>
-                  <Currency
-                    value={Number(availableBalances?.getBalance() ?? 0)}
-                  />
+                  <Currency value={Number(balances?.balance || 0)} />
                 </Text>
                 <ArrowDown className={classes.toggleIcon} />
               </Group>
@@ -102,19 +97,13 @@ export function WalletBalance() {
                 <Stack spacing={4}>
                   <Text className={classes.balanceLabel}>Reserved</Text>
                   <Text className={classes.balanceValue}>
-                    <Currency
-                      value={Number(
-                        availableBalances?.getReservedTradeBalance() ?? 0
-                      )}
-                    />
+                    <Currency value={balances?.reservedTradeBalance || 0} />
                   </Text>
                 </Stack>
                 <Stack spacing={4}>
                   <Text className={classes.balanceLabel}>Locked</Text>
                   <Text className={classes.balanceValue}>
-                    <Currency
-                      value={Number(availableBalances?.getLockedBalance() ?? 0)}
-                    />
+                    <Currency value={balances?.lockedBalance || 0} />
                   </Text>
                 </Stack>
               </Stack>

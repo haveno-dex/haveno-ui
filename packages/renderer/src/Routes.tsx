@@ -29,6 +29,7 @@ import {
   AddPaymentAccount,
   PaymentMethods,
 } from "@pages/Account";
+import { MyWallet } from "@pages/MyWallet";
 
 export function AppRoutes() {
   return (
@@ -37,6 +38,14 @@ export function AppRoutes() {
       <Route path={ROUTES.Login} element={<Login />} />
       <Route path={ROUTES.Welcome} element={<Welcome />} />
       <Route path={ROUTES.CreateAccount} element={<CreateAccount />} />
+      <Route
+        path={ROUTES.MyWallet}
+        element={
+          <ProtectedRoute>
+            <MyWallet />
+          </ProtectedRoute>
+        }
+      />
       <Route
         path={ROUTES.PaymentAccounts}
         element={

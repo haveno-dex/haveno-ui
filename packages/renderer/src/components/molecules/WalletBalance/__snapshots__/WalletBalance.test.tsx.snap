@@ -81,7 +81,7 @@ exports[`molecules::WalletBalance > renders after loading data 1`] = `
         <div
           class="mantine-Text-root mantine-1pfxwhx"
         >
-          (USD 7,800.00)
+          (USD 4,500.00)
         </div>
       </div>
       <div
@@ -106,7 +106,7 @@ exports[`molecules::WalletBalance > renders after loading data 1`] = `
               <div
                 class="mantine-Text-root mantine-14d5cdm"
               >
-                26.00
+                15.00
               </div>
             </div>
             <div
@@ -197,12 +197,92 @@ exports[`molecules::WalletBalance > renders loading state 1`] = `
         </div>
       </div>
       <div
-        class="mantine-Stack-root mantine-lfk3cq"
+        class="mantine-Stack-root mantine-1kb6t4k"
       >
         <div
-          class="mantine-Text-root mantine-1152338"
+          class="mantine-Group-root mantine-6y1794"
         >
-          Loading...
+          <div
+            class="mantine-Text-root mantine-Group-child mantine-q5labh"
+          >
+            15.00
+          </div>
+          <svg
+            class="mantine-Group-child mantine-qg5oag"
+            fill="none"
+            height="1em"
+            viewBox="0 0 7 4"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M2.91916 3.69319C3.23963 4.04927 3.76166 4.04657 4.07971 3.69319L6.82329 0.644746C7.14377 0.288661 7.01636 0 6.53811 0H0.460749C-0.0172283 0 -0.14248 0.291357 0.17557 0.644746L2.91916 3.69319Z"
+              fill="#111111"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+        <div
+          class="mantine-Text-root mantine-1pfxwhx"
+        >
+          (USD 4,500.00)
+        </div>
+      </div>
+      <div
+        aria-hidden="true"
+        class="mantine-1avyp1d"
+        style="box-sizing: border-box; display: none; height: 0px; overflow: hidden;"
+      >
+        <div
+          style="opacity: 0; transition: opacity 200ms ease;"
+        >
+          <div
+            class="mantine-Stack-root mantine-lfk3cq"
+          >
+            <div
+              class="mantine-Stack-root mantine-1kb6t4k"
+            >
+              <div
+                class="mantine-Text-root mantine-kaqdcf"
+              >
+                Total
+              </div>
+              <div
+                class="mantine-Text-root mantine-14d5cdm"
+              >
+                15.00
+              </div>
+            </div>
+            <div
+              class="mantine-Stack-root mantine-1kb6t4k"
+            >
+              <div
+                class="mantine-Text-root mantine-kaqdcf"
+              >
+                Reserved
+              </div>
+              <div
+                class="mantine-Text-root mantine-14d5cdm"
+              >
+                14.00
+              </div>
+            </div>
+            <div
+              class="mantine-Stack-root mantine-1kb6t4k"
+            >
+              <div
+                class="mantine-Text-root mantine-kaqdcf"
+              >
+                Locked
+              </div>
+              <div
+                class="mantine-Text-root mantine-14d5cdm"
+              >
+                12.00
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

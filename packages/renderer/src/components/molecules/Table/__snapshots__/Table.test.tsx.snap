@@ -1,0 +1,48 @@
+// Vitest Snapshot v1
+
+exports[`molecules::Table > renders without exploding. 1`] = `
+<DocumentFragment>
+  <table
+    class="mantine-Table-root mantine-1uvqbeb"
+  >
+    <thead>
+      <tr>
+        <th
+          colspan="2"
+          style="width: 300px;"
+        >
+          Name
+        </th>
+      </tr>
+      <tr>
+        <th
+          colspan="1"
+          style="width: 150px;"
+        >
+          First Name
+        </th>
+        <th
+          colspan="1"
+          style="width: 150px;"
+        >
+          Last Name
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          style="width: 150px;"
+        >
+          Ahmed
+        </td>
+        <td
+          style="width: 150px;"
+        >
+          Subir
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

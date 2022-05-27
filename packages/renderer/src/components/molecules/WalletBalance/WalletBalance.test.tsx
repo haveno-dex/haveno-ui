@@ -21,14 +21,14 @@ import { WalletBalance } from ".";
 
 describe("molecules::WalletBalance", () => {
   beforeAll(() => {
-    vi.mock("@hooks/haveno/useHavenoClient", () => ({
-      useHavenoClient: () => ({
-        getBalances: async () => {
-          return {
-            getLockedBalance: () => 12,
-            getReservedTradeBalance: () => 14,
-            getBalance: () => 15,
-          };
+    vi.mock("@hooks/haveno/useBalances", () => ({
+      useBalances: () => ({
+        isLoading: false,
+        isSuccess: true,
+        data: {
+          lockedBalance: 12,
+          reservedTradeBalance: 14,
+          balance: 15,
         },
       }),
     }));
@@ -53,16 +53,17 @@ describe("molecules::WalletBalance", () => {
   });
 
   it("renders loading state", () => {
-    const { asFragment } = render(
+    const { asFragment, unmount } = render(
       <AppProviders>
         <WalletBalance />
       </AppProviders>
     );
     expect(asFragment()).toMatchSnapshot();
+    unmount();
   });
 
   it("renders after loading data", async () => {
-    const { asFragment, queryByText } = render(
+    const { asFragment, queryByText, unmount } = render(
       <AppProviders>
         <WalletBalance />
       </AppProviders>
@@ -71,5 +72,6 @@ describe("molecules::WalletBalance", () => {
       await waitForElementToBeRemoved(() => queryByText("Loading..."));
     }
     expect(asFragment()).toMatchSnapshot();
+    unmount();
   });
 });

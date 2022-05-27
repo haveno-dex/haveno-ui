@@ -1,0 +1,54 @@
+// Vitest Snapshot v1
+
+exports[`organisms::MyWalletPrimaryAddress > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Group-root mantine-sfnj26"
+  >
+    <div
+      class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-1a4fzbd"
+    >
+      <div
+        class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+      >
+        Primary Address
+      </div>
+      <div
+        class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+      >
+        <div
+          class="mantine-Group-root mantine-1i932k4"
+        >
+          <div
+            class="mantine-Group-child mantine-2w2ufd"
+          >
+            HAVENOADDRESS
+          </div>
+          <div
+            class="mantine-Group-root mantine-Group-child mantine-ze53qg"
+          >
+            <a
+              class="mantine-Text-root mantine-Anchor-root mantine-Group-child mantine-16zvpw1"
+            >
+              Copy
+            </a>
+            <a
+              class="mantine-Text-root mantine-Anchor-root mantine-Group-child mantine-16zvpw1"
+            >
+              QR
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`organisms::MyWalletPrimaryAddress > renders xmr primary address from the daemon. 1`] = `
+<div
+  class="mantine-Group-child mantine-2w2ufd"
+>
+  HAVENOADDRESS
+</div>
+`;

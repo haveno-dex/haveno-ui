@@ -9,7 +9,7 @@ exports[`atoms::Sync Status > renders the fully synced status 1`] = `
       class="mantine-Group-child mantine-16wvh2m"
     />
     <div
-      class="mantine-Text-root mantine-Group-child mantine-1mga3um"
+      class="mantine-Text-root mantine-Group-child mantine-6ffw9j"
     >
       Fully Synced
     </div>
@@ -26,7 +26,7 @@ exports[`atoms::Sync Status > renders the not synced status by default 1`] = `
       class="mantine-Group-child mantine-1mmj0t1"
     />
     <div
-      class="mantine-Text-root mantine-Group-child mantine-1mga3um"
+      class="mantine-Text-root mantine-Group-child mantine-6ffw9j"
     >
       Not Synced
     </div>
@@ -43,7 +43,7 @@ exports[`atoms::Sync Status > renders the sync in progress status 1`] = `
       class="mantine-Group-child mantine-6c6x3l"
     />
     <div
-      class="mantine-Text-root mantine-Group-child mantine-1mga3um"
+      class="mantine-Text-root mantine-Group-child mantine-6ffw9j"
     >
       Syncing
     </div>

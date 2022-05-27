@@ -274,7 +274,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
           class="mantine-Group-child mantine-1mmj0t1"
         />
         <div
-          class="mantine-Text-root mantine-Group-child mantine-1mga3um"
+          class="mantine-Text-root mantine-Group-child mantine-6ffw9j"
         >
           Not Synced
         </div>

@@ -36,11 +36,14 @@ export function BodyText<TComponent = "p">(props: BodyTextProps<TComponent>) {
   return (
     <MText
       {...rest}
-      className={cx(className, {
-        [classes.body]: !size || size === "md",
-        [classes.bodyLg]: size === "lg",
-        [classes.bodyHeavy]: Boolean(heavy),
-      })}
+      className={cx(
+        {
+          [classes.body]: !size || size === "md",
+          [classes.bodyLg]: size === "lg",
+          [classes.bodyHeavy]: Boolean(heavy),
+        },
+        className
+      )}
       size={size}
     >
       {stringId ? (

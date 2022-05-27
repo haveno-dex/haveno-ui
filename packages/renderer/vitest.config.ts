@@ -25,6 +25,7 @@ import viteConfig from "./vite.config";
  */
 const config = mergeConfig(viteConfig, {
   test: {
+    globalSetup: ["./tests/global-setup.ts"],
     setupFiles: ["../../tests/setup-tests.ts"],
     environment: "jsdom",
     include: ["./src/**/*.{test,spec}.{ts,tsx}"],

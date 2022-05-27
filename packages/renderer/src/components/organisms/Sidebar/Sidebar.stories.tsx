@@ -32,4 +32,5 @@ const Template: ComponentStory<typeof Sidebar> = () => {
 };
 
 export const Default = Template.bind({});
+
 Default.args = {};

@@ -21,6 +21,7 @@ export const ROUTES = {
   Welcome: "/onboarding/welcome",
   CreateAccount: "/onboarding/create-account",
   RestoreBackup: "/onboarding/restore-backup",
+  MyWallet: "/my-wallet",
 
   // Account routes
   PaymentAccounts: "/account/payment-accounts",

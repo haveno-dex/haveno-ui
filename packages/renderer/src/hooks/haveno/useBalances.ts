@@ -15,13 +15,30 @@
 // =============================================================================
 
 import { useQuery } from "react-query";
-import type { XmrBalanceInfo } from "haveno-ts";
 import { QueryKeys } from "@constants/query-keys";
 import { useHavenoClient } from "./useHavenoClient";
 
+interface BalanceInfo {
+  balance: number;
+  unlockedBalance: number;
+  lockedBalance: number;
+  reservedOfferBalance: number;
+  reservedTradeBalance: number;
+}
+
 export function useBalances() {
   const client = useHavenoClient();
-  return useQuery<XmrBalanceInfo, Error>(QueryKeys.Balances, async () =>
-    client.getBalances()
-  );
+
+  return useQuery<BalanceInfo, Error>(QueryKeys.Balances, async () => {
+    const xmrBalances = await client.getBalances();
+    const balances = xmrBalances.toObject();
+
+    return {
+      balance: parseFloat(balances.balance),
+      unlockedBalance: parseFloat(balances.unlockedBalance),
+      lockedBalance: parseFloat(balances.lockedBalance),
+      reservedOfferBalance: parseFloat(balances.reservedOfferBalance),
+      reservedTradeBalance: parseFloat(balances.reservedTradeBalance),
+    };
+  });
 }

@@ -71,7 +71,7 @@ export function StartStopDaemon() {
           }),
         });
       })
-      .catch((err) => {
+      .catch((err: Error) => {
         console.dir(err);
         showNotification({
           color: "red",

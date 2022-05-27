@@ -3004,6 +3004,18 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@tanstack/react-table@^8.0.0-alpha.87":
+  version "8.0.0-alpha.87"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-table/-/react-table-8.0.0-alpha.87.tgz#38cd0ffda4d9c89c34951894bf4abfe8b5754528"
+  integrity sha512-m4PTVemBtk8i9YbvI2Q7ODcD4aCQvyQaOnTx/NWL0r8ZTJXi8BD2bq5UhIfRGuvSd/amoLLYZnVanjldVdJ2Mw==
+  dependencies:
+    "@tanstack/table-core" "8.0.0-alpha.87"
+
+"@tanstack/table-core@8.0.0-alpha.87":
+  version "8.0.0-alpha.87"
+  resolved "https://registry.yarnpkg.com/@tanstack/table-core/-/table-core-8.0.0-alpha.87.tgz#bd182861849cdff4bba8a01cfd0ad396f5c24849"
+  integrity sha512-6oFjMqlx37E4oYQGkZ5Ub4kJTqU78OOYVJk6dg2Zf14S5UETqBRx9UsN/3b13I0rY7KsKOAYDQJZV+rLmdl0qA==
+
 "@testing-library/dom@^8.0.0", "@testing-library/dom@^8.13.0":
   version "8.13.0"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-8.13.0.tgz#bc00bdd64c7d8b40841e27a70211399ad3af46f5"
@@ -11204,6 +11216,11 @@ q@^1.5.1:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qr.js@0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/qr.js/-/qr.js-0.0.0.tgz#cace86386f59a0db8050fa90d9b6b0e88a1e364f"
+  integrity sha1-ys6GOG9ZoNuAUPqQ2baw6IoeNk8=
+
 qs@6.9.7:
   version "6.9.7"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.7.tgz#4610846871485e1e048f44ae3b94033f0e675afe"
@@ -11449,6 +11466,14 @@ react-popper@^2.2.4, react-popper@^2.2.5:
   dependencies:
     react-fast-compare "^3.0.1"
     warning "^4.0.2"
+
+react-qr-code@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/react-qr-code/-/react-qr-code-2.0.7.tgz#508304e031e82426a044f5e9490aca87d7c3de38"
+  integrity sha512-NpknL80p7dWbLdHfBSIxQIqLCu3+kBlyzYD692rO0UnVwfCSziIxc1xn/p3JhPEv1RV1lRD8j0w+hR3L7tawTQ==
+  dependencies:
+    prop-types "^15.7.2"
+    qr.js "0.0.0"
 
 react-query@^3.34.19:
   version "3.34.19"
