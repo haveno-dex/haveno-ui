@@ -17,20 +17,17 @@
 import { FormattedMessage, useIntl } from "react-intl";
 import QRCode from "react-qr-code";
 import type { OpenConfirmModal } from "@mantine/modals/lib/context";
+import { showNotification } from "@mantine/notifications";
 import { useModals } from "@mantine/modals";
 import { useClipboard } from "@mantine/hooks";
-import {
-  Anchor,
-  Box,
-  createStyles,
-  Group,
-  SimpleGrid,
-  Skeleton,
-} from "@mantine/core";
+import { Box, createStyles, Group, SimpleGrid, Skeleton } from "@mantine/core";
 import { DetailItem } from "@atoms/DetailItem";
 import { Button } from "@atoms/Buttons";
-import { LangKeys } from "@constants/lang";
+import { Anchor } from "@atoms/Typography";
 import { DetailItemCard } from "@atoms/DetailItemCard/DetailItemCard";
+import { LangKeys } from "@constants/lang";
+import { useSetDownloadQRCode } from "@hooks/haveno/useSetDownloadQRCode";
+import { Modals } from "@constants/modals";
 
 interface AddressCardProps {
   label?: string;
@@ -49,17 +46,34 @@ export function AddressCard({
 }: AddressCardProps) {
   const modals = useModals();
   const { classes } = useStyles();
+  const { formatMessage } = useIntl();
+
+  const { mutateAsync: downloadQRCode } = useSetDownloadQRCode();
 
   const clipboard = useClipboard({ timeout: COPY_TEXT_TIMEOUT });
 
   const handleCopyClick = () => {
     clipboard.copy(address);
   };
+  const handleQRDownloadClick = (addressCode: string) => {
+    downloadQRCode(addressCode).then(() => {
+      showNotification({
+        color: "green",
+        message: formatMessage({
+          id: LangKeys.AddressCardQRCodeSavedSuccessNotif,
+          defaultMessage: "The QR code has been saved successfully.",
+        }),
+      });
+      modals.closeModal(Modals.QRCodeAddress);
+    });
+  };
   const handleQRClick = () => {
     const modalId = modals.openModal({
+      id: Modals.QRCodeAddress,
       children: (
         <AddressCardQRModalContent
           address={address}
+          onQRDownloadClick={handleQRDownloadClick}
           onReturnClick={() => modals.closeModal(modalId)}
         />
       ),
@@ -137,7 +151,7 @@ export function AddressCardSkeleton({
 
 interface AddressCardQRModalContentProps {
   address: string;
-  onQRDownloadClick?: () => void;
+  onQRDownloadClick?: (address: string) => void;
   onReturnClick?: () => void;
 }
 
@@ -149,10 +163,16 @@ function AddressCardQRModalContent({
   const { classes } = useStyles();
   const { formatMessage } = useIntl();
 
+  const handleQRDownloadClick = () => {
+    onQRDownloadClick && onQRDownloadClick(address);
+  };
   return (
-    <Box>
+    <Box className={classes.qrModalRoot}>
       <DetailItem
-        classNames={{ content: classes.qrModalAddress }}
+        classNames={{
+          content: classes.qrModalAddress,
+          label: classes.qrModalAddressLabel,
+        }}
         label={formatMessage({
           id: LangKeys.MyWalletQRModalPrimaryAddress,
           defaultMessage: "Primary Address",
@@ -173,7 +193,7 @@ function AddressCardQRModalContent({
           />
         </Button>
 
-        <Button onClick={onQRDownloadClick}>
+        <Button onClick={handleQRDownloadClick}>
           <FormattedMessage
             id={LangKeys.MyWalletQRModalDownloadQRBtn}
             defaultMessage="Download QR"
@@ -197,11 +217,18 @@ const useStyles = createStyles((theme) => ({
   addressBtns: {
     marginLeft: "auto",
   },
+  qrModalRoot: {
+    padding: "1.5rem",
+  },
   qrRoot: {
-    marginTop: theme.spacing.xl,
+    marginTop: theme.spacing.xl * 1.5,
+    marginBottom: theme.spacing.xl * 1.5,
     textAlign: "center",
   },
   qrModalAddress: {
     fontSize: theme.fontSizes.lg,
+  },
+  qrModalAddressLabel: {
+    fontSize: theme.fontSizes.xs,
   },
 }));

@@ -14,22 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-export enum IpcChannels {
-  // store
-  GetAccountInfo = "store:accountInfo",
-  SetPassword = "store:accountinfo.setPassword",
-  ChangePassword = "store:accountinfo.changePassword",
-  VerifyPassword = "store:accountinfo.verifyPassword",
-  SetPrimaryFiat = "store:accountinfo.primaryFiat",
-  GetPreferences = "store:preferences",
-  SetMoneroNode = "store:preferences.setMoneroNode",
+import { useMutation } from "react-query";
 
-  // haveno
-  DownloadBackup = "haveno:downloadBackup",
-  RestoreBackup = "haveno:restoreBackup",
-
-  // others
-  VerifyAuthToken = "verifyAuthToken",
-
-  DownloadQRCode = "haveno:downloadQRCode",
+export function useSetDownloadQRCode() {
+  return useMutation(async (code: string) => {
+    await window.haveno.downloadQRCode(code);
+  });
 }

@@ -77,7 +77,7 @@ export function MyWalletSendForm() {
 
   return (
     <form onSubmit={form.onSubmit(handleFormSubmit)}>
-      <Stack spacing="xl">
+      <Stack spacing="xl" mt="md">
         <SimpleGrid cols={2}>
           <TextInput
             id="amount"
