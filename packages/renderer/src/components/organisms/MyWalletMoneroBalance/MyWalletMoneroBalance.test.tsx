@@ -46,25 +46,25 @@ describe("organisms::MyWalletMoneroBalance", () => {
     unmount();
   });
 
-  it("contains avaliable balance, reservered funds and locked funds details", () => {
+  it("contains available balance, reservered funds and locked funds details", () => {
     const { unmount } = render(
       <AppProviders>
         <MyWalletMoneroBalance />
       </AppProviders>
     );
-    expect(screen.queryByTestId("avaliable-balance")).toBeInTheDocument();
+    expect(screen.queryByTestId("available-balance")).toBeInTheDocument();
     expect(screen.queryByTestId("locked-funds")).toBeInTheDocument();
     expect(screen.queryByTestId("reserverd-funds")).toBeInTheDocument();
     unmount();
   });
 
-  it("contains avaliable balance, reservered funds and locked funds details", () => {
+  it("contains available balance, reservered funds and locked funds details", () => {
     const { unmount } = render(
       <AppProviders>
         <MyWalletMoneroBalance />
       </AppProviders>
     );
-    expect(screen.queryByTestId("avaliable-balance")).toHaveTextContent(
+    expect(screen.queryByTestId("available-balance")).toHaveTextContent(
       "835,120.34017"
     );
     expect(screen.queryByTestId("reserverd-funds")).toHaveTextContent(

@@ -44,12 +44,12 @@ exports[`molecules::AddressCard > renders without exploding 1`] = `
             class="mantine-Group-root mantine-Group-child mantine-ze53qg"
           >
             <a
-              class="mantine-Text-root mantine-Anchor-root mantine-Group-child mantine-16zvpw1"
+              class="mantine-Text-root mantine-Anchor-root mantine-Group-child mantine-1yvb6qd"
             >
               Copy
             </a>
             <a
-              class="mantine-Text-root mantine-Anchor-root mantine-Group-child mantine-16zvpw1"
+              class="mantine-Text-root mantine-Anchor-root mantine-Group-child mantine-1yvb6qd"
             >
               QR
             </a>

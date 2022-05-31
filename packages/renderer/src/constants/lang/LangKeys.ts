@@ -66,7 +66,7 @@ export enum LangKeys {
   MyWalletSendFieldAddress = "myWallet.send.addressField",
   MyWalletSendFieldAddressPlaceholder = "myWallet.send.addressFieldPlaceholder",
   MyWalletReceiveTitle = "myWallet.receive.receiveTitle",
-  MyWalletMoneroAvailableBalance = "myWallet.monero.avaliableBalance",
+  MyWalletMoneroAvailableBalance = "myWallet.monero.availableBalance",
   MyWalletMoneroReservedFunds = "myWallet.monero.reserveredFunds",
   MyWalletMoneroUnreservedFunds = "myWallet.monero.unreservedFunds",
   MyWalletMoneroLockedFunds = "myWallet.monero.lockedFunds",

@@ -3,7 +3,7 @@
 exports[`organisms::MyWalletMoneroBalance > renders without exploding. 1`] = `
 <DocumentFragment>
   <table
-    class="mantine-Table-root mantine-16jrhzw"
+    class="mantine-Table-root mantine-u2os4d"
   >
     <tbody>
       <tr>
