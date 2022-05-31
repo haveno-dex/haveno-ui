@@ -46,7 +46,7 @@ describe("organisms::MyWalletMoneroBalance", () => {
     unmount();
   });
 
-  it("contains available balance, reservered funds and locked funds details", () => {
+  it("contains available balance, reserved funds and locked funds details", () => {
     const { unmount } = render(
       <AppProviders>
         <MyWalletMoneroBalance />
@@ -58,7 +58,7 @@ describe("organisms::MyWalletMoneroBalance", () => {
     unmount();
   });
 
-  it("contains available balance, reservered funds and locked funds details", () => {
+  it("contains available balance, reserved funds and locked funds details values", () => {
     const { unmount } = render(
       <AppProviders>
         <MyWalletMoneroBalance />
