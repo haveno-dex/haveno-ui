@@ -16,6 +16,9 @@
 
 import fsPromises from "fs/promises";
 import { ipcMain, dialog } from "electron";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import QRCode from "qrcode/lib/server";
 import type { DownloadBackupInput } from "@src/types";
 import { IpcChannels } from "@src/types";
 
@@ -56,4 +59,33 @@ export function registerHavenoHandlers() {
     const zipFile = files.filePaths[0];
     return new Uint8Array(await fsPromises.readFile(zipFile));
   });
+
+  ipcMain.handle(
+    IpcChannels.DownloadQRCode,
+    async (_, code: string): Promise<void> => {
+      const file = await dialog.showSaveDialog({
+        defaultPath: "qr-code",
+        filters: [
+          {
+            extensions: ["png"],
+            name: "*",
+          },
+        ],
+        properties: ["createDirectory", "dontAddToRecent"],
+      });
+      if (!file?.filePath) {
+        return;
+      }
+      QRCode.toFile(
+        file.filePath,
+        code,
+        {
+          width: 500,
+        },
+        (err: Error) => {
+          if (err) throw err;
+        }
+      );
+    }
+  );
 }

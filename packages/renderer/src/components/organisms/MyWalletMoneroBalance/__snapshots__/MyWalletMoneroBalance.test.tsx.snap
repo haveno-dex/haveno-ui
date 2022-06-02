@@ -43,27 +43,42 @@ exports[`organisms::MyWalletMoneroBalance > renders without exploding 1`] = `
     >
       <div
         class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-2d5onn"
-        data-testid="avaliable-balance"
+        data-testid="total-balance"
       >
         <div
           class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
         >
-          Avaliable Balance
+          Total Balance
         </div>
         <div
           class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
         >
-          835,120.34017
+          1,000.10
         </div>
       </div>
       <div
         class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-2d5onn"
-        data-testid="reserverd-funds"
+        data-testid="available-balance"
       >
         <div
           class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
         >
-          Reservered Funds
+          Available Balance
+        </div>
+        <div
+          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+        >
+          8,000.65
+        </div>
+      </div>
+      <div
+        class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-2d5onn"
+        data-testid="reserved-funds"
+      >
+        <div
+          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+        >
+          Reserved Funds
         </div>
         <div
           class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"

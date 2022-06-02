@@ -24,6 +24,9 @@ interface BalanceInfo {
   lockedBalance: number;
   reservedOfferBalance: number;
   reservedTradeBalance: number;
+  availableBalance: number;
+  reservedBalance: number;
+  total: number;
 }
 
 export function useBalances() {
@@ -33,12 +36,25 @@ export function useBalances() {
     const xmrBalances = await client.getBalances();
     const balances = xmrBalances.toObject();
 
+    const balance = parseFloat(balances.balance);
+    const unlockedBalance = parseFloat(balances.unlockedBalance);
+    const lockedBalance = parseFloat(balances.lockedBalance);
+    const reservedOfferBalance = parseFloat(balances.reservedOfferBalance);
+    const reservedTradeBalance = parseFloat(balances.reservedTradeBalance);
+
+    const availableBalance = unlockedBalance;
+    const reservedBalance = reservedOfferBalance + reservedTradeBalance;
+    const total = availableBalance + lockedBalance + reservedBalance;
+
     return {
-      balance: parseFloat(balances.balance),
-      unlockedBalance: parseFloat(balances.unlockedBalance),
-      lockedBalance: parseFloat(balances.lockedBalance),
-      reservedOfferBalance: parseFloat(balances.reservedOfferBalance),
-      reservedTradeBalance: parseFloat(balances.reservedTradeBalance),
+      balance,
+      unlockedBalance,
+      lockedBalance,
+      reservedOfferBalance,
+      reservedTradeBalance,
+      availableBalance,
+      reservedBalance,
+      total,
     };
   });
 }

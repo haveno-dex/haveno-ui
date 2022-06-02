@@ -45,14 +45,14 @@ const useStyles = createStyles((theme, _params, getRef) => {
       paddingRight: 0,
       textTransform: "uppercase",
 
-      "&:first-child": {
+      "&:first-of-type": {
         marginLeft: 0,
       },
       "&:last-child": {
         marginRight: 0,
       },
       [`&.${tabActiveRef}`]: {
-        borderBottomColor: theme.primaryColor,
+        borderBottomColor: theme.colors.blue[6],
         color: theme.colors.dark[9],
       },
     },

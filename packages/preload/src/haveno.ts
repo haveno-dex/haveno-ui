@@ -26,6 +26,9 @@ export const haveno = {
 
   getBackupData: async (): Promise<Uint8Array> =>
     ipcRenderer.invoke(IpcChannels.RestoreBackup),
+
+  downloadQRCode: async (qrCode: string): Promise<void> =>
+    ipcRenderer.invoke(IpcChannels.DownloadQRCode, qrCode),
 };
 
 exposeInMainWorld("haveno", haveno);

@@ -64,7 +64,7 @@ export function WalletTransactions({ data }: WalletTransactionsProps) {
 
 const useStyles = createStyles(() => ({
   root: {
-    "tbody tr td:first-child": {
+    "tbody tr td:first-of-type": {
       paddingLeft: 0,
     },
     "tbody tr td:last-child": {

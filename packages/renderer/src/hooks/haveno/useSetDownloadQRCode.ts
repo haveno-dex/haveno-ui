@@ -14,6 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./Heading";
-export * from "./Text";
-export * from "./Anchor";
+import { useMutation } from "react-query";
+
+export function useSetDownloadQRCode() {
+  return useMutation(async (code: string) => {
+    await window.haveno.downloadQRCode(code);
+  });
+}

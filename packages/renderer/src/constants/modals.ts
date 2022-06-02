@@ -14,6 +14,6 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./Heading";
-export * from "./Text";
-export * from "./Anchor";
+export enum Modals {
+  QRCodeAddress = "QRCodeAddress",
+}

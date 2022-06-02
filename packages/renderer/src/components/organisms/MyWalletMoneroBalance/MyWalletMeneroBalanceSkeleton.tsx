@@ -26,8 +26,8 @@ export function MyWalletMeneroBalanceSkeleton() {
     <MoneroBalance>
       <MoneroBalance.Detail
         label={formatMessage({
-          id: LangKeys.MyWalletMoneroAvaliableBalance,
-          defaultMessage: "Avaliable Balance",
+          id: LangKeys.MyWalletMoneroTotalBalance,
+          defaultMessage: "Total Balance",
         })}
       >
         <Skeleton height={8} radius="xl" mt={6} />
@@ -35,8 +35,17 @@ export function MyWalletMeneroBalanceSkeleton() {
 
       <MoneroBalance.Detail
         label={formatMessage({
-          id: LangKeys.MyWalletMoneroReserveredFunds,
-          defaultMessage: "Reservered Funds",
+          id: LangKeys.MyWalletMoneroAvailableBalance,
+          defaultMessage: "Available Balance",
+        })}
+      >
+        <Skeleton height={8} radius="xl" mt={6} />
+      </MoneroBalance.Detail>
+
+      <MoneroBalance.Detail
+        label={formatMessage({
+          id: LangKeys.MyWalletMoneroReservedFunds,
+          defaultMessage: "Reserved Funds",
         })}
       >
         <Skeleton height={8} radius="xl" mt={6} />
