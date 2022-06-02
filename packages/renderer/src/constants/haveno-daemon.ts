@@ -14,7 +14,6 @@
 //  limitations under the License.
 // =============================================================================
 
-export const HAVENO_DAEMON_URL =
-  import.meta.env.VITE_HAVENO_URL ?? "http://localhost:8080";
+export const HAVENO_DAEMON_URL = "http://170.187.138.125:8080";
 export const HAVENO_DAEMON_PASSWORD =
   import.meta.env.VITE_HAVENO_PASSWORD ?? "apitest";

@@ -14,29 +14,21 @@
 //  limitations under the License.
 // =============================================================================
 
-import { BodyText } from "@atoms/Typography";
-import { Stack } from "@mantine/core";
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Currency } from ".";
+import { useQuery } from "react-query";
+import type { OfferInfo } from "haveno-ts";
+import { QueryKeys } from "@constants/query-keys";
+import { useHavenoClient } from "./useHavenoClient";
 
-export default {
-  title: "atoms/Currency",
-  component: Currency,
-} as ComponentMeta<typeof Currency>;
+interface MarketsOfferesQuery {
+  assetCode: string;
+  direction?: "buy" | "sell";
+}
 
-const Template: ComponentStory<typeof Currency> = (args) => {
-  return (
-    <Stack>
-      <BodyText heavy>
-        <Currency {...args} />
-      </BodyText>
-    </Stack>
+export function useMarketsOffers(query: MarketsOfferesQuery) {
+  const client = useHavenoClient();
+
+  return useQuery<OfferInfo[], Error>(
+    [QueryKeys.MoneroNodeIsRunning, query],
+    () => client.getOffers(query.assetCode, query.direction)
   );
-};
-
-export const Default = Template.bind({});
-Default.args = {
-  currencyCode: "EUR",
-  value: 400000.12,
-  currentDisplay: "symbol",
-};
+}

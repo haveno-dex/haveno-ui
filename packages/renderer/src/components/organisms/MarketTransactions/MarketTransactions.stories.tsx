@@ -14,29 +14,43 @@
 //  limitations under the License.
 // =============================================================================
 
-import { BodyText } from "@atoms/Typography";
-import { Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Currency } from ".";
+import { MarketTransactions } from "./MarketTransactions";
 
 export default {
-  title: "atoms/Currency",
-  component: Currency,
-} as ComponentMeta<typeof Currency>;
+  title: "organisms/Markets/Transactions",
+  component: MarketTransactions,
+} as ComponentMeta<typeof MarketTransactions>;
 
-const Template: ComponentStory<typeof Currency> = (args) => {
-  return (
-    <Stack>
-      <BodyText heavy>
-        <Currency {...args} />
-      </BodyText>
-    </Stack>
-  );
+const Template: ComponentStory<typeof MarketTransactions> = () => {
+  return <MarketTransactions data={data} />;
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  currencyCode: "EUR",
-  value: 400000.12,
-  currentDisplay: "symbol",
-};
+
+Default.args = {};
+
+const data = [
+  {
+    price: 123,
+    priceComparison: 0.12,
+    amount: 123123,
+    amountCurrency: "EUR",
+    cost: 123,
+    costCurrency: "USD",
+    paymentMethod: "ASD",
+    accountAge: 12,
+    accountTrades: 1212,
+  },
+  {
+    price: 123,
+    priceComparison: 0.12,
+    amount: 123123,
+    amountCurrency: "EUR",
+    cost: 123,
+    costCurrency: "USD",
+    paymentMethod: "ASD",
+    accountAge: 12,
+    accountTrades: 1212,
+  },
+];

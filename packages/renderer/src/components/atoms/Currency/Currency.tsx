@@ -17,13 +17,16 @@
 import { useMemo } from "react";
 import { useIntl } from "react-intl";
 
+type CurrencyFormatType = "symbol" | "code" | "name" | "narrowSymbol";
+
 interface CurrencyProps {
   currencyCode?: string;
+  currentDisplay?: CurrencyFormatType;
   value: number;
 }
 
 export function Currency(props: CurrencyProps) {
-  const { currencyCode, value } = props;
+  const { currencyCode, currentDisplay, value } = props;
   const intl = useIntl();
 
   const formattedNumber = useMemo(
@@ -32,7 +35,7 @@ export function Currency(props: CurrencyProps) {
         ...(currencyCode
           ? {
               currency: currencyCode,
-              currencyDisplay: "code",
+              currencyDisplay: currentDisplay || "code",
               style: "currency",
             }
           : {

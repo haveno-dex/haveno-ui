@@ -26,6 +26,7 @@ export const NAV_LINKS = [
   {
     icon: <MarketsIcon />,
     label: "Markets",
+    link: "/markets",
   },
   {
     icon: <OffersIcon />,

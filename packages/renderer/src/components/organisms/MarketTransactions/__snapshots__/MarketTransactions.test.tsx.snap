@@ -1,0 +1,184 @@
+// Vitest Snapshot v1
+
+exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
+<DocumentFragment>
+  <table
+    class="mantine-Table-root mantine-ydlwhr"
+  >
+    <thead>
+      <tr>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Price
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Amount
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Costs
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Payment Method
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Account Age
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Account Trades
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Group-root mantine-6y1794"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
+            >
+              €5,000.96
+            </div>
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-zvhzrs"
+            >
+              -1%
+            </div>
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          XMR 7,564.94
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            $532.34
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          ASD
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Group-root mantine-6y1794"
+          >
+            <div
+              class="mantine-ThemeIcon-root mantine-Group-child mantine-11491oq"
+            >
+              X
+            </div>
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-1xtm85p"
+            >
+              65 Days
+            </div>
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            1,212.00
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Group-root mantine-6y1794"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
+            >
+              €9,637.41
+            </div>
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-zvhzrs"
+            >
+              -1%
+            </div>
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          XMR 6,483.23
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            $983.32
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          ASD
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Group-root mantine-6y1794"
+          >
+            <div
+              class="mantine-ThemeIcon-root mantine-Group-child mantine-11491oq"
+            >
+              X
+            </div>
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-1xtm85p"
+            >
+              65 Days
+            </div>
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            3,412.00
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
