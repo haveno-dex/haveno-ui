@@ -16,8 +16,8 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { AppProviders } from "@atoms/AppProviders";
 import { ConnectionProgress } from ".";
+import { AppProviders } from "@atoms/AppProviders";
 
 describe("atoms::ConnectionProgress", () => {
   it("renders without exploding", () => {

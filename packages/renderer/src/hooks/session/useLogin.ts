@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { createSession } from "@src/utils/session";
 import { useMutation } from "react-query";
+import { createSession } from "@src/utils/session";
 
 interface Variables {
   password: string;

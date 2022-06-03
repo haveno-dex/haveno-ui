@@ -17,13 +17,13 @@
 import { createStyles, Box, Title } from "@mantine/core";
 import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
+import { WIDTH } from "./_constants";
+import { useGetAccountSidebarMenu } from "./_hooks";
 import {
   SecondarySidebar,
   SecondarySidebarItem,
 } from "@molecules/SecondarySidebar";
 import { LangKeys } from "@constants/lang";
-import { WIDTH } from "./_constants";
-import { useGetAccountSidebarMenu } from "./_hooks";
 
 export function AccountSidebar() {
   const { classes } = useStyles();

@@ -15,7 +15,6 @@
 // =============================================================================
 
 import { createTable } from "@tanstack/react-table";
-import { Table } from "@molecules/Table";
 import { createStyles } from "@mantine/core";
 import {
   WalletTransactionnSignCell,
@@ -23,6 +22,7 @@ import {
 } from "./WalletTransactionsCells";
 import { WalletTransactionRowExpanded } from "./WalletTransactionsRowExpanded";
 import type { TWalletTransaction } from "./_types";
+import { Table } from "@molecules/Table";
 
 const table = createTable().setRowType<TWalletTransaction>();
 

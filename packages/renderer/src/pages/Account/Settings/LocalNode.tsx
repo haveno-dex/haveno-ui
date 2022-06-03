@@ -19,15 +19,15 @@ import { FormattedMessage, useIntl } from "react-intl";
 import { Stack, Grid, Group } from "@mantine/core";
 import { joiResolver, useForm } from "@mantine/form";
 import { showNotification } from "@mantine/notifications";
+import { StartStopDaemon } from "./StartStopDaemon";
+import { useLocalSettingsValidation } from "./_hooks";
+import { transformSettingsRequestToForm } from "./_utils";
+import type { LocalSettingsFormValues } from "./_types";
 import { Button } from "@atoms/Buttons";
 import { TextInput } from "@atoms/TextInput";
 import { useMoneroNodeSettings } from "@hooks/haveno/useMoneroNodeSettings";
 import { useSaveLocalMoneroNode } from "@hooks/haveno/useSaveLocalMoneroNode";
 import { LangKeys } from "@constants/lang";
-import { StartStopDaemon } from "./StartStopDaemon";
-import type { LocalSettingsFormValues } from "./_types";
-import { useLocalSettingsValidation } from "./_hooks";
-import { transformSettingsRequestToForm } from "./_utils";
 
 export function LocalNode() {
   const { data: nodeSettings } = useMoneroNodeSettings();

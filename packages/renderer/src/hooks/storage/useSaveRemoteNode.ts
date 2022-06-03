@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { QueryKeys } from "@constants/query-keys";
 import { useMutation, useQueryClient } from "react-query";
+import { QueryKeys } from "@constants/query-keys";
 
 interface Variables {
   uri?: string;

@@ -15,9 +15,9 @@
 // =============================================================================
 
 import { useMutation, useQueryClient } from "react-query";
+import { useHavenoClient } from "./useHavenoClient";
 import { useSaveRemoteNode } from "@hooks/storage/useSaveRemoteNode";
 import { QueryKeys } from "@constants/query-keys";
-import { useHavenoClient } from "./useHavenoClient";
 
 interface Variables {
   uri: string;

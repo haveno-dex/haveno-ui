@@ -16,9 +16,9 @@
 
 import { useMutation, useQueryClient } from "react-query";
 import { MoneroNodeSettings } from "haveno-ts";
+import { useHavenoClient } from "./useHavenoClient";
 import { QueryKeys } from "@constants/query-keys";
 import { useSaveRemoteNode } from "@hooks/storage/useSaveRemoteNode";
-import { useHavenoClient } from "./useHavenoClient";
 
 interface Variables {
   blockchainPath: string;

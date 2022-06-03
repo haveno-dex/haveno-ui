@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ButtonProps as MButtonProps } from "@mantine/core";
 import { Button as MButton, createStyles } from "@mantine/core";
+import type { ButtonProps as MButtonProps } from "@mantine/core";
 
 type ButtonProps<TComponent> = MButtonProps<TComponent> & {
   flavor?: "primary" | "neutral" | "success" | "danger";

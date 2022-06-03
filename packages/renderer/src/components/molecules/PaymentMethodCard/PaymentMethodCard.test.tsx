@@ -21,8 +21,8 @@ import {
   PaymentAccount,
   PaymentAccountPayload,
 } from "haveno-ts";
-import { AppProviders } from "@atoms/AppProviders";
 import { PaymentMethodCard } from ".";
+import { AppProviders } from "@atoms/AppProviders";
 
 describe("molecules::PaymentMethodCard", () => {
   it("renders without exploding", () => {

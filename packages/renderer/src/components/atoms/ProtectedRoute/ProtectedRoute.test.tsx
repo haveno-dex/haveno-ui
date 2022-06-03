@@ -17,11 +17,11 @@
 const navigateSpy = vi.fn();
 const deleteSessionSpy = vi.fn();
 
-import type { SpyInstanceFn } from "vitest";
 import { beforeAll, describe, expect, it, vi, afterEach } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { useAuth } from "@hooks/session/useAuth";
+import type { SpyInstanceFn } from "vitest";
 import { ProtectedRoute } from "./ProtectedRoute";
+import { useAuth } from "@hooks/session/useAuth";
 import { ROUTES } from "@constants/routes";
 
 describe("atoms::ProtectedRoute", () => {

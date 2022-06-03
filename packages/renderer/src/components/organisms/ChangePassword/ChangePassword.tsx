@@ -18,12 +18,12 @@ import { FormattedMessage } from "react-intl";
 import { Stack, Box, Group } from "@mantine/core";
 import { useForm, joiResolver } from "@mantine/form";
 import { showNotification } from "@mantine/notifications";
+import { useAccountSecurityFormSchema } from "./_hooks";
+import type { ChangePasswordFormValues } from "./_types";
 import { PasswordInput } from "@atoms/PasswordInput";
 import { LangKeys } from "@constants/lang";
 import { Button } from "@atoms/Buttons";
 import { useChangePassword } from "@hooks/storage/useChangePassword";
-import { useAccountSecurityFormSchema } from "./_hooks";
-import type { ChangePasswordFormValues } from "./_types";
 
 export function ChangePassword() {
   const accountSecurityFormSchema = useAccountSecurityFormSchema();

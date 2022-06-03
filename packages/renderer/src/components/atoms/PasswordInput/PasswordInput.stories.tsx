@@ -15,8 +15,8 @@
 // =============================================================================
 
 import { Stack } from "@mantine/core";
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
 import { EyeCheck, EyeOff } from "tabler-icons-react";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
 import { PasswordInput } from ".";
 
 export default {

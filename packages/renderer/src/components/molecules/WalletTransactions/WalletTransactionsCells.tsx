@@ -16,13 +16,13 @@
 
 import { FormattedDate, FormattedTime, useIntl } from "react-intl";
 import { Box, Group, Stack, Text, useMantineTheme } from "@mantine/core";
+import { WalletTransactionType } from "./_types";
+import type { TWalletTransaction } from "./_types";
 import { ReactComponent as ArrowNorth } from "@assets/arrow-north.svg";
 import { ReactComponent as ArrowWest } from "@assets/arrow-west.svg";
 import { LangKeys } from "@constants/lang";
 import { Currency } from "@atoms/Currency";
 import { CircleIcon } from "@atoms/CircleIcon/CircleIcon";
-import type { TWalletTransaction } from "./_types";
-import { WalletTransactionType } from "./_types";
 
 export function WalletTransactionnSignCell({
   row,

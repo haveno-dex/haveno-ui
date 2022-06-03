@@ -16,6 +16,8 @@
 
 import { Stack, createStyles } from "@mantine/core";
 import { FormattedMessage } from "react-intl";
+import { LocalNode } from "./LocalNode";
+import { RemoteNode } from "./RemoteNode";
 import { NodeConnectSwitch } from "@molecules/NodeConnectSwitch";
 import { BodyText, Heading } from "@atoms/Typography";
 import { AccountLayout } from "@templates/AccountLayout";
@@ -23,8 +25,6 @@ import { ReactComponent as CloudIcon } from "@assets/setting-cloud.svg";
 import { ReactComponent as ServerIcon } from "@assets/setting-server.svg";
 import { useIsLocalNodeSelected } from "@hooks/storage/useIsLocalNodeSelected";
 import { LangKeys } from "@constants/lang";
-import { LocalNode } from "./LocalNode";
-import { RemoteNode } from "./RemoteNode";
 
 enum NodeTypes {
   Local = "local",

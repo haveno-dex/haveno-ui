@@ -14,10 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { XmrTx } from "haveno-ts";
 import { useQuery } from "react-query";
-import { QueryKeys } from "@constants/query-keys";
+import type { XmrTx } from "haveno-ts";
 import { useHavenoClient } from "./useHavenoClient";
+import { QueryKeys } from "@constants/query-keys";
 
 export const useXmrTxs = () => {
   const client = useHavenoClient();

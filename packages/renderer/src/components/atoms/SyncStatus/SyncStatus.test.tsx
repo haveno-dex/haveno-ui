@@ -16,9 +16,9 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
+import { SyncStatus } from ".";
 import { AppProviders } from "@atoms/AppProviders";
 import { SyncStatus as SyncStatusOptions } from "@constants/sync-status";
-import { SyncStatus } from ".";
 
 describe("atoms::Sync Status", () => {
   it("renders the not synced status by default", () => {

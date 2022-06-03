@@ -14,10 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-import { LangKeys } from "@constants/lang";
-import { ROUTES } from "@constants/routes";
 import React from "react";
 import { useIntl } from "react-intl";
+import { LangKeys } from "@constants/lang";
+import { ROUTES } from "@constants/routes";
 
 export interface AccountSidebarItem {
   label: string;

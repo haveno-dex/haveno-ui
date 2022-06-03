@@ -14,11 +14,11 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ElectronApplication } from "playwright";
-import { _electron as electron } from "playwright";
-import { afterAll, beforeAll, expect, test } from "vitest";
 import { createHash } from "crypto";
+import { afterAll, beforeAll, expect, test } from "vitest";
+import { _electron as electron } from "playwright";
 import "../packages/preload/contracts.d.ts";
+import type { ElectronApplication } from "playwright";
 
 let electronApp: ElectronApplication;
 

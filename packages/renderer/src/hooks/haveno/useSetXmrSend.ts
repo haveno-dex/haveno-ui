@@ -17,8 +17,8 @@
 import { useMutation, useQueryClient } from "react-query";
 import { XmrDestination } from "haveno-ts";
 import { showNotification } from "@mantine/notifications";
-import { QueryKeys } from "@constants/query-keys";
 import { useHavenoClient } from "./useHavenoClient";
+import { QueryKeys } from "@constants/query-keys";
 
 interface SetXmrSendVariables {
   address: string;

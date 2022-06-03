@@ -17,13 +17,13 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Space, Stack } from "@mantine/core";
+import { showNotification } from "@mantine/notifications";
 import { LangKeys } from "@constants/lang/LangKeys";
 import { CenteredLayout } from "@templates/CenteredLayout";
 import { Heading } from "@atoms/Typography";
 import Logo from "@assets/logo.svg";
 import { useAccountInfo } from "@hooks/storage/useAccountInfo";
 import { ROUTES } from "@constants/routes";
-import { showNotification } from "@mantine/notifications";
 
 export function Home() {
   const { data: accountInfo, isSuccess, isError } = useAccountInfo();

@@ -16,9 +16,9 @@
 
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import { render, waitForElementToBeRemoved } from "@testing-library/react";
-import { AppProviders } from "@atoms/AppProviders";
-import { WalletManagement } from ".";
 import { SeedPhrase } from "./SeedPhrase";
+import { WalletManagement } from ".";
+import { AppProviders } from "@atoms/AppProviders";
 
 describe("molecules::WalletManagement", () => {
   beforeAll(() => {

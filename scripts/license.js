@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-const glob = require("glob");
 const fsPromise = require("fs/promises");
+const glob = require("glob");
 
 const DIVIDER = "=".repeat(77);
 

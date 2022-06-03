@@ -16,13 +16,13 @@
 
 import { ipcRenderer } from "electron";
 import { exposeInMainWorld } from "./exposeInMainWorld";
+import { IpcChannels } from "./types";
 import type {
   AccountInfoDto,
   ChangePasswordInput,
   IPreferences,
   SetPasswordInput,
 } from "./types";
-import { IpcChannels } from "./types";
 
 // Export for types in contracts.d.ts
 export const store = {

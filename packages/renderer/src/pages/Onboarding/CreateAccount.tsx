@@ -17,6 +17,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Stack, Container } from "@mantine/core";
+import { CONTENT_MAX_WIDTH } from "./_constants";
 import { CenteredLayout } from "@templates/CenteredLayout";
 import { SetPassword } from "@organisms/SetPassword";
 import { SetPrimaryFiat } from "@organisms/SetPrimaryFiat";
@@ -24,7 +25,6 @@ import { SelectMoneroNode } from "@organisms/SelectMoneroNode";
 import { ReadyToUse } from "@molecules/ReadyToUse";
 import { useCreateAccount } from "@hooks/storage/useCreateAccount";
 import { ROUTES } from "@constants/routes";
-import { CONTENT_MAX_WIDTH } from "./_constants";
 
 enum Steps {
   CreatePassword = "CreatePassword",

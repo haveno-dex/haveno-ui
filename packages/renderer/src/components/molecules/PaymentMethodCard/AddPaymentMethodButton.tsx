@@ -15,8 +15,8 @@
 // =============================================================================
 
 import { createStyles, UnstyledButton } from "@mantine/core";
-import { ReactComponent as AddIcon } from "@assets/circle-plus.svg";
 import { HEIGHT, WIDTH } from "./_constants";
+import { ReactComponent as AddIcon } from "@assets/circle-plus.svg";
 
 interface AddCardProps {
   onClick: () => void;

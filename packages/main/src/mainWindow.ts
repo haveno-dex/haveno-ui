@@ -14,9 +14,9 @@
 //  limitations under the License.
 // =============================================================================
 
-import { BrowserWindow } from "electron";
 import { join } from "path";
 import { URL } from "url";
+import { BrowserWindow } from "electron";
 
 async function createWindow() {
   const browserWindow = new BrowserWindow({

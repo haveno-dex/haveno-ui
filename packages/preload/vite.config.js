@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { chrome } from "../../.electron-vendors.cache.json";
 import { builtinModules } from "module";
+import { chrome } from "../../.electron-vendors.cache.json";
 
 const PACKAGE_ROOT = __dirname;
 

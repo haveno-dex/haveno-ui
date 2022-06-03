@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { DefaultProps } from "@mantine/core";
 import { Box, createStyles } from "@mantine/core";
+import type { DefaultProps } from "@mantine/core";
 
 export interface CircleIconProps extends DefaultProps {
   color?: string;

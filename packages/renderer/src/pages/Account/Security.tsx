@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { LangKeys } from "@constants/lang";
 import { Stack, Box, createStyles, Group } from "@mantine/core";
+import { LangKeys } from "@constants/lang";
 import { AccountLayout } from "@templates/AccountLayout";
 import { Heading, BodyText } from "@atoms/Typography";
 import { ChangePassword } from "@organisms/ChangePassword";

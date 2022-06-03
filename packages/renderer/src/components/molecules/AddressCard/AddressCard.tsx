@@ -16,11 +16,11 @@
 
 import { FormattedMessage, useIntl } from "react-intl";
 import QRCode from "react-qr-code";
-import type { OpenConfirmModal } from "@mantine/modals/lib/context";
 import { showNotification } from "@mantine/notifications";
 import { useModals } from "@mantine/modals";
 import { useClipboard } from "@mantine/hooks";
 import { Box, createStyles, Group, SimpleGrid, Skeleton } from "@mantine/core";
+import type { OpenConfirmModal } from "@mantine/modals/lib/context";
 import { DetailItem } from "@atoms/DetailItem";
 import { Button } from "@atoms/Buttons";
 import { Anchor } from "@atoms/Typography";

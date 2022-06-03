@@ -16,8 +16,8 @@
 
 import { ipcRenderer } from "electron";
 import { exposeInMainWorld } from "./exposeInMainWorld";
-import type { DownloadBackupInput } from "./types";
 import { IpcChannels } from "./types";
+import type { DownloadBackupInput } from "./types";
 
 // Export for types in contracts.d.ts
 export const haveno = {

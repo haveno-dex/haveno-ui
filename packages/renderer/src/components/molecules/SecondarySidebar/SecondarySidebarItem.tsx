@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useNavLinkActive } from "@hooks/misc/useNavLinkActive";
 import { UnstyledButton, Group, Text, createStyles } from "@mantine/core";
+import { useNavLinkActive } from "@hooks/misc/useNavLinkActive";
 
 interface SecondarySidebarItemProps {
   isActive?: boolean;

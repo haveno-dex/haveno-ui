@@ -16,6 +16,13 @@
 
 import { ipcMain, safeStorage } from "electron";
 import Store from "electron-store";
+import { StorageKeys, IpcChannels, StoreSchema } from "@src/types";
+import {
+  createAuthToken,
+  hashPassword,
+  verifyAuthAuthToken,
+  verifyPassword,
+} from "@src/utils/password";
 import type {
   AccountInfoDto,
   ChangePasswordInput,
@@ -23,14 +30,6 @@ import type {
   IStoreSchema,
   SetPasswordInput,
 } from "@src/types";
-import { StorageKeys } from "@src/types";
-import { IpcChannels, StoreSchema } from "@src/types";
-import {
-  createAuthToken,
-  hashPassword,
-  verifyAuthAuthToken,
-  verifyPassword,
-} from "@src/utils/password";
 
 const store = new Store<IStoreSchema>({ schema: StoreSchema });
 

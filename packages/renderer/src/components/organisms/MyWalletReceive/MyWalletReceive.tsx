@@ -17,11 +17,11 @@
 import { useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Box, Button, Group, Stack, Text } from "@mantine/core";
+import { getActiveReceiveAddresses, saveReceiveAddresss } from "./_utils";
 import { LangKeys } from "@constants/lang";
 import { Heading } from "@atoms/Typography";
 import { AddressCard } from "@molecules/AddressCard/AddressCard";
 import { useSetXmrNewSubaddress } from "@hooks/haveno/useSetXmrNewSubaddress";
-import { getActiveReceiveAddresses, saveReceiveAddresss } from "./_utils";
 
 export function MyWalletReceive() {
   const { mutateAsync: setXmrNewSubaddress, isLoading: isSetXmrLoading } =

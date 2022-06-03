@@ -20,13 +20,13 @@ import { Stack, Group, Modal } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
 import { Button, TextButton } from "@atoms/Buttons";
 import { MoneroNodeListItem, NodeStatus } from "@atoms/MoneroNodeListItem";
-import type { AddNodeFormValues } from "@organisms/AddNode";
 import { AddNode } from "@organisms/AddNode";
 import { useMoneroConnections } from "@hooks/haveno/useMoneroConnections";
 import { useAddMoneroNode } from "@hooks/haveno/useAddMoneroNode";
 import { useSetMoneroConnection } from "@hooks/haveno/useSetMoneroConnection";
 import { useGetMoneroConnection } from "@hooks/haveno/useGetMoneroConnection";
 import { LangKeys } from "@constants/lang";
+import type { AddNodeFormValues } from "@organisms/AddNode";
 
 export function RemoteNode() {
   const [isAdding, setAdding] = useState(false);

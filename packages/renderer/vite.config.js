@@ -16,11 +16,11 @@
 
 /* eslint-env node */
 
-const { chrome } = require("../../.electron-vendors.cache.json");
 const { join } = require("path");
 const { builtinModules } = require("module");
 const react = require("@vitejs/plugin-react");
 const svgrPlugin = require("vite-plugin-svgr");
+const { chrome } = require("../../.electron-vendors.cache.json");
 
 const PACKAGE_ROOT = __dirname;
 

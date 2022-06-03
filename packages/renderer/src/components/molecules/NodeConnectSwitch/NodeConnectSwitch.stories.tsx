@@ -14,11 +14,11 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Text } from "@mantine/core";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { NodeConnectSwitch } from ".";
 import { ReactComponent as CloudIcon } from "@assets/setting-cloud.svg";
 import { ReactComponent as ServerIcon } from "@assets/setting-server.svg";
-import { NodeConnectSwitch } from ".";
 
 export default {
   title: "molecules/NodeConnectSwitch",

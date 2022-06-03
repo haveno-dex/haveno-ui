@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FormEvent } from "react";
 import { Stack, Space, Group } from "@mantine/core";
+import type { FormEvent } from "react";
 import { BodyText, Heading } from "@atoms/Typography";
 import { Button, TextButton } from "@atoms/Buttons";
 import { Select } from "@atoms/Select";

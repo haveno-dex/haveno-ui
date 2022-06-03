@@ -16,9 +16,9 @@
 
 import { app } from "electron";
 import "./security-restrictions";
+import { registerHavenoHandlers } from "./services/haveno";
 import { restoreOrCreateWindow } from "@src/mainWindow";
 import { registerStoreHandlers } from "@src/services/store";
-import { registerHavenoHandlers } from "./services/haveno";
 
 /**
  * Prevent multiple instances

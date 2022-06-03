@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { PasswordInputProps as MPasswordInputProps } from "@mantine/core";
 import { createStyles, PasswordInput as MPasswordInput } from "@mantine/core";
+import type { PasswordInputProps as MPasswordInputProps } from "@mantine/core";
 
 interface PasswordInputProps extends MPasswordInputProps {
   id: string;

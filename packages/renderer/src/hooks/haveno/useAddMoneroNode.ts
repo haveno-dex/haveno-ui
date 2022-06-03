@@ -16,8 +16,8 @@
 
 import { useMutation, useQueryClient } from "react-query";
 import { UrlConnection } from "haveno-ts";
-import { QueryKeys } from "@constants/query-keys";
 import { useHavenoClient } from "./useHavenoClient";
+import { QueryKeys } from "@constants/query-keys";
 
 interface Variables {
   address: string;

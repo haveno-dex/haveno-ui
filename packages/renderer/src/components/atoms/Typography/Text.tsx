@@ -14,10 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ReactNode, ReactText } from "react";
 import { FormattedMessage } from "react-intl";
-import type { TextProps as MTextProps } from "@mantine/core";
 import { Text as MText, createStyles } from "@mantine/core";
+import type { ReactNode, ReactText } from "react";
+import type { TextProps as MTextProps } from "@mantine/core";
 import type { LangKeys } from "@constants/lang";
 
 type TextProps<TComponent> = MTextProps<TComponent> & {

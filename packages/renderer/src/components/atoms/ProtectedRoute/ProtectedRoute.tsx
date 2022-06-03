@@ -14,9 +14,9 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import type { ReactNode } from "react";
 import { useAuth } from "@hooks/session/useAuth";
 import { deleteSession } from "@utils/session";
 import { ROUTES } from "@constants/routes";

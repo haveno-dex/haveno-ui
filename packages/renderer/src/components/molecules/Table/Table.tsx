@@ -20,10 +20,10 @@ import {
   getExpandedRowModel,
 } from "@tanstack/react-table";
 import { Table as MTable } from "@mantine/core";
-import type { TableProps } from "./_types";
 import { TableProvider } from "./use-table-context";
 import { TableHeader } from "./TableHeader";
 import { TableBody } from "./TableBody";
+import type { TableProps } from "./_types";
 
 export function Table(props: TableProps) {
   const { table, columns, data, tableWrap } = props;

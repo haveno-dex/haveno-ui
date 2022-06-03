@@ -14,10 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ReactText } from "react";
 import { FormattedMessage } from "react-intl";
-import type { TitleProps } from "@mantine/core";
 import { Title } from "@mantine/core";
+import type { ReactText } from "react";
+import type { TitleProps } from "@mantine/core";
 import type { LangKeys } from "@constants/lang";
 
 interface HeadingProps extends TitleProps {

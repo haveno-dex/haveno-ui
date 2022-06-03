@@ -14,10 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ReactElement, ReactNode } from "react";
 import { cloneElement, Children } from "react";
 import { Box } from "@mantine/core";
 import { useUncontrolled } from "@mantine/hooks";
+import type { ReactElement, ReactNode } from "react";
 import { NodeConnectSwitchMethod } from "./NodeConnectSwitchMethod";
 import { useTabsStyles } from "./NodeConnectSwitch.style";
 

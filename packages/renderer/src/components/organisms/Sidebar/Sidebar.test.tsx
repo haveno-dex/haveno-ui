@@ -16,9 +16,9 @@
 
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import { render } from "@testing-library/react";
+import { Sidebar } from ".";
 import { AppProviders } from "@atoms/AppProviders";
 import { SyncStatus } from "@constants/sync-status";
-import { Sidebar } from ".";
 
 describe("molecules::Sidebar", () => {
   beforeAll(() => {

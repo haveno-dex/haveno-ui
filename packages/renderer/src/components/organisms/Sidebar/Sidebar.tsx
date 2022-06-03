@@ -15,12 +15,12 @@
 // =============================================================================
 
 import { Box, createStyles, Navbar, Stack } from "@mantine/core";
+import { NAV_LINKS, WIDTH } from "./_constants";
+import { NavLink } from "./_NavLink";
 import { WalletBalance } from "@molecules/WalletBalance";
 import { ReactComponent as Logo } from "@assets/logo-icon.svg";
 import { SyncStatus } from "@atoms/SyncStatus";
 import { useSyncStatus } from "@hooks/haveno/useSyncStatus";
-import { NAV_LINKS, WIDTH } from "./_constants";
-import { NavLink } from "./_NavLink";
 
 export function Sidebar() {
   const { classes } = useStyles();

@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ReactNode } from "react";
 import { UnstyledButton, Group, Text, createStyles } from "@mantine/core";
+import type { ReactNode } from "react";
 
 interface NavLinkProps {
   icon: ReactNode;

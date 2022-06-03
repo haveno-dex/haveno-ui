@@ -17,8 +17,8 @@
 import { describe, expect, it, vi } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { AppProviders } from "@atoms/AppProviders";
 import { SetPassword } from ".";
+import { AppProviders } from "@atoms/AppProviders";
 
 describe("organisms::SetPassword", () => {
   it("renders without exploding", () => {

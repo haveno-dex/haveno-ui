@@ -16,8 +16,8 @@
 
 /* eslint-disable @typescript-eslint/no-namespace,@typescript-eslint/no-explicit-any */
 import { expect } from "vitest";
-import type { TestingLibraryMatchers } from "@testing-library/jest-dom/matchers";
 import matchers from "@testing-library/jest-dom/matchers";
+import type { TestingLibraryMatchers } from "@testing-library/jest-dom/matchers";
 
 declare global {
   namespace Vi {

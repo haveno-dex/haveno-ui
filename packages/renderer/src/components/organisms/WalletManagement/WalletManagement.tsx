@@ -19,11 +19,11 @@ import { FormattedMessage } from "react-intl";
 import { useForm } from "@mantine/hooks";
 import { Group, Space, Stack } from "@mantine/core";
 import { showNotification } from "@mantine/notifications";
+import { SeedPhrase } from "./SeedPhrase";
 import { Button } from "@atoms/Buttons";
 import { PasswordInput } from "@atoms/PasswordInput";
 import { useValidatePassword } from "@hooks/haveno/useValidatePassword";
 import { LangKeys } from "@constants/lang";
-import { SeedPhrase } from "./SeedPhrase";
 
 export function WalletManagement() {
   const [isRevealed, setRevealed] = useState(false);

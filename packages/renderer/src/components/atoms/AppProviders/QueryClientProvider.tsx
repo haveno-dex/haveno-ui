@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
 import { QueryClient, QueryClientProvider as QCProvider } from "react-query";
+import type { FC } from "react";
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { TabsProps as MTabsProps } from "@mantine/core";
 import { Tabs as MTabs, Tab as MTab, createStyles } from "@mantine/core";
+import type { TabsProps as MTabsProps } from "@mantine/core";
 
 export function Tabs(props: MTabsProps) {
   const style = useStyles();

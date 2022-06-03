@@ -70,6 +70,8 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
     "happy-dom": "2.41.0",
     "husky": "^7.0.4",
     "jsdom": "^19.0.0",

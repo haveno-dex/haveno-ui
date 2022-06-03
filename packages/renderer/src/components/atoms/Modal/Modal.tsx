@@ -14,10 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { ModalProps as MModalProps } from "@mantine/core";
 import { createStyles, Modal as MModal } from "@mantine/core";
-import type { ModalsProviderProps } from "@mantine/modals";
 import { ModalsProvider as MModalsProvider } from "@mantine/modals";
+import type { ModalProps as MModalProps } from "@mantine/core";
+import type { ModalsProviderProps } from "@mantine/modals";
 
 const commonModalProps = {
   overlayOpacity: 0.25,

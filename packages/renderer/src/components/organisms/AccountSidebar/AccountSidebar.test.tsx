@@ -16,8 +16,8 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { AppProviders } from "@atoms/AppProviders";
 import { AccountSidebar } from "./AccountSidebar";
+import { AppProviders } from "@atoms/AppProviders";
 
 describe("molecules::AccountSidebar", () => {
   it("renders without exploding", () => {

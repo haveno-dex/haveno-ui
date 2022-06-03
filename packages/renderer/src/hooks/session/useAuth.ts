@@ -14,9 +14,9 @@
 //  limitations under the License.
 // =============================================================================
 
+import { useQuery } from "react-query";
 import { QueryKeys } from "@constants/query-keys";
 import { validateSession } from "@utils/session";
-import { useQuery } from "react-query";
 
 export function useAuth() {
   return useQuery<boolean, Error>(

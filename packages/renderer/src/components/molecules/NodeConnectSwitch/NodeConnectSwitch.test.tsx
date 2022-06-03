@@ -16,10 +16,10 @@
 
 import { describe, expect, it } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { NodeConnectSwitch } from ".";
 import { AppProviders } from "@atoms/AppProviders";
 import { ReactComponent as CloudIcon } from "@assets/setting-cloud.svg";
 import { ReactComponent as ServerIcon } from "@assets/setting-server.svg";
-import { NodeConnectSwitch } from ".";
 
 describe("molecules::NodeConnectSwitch", () => {
   it("renders without exploding", () => {

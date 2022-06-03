@@ -18,8 +18,8 @@
 import type { FC } from "react";
 import type { PaymentAccount } from "haveno-ts";
 import { CurrencyLogos } from "@molecules/PaymentMethodCard/_constants";
-import type { SupportedCurrencies } from "@molecules/PaymentMethodCard/_types";
 import { ReactComponent as UnknownLogo } from "@assets/unknown.svg";
+import type { SupportedCurrencies } from "@molecules/PaymentMethodCard/_types";
 
 export function getPaymentAccountName(account: PaymentAccount): string {
   const name = account.getAccountName();

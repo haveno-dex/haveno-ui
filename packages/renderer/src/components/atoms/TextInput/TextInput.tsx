@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { TextInputProps as MTextInputProps } from "@mantine/core";
 import { createStyles, TextInput as MTextInput } from "@mantine/core";
+import type { TextInputProps as MTextInputProps } from "@mantine/core";
 
 interface TextInputProps extends MTextInputProps {
   id: string;

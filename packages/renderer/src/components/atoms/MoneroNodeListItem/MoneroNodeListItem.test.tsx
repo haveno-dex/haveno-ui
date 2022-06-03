@@ -16,8 +16,8 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { AppProviders } from "@atoms/AppProviders";
 import { MoneroNodeListItem, NodeStatus } from "./MoneroNodeListItem";
+import { AppProviders } from "@atoms/AppProviders";
 
 describe("atoms::MoneroNodeListItem", () => {
   it("renders without exploding", () => {

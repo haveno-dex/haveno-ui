@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { FC } from "react";
 import { MantineProvider, Global } from "@mantine/core";
+import type { FC } from "react";
 import { themeOverride, globalStyles } from "@src/theme";
 
 export const ThemeProvider: FC = ({ children }) => {

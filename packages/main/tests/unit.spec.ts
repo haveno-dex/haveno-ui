@@ -14,11 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { MaybeMocked } from "vitest";
 import { beforeEach, expect, test, vi } from "vitest";
-import { restoreOrCreateWindow } from "../src/mainWindow";
-
 import { BrowserWindow } from "electron";
+import type { MaybeMocked } from "vitest";
+import { restoreOrCreateWindow } from "../src/mainWindow";
 
 /**
  * Mock real electron BrowserWindow API

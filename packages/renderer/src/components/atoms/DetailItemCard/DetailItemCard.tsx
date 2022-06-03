@@ -15,8 +15,8 @@
 // =============================================================================
 
 import { createStyles, Group } from "@mantine/core";
-import type { DetailItemProps } from "@atoms/DetailItem";
 import { DetailItem } from "@atoms/DetailItem";
+import type { DetailItemProps } from "@atoms/DetailItem";
 
 export interface DetailItemCardProps extends DetailItemProps {
   primary?: boolean;

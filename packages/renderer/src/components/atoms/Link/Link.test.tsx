@@ -16,8 +16,8 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { AppProviders } from "@atoms/AppProviders";
 import { Link } from ".";
+import { AppProviders } from "@atoms/AppProviders";
 
 describe("atoms::Link", () => {
   it("renders without exploding", () => {

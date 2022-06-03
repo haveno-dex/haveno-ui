@@ -14,10 +14,10 @@
 //  limitations under the License.
 // =============================================================================
 
+import { PaymentMethodIds } from "./payment-methods";
 import { ReactComponent as BtcLogo } from "@assets/btc.svg";
 import { ReactComponent as EthLogo } from "@assets/eth.svg";
 import { ReactComponent as EurLogo } from "@assets/eur.svg";
-import { PaymentMethodIds } from "./payment-methods";
 
 export type SupportedFiat = "USD" | "EUR" | "GBP";
 

@@ -16,8 +16,8 @@
 
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { AppProviders } from "@atoms/AppProviders";
 import { Currency } from ".";
+import { AppProviders } from "@atoms/AppProviders";
 
 describe("atoms::Currency", () => {
   it("renders without exploding", () => {

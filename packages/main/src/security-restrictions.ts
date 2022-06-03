@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { app, shell } from "electron";
 import { URL } from "url";
+import { app, shell } from "electron";
 
 /**
  * List of origins that you allow open INSIDE the application and permissions for each of them.
