@@ -116,6 +116,13 @@ const LangPackEN: { [key in LangKeys]: string } = {
     "The backup has been downloaded successfully.",
   [LangKeys.AccountBackupRestoreSuccessNotif]:
     "The backup has been restored successfully.",
-};
+
+  [LangKeys.MarketOffersAmount]: 'Amount',
+  [LangKeys.MarketOffersPaymentMethod]: 'Payment method',
+  [LangKeys.MarketOffersAccountDetails]: 'Account details',
+  [LangKeys.MarketOffersShowMarketDepth]: 'Show market depth',
+  [LangKeys.MarketOffersHideMarketDepth]: 'Hide market depth',
+  [LangKeys.MarketOffersCreateOffer]: 'Create offer',
+  };
 
 export default LangPackEN;

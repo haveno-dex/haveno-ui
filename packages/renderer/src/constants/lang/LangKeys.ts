@@ -99,4 +99,10 @@ export enum LangKeys {
   AccountBackupRestoreBtn = "account.backup.restore.btn",
   AccountBackupDownloadSuccessNotif = "account.backup.download.successNotification",
   AccountBackupRestoreSuccessNotif = "account.backup.restore.successNotification",
+  MarketOffersAmount = "marketOffers.filter.amount",
+  MarketOffersPaymentMethod = "marketOffers.filter.amount",
+  MarketOffersAccountDetails = "marketOffers.filter.accountDetails",
+  MarketOffersShowMarketDepth = "marketOffers.filter.showMarketDepth",
+  MarketOffersHideMarketDepth = "marketOffers.filter.hideMarketDepth",
+  MarketOffersCreateOffer = "marketOffers.filter.createOffer",
 }
