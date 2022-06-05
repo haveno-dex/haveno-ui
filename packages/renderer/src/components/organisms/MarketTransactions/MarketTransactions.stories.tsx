@@ -16,9 +16,10 @@
 
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
 import { MarketTransactions } from "./MarketTransactions";
+import { MarketTransactionPaymentMethod } from "./_types";
 
 export default {
-  title: "organisms/Markets/Transactions",
+  title: "organisms/Markets/MarketsTransactions",
   component: MarketTransactions,
 } as ComponentMeta<typeof MarketTransactions>;
 
@@ -33,23 +34,25 @@ Default.args = {};
 const data = [
   {
     price: 123,
+    priceCurrency: "EUR",
     priceComparison: 0.12,
     amount: 123123,
     amountCurrency: "EUR",
     cost: 123,
     costCurrency: "USD",
-    paymentMethod: "ASD",
+    paymentMethod: MarketTransactionPaymentMethod.CashByMail,
     accountAge: 12,
     accountTrades: 1212,
   },
   {
     price: 123,
+    priceCurrency: "EUR",
     priceComparison: 0.12,
     amount: 123123,
     amountCurrency: "EUR",
     cost: 123,
     costCurrency: "USD",
-    paymentMethod: "ASD",
+    paymentMethod: MarketTransactionPaymentMethod.CashByMail,
     accountAge: 12,
     accountTrades: 1212,
   },

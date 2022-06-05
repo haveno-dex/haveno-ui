@@ -8,49 +8,12 @@ import {
   MarketTransactionsAccountTradesCell,
   MarketTransactionsCostsCell,
   MarketTransactionsAccountAgeCell,
+  MarketTransactionsPaymentCell,
 } from "./MarketTransactionsCell";
+import { useIntl } from "react-intl";
+import { LangKeys } from "@constants/lang";
 
 const table = createTable().setRowType<MarketTransaction>();
-
-const columns = [
-  table.createDataColumn("price", {
-    id: "price",
-    header: "Price",
-    cell: ({ row }) => <MarketTransactionsPriceCell row={row.original} />,
-    size: 400,
-  }),
-  table.createDataColumn("amount", {
-    id: "amount",
-    header: "Amount",
-    size: 400,
-    cell: ({ row }) => <MarketTransactionsAmountCell row={row.original} />,
-  }),
-  table.createDataColumn("cost", {
-    id: "costs",
-    header: "Costs",
-    size: 400,
-    cell: ({ row }) => <MarketTransactionsCostsCell row={row.original} />,
-  }),
-  table.createDataColumn("paymentMethod", {
-    id: "paymentMethod",
-    header: "Payment Method",
-    size: 400,
-  }),
-  table.createDataColumn("accountAge", {
-    id: "accountAge",
-    header: "Account Age",
-    size: 400,
-    cell: ({ row }) => <MarketTransactionsAccountAgeCell row={row.original} />,
-  }),
-  table.createDataColumn("accountTrades", {
-    id: "accountTrades",
-    header: "Account Trades",
-    size: 400,
-    cell: ({ row }) => (
-      <MarketTransactionsAccountTradesCell row={row.original} />
-    ),
-  }),
-];
 
 interface MarketTransactionsProps {
   data: MarketTransaction[];
@@ -58,6 +21,7 @@ interface MarketTransactionsProps {
 
 export function MarketTransactions({ data }: MarketTransactionsProps) {
   const { classes, cx } = useStyles();
+  const columns = useMarketTransactionsColumns();
 
   return (
     <Table
@@ -76,13 +40,14 @@ const useStyles = createStyles(() => ({
   root: {
     "thead tr": {
       backgroundColor: "#F8F8F8",
-      color: "#B7B6BD",
 
       th: {
         fontSize: 10,
         letterSpacing: "0.05em",
         textTransform: "uppercase",
         borderBottomColor: "#E8E7EC",
+        color: "#B7B6BD",
+        fontWeight: 700,
       },
     },
     "tbody tr": {
@@ -94,3 +59,68 @@ const useStyles = createStyles(() => ({
     },
   },
 }));
+
+const useMarketTransactionsColumns = () => {
+  const { formatMessage } = useIntl();
+
+  return [
+    table.createDataColumn("price", {
+      id: "price",
+      header: formatMessage({
+        id: LangKeys.MarketsTransactionsColumnPrice,
+        defaultMessage: "Price",
+      }),
+      cell: ({ row }) => <MarketTransactionsPriceCell row={row.original} />,
+      size: 400,
+    }),
+    table.createDataColumn("amount", {
+      id: "amount",
+      header: formatMessage({
+        id: LangKeys.MarketsTransactionsColumnAmount,
+        defaultMessage: "Amount",
+      }),
+      size: 400,
+      cell: ({ row }) => <MarketTransactionsAmountCell row={row.original} />,
+    }),
+    table.createDataColumn("cost", {
+      id: "costs",
+      header: formatMessage({
+        id: LangKeys.MarketsTransactionsColumnCost,
+        defaultMessage: "Costs",
+      }),
+      size: 400,
+      cell: ({ row }) => <MarketTransactionsCostsCell row={row.original} />,
+    }),
+    table.createDataColumn("paymentMethod", {
+      id: "paymentMethod",
+      header: formatMessage({
+        id: LangKeys.MarketsTransactionsColumnPaymentMethod,
+        defaultMessage: "Payment Method",
+      }),
+      size: 400,
+      cell: ({ row }) => <MarketTransactionsPaymentCell row={row.original} />,
+    }),
+    table.createDataColumn("accountAge", {
+      id: "accountAge",
+      header: formatMessage({
+        id: LangKeys.MarketsTransactionsColumnAccountAge,
+        defaultMessage: "Account Age",
+      }),
+      size: 400,
+      cell: ({ row }) => (
+        <MarketTransactionsAccountAgeCell row={row.original} />
+      ),
+    }),
+    table.createDataColumn("accountTrades", {
+      id: "accountTrades",
+      header: formatMessage({
+        id: LangKeys.MarketsTransactionsColumnAccountTrades,
+        defaultMessage: "Account Trades",
+      }),
+      size: 400,
+      cell: ({ row }) => (
+        <MarketTransactionsAccountTradesCell row={row.original} />
+      ),
+    }),
+  ];
+};

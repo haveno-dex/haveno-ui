@@ -18,6 +18,7 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MarketTransactions } from "./MarketTransactions";
 import { AppProviders } from "@atoms/AppProviders";
+import { MarketTransactionPaymentMethod } from "./_types";
 
 describe("organisms::MarketTransactions", () => {
   it("renders without exploding.", () => {
@@ -99,7 +100,7 @@ const data = [
     amountCurrency: "XMR",
     cost: 532.34,
     costCurrency: "USD",
-    paymentMethod: "ASD",
+    paymentMethod: MarketTransactionPaymentMethod.CashByMail,
     accountAge: 12,
     accountTrades: 1212,
   },
@@ -111,7 +112,7 @@ const data = [
     amountCurrency: "XMR",
     cost: 983.32,
     costCurrency: "USD",
-    paymentMethod: "ASD",
+    paymentMethod: MarketTransactionPaymentMethod.CashByMail,
     accountAge: 12,
     accountTrades: 3412,
   },

@@ -6,7 +6,11 @@ export interface MarketTransaction {
   amountCurrency: string;
   cost: number;
   costCurrency: string;
-  paymentMethod: string;
+  paymentMethod: MarketTransactionPaymentMethod;
   accountAge: number;
   accountTrades: number;
+}
+
+export enum MarketTransactionPaymentMethod {
+  CashByMail = "CashByMail",
 }

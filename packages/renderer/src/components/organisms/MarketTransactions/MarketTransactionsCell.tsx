@@ -1,7 +1,11 @@
 import { Currency } from "@atoms/Currency";
 import { BodyText } from "@atoms/Typography";
-import { Group, Text, ThemeIcon } from "@mantine/core";
+import { Group, Text } from "@mantine/core";
 import type { MarketTransaction } from "./_types";
+import { MarketTransactionPaymentMethod } from "./_types";
+import { ReactComponent as CheckCircle } from "@assets/check-circle.svg";
+import { useIntl } from "react-intl";
+import { LangKeys } from "@constants/lang";
 
 export function MarketTransactionsAccountAgeCell({
   row,
@@ -10,10 +14,8 @@ export function MarketTransactionsAccountAgeCell({
 }) {
   return (
     <Group>
-      <ThemeIcon radius="xl" size="sm">
-        X
-      </ThemeIcon>
-      <Text>65 Days</Text>
+      <CheckCircle width={15} height={15} />
+      <BodyText heavy>65 Days</BodyText>
     </Group>
   );
 }
@@ -32,7 +34,7 @@ export function MarketTransactionsPriceCell({
           currentDisplay="symbol"
         />
       </BodyText>
-      <Text color="gray">-1%</Text>
+      <BodyText color="gray">-1%</BodyText>
     </Group>
   );
 }
@@ -43,7 +45,9 @@ export function MarketTransactionsAmountCell({
   row?: MarketTransaction;
 }) {
   return (
-    <Currency currencyCode={row?.amountCurrency} value={row?.amount || 0} />
+    <BodyText heavy>
+      <Currency currencyCode={row?.amountCurrency} value={row?.amount || 0} />
+    </BodyText>
   );
 }
 
@@ -71,6 +75,25 @@ export function MarketTransactionsAccountTradesCell({
   return (
     <BodyText heavy>
       <Currency value={row?.accountTrades || 0} />
+    </BodyText>
+  );
+}
+
+export function MarketTransactionsPaymentCell({
+  row,
+}: {
+  row?: MarketTransaction;
+}) {
+  const { formatMessage } = useIntl();
+
+  return (
+    <BodyText heavy>
+      {row?.paymentMethod === MarketTransactionPaymentMethod.CashByMail
+        ? formatMessage({
+            id: LangKeys.MarketsTransactionsCashByMail,
+            defaultMessage: "Cash by mail",
+          })
+        : ""}
     </BodyText>
   );
 }
