@@ -16,6 +16,7 @@
 
 import { createStyles } from "@mantine/core";
 import { createTable } from "@tanstack/react-table";
+import { useIntl } from "react-intl";
 import { Table } from "@molecules/Table";
 import type { MarketTransaction } from "./_types";
 import {
@@ -26,7 +27,6 @@ import {
   MarketTransactionsAccountAgeCell,
   MarketTransactionsPaymentCell,
 } from "./MarketTransactionsTableCell";
-import { useIntl } from "react-intl";
 import { LangKeys } from "@constants/lang";
 
 const table = createTable().setRowType<MarketTransaction>();

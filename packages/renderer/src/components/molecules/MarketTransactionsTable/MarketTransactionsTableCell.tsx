@@ -14,13 +14,13 @@
 //  limitations under the License.
 // =============================================================================
 
+import { useIntl } from "react-intl";
+import { Group } from "@mantine/core";
 import { Currency } from "@atoms/Currency";
 import { BodyText } from "@atoms/Typography";
-import { Group, Text } from "@mantine/core";
 import type { MarketTransaction } from "./_types";
 import { MarketTransactionPaymentMethod } from "./_types";
 import { ReactComponent as CheckCircle } from "@assets/check-circle.svg";
-import { useIntl } from "react-intl";
 import { LangKeys } from "@constants/lang";
 
 export function MarketTransactionsAccountAgeCell({
@@ -29,7 +29,7 @@ export function MarketTransactionsAccountAgeCell({
   row?: MarketTransaction;
 }) {
   return (
-    <Group>
+    <Group spacing="sm">
       <CheckCircle width={15} height={15} />
       <BodyText heavy>65 Days</BodyText>
     </Group>
@@ -42,7 +42,7 @@ export function MarketTransactionsPriceCell({
   row?: MarketTransaction;
 }) {
   return (
-    <Group>
+    <Group spacing="sm">
       <BodyText heavy>
         <Currency
           currencyCode={row?.priceCurrency}
