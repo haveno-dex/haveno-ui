@@ -63,8 +63,8 @@ describe("molecules::MarketTransactionsTable", () => {
         <MarketTransactionsTable data={data} />
       </AppProviders>
     );
-    expect(screen.queryByText("7,564.94 XMR")).toBeInTheDocument();
-    expect(screen.queryByText("6,483.23 XMR")).toBeInTheDocument();
+    expect(screen.queryByText("XMR 7,564.94")).toBeInTheDocument();
+    expect(screen.queryByText("XMR 6,483.23")).toBeInTheDocument();
     unmount();
   });
 
@@ -87,6 +87,16 @@ describe("molecules::MarketTransactionsTable", () => {
     );
     expect(screen.queryByText("3,412")).toBeInTheDocument();
     expect(screen.queryByText("1,212")).toBeInTheDocument();
+    unmount();
+  });
+
+  it("renders offer formatted payment method.", () => {
+    const { unmount } = render(
+      <AppProviders>
+        <MarketTransactionsTable data={data} />
+      </AppProviders>
+    );
+    expect(screen.queryByText("Cash by mail")).toBeInTheDocument();
     unmount();
   });
 });
@@ -112,7 +122,7 @@ const data = [
     amountCurrency: "XMR",
     cost: 983.32,
     costCurrency: "USD",
-    paymentMethod: MarketTransactionPaymentMethod.CashByMail,
+    paymentMethod: MarketTransactionPaymentMethod.Other,
     accountAge: 12,
     accountTrades: 3412,
   },

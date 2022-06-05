@@ -90,7 +90,7 @@ export function MarketTransactionsAccountTradesCell({
 }) {
   return (
     <BodyText heavy>
-      <Currency value={row?.accountTrades || 0} />
+      <Currency value={row?.accountTrades || 0} minimumFractionDigits={0} />
     </BodyText>
   );
 }

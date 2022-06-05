@@ -1,9 +1,9 @@
 // Vitest Snapshot v1
 
-exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
+exports[`molecules::MarketTransactionsTable > renders without exploding. 1`] = `
 <DocumentFragment>
   <table
-    class="mantine-Table-root mantine-ydlwhr"
+    class="mantine-Table-root mantine-19hj5t7"
   >
     <thead>
       <tr>
@@ -51,7 +51,7 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
           style="width: 400px;"
         >
           <div
-            class="mantine-Group-root mantine-6y1794"
+            class="mantine-Group-root mantine-1lumg83"
           >
             <div
               class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
@@ -59,7 +59,7 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
               €5,000.96
             </div>
             <div
-              class="mantine-Text-root mantine-Group-child mantine-zvhzrs"
+              class="mantine-Text-root mantine-Group-child mantine-1qscdi2"
             >
               -1%
             </div>
@@ -68,7 +68,11 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
         <td
           style="width: 400px;"
         >
-          XMR 7,564.94
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            XMR 7,564.94
+          </div>
         </td>
         <td
           style="width: 400px;"
@@ -82,21 +86,33 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
         <td
           style="width: 400px;"
         >
-          ASD
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            Cash by mail
+          </div>
         </td>
         <td
           style="width: 400px;"
         >
           <div
-            class="mantine-Group-root mantine-6y1794"
+            class="mantine-Group-root mantine-1lumg83"
           >
-            <div
-              class="mantine-ThemeIcon-root mantine-Group-child mantine-11491oq"
+            <svg
+              class="mantine-gnzaph mantine-Group-child"
+              fill="none"
+              height="15"
+              viewBox="0 0 15 15"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              X
-            </div>
+              <path
+                d="M7.5 0C3.36316 0 0 3.36316 0 7.5C0 11.6368 3.36316 15 7.5 15C11.6368 15 15 11.6368 15 7.5C15 3.36316 11.6368 0 7.5 0ZM11.1316 5.81053L6.82105 10.5632C6.71053 10.6895 6.50526 10.6895 6.37895 10.5789L3.69474 7.87895C3.56842 7.75263 3.56842 7.56316 3.69474 7.45263L4.48421 6.66316C4.61053 6.53684 4.8 6.53684 4.91053 6.66316L6.55263 8.32105L9.86842 4.65789C9.97895 4.53158 10.1684 4.53158 10.2947 4.64211L11.1158 5.38421C11.2421 5.49474 11.2421 5.68421 11.1316 5.81053Z"
+                fill="#0B65DA"
+              />
+            </svg>
             <div
-              class="mantine-Text-root mantine-Group-child mantine-1xtm85p"
+              class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
             >
               65 Days
             </div>
@@ -108,7 +124,7 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
           <div
             class="mantine-Text-root mantine-ix3vgq"
           >
-            1,212.00
+            1,212
           </div>
         </td>
       </tr>
@@ -117,7 +133,7 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
           style="width: 400px;"
         >
           <div
-            class="mantine-Group-root mantine-6y1794"
+            class="mantine-Group-root mantine-1lumg83"
           >
             <div
               class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
@@ -125,7 +141,7 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
               €9,637.41
             </div>
             <div
-              class="mantine-Text-root mantine-Group-child mantine-zvhzrs"
+              class="mantine-Text-root mantine-Group-child mantine-1qscdi2"
             >
               -1%
             </div>
@@ -134,7 +150,11 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
         <td
           style="width: 400px;"
         >
-          XMR 6,483.23
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            XMR 6,483.23
+          </div>
         </td>
         <td
           style="width: 400px;"
@@ -148,21 +168,31 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
         <td
           style="width: 400px;"
         >
-          ASD
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          />
         </td>
         <td
           style="width: 400px;"
         >
           <div
-            class="mantine-Group-root mantine-6y1794"
+            class="mantine-Group-root mantine-1lumg83"
           >
-            <div
-              class="mantine-ThemeIcon-root mantine-Group-child mantine-11491oq"
+            <svg
+              class="mantine-gnzaph mantine-Group-child"
+              fill="none"
+              height="15"
+              viewBox="0 0 15 15"
+              width="15"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              X
-            </div>
+              <path
+                d="M7.5 0C3.36316 0 0 3.36316 0 7.5C0 11.6368 3.36316 15 7.5 15C11.6368 15 15 11.6368 15 7.5C15 3.36316 11.6368 0 7.5 0ZM11.1316 5.81053L6.82105 10.5632C6.71053 10.6895 6.50526 10.6895 6.37895 10.5789L3.69474 7.87895C3.56842 7.75263 3.56842 7.56316 3.69474 7.45263L4.48421 6.66316C4.61053 6.53684 4.8 6.53684 4.91053 6.66316L6.55263 8.32105L9.86842 4.65789C9.97895 4.53158 10.1684 4.53158 10.2947 4.64211L11.1158 5.38421C11.2421 5.49474 11.2421 5.68421 11.1316 5.81053Z"
+                fill="#0B65DA"
+              />
+            </svg>
             <div
-              class="mantine-Text-root mantine-Group-child mantine-1xtm85p"
+              class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
             >
               65 Days
             </div>
@@ -174,7 +204,7 @@ exports[`organisms::MarketTransactions > renders without exploding. 1`] = `
           <div
             class="mantine-Text-root mantine-ix3vgq"
           >
-            3,412.00
+            3,412
           </div>
         </td>
       </tr>

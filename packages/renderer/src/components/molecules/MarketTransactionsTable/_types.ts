@@ -29,4 +29,5 @@ export interface MarketTransaction {
 
 export enum MarketTransactionPaymentMethod {
   CashByMail = "CashByMail",
+  Other = "Other",
 }
