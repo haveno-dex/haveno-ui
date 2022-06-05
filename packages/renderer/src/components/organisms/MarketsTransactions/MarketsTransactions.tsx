@@ -14,8 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useMarketsOffers } from "@hooks/haveno/useMarketsOffers";
 import { Loader } from "@mantine/core";
+import { useMarketsOffers } from "@hooks/haveno/useMarketsOffers";
 import { MarketTransactionsTable } from "@molecules/MarketTransactionsTable";
 import type { FC } from "react";
 

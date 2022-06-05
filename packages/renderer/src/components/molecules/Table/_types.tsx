@@ -29,4 +29,10 @@ export interface TableProps {
   rowSubComponent?: ({ row }: { row: Row<any> }) => React.ReactNode;
 
   tableWrap?: MTableProps;
+  variant?: TableVariant;
+}
+
+export enum TableVariant {
+  Default = "Default",
+  Primary = "Primary",
 }

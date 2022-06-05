@@ -28,6 +28,7 @@ import {
   MarketTransactionsPaymentCell,
 } from "./MarketTransactionsTableCell";
 import { LangKeys } from "@constants/lang";
+import { TableVariant } from "@molecules/Table/_types";
 
 const table = createTable().setRowType<MarketTransaction>();
 
@@ -38,7 +39,7 @@ interface MarketTransactionsTableProps {
 export function MarketTransactionsTable({
   data,
 }: MarketTransactionsTableProps) {
-  const { classes, cx } = useStyles();
+  const { classes } = useStyles();
   const columns = useMarketTransactionsColumns();
 
   return (
@@ -46,9 +47,10 @@ export function MarketTransactionsTable({
       table={table}
       columns={columns}
       data={data}
+      variant={TableVariant.Primary}
       tableWrap={{
         verticalSpacing: "md",
-        className: cx(classes.root),
+        className: classes.root,
       }}
     />
   );
@@ -56,23 +58,10 @@ export function MarketTransactionsTable({
 
 const useStyles = createStyles(() => ({
   root: {
-    "thead tr": {
-      backgroundColor: "#F8F8F8",
-
-      th: {
-        fontSize: 10,
-        letterSpacing: "0.05em",
-        textTransform: "uppercase",
-        borderBottomColor: "#E8E7EC",
-        color: "#B7B6BD",
-        fontWeight: 700,
-      },
-    },
     "tbody tr": {
       td: {
         paddingTop: 22,
         paddingBottom: 22,
-        borderBottomColor: "#E8E7EC",
       },
     },
   },
