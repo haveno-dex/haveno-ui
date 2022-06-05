@@ -16,15 +16,15 @@
 
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { MarketTransactions } from "./MarketTransactions";
+import { MarketTransactionsTable } from "./MarketTransactionsTable";
 import { AppProviders } from "@atoms/AppProviders";
 import { MarketTransactionPaymentMethod } from "./_types";
 
-describe("organisms::MarketTransactions", () => {
+describe("molecules::MarketTransactionsTable", () => {
   it("renders without exploding.", () => {
     const { asFragment, unmount } = render(
       <AppProviders>
-        <MarketTransactions data={data} />
+        <MarketTransactionsTable data={data} />
       </AppProviders>
     );
     expect(asFragment()).toMatchSnapshot();
@@ -34,7 +34,7 @@ describe("organisms::MarketTransactions", () => {
   it("renders all columns.", () => {
     const { unmount } = render(
       <AppProviders>
-        <MarketTransactions data={data} />
+        <MarketTransactionsTable data={data} />
       </AppProviders>
     );
     expect(screen.queryByText("Price")).toBeInTheDocument();
@@ -49,7 +49,7 @@ describe("organisms::MarketTransactions", () => {
   it("renders formatted price value with currency sign.", () => {
     const { unmount } = render(
       <AppProviders>
-        <MarketTransactions data={data} />
+        <MarketTransactionsTable data={data} />
       </AppProviders>
     );
     expect(screen.queryByText("€5,000.96")).toBeInTheDocument();
@@ -60,7 +60,7 @@ describe("organisms::MarketTransactions", () => {
   it("renders formatted amount value with currency code.", () => {
     const { unmount } = render(
       <AppProviders>
-        <MarketTransactions data={data} />
+        <MarketTransactionsTable data={data} />
       </AppProviders>
     );
     expect(screen.queryByText("7,564.94 XMR")).toBeInTheDocument();
@@ -71,7 +71,7 @@ describe("organisms::MarketTransactions", () => {
   it("renders formatted cost value with currency sign.", () => {
     const { unmount } = render(
       <AppProviders>
-        <MarketTransactions data={data} />
+        <MarketTransactionsTable data={data} />
       </AppProviders>
     );
     expect(screen.queryByText("$532.34")).toBeInTheDocument();
@@ -82,7 +82,7 @@ describe("organisms::MarketTransactions", () => {
   it("renders formatted account trades.", () => {
     const { unmount } = render(
       <AppProviders>
-        <MarketTransactions data={data} />
+        <MarketTransactionsTable data={data} />
       </AppProviders>
     );
     expect(screen.queryByText("3,412")).toBeInTheDocument();

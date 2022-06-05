@@ -15,16 +15,16 @@
 // =============================================================================
 
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { MarketTransactions } from "./MarketTransactions";
+import { MarketTransactionsTable } from "./MarketTransactionsTable";
 import { MarketTransactionPaymentMethod } from "./_types";
 
 export default {
-  title: "organisms/Markets/MarketsTransactions",
-  component: MarketTransactions,
-} as ComponentMeta<typeof MarketTransactions>;
+  title: "molecules/MarketTransactionsTable",
+  component: MarketTransactionsTable,
+} as ComponentMeta<typeof MarketTransactionsTable>;
 
-const Template: ComponentStory<typeof MarketTransactions> = () => {
-  return <MarketTransactions data={data} />;
+const Template: ComponentStory<typeof MarketTransactionsTable> = () => {
+  return <MarketTransactionsTable data={data} />;
 };
 
 export const Default = Template.bind({});

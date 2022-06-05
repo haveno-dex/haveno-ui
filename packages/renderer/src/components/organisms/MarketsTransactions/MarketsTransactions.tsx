@@ -14,13 +14,31 @@
 //  limitations under the License.
 // =============================================================================
 
-import { NavbarLayout } from "@templates/NavbarLayout";
-import { MarketsTransactions } from "@organisms/MarketsTransactions";
+import { useMarketsOffers } from "@hooks/haveno/useMarketsOffers";
+import { Loader } from "@mantine/core";
+import { MarketTransactionsTable } from "@molecules/MarketTransactionsTable";
+import type { FC } from "react";
 
-export function MarketsTransactionsPage() {
+export function MarketsTransactionsLoaded() {
+  useMarketsOffers({
+    assetCode: "eth",
+    direction: "buy",
+  });
+  return <MarketTransactionsTable data={[]} />;
+}
+
+const MarketsTransactionsBoot: FC = ({ children }) => {
+  const { isLoading: isOffersLoading } = useMarketsOffers({
+    assetCode: "eth",
+    direction: "buy",
+  });
+  return isOffersLoading ? <Loader color="gray" /> : <>{children}</>;
+};
+
+export function MarketsTransactions() {
   return (
-    <NavbarLayout>
-      <MarketsTransactions />
-    </NavbarLayout>
+    <MarketsTransactionsBoot>
+      <MarketsTransactionsLoaded />
+    </MarketsTransactionsBoot>
   );
 }

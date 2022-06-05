@@ -14,4 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./MarketsTransactions";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { MarketsTransactions } from "./MarketsTransactions";
+
+export default {
+  title: "organisms/MarketsTransactions",
+  component: MarketsTransactions,
+} as ComponentMeta<typeof MarketsTransactions>;
+
+const Template: ComponentStory<typeof MarketsTransactions> = () => {
+  return <MarketsTransactions />;
+};
+
+export const Default = Template.bind({});
+
+Default.args = {};

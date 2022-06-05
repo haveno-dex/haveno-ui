@@ -27,8 +27,7 @@ interface MarketsOfferesQuery {
 export function useMarketsOffers(query: MarketsOfferesQuery) {
   const client = useHavenoClient();
 
-  return useQuery<OfferInfo[], Error>(
-    [QueryKeys.MoneroNodeIsRunning, query],
-    () => client.getOffers(query.assetCode, query.direction)
+  return useQuery<OfferInfo[], Error>([QueryKeys.MarketsOffers, query], () =>
+    client.getOffers(query.assetCode, query.direction)
   );
 }

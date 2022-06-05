@@ -14,4 +14,20 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./MarketsTransactions";
+import { useQuery } from "react-query";
+import type { OfferInfo } from "haveno-ts";
+import { QueryKeys } from "@constants/query-keys";
+import { useHavenoClient } from "./useHavenoClient";
+
+interface MyOfferesQuery {
+  assetCode: string;
+  direction?: "buy" | "sell";
+}
+
+export function useMarketsOffers(query: MyOfferesQuery) {
+  const client = useHavenoClient();
+
+  return useQuery<OfferInfo[], Error>([QueryKeys.MyOffers, query], () =>
+    client.getMyOffers(query.assetCode, query.direction)
+  );
+}
