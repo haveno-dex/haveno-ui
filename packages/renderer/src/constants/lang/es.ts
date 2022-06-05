@@ -119,6 +119,13 @@ const LangPackES: { [key in LangKeys]: string } = {
     "La copia de seguridad se ha descargado correctamente.",
   [LangKeys.AccountBackupRestoreSuccessNotif]:
     "La copia de seguridad se ha restaurado correctamente.",
+  [LangKeys.MarketsTransactionsColumnPrice]: "Precio",
+  [LangKeys.MarketsTransactionsColumnAmount]: "Monto",
+  [LangKeys.MarketsTransactionsColumnCost]: "Costos",
+  [LangKeys.MarketsTransactionsColumnAccountAge]: "Edad de la cuenta",
+  [LangKeys.MarketsTransactionsColumnAccountTrades]: "Operaciones de cuenta",
+  [LangKeys.MarketsTransactionsColumnPaymentMethod]: "Método de pago",
+  [LangKeys.MarketsTransactionsCashByMail]: "Efectivo por correo",
 };
 
 export default LangPackES;

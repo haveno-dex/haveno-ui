@@ -116,7 +116,6 @@ const LangPackEN: { [key in LangKeys]: string } = {
     "The backup has been downloaded successfully.",
   [LangKeys.AccountBackupRestoreSuccessNotif]:
     "The backup has been restored successfully.",
-
   [LangKeys.MarketsTransactionsColumnPrice]: "Price",
   [LangKeys.MarketsTransactionsColumnAmount]: "Amount",
   [LangKeys.MarketsTransactionsColumnCost]: "Costs",
