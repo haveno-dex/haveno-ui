@@ -20,23 +20,32 @@ import {
   getExpandedRowModel,
 } from "@tanstack/react-table";
 import { Table as MTable } from "@mantine/core";
+import type { TableProps } from "./_types";
+import { TableVariant } from "./_types";
 import { TableProvider } from "./use-table-context";
 import { TableHeader } from "./TableHeader";
 import { TableBody } from "./TableBody";
-import type { TableProps } from "./_types";
+import { useStyles } from "./Table.style";
 
 export function Table(props: TableProps) {
-  const { table, columns, data, tableWrap } = props;
+  const { classes, cx } = useStyles();
+  const { table, columns, data, tableWrap, variant, state } = props;
 
   const tableInstance = useTableInstance(table, {
     data,
     columns,
+    state,
     getCoreRowModel: getCoreRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
   });
 
   return (
-    <MTable {...tableWrap}>
+    <MTable
+      {...tableWrap}
+      className={cx(tableWrap?.className, {
+        [classes.primary]: variant === TableVariant.Primary,
+      })}
+    >
       <TableProvider value={{ table: tableInstance, props }}>
         <TableHeader />
         <TableBody />

@@ -14,29 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Currency } from ".";
-import { BodyText } from "@atoms/Typography";
+import { MarketsOffers } from "./MarketsOffers";
 
 export default {
-  title: "atoms/Currency",
-  component: Currency,
-} as ComponentMeta<typeof Currency>;
+  title: "organisms/MarketsOffers",
+  component: MarketsOffers,
+} as ComponentMeta<typeof MarketsOffers>;
 
-const Template: ComponentStory<typeof Currency> = (args) => {
-  return (
-    <Stack>
-      <BodyText heavy>
-        <Currency {...args} />
-      </BodyText>
-    </Stack>
-  );
+const Template: ComponentStory<typeof MarketsOffers> = () => {
+  return <MarketsOffers />;
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  currencyCode: "EUR",
-  value: 400000.12,
-  format: "symbol",
-};
+
+Default.args = {};

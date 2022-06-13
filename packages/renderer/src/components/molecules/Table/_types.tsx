@@ -15,13 +15,14 @@
 // =============================================================================
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import type { ColumnDef, Row } from "@tanstack/react-table";
+import type { ColumnDef, Row, TableState } from "@tanstack/react-table";
 import type { TableProps as MTableProps } from "@mantine/core";
 
 export interface TableProps {
   columns: Array<ColumnDef<any>>;
   table: any;
   data: Array<any>;
+  state?: Partial<TableState>;
 
   showHeader?: boolean;
   showFooter?: boolean;
@@ -29,4 +30,10 @@ export interface TableProps {
   rowSubComponent?: ({ row }: { row: Row<any> }) => React.ReactNode;
 
   tableWrap?: MTableProps;
+  variant?: TableVariant;
+}
+
+export enum TableVariant {
+  Default = "Default",
+  Primary = "Primary",
 }

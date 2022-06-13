@@ -16,17 +16,20 @@
 
 import { UnstyledButton, Group, Text, createStyles } from "@mantine/core";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface NavLinkProps {
   icon: ReactNode;
   isActive?: boolean;
   label: string;
+  link: string;
 }
 
-export function NavLink({ icon, isActive = false, label }: NavLinkProps) {
+export function NavLink({ icon, isActive = false, label, link }: NavLinkProps) {
   const { classes } = useStyles({ isActive });
+
   return (
-    <UnstyledButton className={classes.navLink}>
+    <UnstyledButton component={Link} className={classes.navLink} to={link}>
       <Group>
         {icon}
         <Text

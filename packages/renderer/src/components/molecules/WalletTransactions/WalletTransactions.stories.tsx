@@ -87,4 +87,4 @@ const data = [
     height: 2482937,
     fee: 0.000005096,
   },
-] as TWalletTransaction[];
+] as Array<TWalletTransaction>;

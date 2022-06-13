@@ -14,29 +14,22 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Currency } from ".";
-import { BodyText } from "@atoms/Typography";
+import type { MarketOfferData } from "@hooks/haveno/useMarketsOffers";
+import type { MarketOffer } from "@organisms/MarketOffersTable";
 
-export default {
-  title: "atoms/Currency",
-  component: Currency,
-} as ComponentMeta<typeof Currency>;
-
-const Template: ComponentStory<typeof Currency> = (args) => {
-  return (
-    <Stack>
-      <BodyText heavy>
-        <Currency {...args} />
-      </BodyText>
-    </Stack>
-  );
-};
-
-export const Default = Template.bind({});
-Default.args = {
-  currencyCode: "EUR",
-  value: 400000.12,
-  format: "symbol",
+export const transformToMarketsOffers = (
+  offers: Array<MarketOfferData>
+): Array<MarketOffer> => {
+  return offers.map((offer) => ({
+    price: offer.price,
+    priceCurrency: offer.counterCurrencyCode,
+    amount: offer.amount,
+    amountCurrency: offer.baseCurrencyCode,
+    costCurrency: offer.baseCurrencyCode,
+    paymentMethod: offer.paymentMethodShortName,
+    cost: offer.txFee,
+    priceComparison: 0.1,
+    accountAge: 1,
+    accountTrades: 1,
+  }));
 };

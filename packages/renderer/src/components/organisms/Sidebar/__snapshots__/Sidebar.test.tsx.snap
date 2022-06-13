@@ -32,9 +32,9 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
       <div
         class="mantine-khtkeg"
       >
-        <button
+        <a
           class="mantine-UnstyledButton-root mantine-1fq8ags"
-          type="button"
+          href="#/markets"
         >
           <div
             class="mantine-Group-root mantine-6y1794"
@@ -58,14 +58,14 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               Markets
             </div>
           </div>
-        </button>
+        </a>
       </div>
       <div
         class="mantine-khtkeg"
       >
-        <button
+        <a
           class="mantine-UnstyledButton-root mantine-1fq8ags"
-          type="button"
+          href="#/"
         >
           <div
             class="mantine-Group-root mantine-6y1794"
@@ -93,14 +93,14 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               My Offers
             </div>
           </div>
-        </button>
+        </a>
       </div>
       <div
         class="mantine-khtkeg"
       >
-        <button
+        <a
           class="mantine-UnstyledButton-root mantine-1fq8ags"
-          type="button"
+          href="#/"
         >
           <div
             class="mantine-Group-root mantine-6y1794"
@@ -132,14 +132,14 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               My Trades
             </div>
           </div>
-        </button>
+        </a>
       </div>
       <div
         class="mantine-khtkeg"
       >
-        <button
+        <a
           class="mantine-UnstyledButton-root mantine-1fq8ags"
-          type="button"
+          href="#/"
         >
           <div
             class="mantine-Group-root mantine-6y1794"
@@ -163,14 +163,14 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               Notifications
             </div>
           </div>
-        </button>
+        </a>
       </div>
       <div
         class="mantine-khtkeg"
       >
-        <button
+        <a
           class="mantine-UnstyledButton-root mantine-1fq8ags"
-          type="button"
+          href="#/"
         >
           <div
             class="mantine-Group-root mantine-6y1794"
@@ -193,7 +193,7 @@ exports[`molecules::Sidebar > renders without exploding 1`] = `
               Account
             </div>
           </div>
-        </button>
+        </a>
       </div>
       <div
         class="mantine-khtkeg"

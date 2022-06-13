@@ -1,0 +1,134 @@
+// Vitest Snapshot v1
+
+exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
+<DocumentFragment>
+  <table
+    class="mantine-Table-root mantine-1ei5v84"
+  >
+    <thead>
+      <tr>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Price
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Amount
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Costs
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Payment Method
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Group-root mantine-1lumg83"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
+            >
+              €5,000.96
+            </div>
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-1qscdi2"
+            >
+              12%
+            </div>
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            XMR 7,564.94
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            $532.34
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            Bitcoin
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Group-root mantine-1lumg83"
+          >
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
+            >
+              €9,637.41
+            </div>
+            <div
+              class="mantine-Text-root mantine-Group-child mantine-1qscdi2"
+            >
+              15%
+            </div>
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            XMR 6,483.23
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            $983.32
+          </div>
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Text-root mantine-ix3vgq"
+          >
+            Altcoins
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

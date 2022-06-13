@@ -14,29 +14,45 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Currency } from ".";
-import { BodyText } from "@atoms/Typography";
+import { MarketOffersTable } from "./MarketOffersTable";
 
 export default {
-  title: "atoms/Currency",
-  component: Currency,
-} as ComponentMeta<typeof Currency>;
+  title: "molecules/MarketOffersTable",
+  component: MarketOffersTable,
+} as ComponentMeta<typeof MarketOffersTable>;
 
-const Template: ComponentStory<typeof Currency> = (args) => {
-  return (
-    <Stack>
-      <BodyText heavy>
-        <Currency {...args} />
-      </BodyText>
-    </Stack>
-  );
+const Template: ComponentStory<typeof MarketOffersTable> = () => {
+  return <MarketOffersTable data={data} />;
 };
 
 export const Default = Template.bind({});
-Default.args = {
-  currencyCode: "EUR",
-  value: 400000.12,
-  format: "symbol",
-};
+
+Default.args = {};
+
+const data = [
+  {
+    price: 123,
+    priceCurrency: "EUR",
+    priceComparison: 0.12,
+    amount: 123123,
+    amountCurrency: "EUR",
+    cost: 123,
+    costCurrency: "USD",
+    paymentMethod: "Bitcoin",
+    accountAge: 12,
+    accountTrades: 1212,
+  },
+  {
+    price: 123,
+    priceCurrency: "EUR",
+    priceComparison: 0.12,
+    amount: 123123,
+    amountCurrency: "EUR",
+    cost: 123,
+    costCurrency: "USD",
+    paymentMethod: "Altcoins",
+    accountAge: 12,
+    accountTrades: 1212,
+  },
+];

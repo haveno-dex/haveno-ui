@@ -38,6 +38,7 @@ export function TableBody() {
                 key={cell.id}
                 style={{
                   width: cell.column.getSize(),
+                  textAlign: cell.column.columnDef?.meta?.textAlign,
                 }}
               >
                 {cell.renderCell()}

@@ -14,29 +14,6 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Currency } from ".";
-import { BodyText } from "@atoms/Typography";
-
-export default {
-  title: "atoms/Currency",
-  component: Currency,
-} as ComponentMeta<typeof Currency>;
-
-const Template: ComponentStory<typeof Currency> = (args) => {
-  return (
-    <Stack>
-      <BodyText heavy>
-        <Currency {...args} />
-      </BodyText>
-    </Stack>
-  );
-};
-
-export const Default = Template.bind({});
-Default.args = {
-  currencyCode: "EUR",
-  value: 400000.12,
-  format: "symbol",
+export const fractionToPercent = (value: number) => {
+  return value * 100;
 };

@@ -14,15 +14,24 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Box, createStyles, Group } from "@mantine/core";
 import type { FC } from "react";
+import type { DefaultProps } from "@mantine/core";
+import { Box, createStyles, Group } from "@mantine/core";
 import { Sidebar } from "@organisms/Sidebar";
 
-export const NavbarLayout: FC = (props) => {
-  const { children } = props;
-  const { classes } = useStyles();
+export const NavbarLayout: FC<DefaultProps> = ({
+  children,
+  classNames,
+  className,
+  ...rest
+}) => {
+  const { classes, cx } = useStyles(undefined, {
+    name: "NavbarLayout",
+    classNames,
+  });
+
   return (
-    <Group className={classes.container} spacing={0}>
+    <Group className={cx(classes.container, className)} spacing={0} {...rest}>
       <Sidebar />
       <Box className={classes.contentArea}>{children}</Box>
     </Group>

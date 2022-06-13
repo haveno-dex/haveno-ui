@@ -14,29 +14,26 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Stack } from "@mantine/core";
-import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Currency } from ".";
-import { BodyText } from "@atoms/Typography";
+import { createStyles } from "@mantine/core";
 
-export default {
-  title: "atoms/Currency",
-  component: Currency,
-} as ComponentMeta<typeof Currency>;
+export const useStyles = createStyles((theme) => ({
+  primary: {
+    "thead tr": {
+      backgroundColor: theme.colors.gray[0],
 
-const Template: ComponentStory<typeof Currency> = (args) => {
-  return (
-    <Stack>
-      <BodyText heavy>
-        <Currency {...args} />
-      </BodyText>
-    </Stack>
-  );
-};
-
-export const Default = Template.bind({});
-Default.args = {
-  currencyCode: "EUR",
-  value: 400000.12,
-  format: "symbol",
-};
+      th: {
+        borderBottomColor: theme.colors.gray[2],
+        color: theme.colors.gray[5],
+        fontSize: 10,
+        fontWeight: 700,
+        letterSpacing: "0.05em",
+        textTransform: "uppercase",
+      },
+    },
+    "tbody tr": {
+      td: {
+        borderBottomColor: theme.colors.gray[2],
+      },
+    },
+  },
+}));

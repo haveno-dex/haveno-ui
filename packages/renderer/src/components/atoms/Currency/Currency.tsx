@@ -15,15 +15,19 @@
 // =============================================================================
 
 import { useMemo } from "react";
+import type { FormatNumberOptions } from "react-intl";
 import { useIntl } from "react-intl";
 
-interface CurrencyProps {
+type CurrencyFormatType = "symbol" | "code" | "name" | "narrowSymbol";
+
+interface CurrencyProps extends FormatNumberOptions {
   currencyCode?: string;
+  format?: CurrencyFormatType;
   value: number;
 }
 
 export function Currency(props: CurrencyProps) {
-  const { currencyCode, value } = props;
+  const { currencyCode, format, value, ...formatNumberProps } = props;
   const intl = useIntl();
 
   const formattedNumber = useMemo(
@@ -32,7 +36,7 @@ export function Currency(props: CurrencyProps) {
         ...(currencyCode
           ? {
               currency: currencyCode,
-              currencyDisplay: "code",
+              currencyDisplay: format || "code",
               style: "currency",
             }
           : {
@@ -40,6 +44,7 @@ export function Currency(props: CurrencyProps) {
               minimumFractionDigits: 2,
               maximumFractionDigits: 12,
             }),
+        ...formatNumberProps,
       }),
     [currencyCode, value]
   );

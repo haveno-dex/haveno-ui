@@ -36,6 +36,7 @@ export function TableHeader() {
               colSpan={header.colSpan}
               style={{
                 width: header.getSize(),
+                textAlign: header.column.columnDef?.meta?.textAlign,
               }}
             >
               {header.isPlaceholder ? null : header.renderHeader()}

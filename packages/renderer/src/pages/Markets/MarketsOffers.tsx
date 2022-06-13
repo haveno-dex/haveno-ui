@@ -14,45 +14,22 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Group, createStyles, Box } from "@mantine/core";
+import { createStyles } from "@mantine/core";
 import { NavbarLayout } from "@templates/NavbarLayout";
-import { AccountSidebar } from "@organisms/AccountSidebar";
+import { MarketsOffers } from "@organisms/MarketsOffers";
 
-interface AccountContentProps {
-  children: JSX.Element | Array<JSX.Element>;
-}
-
-function AccountContent({ children }: AccountContentProps) {
+export function MarketsOffersPage() {
   const { classes } = useStyles();
 
   return (
-    <Group className={classes.container} spacing={0}>
-      <AccountSidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
-  );
-}
-
-interface AccountLayoutProps {
-  children: JSX.Element | Array<JSX.Element>;
-}
-
-export function AccountLayout({ children }: AccountLayoutProps) {
-  return (
-    <NavbarLayout>
-      <AccountContent>{children}</AccountContent>
+    <NavbarLayout classNames={{ contentArea: classes.contentArea }}>
+      <MarketsOffers />
     </NavbarLayout>
   );
 }
 
-const useStyles = createStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "stretch",
-  },
+const useStyles = createStyles(() => ({
   contentArea: {
-    display: "flex",
-    flex: 1,
-    padding: theme.spacing.sm,
+    padding: 0,
   },
 }));
