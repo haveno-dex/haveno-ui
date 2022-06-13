@@ -14,7 +14,7 @@
 //  limitations under the License.
 // =============================================================================
 
-import { Box, createStyles, Group } from "@mantine/core";
+import { Box, createStyles, Group, Stack, Text } from "@mantine/core";
 import { BodyText } from "@atoms/Typography";
 import { SyncStatus as SyncStatusOptions } from "@constants/sync-status";
 
@@ -28,24 +28,37 @@ export function SyncStatus({
   const { classes } = useStyles({ syncStatus: status });
 
   return (
-    <Group className={classes.container} spacing="sm">
-      <Box component="span" className={classes.syncDot} />
-      <BodyText heavy className={classes.message}>
-        {status}
-      </BodyText>
-    </Group>
+    <Stack className={classes.container} spacing={2}>
+      <Group spacing={4}>
+        <Box component="span" className={classes.syncDot} />
+        <BodyText heavy className={classes.message}>
+          {status}
+        </BodyText>
+      </Group>
+      <Text className={classes.nodeName}>node.sethforprivacy.com</Text>
+    </Stack>
   );
 }
 
 const useStyles = createStyles<string, { syncStatus: SyncStatusOptions }>(
   (theme, { syncStatus }) => ({
     container: {
-      backgroundColor: theme.colors.gray[1],
-      borderRadius: "0.5rem",
-      padding: "0.75rem 1rem",
+      background: "rgba(17, 17, 17, 0.15)",
+      borderRadius: theme.radius.md,
+      padding: `${theme.spacing.xs * 0.8}px ${theme.spacing.xs}px`,
     },
-    message: {},
-    notSynced: {},
+    message: {
+      color: theme.colors.white,
+      fontSize: "0.5rem",
+      fontWeight: 700,
+      opacity: 0.8,
+      textTransform: "uppercase",
+    },
+    nodeName: {
+      color: theme.colors.white,
+      fontSize: "0.75rem",
+      fontWeight: 600,
+    },
     syncDot: {
       backgroundColor:
         syncStatus === SyncStatusOptions.Full

@@ -14,150 +14,74 @@
 //  limitations under the License.
 // =============================================================================
 
-import { useState, useMemo } from "react";
-import {
-  Collapse,
-  createStyles,
-  Group,
-  Stack,
-  Text,
-  UnstyledButton,
-} from "@mantine/core";
-import { ReactComponent as XMRLogo } from "@assets/xmr-logo-1.svg";
-import { ReactComponent as ArrowDown } from "@assets/arrow-down.svg";
+import { createStyles, Group, Skeleton, Stack, Text } from "@mantine/core";
 import { useBalances } from "@hooks/haveno/useBalances";
-import { useAccountInfo } from "@hooks/storage/useAccountInfo";
-import { usePrice } from "@hooks/haveno/usePrice";
 import { Currency } from "@atoms/Currency";
-import { BodyText } from "@atoms/Typography";
 
 export function WalletBalance() {
-  const [isOpen, setOpen] = useState(false);
-  const { classes } = useStyles({ isOpen });
-
+  const { classes } = useStyles();
   const { data: balances, isLoading: isLoadingBalance } = useBalances();
-  const { data: accountInfo, isLoading: isLoadingAccountInfo } =
-    useAccountInfo();
-  const { data: price } = usePrice(accountInfo?.primaryFiat);
-
-  const totalBalance = useMemo(() => {
-    return balances?.balance || 0 + (balances?.reservedTradeBalance || 0);
-  }, [balances]);
-
-  const fiatBalance = useMemo(() => {
-    if (!totalBalance || !price || !accountInfo?.primaryFiat) {
-      return 0;
-    }
-    return totalBalance * price;
-  }, [totalBalance, price, accountInfo]);
 
   return (
-    <UnstyledButton
-      aria-label="Show Balance"
-      className={classes.btnToggle}
-      onClick={() => setOpen(!isOpen)}
-    >
-      <Stack>
-        <Group spacing="sm">
-          <XMRLogo className={classes.xmrLogo} />
-          <Text className={classes.heading} weight={700}>
-            Available Balance
-          </Text>
-        </Group>
-        {isLoadingAccountInfo || isLoadingBalance ? (
-          <Stack>
-            <BodyText size="xs">Loading...</BodyText>
-          </Stack>
-        ) : (
-          <>
-            <Stack spacing={4}>
-              <Group>
-                <Text className={classes.xmr}>
-                  <Currency value={Number(balances?.balance || 0)} />
-                </Text>
-                <ArrowDown className={classes.toggleIcon} />
-              </Group>
-              <Text className={classes.fiat}>
-                (
-                <Currency
-                  currencyCode={accountInfo?.primaryFiat}
-                  value={fiatBalance}
-                />
-                )
-              </Text>
-            </Stack>
-            <Collapse in={isOpen}>
-              <Stack>
-                <Stack spacing={4}>
-                  <Text className={classes.balanceLabel}>Total</Text>
-                  <Text className={classes.balanceValue}>
-                    <Currency value={totalBalance} />
-                  </Text>
-                </Stack>
-                <Stack spacing={4}>
-                  <Text className={classes.balanceLabel}>Reserved</Text>
-                  <Text className={classes.balanceValue}>
-                    <Currency value={balances?.reservedTradeBalance || 0} />
-                  </Text>
-                </Stack>
-                <Stack spacing={4}>
-                  <Text className={classes.balanceLabel}>Locked</Text>
-                  <Text className={classes.balanceValue}>
-                    <Currency value={balances?.lockedBalance || 0} />
-                  </Text>
-                </Stack>
-              </Stack>
-            </Collapse>
-          </>
-        )}
+    <Group className={classes.container} spacing="sm" position="apart">
+      <Stack spacing={2}>
+        <Text className={classes.heading}>Available Balance</Text>
+        <BalanceValue
+          isLoading={isLoadingBalance}
+          value={balances?.availableBalance || 0}
+        />
       </Stack>
-    </UnstyledButton>
+      <Stack spacing={2}>
+        <Text className={classes.heading}>Locked Funds</Text>
+        <BalanceValue
+          isLoading={isLoadingBalance}
+          value={balances?.lockedBalance || 0}
+        />
+      </Stack>
+      <Stack spacing={2}>
+        <Text className={classes.heading}>Reserved Funds</Text>
+        <BalanceValue
+          isLoading={isLoadingBalance}
+          value={balances?.reservedBalance || 0}
+        />
+      </Stack>
+    </Group>
   );
 }
 
-const useStyles = createStyles<string, { isOpen: boolean }>(
-  (theme, params) => ({
-    btnToggle: {
-      border: `solid 1px ${theme.colors.gray[4]}`,
-      borderRadius: theme.radius.md,
-      padding: theme.spacing.md,
+interface BalanceValueProps {
+  isLoading: boolean;
+  value: number;
+}
 
-      "&:hover": {
-        borderColor: theme.colors.gray[5],
-      },
-    },
-    xmrLogo: {
-      width: 20,
-    },
-    toggleIcon: {
-      transform: `rotate(${params.isOpen ? 180 : 0}deg)`,
-      transition: "transform 0.2s",
-      width: 8,
-    },
-    heading: {
-      fontSize: "0.5rem",
-      fontWeight: 700,
-      textTransform: "uppercase",
-    },
-    xmr: {
-      fontSize: "0.75rem",
-      fontWeight: 600,
-    },
-    fiat: {
-      color: theme.colors.gray[6],
-      fontSize: "0.625rem",
-      fontWeight: 500,
-    },
-    balanceLabel: {
-      color: theme.colors.gray[6],
-      fontSize: "0.625rem",
-      fontWeight: 700,
-      textTransform: "uppercase",
-    },
-    balanceValue: {
-      color: theme.colors.gray[8],
-      fontSize: "0.625rem",
-      fontWeight: 600,
-    },
-  })
-);
+function BalanceValue({ isLoading, value }: BalanceValueProps) {
+  const { classes } = useStyles();
+  if (isLoading) {
+    return <Skeleton height={12} my={3} sx={{ opacity: 0.15 }} />;
+  }
+  return (
+    <Text className={classes.balanceValue}>
+      <Currency value={value} />
+    </Text>
+  );
+}
+
+const useStyles = createStyles((theme) => ({
+  container: {
+    background: "rgba(17, 17, 17, 0.15)",
+    borderRadius: theme.radius.md,
+    padding: `${theme.spacing.xs * 0.8}px ${theme.spacing.xs}px`,
+  },
+  heading: {
+    color: theme.colors.white,
+    fontSize: "0.5rem",
+    fontWeight: 700,
+    opacity: 0.8,
+    textTransform: "uppercase",
+  },
+  balanceValue: {
+    color: theme.colors.white,
+    fontSize: "0.75rem",
+    fontWeight: 600,
+  },
+}));

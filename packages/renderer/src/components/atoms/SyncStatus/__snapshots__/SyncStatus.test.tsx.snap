@@ -3,15 +3,24 @@
 exports[`atoms::Sync Status > renders the fully synced status 1`] = `
 <DocumentFragment>
   <div
-    class="mantine-Group-root mantine-33bl97"
+    class="mantine-Stack-root mantine-xkcyre"
   >
-    <span
-      class="mantine-Group-child mantine-16wvh2m"
-    />
     <div
-      class="mantine-Text-root mantine-Group-child mantine-6ffw9j"
+      class="mantine-Group-root mantine-i39wlo"
     >
-      Fully Synced
+      <span
+        class="mantine-Group-child mantine-16wvh2m"
+      />
+      <div
+        class="mantine-Text-root mantine-Group-child mantine-1bxawp9"
+      >
+        Fully Synced
+      </div>
+    </div>
+    <div
+      class="mantine-Text-root mantine-1azyhhz"
+    >
+      node.sethforprivacy.com
     </div>
   </div>
 </DocumentFragment>
@@ -20,15 +29,24 @@ exports[`atoms::Sync Status > renders the fully synced status 1`] = `
 exports[`atoms::Sync Status > renders the not synced status by default 1`] = `
 <DocumentFragment>
   <div
-    class="mantine-Group-root mantine-33bl97"
+    class="mantine-Stack-root mantine-xkcyre"
   >
-    <span
-      class="mantine-Group-child mantine-1mmj0t1"
-    />
     <div
-      class="mantine-Text-root mantine-Group-child mantine-6ffw9j"
+      class="mantine-Group-root mantine-i39wlo"
     >
-      Not Synced
+      <span
+        class="mantine-Group-child mantine-1mmj0t1"
+      />
+      <div
+        class="mantine-Text-root mantine-Group-child mantine-1bxawp9"
+      >
+        Not Synced
+      </div>
+    </div>
+    <div
+      class="mantine-Text-root mantine-1azyhhz"
+    >
+      node.sethforprivacy.com
     </div>
   </div>
 </DocumentFragment>
@@ -37,15 +55,24 @@ exports[`atoms::Sync Status > renders the not synced status by default 1`] = `
 exports[`atoms::Sync Status > renders the sync in progress status 1`] = `
 <DocumentFragment>
   <div
-    class="mantine-Group-root mantine-33bl97"
+    class="mantine-Stack-root mantine-xkcyre"
   >
-    <span
-      class="mantine-Group-child mantine-6c6x3l"
-    />
     <div
-      class="mantine-Text-root mantine-Group-child mantine-6ffw9j"
+      class="mantine-Group-root mantine-i39wlo"
     >
-      Syncing
+      <span
+        class="mantine-Group-child mantine-6c6x3l"
+      />
+      <div
+        class="mantine-Text-root mantine-Group-child mantine-1bxawp9"
+      >
+        Syncing
+      </div>
+    </div>
+    <div
+      class="mantine-Text-root mantine-1azyhhz"
+    >
+      node.sethforprivacy.com
     </div>
   </div>
 </DocumentFragment>

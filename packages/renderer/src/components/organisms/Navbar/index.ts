@@ -14,29 +14,4 @@
 //  limitations under the License.
 // =============================================================================
 
-import { beforeAll, describe, expect, it, vi } from "vitest";
-import { render } from "@testing-library/react";
-import { Sidebar } from ".";
-import { AppProviders } from "@atoms/AppProviders";
-import { SyncStatus } from "@constants/sync-status";
-
-describe("molecules::Sidebar", () => {
-  beforeAll(() => {
-    vi.mock("@hooks/haveno/useSyncStatus", () => ({
-      useSyncStatus: () => ({
-        isLoading: false,
-        isSuccess: true,
-        data: SyncStatus.NotSynced,
-      }),
-    }));
-  });
-
-  it("renders without exploding", () => {
-    const { asFragment } = render(
-      <AppProviders>
-        <Sidebar />
-      </AppProviders>
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+export * from "./Navbar";

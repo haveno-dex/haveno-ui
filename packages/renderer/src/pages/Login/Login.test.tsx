@@ -85,8 +85,7 @@ describe("pages::Login", () => {
     unmount();
   });
 
-  // TODO: update behavior to redirect to the Market page
-  it("navigates to Payment Accounts page after successful login", async () => {
+  it("navigates to Market page after successful login", async () => {
     const PASSWORD = "Haveno!2022";
     loginSpy.mockImplementation(({ password }, { onSuccess, onError }) => {
       if (password === PASSWORD) {
@@ -105,7 +104,7 @@ describe("pages::Login", () => {
     await user.type(screen.getByLabelText("Password"), PASSWORD);
     fireEvent.submit(screen.getByRole("button", { name: "Login" }));
     expect(navSpy).to.toHaveBeenCalledTimes(1);
-    expect(navSpy).toHaveBeenCalledWith(ROUTES.PaymentAccounts, {
+    expect(navSpy).toHaveBeenCalledWith(ROUTES.Markets, {
       replace: true,
     });
     unmount();

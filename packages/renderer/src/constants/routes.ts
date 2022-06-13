@@ -18,11 +18,14 @@ export const ROUTES = {
   Home: "",
   HomeAlias: "/",
   Login: "/login",
+  Markets: "/markets",
+  MyOffers: "/my-offers",
+  MyTrades: "/my-trades",
   Welcome: "/onboarding/welcome",
   CreateAccount: "/onboarding/create-account",
   RestoreBackup: "/onboarding/restore-backup",
   MyWallet: "/my-wallet",
-  Markets: "/markets",
+  Notifications: "/notifications",
 
   // Account routes
   PaymentAccounts: "/account/payment-accounts",

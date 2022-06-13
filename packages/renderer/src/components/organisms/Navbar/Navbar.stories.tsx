@@ -16,17 +16,17 @@
 
 import { Stack } from "@mantine/core";
 import type { ComponentStory, ComponentMeta } from "@storybook/react";
-import { Sidebar } from ".";
+import { Navbar } from ".";
 
 export default {
-  title: "organisms/Sidebar",
-  component: Sidebar,
-} as ComponentMeta<typeof Sidebar>;
+  title: "organisms/Navbar",
+  component: Navbar,
+} as ComponentMeta<typeof Navbar>;
 
-const Template: ComponentStory<typeof Sidebar> = () => {
+const Template: ComponentStory<typeof Navbar> = () => {
   return (
     <Stack>
-      <Sidebar />
+      <Navbar />
     </Stack>
   );
 };

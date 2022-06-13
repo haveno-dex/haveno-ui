@@ -20,7 +20,7 @@ import { SyncStatus } from ".";
 import { SyncStatus as SyncStatusOptions } from "@constants/sync-status";
 
 export default {
-  title: "molecules/Sync Status",
+  title: "atoms/Sync Status",
   component: SyncStatus,
   argTypes: {
     status: {

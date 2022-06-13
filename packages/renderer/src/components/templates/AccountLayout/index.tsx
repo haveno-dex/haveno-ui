@@ -14,36 +14,22 @@
 //  limitations under the License.
 // =============================================================================
 
+import type { FC } from "react";
 import { Group, createStyles, Box } from "@mantine/core";
 import { NavbarLayout } from "@templates/NavbarLayout";
 import { AccountSidebar } from "@organisms/AccountSidebar";
 
-interface AccountContentProps {
-  children: JSX.Element | Array<JSX.Element>;
-}
-
-function AccountContent({ children }: AccountContentProps) {
+export const AccountLayout: FC = ({ children }) => {
   const { classes } = useStyles();
-
-  return (
-    <Group className={classes.container} spacing={0}>
-      <AccountSidebar />
-      <Box className={classes.contentArea}>{children}</Box>
-    </Group>
-  );
-}
-
-interface AccountLayoutProps {
-  children: JSX.Element | Array<JSX.Element>;
-}
-
-export function AccountLayout({ children }: AccountLayoutProps) {
   return (
     <NavbarLayout>
-      <AccountContent>{children}</AccountContent>
+      <Group className={classes.container} spacing={0}>
+        <AccountSidebar />
+        <Box className={classes.contentArea}>{children}</Box>
+      </Group>
     </NavbarLayout>
   );
-}
+};
 
 const useStyles = createStyles((theme) => ({
   container: {
