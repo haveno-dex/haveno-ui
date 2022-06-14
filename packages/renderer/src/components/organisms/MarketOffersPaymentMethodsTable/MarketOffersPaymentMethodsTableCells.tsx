@@ -14,6 +14,31 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+import { Text } from "@mantine/core";
+import type { TMarketOfferPaymentMethod } from "./_types";
+import { Currency } from "@atoms/Currency";
+
+export function MarketOffersPaymentMethodsLimit({
+  row,
+}: {
+  row?: TMarketOfferPaymentMethod;
+}) {
+  return (
+    <Text size="sm" color="gray">
+      <Currency value={row?.rateTradeLimit || 0} minimumFractionDigits={0} />{" "}
+      {row?.rateTradeLimitCurrency}
+    </Text>
+  );
+}
+
+export function MarketOffersPaymentMethodsInfo({
+  row,
+}: {
+  row?: TMarketOfferPaymentMethod;
+}) {
+  return (
+    <Text size="sm" color="gray">
+      {row?.info}
+    </Text>
+  );
+}

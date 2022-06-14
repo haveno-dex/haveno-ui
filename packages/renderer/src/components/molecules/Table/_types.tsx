@@ -18,11 +18,13 @@
 import type { ColumnDef, Row, TableState } from "@tanstack/react-table";
 import type { TableProps as MTableProps } from "@mantine/core";
 
+// TODO: Add type or generic
 export interface TableProps {
   columns: Array<ColumnDef<any>>;
   table: any;
   data: Array<any>;
   state?: Partial<TableState>;
+  defaultColumn?: any;
 
   showHeader?: boolean;
   showFooter?: boolean;
@@ -31,6 +33,11 @@ export interface TableProps {
 
   tableWrap?: MTableProps;
   variant?: TableVariant;
+
+  onEditableDataChange?: (v: Array<any>) => void;
+
+  pointerRow?: boolean;
+  onRowClick?: (column: any) => void;
 }
 
 export enum TableVariant {

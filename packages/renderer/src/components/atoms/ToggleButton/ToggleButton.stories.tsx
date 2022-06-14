@@ -14,6 +14,20 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+import type { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ToggleButton } from "./ToggleButton";
+
+export default {
+  title: "atoms/ToggleButton",
+  component: ToggleButton,
+} as ComponentMeta<typeof ToggleButton>;
+
+const Template: ComponentStory<typeof ToggleButton> = (args) => {
+  return <ToggleButton {...args} />;
+};
+
+export const Default = Template.bind({});
+
+Default.args = {
+  labels: ["Sell XMR", "Buy XMR"],
+};

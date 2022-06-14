@@ -14,6 +14,26 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+import { useModals } from "@mantine/modals";
+import { MarketOffersFilterAccountsForm } from "@organisms/MarketOffersFilterAccountsForm";
+
+export function useMarketOffersAccountModal() {
+  const modals = useModals();
+
+  return {
+    openModal: () => {
+      const modalId = modals.openModal({
+        title: "Amount",
+        children: (
+          <MarketOffersFilterAccountsForm
+            onSubmit={() => {
+              modals.closeModal(modalId);
+            }}
+          />
+        ),
+        size: "lg",
+        withCloseButton: true,
+      });
+    },
+  };
+}

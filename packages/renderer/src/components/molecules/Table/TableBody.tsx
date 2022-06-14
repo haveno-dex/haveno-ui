@@ -20,7 +20,7 @@ import { useTableContext } from "./use-table-context";
 export function TableBody() {
   const {
     table,
-    props: { rowSubComponent },
+    props: { rowSubComponent, onRowClick },
   } = useTableContext();
 
   return (
@@ -31,6 +31,7 @@ export function TableBody() {
             key={row.id}
             onClick={() => {
               row.toggleExpanded();
+              onRowClick && onRowClick(row);
             }}
           >
             {row.getVisibleCells().map((cell) => (

@@ -14,6 +14,8 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+export * from "./MarketOffersTradingPairTable";
+export type {
+  TMarketOffersTradingPair,
+  TMarketTradingPairTable,
+} from "./_types";

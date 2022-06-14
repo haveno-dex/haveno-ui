@@ -125,6 +125,56 @@ const LangPackES: { [key in LangKeys]: string } = {
   [LangKeys.MarketsOffersColumnAccountAge]: "Edad de la cuenta",
   [LangKeys.MarketsOffersColumnAccountTrades]: "Operaciones de cuenta",
   [LangKeys.MarketsOffersColumnPaymentMethod]: "Método de pago",
+  [LangKeys.MarketsTransactionsColumnPrice]: "Precio",
+  [LangKeys.MarketsTransactionsColumnAmount]: "Monto",
+  [LangKeys.MarketsTransactionsColumnCost]: "Costos",
+  [LangKeys.MarketsTransactionsColumnAccountAge]: "Edad de la cuenta",
+  [LangKeys.MarketsTransactionsColumnAccountTrades]: "Operaciones de cuenta",
+  [LangKeys.MarketsTransactionsColumnPaymentMethod]: "Método de pago",
+  [LangKeys.MarketsTransactionsCashByMail]: "Cash by mail",
+  [LangKeys.MarketOffersAmount]: "Monto",
+  [LangKeys.MarketOffersWith]: "con",
+  [LangKeys.MarketOffersSwitchSell]: "Vender {currency}",
+  [LangKeys.MarketOffersSwitchBuy]: "Comprar {currency}",
+  [LangKeys.MarketOffersPaymentMethod]: "Método de pago",
+  [LangKeys.MarketOffersAccountDetails]: "Detalles de la cuenta",
+  [LangKeys.MarketOffersShowMarketDepth]: "Mostrar profundidad de mercado",
+  [LangKeys.MarketOffersHideMarketDepth]: "Ocultar profundidad de mercado",
+  [LangKeys.MarketOffersCreateOffer]: "Crear oferta",
+  [LangKeys.MarketOffersCurrency]: "Divisa",
+  [LangKeys.MarketOffersSigned]: "Firmada",
+  [LangKeys.MarketOffersTradesAmount]: ">{value} vientos alisios",
+  [LangKeys.MarketOffersDaysAge]: ">{value} días",
+  [LangKeys.MarketPaymentMethodColMethodName]: "Método",
+  [LangKeys.MarketPaymentMethodColRateTradeLimit]: "Límite comercial de tasa",
+  [LangKeys.MarketPaymentMethodColInfo]: "Información",
+  [LangKeys.MarketTradingPairColPair]: "Par",
+  [LangKeys.MarketTradingPairColLastPrice]: "Last Price",
+  [LangKeys.MarketTradingPairColDayChange]: "Cambio 24",
+  [LangKeys.MarketTradingPairColDayChangeVolume]: "Vol. 24",
+  [LangKeys.MarketFilterAccountLabelSignedAccounts]: "cuentas firmadas",
+  [LangKeys.MarketFilterAccountDescSignedAccounts]:
+    "Solo mostrar cuentas que hayan sido firmadas. Tenga en cuenta que las cuentas nuevas deben tener la oportunidad de ser firmadas.",
+  [LangKeys.MarketFilterAccountLabelMinAccountAge]: "Edad mínima de la cuenta",
+  [LangKeys.MarketFilterAccountDescMinAccountAge]:
+    "Mostrar solo ofertas comerciales con una edad mínima de cuenta.",
+  [LangKeys.MarketFilterAccountLabelAmountTrades]:
+    "Cantidad mínima de operaciones",
+  [LangKeys.MarketFilterAccountDescAmountTrades]:
+    "Mostrar solo ofertas comerciales de cuentas con una cantidad mínima de operaciones completadas",
+  [LangKeys.MarketFilterAccountTrades]: "Vientos alisios",
+  [LangKeys.MarketFilterAccountDays]: "Días",
+  [LangKeys.MarketFilterAccountClearFiltersBtn]: "Borrar filtros",
+  [LangKeys.MarketFilterAccountSaveBtn]: "Guardar filtros",
+  [LangKeys.MarketAmountFilterFieldMinAmountTrades]:
+    "Cantidad mínima de operaciones",
+  [LangKeys.MarketAmountFilterFieldMinAmountTradesDesc]:
+    "Establece la cantidad mínima que deseas comprar.",
+  [LangKeys.MarketAmountFilterFieldMaxAmount]: "Importe máximo",
+  [LangKeys.MarketAmountFilterFieldMaxAmountDesc]:
+    "Establece la cantidad máxima que deseas comprar.",
+  [LangKeys.MarketAmountFilterAmountClearFiltersBtn]: "Borrar filtros",
+  [LangKeys.MarketAmountFilterAmountSaveBtn]: "Guardar filtros",
 };
 
 export default LangPackES;

@@ -26,10 +26,20 @@ import { TableProvider } from "./use-table-context";
 import { TableHeader } from "./TableHeader";
 import { TableBody } from "./TableBody";
 import { useStyles } from "./Table.style";
+import { updateTableCell } from "./_utils";
 
 export function Table(props: TableProps) {
   const { classes, cx } = useStyles();
-  const { table, columns, data, tableWrap, variant, state } = props;
+  const {
+    table,
+    columns,
+    data,
+    tableWrap,
+    variant,
+    onEditableDataChange,
+    defaultColumn,
+    state,
+  } = props;
 
   const tableInstance = useTableInstance(table, {
     data,
@@ -37,6 +47,17 @@ export function Table(props: TableProps) {
     state,
     getCoreRowModel: getCoreRowModel(),
     getExpandedRowModel: getExpandedRowModel(),
+    meta: {
+      updateData: (rowIndex: number, columnId: string, value: unknown) => {
+        const newData = updateTableCell(data, rowIndex, columnId, value);
+        onEditableDataChange && onEditableDataChange(newData);
+      },
+    },
+    ...(defaultColumn
+      ? {
+          defaultColumn,
+        }
+      : {}),
   });
 
   return (

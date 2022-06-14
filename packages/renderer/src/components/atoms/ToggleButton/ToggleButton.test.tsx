@@ -14,6 +14,25 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
+import { ToggleButton } from "./ToggleButton";
+
+describe("atoms::ToggleButton", () => {
+  it("renders without exploding", () => {
+    const { asFragment, unmount } = render(
+      <ToggleButton labels={["Sell", "Buy"]} />
+    );
+    expect(asFragment()).toMatchSnapshot();
+    unmount();
+  });
+
+  it("renders all tabs", () => {
+    const { unmount } = render(
+      <ToggleButton labels={["Sell XMR", "Buy XMR"]} />
+    );
+    expect(screen.queryByText("Sell XMR")).toBeInTheDocument();
+    expect(screen.queryByText("Buy XMR")).toBeInTheDocument();
+    unmount();
+  });
+});

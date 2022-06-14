@@ -33,7 +33,7 @@ export const NAV_LINKS = [
   {
     icon: <MarketsIcon />,
     label: "Markets",
-    link: "/markets",
+    route: "/markets",
   },
   {
     icon: <OffersIcon />,

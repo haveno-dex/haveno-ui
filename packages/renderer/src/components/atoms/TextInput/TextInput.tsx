@@ -14,8 +14,15 @@
 //  limitations under the License.
 // =============================================================================
 
-import { createStyles, TextInput as MTextInput } from "@mantine/core";
-import type { TextInputProps as MTextInputProps } from "@mantine/core";
+import type {
+  TextInputProps as MTextInputProps,
+  NumberInputProps as MNumberInputProps,
+} from "@mantine/core";
+import {
+  createStyles,
+  TextInput as MTextInput,
+  NumberInput as MNumberInput,
+} from "@mantine/core";
 
 interface TextInputProps extends MTextInputProps {
   id: string;
@@ -24,7 +31,19 @@ interface TextInputProps extends MTextInputProps {
 export function TextInput(props: TextInputProps) {
   const { id, ...rest } = props;
   const { classes } = useStyles();
+
   return <MTextInput classNames={classes} id={id} {...rest} />;
+}
+
+interface NumberInputProps extends MNumberInputProps {
+  id: string;
+}
+
+export function NumberInput(props: NumberInputProps) {
+  const { id, ...rest } = props;
+  const { classes } = useStyles();
+
+  return <MNumberInput classNames={classes} id={id} {...rest} />;
 }
 
 const useStyles = createStyles((theme) => ({

@@ -14,6 +14,23 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+import _ from "lodash";
+
+/**
+ * Retrieves the form fields and removes fields that out of form from
+ * the given intial values, and removes previously unfilled optional values
+ * come as `null` as well.
+ *
+ * @param  {Record<string, unknown>} param - Form values.
+ * @param  {Record<string, unknown>} initialValues - Form initial values.
+ * @return {Record<string, unknown>}
+ */
+export const transformToForm = (
+  obj: Record<string, unknown>,
+  initialValues: Record<string, unknown>
+): Record<string, unknown> => {
+  return _.pickBy(
+    obj,
+    (val, key) => val !== null && Object.keys(initialValues).includes(key)
+  );
+};

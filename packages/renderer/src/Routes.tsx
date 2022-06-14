@@ -39,7 +39,14 @@ export function AppRoutes() {
       <Route path={ROUTES.Login} element={<Login />} />
       <Route path={ROUTES.Welcome} element={<Welcome />} />
       <Route path={ROUTES.CreateAccount} element={<CreateAccount />} />
-      <Route path={ROUTES.Markets} element={<MarketsOffersPage />} />
+      <Route
+        path={ROUTES.Markets}
+        element={
+          <ProtectedRoute>
+            <MarketsOffersPage />
+          </ProtectedRoute>
+        }
+      />
       <Route
         path={ROUTES.MyWallet}
         element={

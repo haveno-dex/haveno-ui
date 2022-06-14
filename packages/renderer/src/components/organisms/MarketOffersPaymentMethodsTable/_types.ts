@@ -14,6 +14,11 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+export interface TMarketOfferPaymentMethod {
+  methodChecked?: boolean;
+  methodName: string;
+  methodKey: string;
+  rateTradeLimit: number;
+  rateTradeLimitCurrency: string;
+  info: string;
+}

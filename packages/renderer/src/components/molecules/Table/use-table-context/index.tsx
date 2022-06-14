@@ -20,6 +20,7 @@ import type { TableInstance } from "@tanstack/react-table";
 import type { TableProps } from "../_types";
 
 interface TableContextValue {
+  // TODO: Add type or generic
   table: TableInstance<any>;
   props: TableProps;
 }

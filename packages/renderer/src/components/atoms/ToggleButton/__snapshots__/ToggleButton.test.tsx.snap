@@ -1,0 +1,54 @@
+// Vitest Snapshot v1
+
+exports[`atoms::ToggleButton > renders without exploding 1`] = `
+<DocumentFragment>
+  <div
+    class="mantine-Tabs-root mantine-jjhffj"
+  >
+    <div
+      class="mantine-1s8spa1 mantine-Tabs-tabsListWrapper"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="mantine-Group-root __mantine-ref-tabsList mantine-Tabs-tabsList mantine-1tggmaq"
+        role="tablist"
+      >
+        <button
+          aria-selected="true"
+          class="mantine-Tabs-tabControl __mantine-ref-tabActive mantine-Tabs-tabActive mantine-Group-child mantine-9dd9nw"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          <div
+            class="mantine-Tabs-tabInner mantine-12bvju6"
+          >
+            <div
+              class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+            >
+              Sell
+            </div>
+          </div>
+        </button>
+        <button
+          aria-selected="false"
+          class="mantine-Tabs-tabControl mantine-Group-child mantine-1pl658a"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          <div
+            class="mantine-Tabs-tabInner mantine-12bvju6"
+          >
+            <div
+              class="mantine-1s8spa1 mantine-Tabs-tabLabel"
+            >
+              Buy
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

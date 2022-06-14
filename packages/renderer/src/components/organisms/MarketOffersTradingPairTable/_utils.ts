@@ -14,6 +14,7 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+import type { TMarketOffersTradingPair } from "./_types";
+
+export const pairColumnAccessor = (row: TMarketOffersTradingPair): string =>
+  `${row.fromPair}/${row.toPair}`;

@@ -14,6 +14,18 @@
 //  limitations under the License.
 // =============================================================================
 
-export * from "./_types";
-export * from "./Table";
-export * from "./cells";
+import { createTable } from "@tanstack/react-table";
+
+export interface TMarketOffersTradingPair {
+  fromPair: string;
+  toPair: string;
+  lastPrice: number;
+  lastPriceCurrency: string;
+  dayChangeRate: number;
+  dayChangeVolume: number;
+}
+
+export const marketTradingPairTable =
+  createTable().setRowType<TMarketOffersTradingPair>();
+
+export type TMarketTradingPairTable = typeof marketTradingPairTable.generics;

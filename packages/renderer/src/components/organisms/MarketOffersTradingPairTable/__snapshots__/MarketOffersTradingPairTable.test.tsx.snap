@@ -1,0 +1,118 @@
+// Vitest Snapshot v1
+
+exports[`molecules::MarketoffersTradingPairTable > renders without exploding 1`] = `
+<DocumentFragment>
+  <table
+    class="mantine-Table-root __mantine-ref-hover mantine-Table-hover mantine-1u8kzyn"
+  >
+    <thead>
+      <tr>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Pair
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px;"
+        >
+          Last Price
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px; text-align: right;"
+        >
+          24th Change
+        </th>
+        <th
+          colspan="1"
+          style="width: 400px; text-align: right;"
+        >
+          24th Vol
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td
+          style="width: 400px;"
+        >
+          EUR/XMR
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Group-root mantine-6y1794"
+          >
+            <div
+              class="mantine-Group-child mantine-1oprzqz"
+            >
+              EUR
+            </div>
+            <div
+              class="mantine-Group-child mantine-1oprzqz"
+            >
+              101.12
+            </div>
+          </div>
+        </td>
+        <td
+          style="width: 400px; text-align: right;"
+        >
+          <div
+            class="mantine-ozfbol"
+          >
+            +3,5%
+          </div>
+        </td>
+        <td
+          style="width: 400px; text-align: right;"
+        >
+          4,233.123
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="width: 400px;"
+        >
+          USD/XMR
+        </td>
+        <td
+          style="width: 400px;"
+        >
+          <div
+            class="mantine-Group-root mantine-6y1794"
+          >
+            <div
+              class="mantine-Group-child mantine-1oprzqz"
+            >
+              EUR
+            </div>
+            <div
+              class="mantine-Group-child mantine-1oprzqz"
+            >
+              105.12
+            </div>
+          </div>
+        </td>
+        <td
+          style="width: 400px; text-align: right;"
+        >
+          <div
+            class="mantine-ozfbol"
+          >
+            +3,5%
+          </div>
+        </td>
+        <td
+          style="width: 400px; text-align: right;"
+        >
+          1,222.123
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;

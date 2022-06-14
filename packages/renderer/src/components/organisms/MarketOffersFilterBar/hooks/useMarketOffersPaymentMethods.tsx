@@ -14,29 +14,40 @@
 //  limitations under the License.
 // =============================================================================
 
-import { createStyles, Stack } from "@mantine/core";
-import { NavbarLayout } from "@templates/NavbarLayout";
-import { MarketsOffers } from "@organisms/MarketsOffers";
-import { MarketOffersFilterBar } from "@organisms/MarketOffersFilterBar";
+import { createStyles } from "@mantine/core";
+import { useModals } from "@mantine/modals";
+import { MarketOffersFilterPaymentMethods } from "@organisms/MarketOffersFilterPaymentMethods";
 
-export function MarketsOffersPage() {
+export function useMarketOffersPaymentMethods() {
+  const modals = useModals();
   const { classes } = useStyles();
 
-  return (
-    <NavbarLayout classNames={{ contentArea: classes.contentArea }}>
-      <Stack spacing={0} className={classes.innerContent}>
-        <MarketOffersFilterBar />
-        <MarketsOffers />
-      </Stack>
-    </NavbarLayout>
-  );
+  return {
+    openModal: () => {
+      modals.openModal({
+        title: "Filter on payment methods",
+        children: <MarketOffersFilterPaymentMethods />,
+        size: 970,
+        withCloseButton: true,
+        classNames: classes,
+      });
+    },
+  };
 }
 
-const useStyles = createStyles(() => ({
-  contentArea: {
-    padding: 0,
+const useStyles = createStyles((theme) => ({
+  root: {
+    padding: "0 !important",
   },
-  innerContent: {
-    width: "100%",
+  modal: {
+    padding: "0 !important",
+  },
+  title: {
+    fontSize: theme.fontSizes.md,
+    fontWeight: 600,
+  },
+  header: {
+    padding: "12px 20px",
+    margin: 0,
   },
 }));
