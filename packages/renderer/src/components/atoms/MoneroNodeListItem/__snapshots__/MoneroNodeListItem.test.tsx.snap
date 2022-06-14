@@ -3,11 +3,11 @@
 exports[`atoms::MoneroNodeListItem > renders without exploding 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-UnstyledButton-root mantine-pk5m2t"
+    class="mantine-UnstyledButton-root mantine-146e5sp"
     type="button"
   >
     <div
-      class="mantine-Text-root mantine-14byb36"
+      class="mantine-Text-root mantine-jmvuvj"
     >
       node.moneroworldcom:18089:active
     </div>
@@ -20,11 +20,11 @@ exports[`atoms::MoneroNodeListItem > renders without exploding 1`] = `
     </div>
   </button>
   <button
-    class="mantine-UnstyledButton-root mantine-1v48mh9"
+    class="mantine-UnstyledButton-root mantine-9tasfa"
     type="button"
   >
     <div
-      class="mantine-Text-root mantine-14byb36"
+      class="mantine-Text-root mantine-jmvuvj"
     >
       node.moneroworldcom:18089:inactive
     </div>

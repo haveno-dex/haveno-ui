@@ -15,7 +15,7 @@ exports[`pages::Login > renders without exploding 1`] = `
       />
     </header>
     <div
-      class="mantine-Container-root mantine-1hpmr7z"
+      class="mantine-Container-root mantine-13ldvuy"
     >
       <div
         class="mantine-Stack-root mantine-12lpdrc"
@@ -25,16 +25,16 @@ exports[`pages::Login > renders without exploding 1`] = `
             class="mantine-Stack-root mantine-lfk3cq"
           >
             <div
-              class="mantine-Container-root mantine-me1cdz"
+              class="mantine-Container-root mantine-15pjuqq"
             >
               <h1
-                class="mantine-Title-root mantine-1rawl7h"
+                class="mantine-Title-root mantine-10yhpe6"
               >
                 Login to Haveno
               </h1>
             </div>
             <div
-              class="mantine-Text-root mantine-1ourfup"
+              class="mantine-Text-root mantine-1xgwjc0"
             >
               All your data is stored locally on your machine. Haveno uses solely a password.
             </div>
@@ -42,7 +42,7 @@ exports[`pages::Login > renders without exploding 1`] = `
               class="mantine-63n06h"
             />
             <div
-              class="mantine-PasswordInput-root mantine-14qek68"
+              class="mantine-PasswordInput-root mantine-1u48g6v"
             >
               <label
                 class="mantine-PasswordInput-label mantine-1bjo575"
@@ -56,11 +56,11 @@ exports[`pages::Login > renders without exploding 1`] = `
               >
                 <div
                   aria-invalid="false"
-                  class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-nakpsh"
+                  class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-1hlli39"
                 >
                   <input
                     aria-label="Password"
-                    class="mantine-PasswordInput-innerInput mantine-17c0t6q"
+                    class="mantine-PasswordInput-innerInput mantine-66fxec"
                     id="password"
                     type="password"
                     value=""
@@ -71,7 +71,7 @@ exports[`pages::Login > renders without exploding 1`] = `
                 >
                   <button
                     aria-hidden="true"
-                    class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-910bvd"
+                    class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-11pctd2"
                     tabindex="-1"
                     type="button"
                   >
@@ -100,7 +100,7 @@ exports[`pages::Login > renders without exploding 1`] = `
               class="mantine-Group-root mantine-19jxmdp"
             >
               <button
-                class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-s2bdxi"
+                class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-18llzhv"
                 type="submit"
               >
                 <div

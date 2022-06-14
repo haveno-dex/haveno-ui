@@ -45,12 +45,12 @@ exports[`organisms::MoneroBalance > renders without exploding. 1`] = `
         class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-2d5onn"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-1mkytp"
+          class="mantine-Text-root mantine-DetailItem-label mantine-8r3ub3"
         >
           Balance
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-17mq3ni"
+          class="mantine-Text-root mantine-DetailItem-content mantine-m3tadk"
         >
           10.20
         </div>

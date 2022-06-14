@@ -46,12 +46,12 @@ exports[`organisms::MyWalletMoneroBalance > renders without exploding 1`] = `
         data-testid="total-balance"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+          class="mantine-Text-root mantine-DetailItem-label mantine-1ece26k"
         >
           Total Balance
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+          class="mantine-Text-root mantine-DetailItem-content mantine-1tq817k"
         >
           1,000.10
         </div>
@@ -61,12 +61,12 @@ exports[`organisms::MyWalletMoneroBalance > renders without exploding 1`] = `
         data-testid="available-balance"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+          class="mantine-Text-root mantine-DetailItem-label mantine-1ece26k"
         >
           Available Balance
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+          class="mantine-Text-root mantine-DetailItem-content mantine-1tq817k"
         >
           8,000.65
         </div>
@@ -76,12 +76,12 @@ exports[`organisms::MyWalletMoneroBalance > renders without exploding 1`] = `
         data-testid="reserved-funds"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+          class="mantine-Text-root mantine-DetailItem-label mantine-1ece26k"
         >
           Reserved Funds
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+          class="mantine-Text-root mantine-DetailItem-content mantine-1tq817k"
         >
           74,610.1236
         </div>
@@ -91,12 +91,12 @@ exports[`organisms::MyWalletMoneroBalance > renders without exploding 1`] = `
         data-testid="locked-funds"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+          class="mantine-Text-root mantine-DetailItem-label mantine-1ece26k"
         >
           Locked Funds
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+          class="mantine-Text-root mantine-DetailItem-content mantine-1tq817k"
         >
           90,371.161239
         </div>

@@ -10,7 +10,7 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
         class="mantine-Stack-root mantine-1i7neaa"
       >
         <div
-          class="mantine-Select-root mantine-18udhi"
+          class="mantine-Select-root mantine-1m3pqry"
         >
           <label
             class="mantine-Select-label mantine-7802ha"
@@ -23,7 +23,6 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
             aria-controls="currency"
             aria-expanded="false"
             aria-haspopup="listbox"
-            aria-owns="currency-items"
             role="combobox"
             tabindex="-1"
           >
@@ -37,13 +36,13 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
               <input
                 aria-autocomplete="list"
                 aria-invalid="false"
-                autocomplete="nope"
-                class="mantine-Select-defaultVariant mantine-Select-input mantine-93d3e4"
+                autocomplete="off"
+                class="mantine-Select-defaultVariant mantine-Select-input mantine-1ihdofq"
                 data-mantine-stop-propagation="false"
                 id="currency"
                 placeholder="Pick one"
                 readonly=""
-                type="text"
+                type="search"
                 value=""
               />
               <div
@@ -77,7 +76,7 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
             style="opacity: 0; transition: opacity 200ms ease;"
           >
             <div
-              class="mantine-Select-root mantine-18udhi"
+              class="mantine-Select-root mantine-1m3pqry"
             >
               <label
                 class="mantine-Select-label mantine-7802ha"
@@ -90,7 +89,6 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
                 aria-controls="paymentMethod"
                 aria-expanded="false"
                 aria-haspopup="listbox"
-                aria-owns="paymentMethod-items"
                 role="combobox"
                 tabindex="-1"
               >
@@ -104,12 +102,12 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
                   <input
                     aria-autocomplete="list"
                     aria-invalid="false"
-                    autocomplete="nope"
-                    class="mantine-Select-defaultVariant mantine-Select-input mantine-16ko5f2"
+                    autocomplete="off"
+                    class="mantine-Select-defaultVariant mantine-Select-input mantine-1c1daci"
                     data-mantine-stop-propagation="false"
                     id="paymentMethod"
                     placeholder="Pick one"
-                    type="text"
+                    type="search"
                     value=""
                   />
                   <div
@@ -145,7 +143,7 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
             style="opacity: 0; transition: opacity 200ms ease;"
           >
             <div
-              class="mantine-TextInput-root mantine-18udhi"
+              class="mantine-TextInput-root mantine-1m3pqry"
             >
               <label
                 class="mantine-TextInput-label mantine-7802ha"
@@ -159,7 +157,7 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+                  class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-yxlzy5"
                   id="accountNumber"
                   type="text"
                   value=""
@@ -172,7 +170,7 @@ exports[`organisms::AddPaymentMethod > renders without exploding 1`] = `
           class="mantine-Group-root mantine-mk7hdv"
         >
           <button
-            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1bqp2m7"
+            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1hjgevl"
             type="submit"
           >
             <div

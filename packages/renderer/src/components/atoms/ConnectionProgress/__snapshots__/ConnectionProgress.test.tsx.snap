@@ -6,7 +6,7 @@ exports[`atoms::ConnectionProgress > renders without exploding 1`] = `
     class="mantine-Stack-root mantine-njf2rt"
   >
     <div
-      class="mantine-Text-root mantine-1ourfup"
+      class="mantine-Text-root mantine-1xgwjc0"
     >
       Connecting to Monero Network
     </div>

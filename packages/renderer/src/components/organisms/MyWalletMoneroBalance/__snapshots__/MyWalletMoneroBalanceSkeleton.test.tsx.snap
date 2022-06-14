@@ -45,12 +45,12 @@ exports[`organisms::MyWalletMeneroBalanceSkeleton > renders without exploding 1`
         class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-2d5onn"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+          class="mantine-Text-root mantine-DetailItem-label mantine-1ece26k"
         >
           Total Balance
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+          class="mantine-Text-root mantine-DetailItem-content mantine-1tq817k"
         >
           <div
             class="mantine-Skeleton-root mantine-Skeleton-visible mantine-12edv24"
@@ -61,12 +61,12 @@ exports[`organisms::MyWalletMeneroBalanceSkeleton > renders without exploding 1`
         class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-2d5onn"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+          class="mantine-Text-root mantine-DetailItem-label mantine-1ece26k"
         >
           Available Balance
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+          class="mantine-Text-root mantine-DetailItem-content mantine-1tq817k"
         >
           <div
             class="mantine-Skeleton-root mantine-Skeleton-visible mantine-12edv24"
@@ -77,12 +77,12 @@ exports[`organisms::MyWalletMeneroBalanceSkeleton > renders without exploding 1`
         class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-2d5onn"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+          class="mantine-Text-root mantine-DetailItem-label mantine-1ece26k"
         >
           Reserved Funds
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+          class="mantine-Text-root mantine-DetailItem-content mantine-1tq817k"
         >
           <div
             class="mantine-Skeleton-root mantine-Skeleton-visible mantine-12edv24"
@@ -93,12 +93,12 @@ exports[`organisms::MyWalletMeneroBalanceSkeleton > renders without exploding 1`
         class="mantine-Stack-root mantine-DetailItem-root mantine-Group-child mantine-2d5onn"
       >
         <div
-          class="mantine-Text-root mantine-DetailItem-label mantine-10gsq91"
+          class="mantine-Text-root mantine-DetailItem-label mantine-1ece26k"
         >
           Locked Funds
         </div>
         <div
-          class="mantine-Text-root mantine-DetailItem-content mantine-oat2gy"
+          class="mantine-Text-root mantine-DetailItem-content mantine-1tq817k"
         >
           <div
             class="mantine-Skeleton-root mantine-Skeleton-visible mantine-12edv24"

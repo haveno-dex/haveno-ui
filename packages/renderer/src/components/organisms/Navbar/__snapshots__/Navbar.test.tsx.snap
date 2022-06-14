@@ -28,7 +28,7 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
         href="#/"
       >
         <div
-          class="mantine-Text-root mantine-dnz1r0"
+          class="mantine-Text-root mantine-8jknfx"
         >
           Dashboard
         </div>
@@ -38,7 +38,7 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
         href="#/markets"
       >
         <div
-          class="mantine-Text-root mantine-dnz1r0"
+          class="mantine-Text-root mantine-8jknfx"
         >
           Market
         </div>
@@ -48,7 +48,7 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
         href="#/my-offers"
       >
         <div
-          class="mantine-Text-root mantine-dnz1r0"
+          class="mantine-Text-root mantine-8jknfx"
         >
           My Offers
         </div>
@@ -58,7 +58,7 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
         href="#/my-trades"
       >
         <div
-          class="mantine-Text-root mantine-dnz1r0"
+          class="mantine-Text-root mantine-8jknfx"
         >
           My Trades
         </div>
@@ -68,7 +68,7 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
         href="#/my-wallet"
       >
         <div
-          class="mantine-Text-root mantine-dnz1r0"
+          class="mantine-Text-root mantine-8jknfx"
         >
           Wallet
         </div>
@@ -90,13 +90,13 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
               class="mantine-Group-child mantine-1mmj0t1"
             />
             <div
-              class="mantine-Text-root mantine-Group-child mantine-1bxawp9"
+              class="mantine-Text-root mantine-Group-child mantine-17p1w3"
             >
               Not Synced
             </div>
           </div>
           <div
-            class="mantine-Text-root mantine-1azyhhz"
+            class="mantine-Text-root mantine-1swgem8"
           >
             node.sethforprivacy.com
           </div>
@@ -108,7 +108,7 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
             class="mantine-Stack-root mantine-Group-child mantine-1vgxq13"
           >
             <div
-              class="mantine-Text-root mantine-1l9p15c"
+              class="mantine-Text-root mantine-hbkn2v"
             >
               Available Balance
             </div>
@@ -120,7 +120,7 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
             class="mantine-Stack-root mantine-Group-child mantine-1vgxq13"
           >
             <div
-              class="mantine-Text-root mantine-1l9p15c"
+              class="mantine-Text-root mantine-hbkn2v"
             >
               Locked Funds
             </div>
@@ -132,7 +132,7 @@ exports[`molecules::Navbar > renders without exploding 1`] = `
             class="mantine-Stack-root mantine-Group-child mantine-1vgxq13"
           >
             <div
-              class="mantine-Text-root mantine-1l9p15c"
+              class="mantine-Text-root mantine-hbkn2v"
             >
               Reserved Funds
             </div>

@@ -10,7 +10,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
         class="mantine-Stack-root mantine-lfk3cq"
       >
         <div
-          class="mantine-TextInput-root mantine-18udhi"
+          class="mantine-TextInput-root mantine-1m3pqry"
         >
           <label
             class="mantine-TextInput-label mantine-7802ha"
@@ -19,6 +19,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
           >
             Node address
             <span
+              aria-hidden="true"
               class="mantine-1m203yh mantine-TextInput-required"
             >
                *
@@ -30,7 +31,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
             <input
               aria-invalid="false"
               aria-label="Node address"
-              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-yxlzy5"
               id="address"
               required=""
               type="text"
@@ -39,7 +40,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
           </div>
         </div>
         <div
-          class="mantine-TextInput-root mantine-18udhi"
+          class="mantine-TextInput-root mantine-1m3pqry"
         >
           <label
             class="mantine-TextInput-label mantine-7802ha"
@@ -48,6 +49,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
           >
             Port
             <span
+              aria-hidden="true"
               class="mantine-1m203yh mantine-TextInput-required"
             >
                *
@@ -59,7 +61,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
             <input
               aria-invalid="false"
               aria-label="Port"
-              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-yxlzy5"
               id="port"
               required=""
               type="text"
@@ -68,7 +70,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
           </div>
         </div>
         <div
-          class="mantine-TextInput-root mantine-18udhi"
+          class="mantine-TextInput-root mantine-1m3pqry"
         >
           <label
             class="mantine-TextInput-label mantine-7802ha"
@@ -82,7 +84,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
           >
             <input
               aria-invalid="false"
-              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-yxlzy5"
               id="user"
               type="text"
               value=""
@@ -90,7 +92,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
           </div>
         </div>
         <div
-          class="mantine-PasswordInput-root mantine-18udhi"
+          class="mantine-PasswordInput-root mantine-1m3pqry"
         >
           <label
             class="mantine-PasswordInput-label mantine-7802ha"
@@ -104,10 +106,10 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
           >
             <div
               aria-invalid="false"
-              class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-1i2duzg"
+              class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-1fntf85"
             >
               <input
-                class="mantine-PasswordInput-innerInput mantine-1bj8gkk"
+                class="mantine-PasswordInput-innerInput mantine-u0eqyi"
                 id="password"
                 type="password"
                 value=""
@@ -118,7 +120,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
             >
               <button
                 aria-hidden="true"
-                class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-vao037"
+                class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-1vhreye"
                 tabindex="-1"
                 type="button"
               >
@@ -147,7 +149,7 @@ exports[`organisms::AddNode > can render the form without the title 1`] = `
           class="mantine-Group-root mantine-147cgkf"
         >
           <button
-            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1bqp2m7"
+            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1hjgevl"
             type="submit"
           >
             <div
@@ -173,7 +175,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
     class="mantine-Stack-root mantine-ngu3vw"
   >
     <h3
-      class="mantine-Title-root mantine-ha7ih2"
+      class="mantine-Title-root mantine-biockz"
     >
       Add a new node
     </h3>
@@ -182,7 +184,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
         class="mantine-Stack-root mantine-lfk3cq"
       >
         <div
-          class="mantine-TextInput-root mantine-18udhi"
+          class="mantine-TextInput-root mantine-1m3pqry"
         >
           <label
             class="mantine-TextInput-label mantine-7802ha"
@@ -191,6 +193,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
           >
             Node address
             <span
+              aria-hidden="true"
               class="mantine-1m203yh mantine-TextInput-required"
             >
                *
@@ -202,7 +205,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
             <input
               aria-invalid="false"
               aria-label="Node address"
-              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-yxlzy5"
               id="address"
               required=""
               type="text"
@@ -211,7 +214,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
           </div>
         </div>
         <div
-          class="mantine-TextInput-root mantine-18udhi"
+          class="mantine-TextInput-root mantine-1m3pqry"
         >
           <label
             class="mantine-TextInput-label mantine-7802ha"
@@ -220,6 +223,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
           >
             Port
             <span
+              aria-hidden="true"
               class="mantine-1m203yh mantine-TextInput-required"
             >
                *
@@ -231,7 +235,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
             <input
               aria-invalid="false"
               aria-label="Port"
-              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-yxlzy5"
               id="port"
               required=""
               type="text"
@@ -240,7 +244,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
           </div>
         </div>
         <div
-          class="mantine-TextInput-root mantine-18udhi"
+          class="mantine-TextInput-root mantine-1m3pqry"
         >
           <label
             class="mantine-TextInput-label mantine-7802ha"
@@ -254,7 +258,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
           >
             <input
               aria-invalid="false"
-              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-yxlzy5"
               id="user"
               type="text"
               value=""
@@ -262,7 +266,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
           </div>
         </div>
         <div
-          class="mantine-PasswordInput-root mantine-18udhi"
+          class="mantine-PasswordInput-root mantine-1m3pqry"
         >
           <label
             class="mantine-PasswordInput-label mantine-7802ha"
@@ -276,10 +280,10 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
           >
             <div
               aria-invalid="false"
-              class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-1i2duzg"
+              class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-1fntf85"
             >
               <input
-                class="mantine-PasswordInput-innerInput mantine-1bj8gkk"
+                class="mantine-PasswordInput-innerInput mantine-u0eqyi"
                 id="password"
                 type="password"
                 value=""
@@ -290,7 +294,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
             >
               <button
                 aria-hidden="true"
-                class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-vao037"
+                class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-1vhreye"
                 tabindex="-1"
                 type="button"
               >
@@ -319,7 +323,7 @@ exports[`organisms::AddNode > renders without exploding 1`] = `
           class="mantine-Group-root mantine-147cgkf"
         >
           <button
-            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1bqp2m7"
+            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1hjgevl"
             type="submit"
           >
             <div

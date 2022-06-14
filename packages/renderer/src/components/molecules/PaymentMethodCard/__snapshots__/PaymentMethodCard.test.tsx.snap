@@ -32,13 +32,13 @@ exports[`molecules::PaymentMethodCard > renders without exploding 1`] = `
             />
           </svg>
           <div
-            class="mantine-Text-root mantine-Group-child mantine-xrxbf2"
+            class="mantine-Text-root mantine-Group-child mantine-1hqopbt"
           >
             BTC
           </div>
         </div>
         <button
-          class="mantine-UnstyledButton-root mantine-Group-child mantine-1e6tu8r"
+          class="mantine-UnstyledButton-root mantine-Group-child mantine-19cytdf"
           type="button"
         >
           <svg
@@ -57,7 +57,7 @@ exports[`molecules::PaymentMethodCard > renders without exploding 1`] = `
         </button>
       </div>
       <div
-        class="mantine-Text-root mantine-17kke86"
+        class="mantine-Text-root mantine-1ujh5f3"
       >
         01234567abcdef
       </div>

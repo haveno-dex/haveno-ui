@@ -3,7 +3,7 @@
 exports[`atoms::Select > renders without exploding 1`] = `
 <DocumentFragment>
   <div
-    class="mantine-Select-root mantine-18udhi"
+    class="mantine-Select-root mantine-1m3pqry"
   >
     <label
       class="mantine-Select-label mantine-7802ha"
@@ -16,7 +16,6 @@ exports[`atoms::Select > renders without exploding 1`] = `
       aria-controls="select"
       aria-expanded="false"
       aria-haspopup="listbox"
-      aria-owns="select-items"
       role="combobox"
       tabindex="-1"
     >
@@ -30,13 +29,13 @@ exports[`atoms::Select > renders without exploding 1`] = `
         <input
           aria-autocomplete="list"
           aria-invalid="false"
-          autocomplete="nope"
-          class="mantine-Select-defaultVariant mantine-Select-input mantine-93d3e4"
+          autocomplete="off"
+          class="mantine-Select-defaultVariant mantine-Select-input mantine-1ihdofq"
           data-mantine-stop-propagation="false"
           id="select"
           placeholder="Pick one"
           readonly=""
-          type="text"
+          type="search"
           value=""
         />
         <div

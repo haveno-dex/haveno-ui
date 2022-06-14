@@ -14,7 +14,7 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { CSSObject } from "@mantine/core";
+import type { CSSObject } from "@emotion/react";
 import InterFont from "@assets/fonts/Inter-Variable.ttf";
 
 export const globalStyles: CSSObject = {

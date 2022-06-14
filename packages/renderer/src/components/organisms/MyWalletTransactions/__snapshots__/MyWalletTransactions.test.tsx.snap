@@ -3,7 +3,7 @@
 exports[`organisms::MyWalletMoneroBalance > renders without exploding. 1`] = `
 <DocumentFragment>
   <table
-    class="mantine-Table-root mantine-u2os4d"
+    class="mantine-Table-root mantine-qaazp5"
   >
     <tbody>
       <tr>
@@ -34,7 +34,7 @@ exports[`organisms::MyWalletMoneroBalance > renders without exploding. 1`] = `
               class="mantine-Group-child mantine-1oprzqz"
             >
               <div
-                class="mantine-Text-root mantine-3v9dod"
+                class="mantine-Text-root mantine-8y7ope"
               >
                 Received
               </div>
@@ -42,12 +42,12 @@ exports[`organisms::MyWalletMoneroBalance > renders without exploding. 1`] = `
                 class="mantine-Group-root mantine-bhsibn"
               >
                 <div
-                  class="mantine-Text-root mantine-Group-child mantine-e2rvui"
+                  class="mantine-Text-root mantine-Group-child mantine-8uy9kb"
                 >
                   7:34 PM
                 </div>
                 <div
-                  class="mantine-Text-root mantine-Group-child mantine-e2rvui"
+                  class="mantine-Text-root mantine-Group-child mantine-8uy9kb"
                 >
                   May 26, 2022
                 </div>
@@ -62,7 +62,7 @@ exports[`organisms::MyWalletMoneroBalance > renders without exploding. 1`] = `
             class="mantine-Stack-root mantine-1yjxaby"
           >
             <div
-              class="mantine-Text-root mantine-3v9dod"
+              class="mantine-Text-root mantine-8y7ope"
             >
               XMR 10,000.00
             </div>

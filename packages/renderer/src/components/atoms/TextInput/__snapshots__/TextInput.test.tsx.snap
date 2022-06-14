@@ -3,7 +3,7 @@
 exports[`atoms::TextInput > renders without exploding 1`] = `
 <DocumentFragment>
   <div
-    class="mantine-TextInput-root mantine-18udhi"
+    class="mantine-TextInput-root mantine-1m3pqry"
   >
     <label
       class="mantine-TextInput-label mantine-7802ha"
@@ -17,7 +17,7 @@ exports[`atoms::TextInput > renders without exploding 1`] = `
     >
       <input
         aria-invalid="false"
-        class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-dagq8e"
+        class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-yxlzy5"
         id="textfield"
         placeholder="johndoe@gmail.com"
         type="email"

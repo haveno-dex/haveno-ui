@@ -6,7 +6,7 @@ exports[`atoms::Link > renders without exploding 1`] = `
     href="#/"
   >
     <span
-      class="mantine-Text-root mantine-ix3vgq"
+      class="mantine-Text-root mantine-1o3tzv8"
     >
       Click me
     </span>

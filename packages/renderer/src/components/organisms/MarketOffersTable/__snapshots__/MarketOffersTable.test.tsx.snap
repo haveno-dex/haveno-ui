@@ -3,7 +3,7 @@
 exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
 <DocumentFragment>
   <table
-    class="mantine-Table-root mantine-1ei5v84"
+    class="mantine-Table-root mantine-shky0d"
   >
     <thead>
       <tr>
@@ -42,12 +42,12 @@ exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
             class="mantine-Group-root mantine-1lumg83"
           >
             <div
-              class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
+              class="mantine-Text-root mantine-Group-child mantine-1yy4n5b"
             >
               €5,000.96
             </div>
             <div
-              class="mantine-Text-root mantine-Group-child mantine-1qscdi2"
+              class="mantine-Text-root mantine-Group-child mantine-fvwhc7"
             >
               12%
             </div>
@@ -57,7 +57,7 @@ exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
           style="width: 400px;"
         >
           <div
-            class="mantine-Text-root mantine-ix3vgq"
+            class="mantine-Text-root mantine-1o3tzv8"
           >
             XMR 7,564.94
           </div>
@@ -66,7 +66,7 @@ exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
           style="width: 400px;"
         >
           <div
-            class="mantine-Text-root mantine-ix3vgq"
+            class="mantine-Text-root mantine-1o3tzv8"
           >
             $532.34
           </div>
@@ -75,7 +75,7 @@ exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
           style="width: 400px;"
         >
           <div
-            class="mantine-Text-root mantine-ix3vgq"
+            class="mantine-Text-root mantine-1o3tzv8"
           >
             Bitcoin
           </div>
@@ -89,12 +89,12 @@ exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
             class="mantine-Group-root mantine-1lumg83"
           >
             <div
-              class="mantine-Text-root mantine-Group-child mantine-1h17kkk"
+              class="mantine-Text-root mantine-Group-child mantine-1yy4n5b"
             >
               €9,637.41
             </div>
             <div
-              class="mantine-Text-root mantine-Group-child mantine-1qscdi2"
+              class="mantine-Text-root mantine-Group-child mantine-fvwhc7"
             >
               15%
             </div>
@@ -104,7 +104,7 @@ exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
           style="width: 400px;"
         >
           <div
-            class="mantine-Text-root mantine-ix3vgq"
+            class="mantine-Text-root mantine-1o3tzv8"
           >
             XMR 6,483.23
           </div>
@@ -113,7 +113,7 @@ exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
           style="width: 400px;"
         >
           <div
-            class="mantine-Text-root mantine-ix3vgq"
+            class="mantine-Text-root mantine-1o3tzv8"
           >
             $983.32
           </div>
@@ -122,7 +122,7 @@ exports[`molecules::MarketOffersTable > renders without exploding. 1`] = `
           style="width: 400px;"
         >
           <div
-            class="mantine-Text-root mantine-ix3vgq"
+            class="mantine-Text-root mantine-1o3tzv8"
           >
             Altcoins
           </div>

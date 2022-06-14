@@ -6,12 +6,12 @@ exports[`atoms::DetailItem > renders without exploding 1`] = `
     class="mantine-Stack-root mantine-DetailItem-root mantine-fpp2be"
   >
     <div
-      class="mantine-Text-root mantine-DetailItem-label mantine-1mkytp"
+      class="mantine-Text-root mantine-DetailItem-label mantine-8r3ub3"
     >
       Label
     </div>
     <div
-      class="mantine-Text-root mantine-DetailItem-content mantine-17mq3ni"
+      class="mantine-Text-root mantine-DetailItem-content mantine-m3tadk"
     >
       Content
     </div>

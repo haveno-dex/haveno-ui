@@ -6,7 +6,7 @@ exports[`molecules::AccountSidebar > renders without exploding 1`] = `
     class="mantine-37r7j5"
   >
     <h3
-      class="mantine-Title-root mantine-19bfor4"
+      class="mantine-Title-root mantine-dpnfrz"
     >
       Account
     </h3>
@@ -14,73 +14,73 @@ exports[`molecules::AccountSidebar > renders without exploding 1`] = `
       class="mantine-Stack-root mantine-lfk3cq"
     >
       <nav
-        class="mantine-Navbar-root mantine-vf15cs"
+        class="mantine-Navbar-root mantine-k1d20c"
       >
         <button
-          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          class="mantine-UnstyledButton-root mantine-ja4sdk"
           type="button"
         >
           <div
             class="mantine-Group-root mantine-2jlg77"
           >
             <div
-              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+              class="mantine-Text-root mantine-Group-child mantine-toslzp"
             >
               Payment Accounts
             </div>
           </div>
         </button>
         <button
-          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          class="mantine-UnstyledButton-root mantine-ja4sdk"
           type="button"
         >
           <div
             class="mantine-Group-root mantine-2jlg77"
           >
             <div
-              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+              class="mantine-Text-root mantine-Group-child mantine-toslzp"
             >
               Node Settings
             </div>
           </div>
         </button>
         <button
-          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          class="mantine-UnstyledButton-root mantine-ja4sdk"
           type="button"
         >
           <div
             class="mantine-Group-root mantine-2jlg77"
           >
             <div
-              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+              class="mantine-Text-root mantine-Group-child mantine-toslzp"
             >
               Security
             </div>
           </div>
         </button>
         <button
-          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          class="mantine-UnstyledButton-root mantine-ja4sdk"
           type="button"
         >
           <div
             class="mantine-Group-root mantine-2jlg77"
           >
             <div
-              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+              class="mantine-Text-root mantine-Group-child mantine-toslzp"
             >
               Wallet
             </div>
           </div>
         </button>
         <button
-          class="mantine-UnstyledButton-root mantine-1us1eqc"
+          class="mantine-UnstyledButton-root mantine-ja4sdk"
           type="button"
         >
           <div
             class="mantine-Group-root mantine-2jlg77"
           >
             <div
-              class="mantine-Text-root mantine-Group-child mantine-17vcv21"
+              class="mantine-Text-root mantine-Group-child mantine-toslzp"
             >
               Backup
             </div>

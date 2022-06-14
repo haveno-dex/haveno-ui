@@ -9,12 +9,12 @@ exports[`molecules::WalletManagement > renders after loading data 1`] = `
       class="mantine-63n06h"
     />
     <div
-      class="mantine-Text-root mantine-1ogvxnc"
+      class="mantine-Text-root mantine-1r7efq5"
     >
       Loading Wallet Seeds...
     </div>
     <ol
-      class="mantine-List-root mantine-14df5ct"
+      class="mantine-List-root mantine-shpils"
     >
       <div
         class="mantine-Group-root mantine-1qkd5ve"
@@ -409,7 +409,7 @@ exports[`molecules::WalletManagement > renders loading state 1`] = `
           class="mantine-78ek8g"
         />
         <div
-          class="mantine-PasswordInput-root mantine-14qek68"
+          class="mantine-PasswordInput-root mantine-1u48g6v"
         >
           <label
             class="mantine-PasswordInput-label mantine-1bjo575"
@@ -418,6 +418,7 @@ exports[`molecules::WalletManagement > renders loading state 1`] = `
           >
             Password
             <span
+              aria-hidden="true"
               class="mantine-1wc35tu mantine-PasswordInput-required"
             >
                *
@@ -428,10 +429,10 @@ exports[`molecules::WalletManagement > renders loading state 1`] = `
           >
             <div
               aria-invalid="false"
-              class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-nakpsh"
+              class="mantine-PasswordInput-defaultVariant mantine-PasswordInput-input mantine-PasswordInput-input mantine-1hlli39"
             >
               <input
-                class="mantine-PasswordInput-innerInput mantine-17c0t6q"
+                class="mantine-PasswordInput-innerInput mantine-66fxec"
                 id="password"
                 required=""
                 type="password"
@@ -443,7 +444,7 @@ exports[`molecules::WalletManagement > renders loading state 1`] = `
             >
               <button
                 aria-hidden="true"
-                class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-910bvd"
+                class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-PasswordInput-visibilityToggle mantine-11pctd2"
                 tabindex="-1"
                 type="button"
               >
@@ -472,7 +473,7 @@ exports[`molecules::WalletManagement > renders loading state 1`] = `
           class="mantine-Group-root mantine-147cgkf"
         >
           <button
-            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-s2bdxi"
+            class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-18llzhv"
             disabled=""
             type="submit"
           >

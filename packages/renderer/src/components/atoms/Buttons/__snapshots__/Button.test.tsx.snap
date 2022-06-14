@@ -3,7 +3,7 @@
 exports[`atoms::Buttons > renders error button 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-Button-filled mantine-Button-root mantine-17e9v6f"
+    class="mantine-Button-filled mantine-Button-root mantine-b4sl6"
     type="button"
   >
     <div
@@ -22,7 +22,7 @@ exports[`atoms::Buttons > renders error button 1`] = `
 exports[`atoms::Buttons > renders neutral button 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-Button-filled mantine-Button-root mantine-13v2nwn"
+    class="mantine-Button-filled mantine-Button-root mantine-h60jl4"
     type="button"
   >
     <div
@@ -41,7 +41,7 @@ exports[`atoms::Buttons > renders neutral button 1`] = `
 exports[`atoms::Buttons > renders primary button by default 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-Button-filled mantine-Button-root mantine-pfssi"
+    class="mantine-Button-filled mantine-Button-root mantine-11hawrf"
     type="button"
   >
     <div
@@ -60,7 +60,7 @@ exports[`atoms::Buttons > renders primary button by default 1`] = `
 exports[`atoms::Buttons > renders success button 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-Button-filled mantine-Button-root mantine-1phtj0c"
+    class="mantine-Button-filled mantine-Button-root mantine-1wbcmdw"
     type="button"
   >
     <div
@@ -79,11 +79,11 @@ exports[`atoms::Buttons > renders success button 1`] = `
 exports[`atoms::Buttons > renders text button 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-UnstyledButton-root mantine-13uxwbm"
+    class="mantine-UnstyledButton-root mantine-jxthji"
     type="button"
   >
     <span
-      class="mantine-Text-root mantine-10a0kig"
+      class="mantine-Text-root mantine-1xu8ypy"
     >
       This is a Text Button
     </span>

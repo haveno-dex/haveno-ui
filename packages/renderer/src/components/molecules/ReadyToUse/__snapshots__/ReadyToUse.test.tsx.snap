@@ -6,12 +6,12 @@ exports[`molecules::ReadyToUse > renders without exploding 1`] = `
     class="mantine-Stack-root mantine-lfk3cq"
   >
     <h1
-      class="mantine-Title-root mantine-xz2ygd"
+      class="mantine-Title-root mantine-1krktmh"
     >
       Haveno is ready for use.
     </h1>
     <div
-      class="mantine-Text-root mantine-1w4ewzw"
+      class="mantine-Text-root mantine-8at25l"
     >
       You’ve succesfully set up Haveno. Please note that to be able to trade, you need to deposit Monero in your Haveno wallet and set up a payment account.
     </div>
@@ -22,7 +22,7 @@ exports[`molecules::ReadyToUse > renders without exploding 1`] = `
       class="mantine-Group-root mantine-19jxmdp"
     >
       <button
-        class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1bqp2m7"
+        class="mantine-Button-filled mantine-Button-root mantine-Group-child mantine-1hjgevl"
         type="submit"
       >
         <div

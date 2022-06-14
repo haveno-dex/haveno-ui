@@ -3,7 +3,7 @@
 exports[`molecules::AddPaymentMethodButton > renders without exploding 1`] = `
 <DocumentFragment>
   <button
-    class="mantine-UnstyledButton-root mantine-17b3lsu"
+    class="mantine-UnstyledButton-root mantine-eowpmc"
     type="button"
   >
     <svg
