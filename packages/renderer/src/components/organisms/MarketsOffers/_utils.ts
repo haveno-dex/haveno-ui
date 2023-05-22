@@ -27,7 +27,7 @@ export const transformToMarketsOffers = (
     amountCurrency: offer.baseCurrencyCode,
     costCurrency: offer.baseCurrencyCode,
     paymentMethod: offer.paymentMethodShortName,
-    cost: offer.txFee,
+    cost: offer.makerFee,
     priceComparison: 0.1,
     accountAge: 1,
     accountTrades: 1,

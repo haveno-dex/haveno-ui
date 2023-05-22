@@ -16,6 +16,7 @@
 
 import { isEmpty } from "lodash";
 import type { XmrTx } from "haveno-ts";
+import { HavenoUtils } from "haveno-ts";
 import { WalletTransactionType } from "@molecules/WalletTransactions/_types";
 import type { TWalletTransaction } from "@molecules/WalletTransactions/_types";
 
@@ -30,12 +31,15 @@ const transfromXmrTx = (xmrTx: XmrTx.AsObject): TWalletTransaction => ({
     ? WalletTransactionType.Sent
     : WalletTransactionType.Received,
 
-  fee: parseFloat(xmrTx.fee),
+  fee: HavenoUtils.atomicUnitsToXmr(xmrTx.fee),
   height: xmrTx.height,
 
+  // TODO: this skips incoming transfers of tx which has both incoming and outgoing transfer
   amount: !isEmpty(xmrTx.outgoingTransfer)
-    ? parseFloat(xmrTx.outgoingTransfer?.amount || "")
-    : parseFloat(xmrTx.incomingTransfersList[0]?.amount),
+    ? HavenoUtils.atomicUnitsToXmr(xmrTx.outgoingTransfer?.amount || "0")
+    : HavenoUtils.atomicUnitsToXmr(
+        xmrTx.incomingTransfersList[0]?.amount || "0"
+      ),
 
   amountCurrency: "XMR",
   transactionId: xmrTx.hash,

@@ -24,7 +24,7 @@ export function useIsMoneroNodeRunning() {
     QueryKeys.MoneroNodeIsRunning,
     async () => {
       try {
-        const value = await client.isMoneroNodeRunning();
+        const value = await client.isMoneroNodeOnline();
         return value;
       } catch {
         return false;

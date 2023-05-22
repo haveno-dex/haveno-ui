@@ -38,7 +38,7 @@ export function useSaveLocalMoneroNode() {
       nodeSettings.setStartupFlagsList(data.startupFlags);
       nodeSettings.setBootstrapUrl(data.bootstrapUrl);
 
-      if (await client.isMoneroNodeRunning()) {
+      if (await client.isMoneroNodeOnline()) {
         // stop the node if it's running
         await client.stopMoneroNode();
       }
