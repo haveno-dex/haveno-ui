@@ -14,6 +14,7 @@
 //  limitations under the License.
 // =============================================================================
 
+import { HavenoUtils } from "haveno-ts";
 import { useQuery } from "react-query";
 import { useHavenoClient } from "./useHavenoClient";
 import { QueryKeys } from "@constants/query-keys";
@@ -37,10 +38,16 @@ export function useBalances() {
     const balances = xmrBalances.toObject();
 
     const balance = parseFloat(balances.balance);
-    const unlockedBalance = parseFloat(balances.unlockedBalance);
-    const lockedBalance = parseFloat(balances.lockedBalance);
-    const reservedOfferBalance = parseFloat(balances.reservedOfferBalance);
-    const reservedTradeBalance = parseFloat(balances.reservedTradeBalance);
+    const unlockedBalance = HavenoUtils.atomicUnitsToXmr(
+      balances.availableBalance
+    );
+    const lockedBalance = HavenoUtils.atomicUnitsToXmr(balances.pendingBalance);
+    const reservedOfferBalance = HavenoUtils.atomicUnitsToXmr(
+      balances.reservedOfferBalance
+    );
+    const reservedTradeBalance = HavenoUtils.atomicUnitsToXmr(
+      balances.reservedTradeBalance
+    );
 
     const availableBalance = unlockedBalance;
     const reservedBalance = reservedOfferBalance + reservedTradeBalance;

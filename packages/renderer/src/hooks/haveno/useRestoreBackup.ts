@@ -54,7 +54,7 @@ export function useRestoreBackup() {
       deleteSession();
       navigate(ROUTES.Login);
 
-      if (await client.isMoneroNodeRunning()) {
+      if (await client.isMoneroNodeOnline()) {
         await client.stopMoneroNode();
       }
       try {

@@ -29,13 +29,13 @@ describe("organisms::MyWalletMoneroBalance", () => {
           {
             timestamp: 1653593643913,
             height: "1.334423",
-            fee: "3.33",
+            fee: "33300000",
             isConfirmed: true,
             isLocked: false,
             hash: "HASHADDRESS",
             incomingTransfersList: [
               {
-                amount: "10000",
+                amount: "10000000000000000",
                 accountIndex: 1,
                 subaddressIndex: 1,
                 address: "INCOMINGADDRESS",

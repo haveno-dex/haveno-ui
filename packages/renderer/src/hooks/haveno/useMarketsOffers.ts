@@ -16,6 +16,7 @@
 
 import { useQuery } from "react-query";
 import type { OfferInfo } from "haveno-ts";
+import { HavenoUtils } from "haveno-ts";
 import { useHavenoClient } from "./useHavenoClient";
 import { QueryKeys } from "@constants/query-keys";
 
@@ -42,6 +43,15 @@ const transformData = (offers: Array<OfferInfo>) => {
 
     return {
       ...offer,
+      amount: HavenoUtils.atomicUnitsToXmr(offer.amount),
+      minAmount: HavenoUtils.atomicUnitsToXmr(offer.minAmount),
+      buyerSecurityDeposit: HavenoUtils.atomicUnitsToXmr(
+        offer.buyerSecurityDeposit
+      ),
+      sellerSecurityDeposit: HavenoUtils.atomicUnitsToXmr(
+        offer.sellerSecurityDeposit
+      ),
+      makerFee: HavenoUtils.atomicUnitsToXmr(offer.makerFee),
       price: parseFloat(offer.price),
       volume: parseFloat(offer.volume),
       minVolume: parseFloat(offer.minVolume),
@@ -70,8 +80,6 @@ export interface MarketOfferData {
   date: number;
   state: string;
   sellerSecurityDeposit: number;
-  offerFeePaymentTxId: string;
-  txFee: number;
   makerFee: number;
   isActivated: boolean;
   isMyOffer: boolean;
