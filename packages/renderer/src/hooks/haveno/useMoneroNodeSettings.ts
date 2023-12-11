@@ -15,13 +15,13 @@
 // =============================================================================
 
 import { useQuery } from "react-query";
-import type { MoneroNodeSettings } from "haveno-ts";
+import type { XmrNodeSettings } from "haveno-ts";
 import { useHavenoClient } from "./useHavenoClient";
 import { QueryKeys } from "@constants/query-keys";
 
 export function useMoneroNodeSettings() {
   const client = useHavenoClient();
-  return useQuery<MoneroNodeSettings | undefined, Error>(
+  return useQuery<XmrNodeSettings | undefined, Error>(
     QueryKeys.MoneroNodeSettings,
     async () => client.getMoneroNodeSettings()
   );

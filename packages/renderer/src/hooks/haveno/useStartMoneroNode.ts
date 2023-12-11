@@ -15,7 +15,7 @@
 // =============================================================================
 
 import { useMutation, useQueryClient } from "react-query";
-import type { MoneroNodeSettings } from "haveno-ts";
+import type { XmrNodeSettings } from "haveno-ts";
 import { useHavenoClient } from "./useHavenoClient";
 import { QueryKeys } from "@constants/query-keys";
 
@@ -23,8 +23,8 @@ export function useStartMoneroNode() {
   const queryClient = useQueryClient();
   const client = useHavenoClient();
 
-  return useMutation<void, Error, MoneroNodeSettings>(
-    async (data: MoneroNodeSettings) => client.startMoneroNode(data),
+  return useMutation<void, Error, XmrNodeSettings>(
+    async (data: XmrNodeSettings) => client.startMoneroNode(data),
     {
       onSuccess: () => {
         queryClient.invalidateQueries(QueryKeys.MoneroNodeIsRunning);

@@ -14,16 +14,16 @@
 //  limitations under the License.
 // =============================================================================
 
-import type { MoneroNodeSettings } from "haveno-ts";
+import type { XmrNodeSettings } from "haveno-ts";
 import type { LocalSettingsFormValues } from "./_types";
 
 /**
  * Transformes the settings request values to form.
- * @param    {MoneroNodeSettings.AsObject} nodeSettings
+ * @param    {XmrNodeSettings.AsObject} nodeSettings
  * @returns  {LocalSettingsFormValues}
  */
 export function transformSettingsRequestToForm(
-  nodeSettings: MoneroNodeSettings.AsObject
+  nodeSettings: XmrNodeSettings.AsObject
 ): LocalSettingsFormValues {
   return {
     blockchainLocation: nodeSettings?.blockchainPath || "",

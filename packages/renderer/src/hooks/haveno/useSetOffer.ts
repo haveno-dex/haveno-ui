@@ -15,12 +15,13 @@
 // =============================================================================
 
 import { useMutation, useQueryClient } from "react-query";
+import type { OfferDirection } from "haveno-ts";
 import { showNotification } from "@mantine/notifications";
 import { useHavenoClient } from "./useHavenoClient";
 import { QueryKeys } from "@constants/query-keys";
 
 interface SetOfferVariables {
-  direction: string;
+  direction: OfferDirection;
   amount: bigint;
   assetCode: string;
   paymentAccountId: string;

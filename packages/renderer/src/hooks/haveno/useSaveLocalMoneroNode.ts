@@ -15,7 +15,7 @@
 // =============================================================================
 
 import { useMutation, useQueryClient } from "react-query";
-import { MoneroNodeSettings } from "haveno-ts";
+import { XmrNodeSettings } from "haveno-ts";
 import { useHavenoClient } from "./useHavenoClient";
 import { QueryKeys } from "@constants/query-keys";
 import { useSaveRemoteNode } from "@hooks/storage/useSaveRemoteNode";
@@ -33,7 +33,7 @@ export function useSaveLocalMoneroNode() {
 
   return useMutation<void, Error, Variables>(
     async (data: Variables) => {
-      const nodeSettings = new MoneroNodeSettings();
+      const nodeSettings = new XmrNodeSettings();
       nodeSettings.setBlockchainPath(data.blockchainPath);
       nodeSettings.setStartupFlagsList(data.startupFlags);
       nodeSettings.setBootstrapUrl(data.bootstrapUrl);
