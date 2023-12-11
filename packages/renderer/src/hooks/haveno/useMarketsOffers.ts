@@ -45,12 +45,8 @@ const transformData = (offers: Array<OfferInfo>) => {
       ...offer,
       amount: HavenoUtils.atomicUnitsToXmr(offer.amount),
       minAmount: HavenoUtils.atomicUnitsToXmr(offer.minAmount),
-      buyerSecurityDeposit: HavenoUtils.atomicUnitsToXmr(
-        offer.buyerSecurityDeposit
-      ),
-      sellerSecurityDeposit: HavenoUtils.atomicUnitsToXmr(
-        offer.sellerSecurityDeposit
-      ),
+      buyerSecurityDeposit: offer.buyerSecurityDepositPct,
+      sellerSecurityDeposit: offer.sellerSecurityDepositPct,
       makerFee: HavenoUtils.atomicUnitsToXmr(offer.makerFee),
       price: parseFloat(offer.price),
       volume: parseFloat(offer.volume),

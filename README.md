@@ -5,7 +5,7 @@
 ### Prerequisites
 
 1. Node 16.x
-2. yarn 1.x
+2. yarn 1.x (npm install --global yarn)
 3. Run user1-daemon-local and envoy proxy by following [these instructions](https://github.com/haveno-dex/haveno-ts#run-tests)
 
 ### Install dependencies

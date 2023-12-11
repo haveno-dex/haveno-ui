@@ -17,7 +17,7 @@
 import { hideNotification, showNotification } from "@mantine/notifications";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
-import { MoneroNodeSettings } from "haveno-ts";
+import { XmrNodeSettings } from "haveno-ts";
 import { useHavenoClient } from "./useHavenoClient";
 import { Notifications } from "@constants/notifications";
 import { deleteSession } from "@utils/session";
@@ -58,7 +58,7 @@ export function useRestoreBackup() {
         await client.stopMoneroNode();
       }
       try {
-        await client.startMoneroNode(new MoneroNodeSettings());
+        await client.startMoneroNode(new XmrNodeSettings());
       } catch (ex) {
         console.log(ex);
         throw new Error("Failed to start the monero node");

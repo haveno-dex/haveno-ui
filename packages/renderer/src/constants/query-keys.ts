@@ -21,7 +21,7 @@ export enum QueryKeys {
   MoneroConnection = "Haveno.MoneroConnection",
   MoneroConnections = "Haveno.MoneroConnections",
   MoneroNodeIsRunning = "Haveno.MoneroNodeIsRunning",
-  MoneroNodeSettings = "Haveno.MoneroNodeSettings",
+  MoneroNodeSettings = "Haveno.XmrNodeSettings",
   PaymentAccounts = "Haveno.PaymentAccounts",
   Prices = "Haveno.Prices",
   PrimaryAddress = "Haveno.PrimaryAddress",

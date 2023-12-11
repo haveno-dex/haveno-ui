@@ -15,13 +15,13 @@
 // =============================================================================
 
 import { useQuery } from "react-query";
-import type { OfferInfo } from "haveno-ts";
+import type { OfferDirection, OfferInfo } from "haveno-ts";
 import { useHavenoClient } from "./useHavenoClient";
 import { QueryKeys } from "@constants/query-keys";
 
 interface MyOfferesQuery {
   assetCode: string;
-  direction?: "buy" | "sell";
+  direction?: OfferDirection;
 }
 
 export function useMarketsOffers(query: MyOfferesQuery) {
